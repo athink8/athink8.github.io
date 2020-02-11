@@ -1,0 +1,527 @@
+# main menu navigation url and icon
+# 配置菜单导航的名称、路径和图标icon.   
+menu:
+  首页:
+    url: /
+    icon: fas fa-home
+  标签:
+    url: /tags
+    icon: fas fa-tags
+  分类:
+    url: /categories
+    icon: fas fa-bookmark
+  时光轴:
+    url: /archives
+    icon: fas fa-archive
+  留言板:
+    url: /contact
+    icon: fas fa-comments
+  友情链接:
+    url: /friends
+    icon: fas fa-address-book
+  关于:
+    url: /about
+    icon: fas fa-user-circle
+         
+  # 二级菜单写法如下
+  #Medias:
+  #  icon: fas fa-list
+  #  children:
+  #    - name: Musics
+  #      url: /musics
+  #      icon: fas fa-music
+  #    - name: Movies
+  #      url: /movies
+  #      icon: fas fa-film
+  #    - name: Books
+  #      url: /books
+  #      icon: fas fa-book
+  #    - name: Galleries
+  #      url: /galleries
+  #      icon: fas fa-image
+
+
+ 
+# Website start time.
+# 站点运行开始时间.
+time:
+  enable: true
+  year: 2020 # 年份
+  month: 02 # 月份
+  date: 10 # 日期
+  hour: 00 # 小时
+  minute: 00 # 分钟
+  second: 00 # 秒
+
+# Index cover carousel configuration.
+# 首页封面轮播图的相关配置.
+cover:
+  showPrevNext: true # 是否显示左右切换按钮. Whether to display the left and right toggle buttons.
+  showIndicators: true # 是否显示指示器. # Whether to display the indicators
+  autoLoop: true # 是否自动轮播. Whether it is automatically rotated.
+  duration: 100 # 切换延迟时间. Switching delay time.
+  intervalTime: 9000 # 自动切换下一张的间隔时间. Automatically switch the interval of the next one.
+  useConfig: false # 是否使用配置文件, 在 _data/covers.json 下配置推荐文章, false则使用主题在文章中的配置 cover coverImg
+  # useConfig 使用方式: 将主题 hexo-theme-matery/source/_data/covers.json 移动到 my-blog/source/_data/下修改配置即可
+
+# index page dream text,
+# 配置首页显示"梦想"的语句.
+dream:
+  enable: true
+  showTitle: true
+  title: 听君一言
+  text: 生活就像海洋，只有意志坚强的人才能到达堤岸！一瓦一砖，脚踏实地，梦想遥不可及亦可实现！
+  textUrl: https://api.uixsj.cn/hitokoto/w.php
+
+# Whether to display the musics.
+# 是否在首页显示音乐.
+music:
+  enable: true
+  title: #非吸底模式有效
+   enable: false
+   show: 听听音乐
+  server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
+  type: playlist	#require song, playlist, album, search, artist
+  id: 2602222983     #require	song id / playlist id / album id / search keyword
+  fixed: true # 开启吸底模式
+  autoplay: false # 是否自动播放
+  theme: '#C4C4C4'
+  loop: 'all' # 音频循环播放, 可选值: 'all', 'one', 'none'
+  order: 'random' # 音频循环顺序, 可选值: 'list', 'random'
+  preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.9 # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  listFolded: true # 列表默认折叠
+  listMaxHeight: 600px #列表最大高度
+
+# Whether to display the videos.
+# 是否在首页显示视频.
+video:
+  enable: false
+  showTitle: true
+  title: 精彩视频
+  url: # 必填
+  pic:
+  thumbnails:
+  height: # 如：400
+  autoplay: false # 是否自动播放
+  theme: '#42b983'
+  loop: false # 是否循环播放
+  preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.7
+
+# Whether to display the title of the recommended posts
+# 是否显示推荐文章的标题
+recommend:
+  enable: true
+  showTitle: true
+  useConfig: false # 是否使用配置文件, 在 _data/recommends.json 下配置推荐文章, false则会走主题配置的 top 属性
+  # useConfig 使用方式: 将主题 hexo-theme-matery/source/_data/recommends.json 移动到 my-blog/source/_data/下修改配置即可
+
+# Configure website favicon and LOGO
+# 配置网站favicon和网站LOGO
+favicon: https://s2.ax1x.com/2020/02/11/1oJJeJ.th.png
+logo: https://s2.ax1x.com/2020/02/11/1oJJeJ.th.png
+
+# The configuration of the second button in the home banner,
+# including the display name of the button, the font awesome icon, and the hyperlink to the button.
+# 首页 banner 中的第二个按钮的配置，包括按钮的显示名称、font awesome图标和按钮的超链接.
+indexbtn:
+  enable: true
+  name: Github
+  icon: fab fa-github-alt
+  url: https://github.com/athink8
+
+# The configurations of the second line of home banner
+# icon/button will not show up if you leave the corresponding socialLink empty
+# 首页 banner 中的第二行个人信息配置，留空即不启用
+socialLink:
+  github:  https://github.com/athink8
+  email: athink8@163.com
+  facebook: # https://www.facebook.com/xxx
+  twitter: # https://twitter.com/xxx
+  qq: 813317539
+  weibo: # https://weibo.com/xxx
+  zhihu: # https://www.zhihu.com/xxx
+  rss: false # true、false
+
+# Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
+# You can add `toc: false` to the Front-matter of a post to turn off the TOC.
+# 是否激活文章 TOC 功能，并配置TOC支持选中哪些标题类型，这是全局配置。
+# 可以在某篇文章的 Front-matter 中再加上`toc: false`，使该篇文章关闭TOC目录功能
+toc:
+  enable: true
+  heading: h2, h3, h4
+  collapseDepth: 0 # 目录默认展开层级
+  showToggleBtn: true # 是否显示切换TOC目录展开收缩的按钮
+
+# 代码块相关
+code:
+  lang: false # 代码块是否显示名称
+  copy: true # 代码块是否可复制
+  shrink: true # 代码块是否可以收缩
+  break: false # 代码是否折行
+
+# 是否激活文章末尾的打赏功能，默认激活（你替换为的你自己的微信、支付宝二维码图片、或者使用网络图片也可以）.
+reward:
+  enable: true
+  title: 今天天气不错,请我喝个茶呗？
+  wechat: https://s2.ax1x.com/2020/02/10/1INuNR.th.png
+  alipay: https://s2.ax1x.com/2020/02/10/1INK41.th.jpg
+
+# Whether to activate the copyright information of the blog and author when copying the post content.
+# minCharNumber: Approve copyright information by copying at least how many characters.
+# 是否激活复制文章时追加博客和作者的版权信息.
+copyright:
+  enable: false
+  minCharNumber: 120 # 至少复制多少个字符就追加版权信息.
+  description: 本文章著作权归原作者所有，任何形式的转载都请注明出处。
+
+# Whether to activate the mathjax, this is a global configuration, but the post still does not open the mathjax rendering.
+# Considering that the mathjax loading is time consuming,
+# you also need to add `mathjax: true` to the Front-matter of the post that needs to be rendered.
+# 是否激活mathjax数学公式，这是全局配置，但文章仍然不会都开启mathjax渲染，
+# 考虑到mathjax加载比较耗时，你还需要在需要渲染的文章的Front-matter中再加上`mathjax: true`才行.
+mathjax:
+  enable: false
+  cdn: https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+# Post word count, reading duration, site total word count.
+# Before you activate, please confirm that you have installed the hexo-wordcount plugin,
+# install the plugin command: `npm i --save hexo-wordcount`.
+# 文章字数统计、阅读时长、总字数统计等
+# 文章信息--若要开启文章字数统计，需要安装 hexo-wordcount 插件，安装命令: `npm i --save hexo-wordcount`
+postInfo:
+  date: true # 发布日期
+  update: true # 更新日期
+  wordCount: true # 文章字数统计
+  totalCount: false # 站点总文章字数
+  min2read: true # 文章阅读时长
+  readCount: true # 文章阅读次数
+
+# Whether to activate the 'love' effect of clicking on the page.
+# 是否激活点击页面的'爱心'效果，默认激活.
+clicklove:
+  enable: true
+
+# profile in about page, including avatars, career, and personal introductions.
+# 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
+profile:
+  avatar: https://s2.ax1x.com/2020/02/10/1IU9qe.th.png
+  career: Java工程师/全栈
+  introduction: 本人大四，主学Java后端，但是又不想局限于此，希望能够对技术保持兴趣，学无止境，努力成为一名优秀的全栈！加油！
+  
+# config my projects informations in about page.
+# If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+myProjects:
+  enable: false
+  data:
+    hexo-theme-matery:
+      icon: fas fa-file-alt
+      iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
+      url: http://github.com/blinkfox/hexo-theme-matery
+      desc: This is a Hexo blog theme with 'Material Design' and responsive design.
+    Fenix:
+        icon: fas fa-database
+        iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
+        url: https://github.com/blinkfox/fenix
+        desc: 这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。
+    typora-vue-theme:
+        icon: fas fa-file-alt
+        iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
+        url: https://github.com/blinkfox/typora-vue-theme
+        desc: This is a typora theme inspired by Vue document style.
+
+# config my skills informations in about page.
+# If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的技能"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+mySkills:
+  enable: true
+  data:
+    Java:
+      background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
+      percent: 60%
+    Spring:
+      background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
+      percent: 60%
+    SringBoot:
+      background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
+      percent: 60%
+    MyBatis:
+      background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
+      percent: 60%
+    mySQL:
+      background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
+      percent: 60%
+    前端:
+      background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
+      percent: 60%
+
+# config gallery of my photos in about page.
+# If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
+# 在“关于”页面配置"我的相册"图片，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+myGallery:
+  enable: true
+  data:
+    - https://api.paugram.com/wallpaper/?source=cp
+    - https://i.loli.net/2020/02/09/pqo5alXDPAIVcEw.jpg
+    - https://api.paugram.com/wallpaper/?source=gt
+    - https://cdn.mom1.cn/?mom=302&name=1
+    - https://cdn.mom1.cn/?mom=302&name=2
+    - http://api.mtyqx.cn/api/random.php
+    - http://www.dmoe.cc/random.php
+    - https://acg.toubiec.cn/random 
+    - https://api.ixiaowai.cn/gqapi/gqapi.php
+    - https://api.ixiaowai.cn/api/api.php
+    - http://www.dmoe.cc/random.php
+    - https://acg.toubiec.cn/random?
+    
+    #- /medias/featureimages/0.jpg
+
+
+# Whether to display post-calender in the `archive` page
+# 设置在归档页面中是否显示'文章日历'控件
+postCalendar: true
+
+# the Gitalk config，default disabled
+# Gitalk 评论模块的配置，默认为不激活
+gitalk:
+  enable: false
+  owner:
+  repo:
+  oauth:
+    clientId:
+    clientSecret:
+  admin:
+
+# the Gitment config，default disabled
+# Gitment 评论模块的配置，默认为不激活
+gitment:
+  enable: false
+  owner:
+  repo:
+  oauth:
+    clientId:
+    clientSecret:
+
+# disqus config, default disabled
+# Disqus评论模块的配置，默认为不激活
+disqus:
+  enable: false
+  shortname:
+
+# Livere comment configuration, the default is not activated
+# Livere 来必力评论模块的配置，默认为不激活
+livere:
+  enable: false
+  uid:
+
+# The configuration of the Valine comment module is not activated by default.
+# To use it, activate the configuration item and set appId and appKey.
+# Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
+valine:
+  enable: true
+  appId: JRF9GJFiTtq472Rfl4TExkzc-9Nh9j0Va
+  appKey: JHg0HpgcopCoARrLoxrQfeLK
+  notify: false
+  verify: true
+  visitor: true
+  avatar: 'monsterid' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+  pageSize: 10
+  placeholder: '请输入你的留言吧' # Comment Box placeholder
+  background: https://s2.ax1x.com/2020/02/10/1IdL5j.png
+
+# Whether to display fork me on github icon and link, default true, You can change it to your repo address
+# 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
+githubLink:
+  enable: true
+  url: https://github.com/athink8
+  title: Fork Me
+
+# The password verification feature of read post. To use this feature,
+# activate the configuration item and write the 'password' key and Cipher in the post's Front-matter.
+# Note: In order to ensure that the original password will not be leaked to the web page,
+# the password of the article must be encrypted by 'SHA256' so that it will not be cracked.
+# 阅读文章的密码验证功能，如要使用此功能请激活该配置项，并在对应文章的Front-matter中写上'password'的键和加密后的密文即可.
+# 请注意：为了保证密码原文不会被泄露到网页中，文章的密码必须是通过'SHA256'加密的，这样就不会被破解.
+verifyPassword:
+  enable: false
+  promptMessage: 请输入访问本文章的密码
+  errorMessage: 密码错误，将返回主页！
+
+# busuanzi(http://busuanzi.ibruce.info/) website statistics
+# 不蒜子(http://busuanzi.ibruce.info/) 网站统计
+busuanziStatistics:
+  enable: true
+  totalTraffic: true # 总访问量
+  totalNumberOfvisitors: true # 总人次
+
+# Add google analytics configuration
+# 添加 Google Analytics 配置
+googleAnalytics:
+  enable: false
+  id:
+
+# Add baidu analytics configuration
+# 添加 baidu Analytics 配置
+baiduAnalytics:
+  enable: false
+  id:
+
+# 百度搜索资源平台提交链接
+baiduPush: true
+
+# The used front-end library can be replaced with the corresponding CDN address as needed,
+# If the specific version is not specified below, you can use the latest version.
+# 使用到的前端库，可按需替换成对应的CDN地址，如果下面未指定具体的版本号，使用最新的版本即可.
+libs:
+  css:
+    fontAwesome: https://cdn.bootcss.com/font-awesome/5.11.1/css/all.min.css # V5.11.1
+    materialize: https://cdn.bootcss.com/materialize/1.0.0/css/materialize.min.css # 1.0.0
+    aos: https://cdn.bootcss.com/aos/3.0.0-beta.6/aos.css
+    animate: https://cdn.bootcss.com/animate.css/3.5.1/animate.min.css # V3.5.1
+    lightgallery: https://cdn.bootcss.com/lightgallery/1.6.11/css/lightgallery.min.css # V1.6.11
+    aplayer: https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css
+    dplayer: https://cdn.bootcss.com/dplayer/1.25.0/DPlayer.min.css
+    gitalk: https://cdn.bootcss.com/gitalk/1.5.0/gitalk.css
+    jqcloud: https://cdn.bootcss.com/jqcloud/1.0.4/jqcloud.css
+    tocbot: https://cdn.bootcss.com/tocbot/4.8.1/tocbot.css
+  js:
+    jquery: https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js
+    materialize: https://cdn.bootcss.com/materialize/1.0.0/js/materialize.min.js # 1.0.0
+    masonry: https://cdn.bootcss.com/masonry/4.0.0/masonry.pkgd.min.js # v4.0.0
+    aos: https://cdn.bootcss.com/aos/3.0.0-beta.6/aos.js
+    scrollProgress: https://cdn.bootcss.com/scrollprogress/3.0.2/scrollProgress.min.js
+    lightgallery: https://cdn.bootcss.com/lightgallery/1.6.11/js/lightgallery-all.min.js # V1.6.11
+    clicklove: /libs/others/clicklove.js
+    busuanzi: http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+    aplayer: https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js
+    dplayer: https://cdn.bootcss.com/dplayer/1.25.0/DPlayer.min.js
+    crypto: https://cdn.bootcss.com/crypto-js/3.1.9-1/crypto-js.min.js
+    echarts: https://cdn.bootcss.com/echarts/4.3.0/echarts.min.js
+    gitalk: https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js
+    valine: https://unpkg.com/valine/dist/Valine.min.js # 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
+    jqcloud: https://cdn.bootcss.com/jqcloud/1.0.4/jqcloud-1.0.4.min.js
+    tocbot: https://cdn.bootcss.com/tocbot/4.8.1/tocbot.min.js
+    canvas_nest: /libs/background/canvas-nest.js
+    ribbon: /libs/background/ribbon.min.js
+    ribbonRefresh: /libs/background/ribbon-refresh.min.js
+    ribbon_dynamic: /libs/background/ribbon-dynamic.js
+    instantpage: /libs/instantpage/instantpage.js
+
+# The post featured images that needs to be displayed when there is no image.
+# 无文章特色图片时需要显示的文章特色图片.
+featureImages:
+- /medias/featureimages/0.jpg
+- https://api.ixiaowai.cn/gqapi/gqapi.php
+- https://i.loli.net/2020/02/10/h8o4eUqB6RHKLvm.jpg
+- https://s2.ax1x.com/2020/02/10/15UAt1.jpg
+- https://s2.ax1x.com/2020/02/10/15Ui79.jpg
+- https://s2.ax1x.com/2020/02/10/15UkkR.jpg
+- https://s2.ax1x.com/2020/02/10/15Um6O.jpg
+- https://s2.ax1x.com/2020/02/10/15UP0J.jpg
+- https://s2.ax1x.com/2020/02/10/15Ue1K.jpg
+- https://s2.ax1x.com/2020/02/10/15UKne.jpg
+- https://s2.ax1x.com/2020/02/10/15UQ7d.jpg
+- https://s2.ax1x.com/2020/02/10/15U1AA.jpg
+- https://s2.ax1x.com/2020/02/10/15U8ht.jpg
+- https://s2.ax1x.com/2020/02/10/15UY1f.jpg
+- https://s2.ax1x.com/2020/02/10/15UNjS.jpg
+
+
+# default configs that the default policy for every articles/posts
+# default 配置文章的默认转载规则
+
+# you can define reprint policy for a single article in the front-matter of the specific md file using this key: reprintPolicy
+# 您可以使用在文章md文件的 front-matter 中指定 reprintPolicy 来给单个文章配置转载规则
+
+# 可用的转载规则有（available reprint policies are）：
+# 这些转载规则的意义请参考(you can refer to this link FMI)：https://creativecommons.org/choose/?lang=zh
+# cc_by（知识共享署名 4.0 国际许可协议 Creative Commons Attribution-NoDerivatives 4.0 International License）
+# cc_by_nd（知识共享署名-禁止演绎 4.0 国际许可协议 Creative Commons Attribution-NoDerivatives 4.0 International License）
+# cc_by_sa（知识共享署名-相同方式共享 4.0 国际许可协议 Creative Commons Attribution-ShareAlike 4.0 International License）
+# cc_by_nc（知识共享署名-非商业性使用 4.0 国际许可协议 Creative Commons Attribution-NoDerivatives 4.0 International License）
+# cc_by_nc_nd（知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议 Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License）
+# cc_by_nc_sa（知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License）
+
+# cc0（CC0 1.0 通用 (CC0 1.0) 公共领域贡献 CC0 1.0 Universal (CC0 1.0) Public Domain Dedication） https://creativecommons.org/publicdomain/zero/1.0/deed.zh
+
+# noreprint（不允许转载 not allowed to reprint）
+# pay（付费转载 pay for reprinting）
+reprint:
+  enable: true # whether enable reprint section 是否启用“转载规则限定模块”
+  default: cc_by
+
+# DaoVoice online contact
+daovoice:
+  enable: false
+  app_id:
+
+# Tidio online contact
+tidio:
+  enable: false
+  public_key:
+
+#背景canvas-nest
+canvas_nest:
+  enable: true
+  color: 0,0,255 # 线条颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+  pointColor: 0,0,255 # 交点颜色, 默认: '0,0,0' ；三个数字分别为(R,G,B)，注意用,分割
+  opacity: 0.7 # 线条透明度（0~1）, 默认: 0.5
+  zIndex: -1 # 背景的 z-index 属性，css 属性用于控制所在层的位置, 默认: -1.
+  count: 99 # 线条的总数量, 默认: 99
+
+# 背景静止彩带.
+ribbon:
+  enable: false
+  size: 150 # 彩带大小, 默认: 90.
+  alpha: 0.6 # 彩带透明度 (0 ~ 1), 默认: 0.6.
+  zIndex: -1 # 背景的z-index属性，css属性用于控制所在层的位置, 默认: -1.
+  clickChange: false  # 设置是否每次点击都更换彩带.
+
+# 背景动态彩带.
+ribbon_dynamic:
+  enable: false
+
+# sharejs文章分享模块.
+# 支持顺序，可选项目为twitter, facebook, google, qq, qzone, wechat, weibo, douban, linkedin.
+sharejs:
+  enable: true
+  sites: twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin
+
+# addthis文章分享模块.
+addthis:
+  enable: false
+  pubid:  # 前往https://www.addthis.com/获取
+
+# 打字效果副标题.
+# 如果有符号 ‘ ，请在 ’ 前面加上 \
+subtitle:
+  enable: true
+  loop: true # 是否循环
+  showCursor: true # 是否显示光标
+  startDelay: 300 # 开始延迟
+  typeSpeed: 110 # 打字速度
+  backSpeed: 50 # 删除速度
+  sub1: 今天天气不错，有志者事竟成
+  sub2: Good days, where there is a will there is a way
+
+# 手机二级菜单.
+navMenu:
+  mleft: false # 二级侧栏子菜单是否对齐左边
+  bgColor: " " # 二级侧栏子菜单背景颜色,留空即为全局背景色
+
+# 网页预加载.
+instantpage:
+  enable: true
+
+# banner 是否每日切换.
+# 若为 false, 则 banner 默认为 /medias/banner/0.jpg
+banner:
+  enable: true
+
+#ICP备案信息尾部显示
+icp:
+  enable: false
+  url: # 备案链接
+  text: # 备案信息

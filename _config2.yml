@@ -1,0 +1,84 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site 这里的配置，哪项配置反映在哪里，可以参考我的博客
+title: xxx # 博客的名字，也称站点名称
+subtitle: xxx # 副标题
+description: xxx # 对站点的描述，搜索引擎会抓取，可以自定义
+author: xxx # 作者名字
+language: zh-Hans # 语言 简体中文
+timezone:  # 用默认的即可
+
+# URL 
+# 这项暂时不需要配置，绑定域名后，要创建 sitemap.xml 时再配置该项
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: # http://xxx.com
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+# 目录，不要修改
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing 
+# 文章布局、写作格式的定义，不修改
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format 
+# 日期 / 时间 格式，不要修改
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: MMM D YYYY
+time_format: H:mm:ss
+
+# Pagination 
+# 每页显示文章数，可以自定义
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions 
+# 配置站点所用主题和插件，这里将默认主题注释，修改为 next
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: next
+#theme: landscape
+
+# 头像
+# 注意：是 xxx.github.io/source 下的开始的相对路径，如果 source 文件夹下面没有 uploads 文件夹，那么新建一个。考虑到会博客中用很多图片，在 uploads 文件夹下请分好类，避免混乱
+avatar: /uploads/images/avatar.jpg
+
+# Deployment 
+# 本地博客部署到 github 上要配置这里
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git # 使用 Git 提交
+  repository: https://github.com/xxx/xxx.github.io.git # 就是存放博客的仓库地址
