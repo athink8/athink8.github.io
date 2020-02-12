@@ -1006,7 +1006,7 @@ article .article-tags .chip {
 	line-height: inherit;
 	position: absolute;
 	box-sizing: border-box;
-	z-index: 200;
+	z-index: 96;
 	background-color: #fff;
 	font-weight: 500;
 }
@@ -1925,8 +1925,8 @@ footer .copy-right {
 	display: none;
 	position: fixed;
 	right: 15px;
-	bottom: 15px;
-	padding-top: 15px;
+	bottom: 10%;
+	padding-top: 10px;
 	margin-bottom: 0;
 	z-index: 998;
 }
