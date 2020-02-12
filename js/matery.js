@@ -4,8 +4,8 @@ $(function () {
     /**
      * 添加文章卡片hover效果.
      */
-    let articleCardHover = function () {
-        let animateClass = 'animated pulse';
+    var articleCardHover = function () {
+        var animateClass = 'animated pulse';
         $('article .article').hover(function () {
 			 $(this).addClass('card-shadow');
             $(this).addClass(animateClass);
@@ -20,13 +20,13 @@ $(function () {
     $('.sidenav').sidenav();
 
     /* 修复文章卡片 div 的宽度. */
-    let fixPostCardWidth = function (srcId, targetId) {
-        let srcDiv = $('#' + srcId);
+    var fixPostCardWidth = function (srcId, targetId) {
+        var srcDiv = $('#' + srcId);
         if (srcDiv.length === 0) {
             return;
         }
 
-        let w = srcDiv.width();
+        var w = srcDiv.width();
         if (w >= 450) {
             w = w + 21;
         } else if (w >= 350 && w < 450) {
@@ -42,14 +42,14 @@ $(function () {
     /**
      * 修复footer部分的位置，使得在内容比较少时，footer也会在底部.
      */
-    let fixFooterPosition = function () {
+    var fixFooterPosition = function () {
         $('.content').css('min-height', window.innerHeight - 165);
     };
 
     /**
      * 修复样式.
      */
-    let fixStyles = function () {
+    var fixStyles = function () {
         fixPostCardWidth('navContainer');
         fixPostCardWidth('artDetail', 'prenext-posts');
         fixFooterPosition();
@@ -73,18 +73,18 @@ $(function () {
     });
 
     /*文章内容详情的一些初始化特性*/
-    let articleInit = function () {
+    var articleInit = function () {
         $('#articleContent a').attr('target', '_blank');
 
         $('#articleContent img').each(function () {
-            let imgPath = $(this).attr('src');
+            var imgPath = $(this).attr('src');
             $(this).wrap('<div class="img-item" data-src="' + imgPath + '" data-sub-html=".caption"></div>');
             // 图片添加阴影
             $(this).addClass("img-shadow img-margin");
             // 图片添加字幕
-            let alt = $(this).attr('alt');
-            let title = $(this).attr('title');
-            let captionText = "";
+            var alt = $(this).attr('alt');
+            var title = $(this).attr('title');
+            var captionText = "";
             // 如果alt为空，title来替
             if (alt === undefined || alt === "") {
                 if (title !== undefined && title !== "") {
@@ -95,9 +95,9 @@ $(function () {
             }
             // 字幕不空，添加之
             if (captionText !== "") {
-                let captionDiv = document.createElement('div');
+                var captionDiv = document.createElement('div');
                 captionDiv.className = 'caption';
-                let captionEle = document.createElement('b');
+                var captionEle = document.createElement('b');
                 captionEle.className = 'center-caption';
                 captionEle.innerText = captionText;
                 captionDiv.appendChild(captionEle);
@@ -129,18 +129,18 @@ $(function () {
     });
 
     /*监听滚动条位置*/
-    let $nav = $('#headNav');
-    let $backTop = $('.top-scroll');
+    var $nav = $('#headNav');
+    var $backTop = $('.top-scroll');
     // 当页面处于文章中部的时候刷新页面，因为此时无滚动，所以需要判断位置,给导航加上绿色。
     showOrHideNavBg($(window).scrollTop());
     $(window).scroll(function () {
         /* 回到顶部按钮根据滚动条的位置的显示和隐藏.*/
-        let scroll = $(window).scrollTop();
+        var scroll = $(window).scrollTop();
         showOrHideNavBg(scroll);
     });
 
     function showOrHideNavBg(position) {
-        let showPosition = 100;
+        var showPosition = 100;
         if (position < showPosition) {
             $nav.addClass('nav-transparent');
             $backTop.slideUp(300);
