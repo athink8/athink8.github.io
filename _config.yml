@@ -15,11 +15,15 @@ timezone: ''
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://blog.onfree.cn
 root: /
-permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink.html
 permalink_defaults: 
 pretty_urls:
-  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: false # Set to false to remove trailing '.html' from permalinks
+  #trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  #trailing_html: false # Set to false to remove trailing '.html' from permalinks
+
+abbrlink:
+ alg: crc32 #算法： crc16(default) and crc32
+ rep: hex   #进制： dec(default) and hex: dec #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex为十六进制  
 
 # Directory
 source_dir: source
@@ -29,7 +33,10 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: README.md
+skip_render: 
+ - README.md
+ #- 'mylove/**'
+ 
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -94,8 +101,10 @@ theme: hexo-theme-matery-master
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/athink8/athink8.github.io.git
+  repo: https://github.com/athink8/athink8.github.io.git,master
   branch: master
+  #github: https://github.com/athink8/athink8.github.io.git,master
+  #coding: git@e.coding.net:athink8/athink8.git,master
   
 #代码高亮
 highlight:
@@ -137,3 +146,14 @@ admin:
  secret: hello athink
  #deployCommand: './admin_script/hexo-generate.sh'
  expire: 60*1
+ 
+ #链跳转插件
+ hexo_external_link:
+  enable: true
+  enable_base64_encode: true
+  url_param_name: '' #u
+  html_file_name: 'go.html'
+  target_blank: true
+  link_rel: 'external nofollow noopener noreferrer'
+  domain: blog.onfree.cn' # 如果开启了防盗链
+  safety_chain: true

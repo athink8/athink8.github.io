@@ -146,16 +146,18 @@ gulp.task('compress', function(cb) {
 	runSequence(['compressHtml', 'compressCss', 'compressJs'], cb);
 });
 
-// 执行顺序： 清除public目录 -> 产生原始博客内容 -> 执行压缩混淆 -> 部署到服务器
-gulp.task('build', function(cb) {
-	runSequence.options.ignoreUndefinedTasks = true;
-	runSequence('clean', 'generate', 'compress', 'deploy', cb);
-});
-
 // 默认任务 compressImage
 gulp.task('default',
 	gulp.series('clean', 'generate',
 		gulp.parallel('compressHtml', 'compressCss', 'compressJs')
 	)
 );
+
+// 执行顺序： 清除public目录 -> 产生原始博客内容 -> 执行压缩混淆 -> 部署到服务器
+gulp.task('build', function(cb) {
+	runSequence.options.ignoreUndefinedTasks = true;
+	runSequence('clean', 'generate', 'compress', 'deploy', cb);
+});
+
+
 //Gulp4最大的一个改变就是gulp.task函数现在只支持两个参数，分别是任务名和运行任务的函数

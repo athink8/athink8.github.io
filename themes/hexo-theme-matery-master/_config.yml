@@ -20,8 +20,15 @@ menu:
     url: /friends
     icon: fas fa-address-book
   关于:
-    url: /about
+    url: /
     icon: fas fa-user-circle
+    children:
+      - name: 关于我
+        url: /about
+        icon: fas fa-user-circle
+      - name: mylove    #这是新添加的，在原有配置基础上添加
+        url: /mylove
+        icon: fa fa-heart
          
   # 二级菜单写法如下
   #Medias:
@@ -86,12 +93,13 @@ music:
   fixed: true # 开启吸底模式
   autoplay: false # 是否自动播放
   theme: '#C4C4C4'
-  loop: 'all' # 音频循环播放, 可选值: 'all', 'one', 'none'
+  loop: all # 音频循环播放, 可选值: 'all', 'one', 'none'
   order: 'random' # 音频循环顺序, 可选值: 'list', 'random'
   preload: 'auto' # 预加载，可选值: 'none', 'metadata', 'auto'
   volume: 0.9 # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
   listFolded: true # 列表默认折叠
   listMaxHeight: 600px #列表最大高度
+  mini: true
 
 # Whether to display the videos.
 # 是否在首页显示视频.
@@ -164,7 +172,7 @@ code:
 # 是否激活文章末尾的打赏功能，默认激活（你替换为的你自己的微信、支付宝二维码图片、或者使用网络图片也可以）.
 reward:
   enable: true
-  title: 今天天气不错,请我喝个茶呗？
+  title: 今天天气不错,请我喝茶呗？
   wechat: https://s2.ax1x.com/2020/02/10/1INuNR.th.png
   alipay: https://s2.ax1x.com/2020/02/10/1INK41.th.jpg
 
@@ -381,7 +389,7 @@ libs:
     aos: https://cdn.bootcss.com/aos/3.0.0-beta.6/aos.css
     animate: https://cdn.bootcss.com/animate.css/3.5.1/animate.min.css # V3.5.1
     lightgallery: https://cdn.bootcss.com/lightgallery/1.6.11/css/lightgallery.min.css # V1.6.11
-    aplayer: https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css
+    aplayer: /libs/aplayer/APlayer.min.css
     dplayer: https://cdn.bootcss.com/dplayer/1.25.0/DPlayer.min.css
     gitalk: https://cdn.bootcss.com/gitalk/1.5.0/gitalk.css
     jqcloud: https://cdn.bootcss.com/jqcloud/1.0.4/jqcloud.css
@@ -395,19 +403,20 @@ libs:
     lightgallery: https://cdn.bootcss.com/lightgallery/1.6.11/js/lightgallery-all.min.js # V1.6.11
     clicklove: /libs/others/clicklove.js
     busuanzi: http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
-    aplayer: https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js
+    aplayer: /libs/aplayer/APlayer.min.js
     dplayer: https://cdn.bootcss.com/dplayer/1.25.0/DPlayer.min.js
     crypto: https://cdn.bootcss.com/crypto-js/3.1.9-1/crypto-js.min.js
     echarts: https://cdn.bootcss.com/echarts/4.3.0/echarts.min.js
     gitalk: https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js
-    valine: https://unpkg.com/valine/dist/Valine.min.js # 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
+    valine: /libs/valine/Valine.min.js # 若想保持最新版，请替换为 https://unpkg.com/valine/dist/Valine.min.js  默认为 /libs/valine/Valine.min.js
     jqcloud: https://cdn.bootcss.com/jqcloud/1.0.4/jqcloud-1.0.4.min.js
     tocbot: https://cdn.bootcss.com/tocbot/4.8.1/tocbot.min.js
     canvas_nest: /libs/background/canvas-nest.js
-    ribbon: /libs/background/ribbon.min.js
-    ribbonRefresh: /libs/background/ribbon-refresh.min.js
-    ribbon_dynamic: /libs/background/ribbon-dynamic.js
+    #ribbon: /libs/background/ribbon.min.js
+    #ribbonRefresh: /libs/background/ribbon-refresh.min.js
+    #ribbon_dynamic: /libs/background/ribbon-dynamic.js
     instantpage: /libs/instantpage/instantpage.js
+    meting: /libs/Meting/Meting.min.js
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
@@ -461,7 +470,7 @@ daovoice:
 tidio:
   enable: false
   public_key:
-
+  
 #背景canvas-nest
 canvas_nest:
   enable: true

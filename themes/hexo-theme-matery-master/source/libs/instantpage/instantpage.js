@@ -1,8 +1,8 @@
 /*! instant.page v2.0.0 - (C) 2019 Alexandre Dieulot - https://instant.page/license */
 
-let urlToPreload
-let mouseoverTimer
-let lastTouchTimestamp
+var urlToPreload
+var mouseoverTimer
+var lastTouchTimestamp
 
 const prefetcher = document.createElement('link')
 const isSupported = prefetcher.relList && prefetcher.relList.supports && prefetcher.relList.supports('prefetch')
@@ -11,9 +11,9 @@ const allowQueryString = 'instantAllowQueryString' in document.body.dataset
 const allowExternalLinks = 'instantAllowExternalLinks' in document.body.dataset
 const useWhitelist = 'instantWhitelist' in document.body.dataset
 
-let delayOnHover = 65
-let useMousedown = false
-let useMousedownOnly = false
+var delayOnHover = 65
+var useMousedown = false
+var useMousedownOnly = false
 if ('instantIntensity' in document.body.dataset) {
     if (document.body.dataset.instantIntensity.substr(0, 'mousedown'.length) == 'mousedown') {
         useMousedown = true

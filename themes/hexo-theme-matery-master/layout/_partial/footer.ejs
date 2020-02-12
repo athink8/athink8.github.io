@@ -6,9 +6,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year"><%- theme.time.year %></span>
-            <a href="<%- config.url %>" target="_blank"><%- config.author %></a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <a href="<%- config.url %>" target="_blank">@<%- config.author %></a>
             <br>
             <% if (theme.postInfo.totalCount) { %>
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
@@ -20,13 +18,13 @@
             <% } %>
             <% if (theme.busuanziStatistics && theme.busuanziStatistics.totalTraffic) { %>
             <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                <i class="far fa-eye"></i>&nbsp;访问量:&nbsp;<span id="busuanzi_value_site_pv"
                     class="white-color"></span>&nbsp;次
             </span>
             <% } %>
             <% if (theme.busuanziStatistics && theme.busuanziStatistics.totalNumberOfvisitors) { %>
             <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                --&nbsp;<i class="fas fa-users"></i>&nbsp;访问人数:&nbsp;<span id="busuanzi_value_site_uv"
                     class="white-color"></span>&nbsp;人
             </span>
             <% } %>
