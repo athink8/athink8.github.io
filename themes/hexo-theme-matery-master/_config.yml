@@ -66,7 +66,7 @@ cover:
   showPrevNext: true # 是否显示左右切换按钮. Whether to display the left and right toggle buttons.
   showIndicators: true # 是否显示指示器. # Whether to display the indicators
   autoLoop: true # 是否自动轮播. Whether it is automatically rotated.
-  duration: 100 # 切换延迟时间. Switching delay time.
+  duration: 80 # 切换延迟时间. Switching delay time.
   intervalTime: 9000 # 自动切换下一张的间隔时间. Automatically switch the interval of the next one.
   useConfig: false # 是否使用配置文件, 在 _data/covers.json 下配置推荐文章, false则使用主题在文章中的配置 cover coverImg
   # useConfig 使用方式: 将主题 hexo-theme-matery/source/_data/covers.json 移动到 my-blog/source/_data/下修改配置即可
@@ -402,7 +402,7 @@ libs:
     scrollProgress: https://cdn.bootcss.com/scrollprogress/3.0.2/scrollProgress.min.js
     lightgallery: https://cdn.bootcss.com/lightgallery/1.6.11/js/lightgallery-all.min.js # V1.6.11
     clicklove: /libs/others/clicklove.js
-    busuanzi: http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+    busuanzi:  /libs/busuanzi/busuanzi.pure.mini.js
     aplayer: /libs/aplayer/APlayer.min.js
     dplayer: https://cdn.bootcss.com/dplayer/1.25.0/DPlayer.min.js
     crypto: https://cdn.bootcss.com/crypto-js/3.1.9-1/crypto-js.min.js
@@ -417,6 +417,7 @@ libs:
     #ribbon_dynamic: /libs/background/ribbon-dynamic.js
     instantpage: /libs/instantpage/instantpage.js
     meting: /libs/Meting/Meting.min.js
+
 
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
@@ -534,3 +535,9 @@ icp:
   enable: false
   url: # 备案链接
   text: # 备案信息
+  
+#使用jsDelivr cdn加速静态
+jsDelivr:
+  enable: true
+  url: https://cdn.jsdelivr.net/gh/athink8/athink8.github.io 
+  

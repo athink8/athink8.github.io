@@ -16,19 +16,37 @@
     <script src="<%- theme.libs.js.aos %>"></script>
     <script src="<%- theme.libs.js.scrollProgress %>"></script>
     <script src="<%- theme.libs.js.lightgallery %>"></script>
-    <script src="/js/matery.js"></script>
 	
-	<script src="/js/add1.js"></script>
-	<!-- <script src="/libs/others/snow.js"></script> -->
-
+	<!-- 是否开启jsDelivr 加速 -->
+	<% if (theme.jsDelivr.enable) { %>
+		<script src="<%- theme.jsDelivr.url %>/js/matery.js"></script>
+		<script src="<%- theme.jsDelivr.url %>/js/add1.js"></script>
+	<% } else { %>
+		<script src="/js/matery.js"></script>
+		<script src="/js/add1.js"></script>
+	<%}%>
+	
+	<!-- <script src="<%- theme.jsDelivr.url %>/libs/others/snow.js"></script> -->
+		
     <%- partial('_partial/google-analytics') %>
     <%- partial('_partial/baidu-analytics') %>
     <%- partial('_partial/baidu-push') %>
     <% if (theme.clicklove.enable) { %>
-    <script src="<%- theme.libs.js.clicklove %>" async="async"></script>
+		<% if (theme.jsDelivr.enable) { %>
+			<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.clicklove %>" 
+					async="async"></script>
+		<% } else { %>
+			<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.clicklove %>"
+						async="async"></script>
+		<%}%>
     <% } %>
+		
     <% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
-    <script async src="<%- theme.libs.js.busuanzi %>"></script>
+		<% if (theme.jsDelivr.enable) { %>
+			<script async src="<%- theme.jsDelivr.url %><%- theme.libs.js.busuanzi %>"></script>
+		<% } else { %>
+			<script async src="<%- theme.libs.js.busuanzi %>"></script>
+		<%}%>
     <% } %>
 
     <% if (theme.tidio.enable) { %>
@@ -86,7 +104,7 @@
     <script type="text/javascript" color="<%- theme.canvas_nest.color %>"
         pointColor="<%- theme.canvas_nest.pointColor %>" opacity='<%- theme.canvas_nest.opacity %>'
         zIndex="<%- theme.canvas_nest.zIndex %>" count="<%- theme.canvas_nest.count %>"
-        src="<%- theme.libs.js.canvas_nest %>"></script>
+        src="<%- theme.jsDelivr.url %><%- theme.libs.js.canvas_nest %>"></script>
     <% } %>
 
     <% if (theme.ribbon.enable) { %>
@@ -100,7 +118,12 @@
     <% } %>
     
     <% if (theme.instantpage.enable) { %>
-    <script src="<%- theme.libs.js.instantpage %>" type="module"></script>
+		<!-- 是否开启jsDelivr 加速 -->
+		<% if (theme.jsDelivr.enable) { %>
+			<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.instantpage %>" type="module"></script>
+		<% } else { %>
+			<script src="<%- theme.libs.js.instantpage %>" type="module"></script>
+		<%}%>
     <% } %>
 	
 

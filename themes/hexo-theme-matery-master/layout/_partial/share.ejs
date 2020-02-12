@@ -4,7 +4,13 @@
     
     <% if (theme.sharejs.enable) { %>
     <div class="social-share" data-sites="<%- theme.sharejs.sites %>" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
+    <!-- 是否开启jsDelivr 加速 -->
+    <% if (theme.jsDelivr.enable) { %>
+    	<script src="/libs/share/js/social-share.min.js"></script>
+    <% } else { %>
+    	<script src="/libs/share/js/social-share.min.js"></script>
+    <%}%>
+	
     <% } %>
 
     <% if (theme.addthis.enable) { %>

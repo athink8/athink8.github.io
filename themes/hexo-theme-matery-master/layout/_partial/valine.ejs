@@ -243,8 +243,14 @@
     </div>
 </div>
 
-<script src="<%- theme.libs.js.valine %>"></script>
-<script src="/libs/valine/av-min.js"></script>
+	<!-- 是否开启jsDelivr 加速 -->
+	<% if (theme.jsDelivr.enable) { %>
+		<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.valine %>"></script>
+		<script src="<%- theme.jsDelivr.url %>/libs/valine/av-min.js"></script>
+	<% } else { %>
+		<script src="<%- theme.libs.js.valine %>"></script>
+		<script src="<%- theme.jsDelivr.url %>/libs/valine/av-min.js"></script>
+	<%}%>
 
 <script>
     new Valine({

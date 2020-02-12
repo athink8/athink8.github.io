@@ -1,4 +1,14 @@
-<link rel="stylesheet" href="<%- theme.libs.css.aplayer %>">
+<!-- 是否开启jsDelivr 加速 -->
+<% if (theme.jsDelivr.enable) { %>
+	<link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- theme.libs.css.aplayer %>">
+	<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.aplayer %>"></script>
+	<script src="<%- theme.jsDelivr.url %><%- theme.libs.js.meting %>"></script>
+<% } else { %>
+	<link rel="stylesheet" href="<%- theme.libs.css.aplayer %>">
+	<script src="<%- theme.libs.js.aplayer %>"></script>
+	<script src="<%- theme.libs.js.meting %>"></script>
+<%}%>	
+
 <div class="<% if(!theme.music.fixed) { %>music-player<% } %>">
     <% if (!theme.music.fixed && theme.music.title.enable) { %>
         <div class="title center-align">
@@ -24,6 +34,4 @@
     </div>
 </div>
 
-<script src="<%- theme.libs.js.aplayer %>"></script>
-<script src="<%- theme.libs.js.meting %>"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script> -->

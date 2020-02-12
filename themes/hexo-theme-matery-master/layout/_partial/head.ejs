@@ -83,9 +83,16 @@
     <link rel="stylesheet" type="text/css" href="<%- theme.libs.css.aos %>">
     <link rel="stylesheet" type="text/css" href="<%- theme.libs.css.animate %>">
     <link rel="stylesheet" type="text/css" href="<%- theme.libs.css.lightgallery %>">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
     
+	<!-- 是否开启jsDelivr 加速 -->
+	<% if (theme.jsDelivr.enable) { %>
+	    <link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %>/css/matery.css">
+	    <link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %>/css/my.css">
+	<% } else { %>
+		<link rel="stylesheet" type="text/css" href="/css/matery.css">
+		<link rel="stylesheet" type="text/css" href="/css/my.css">
+	<%}%>
+ 
     <script src="<%- theme.libs.js.jquery %>"></script>
     
 </head>

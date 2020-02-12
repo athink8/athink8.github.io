@@ -10,9 +10,15 @@
     </div>
 </div>
 
-<script src="/js/search.js"></script>
+<!-- 是否开启jsDelivr 加速 -->
+<% if (theme.jsDelivr.enable) { %>
+	<script src="<%- theme.jsDelivr.url %>/js/search.js"></script>
+<% } else { %>
+	<script src="/js/search.js"></script>
+<%}%>
+	
 <script type="text/javascript">
 $(function () {
-    searchFunc("<%= config.root %>" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc("<%- theme.jsDelivr.url %><%= config.root %>" + "search.xml", 'searchInput', 'searchResult');
 });
 </script>
