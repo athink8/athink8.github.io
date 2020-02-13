@@ -281,10 +281,10 @@ myGallery:
     - https://cdn.mom1.cn/?mom=302&name=4
     - https://cdn.mom1.cn/?mom=302&name=5
     - https://cdn.mom1.cn/?mom=302&name=6
+    - https://cdn.mom1.cn/?mom=302&name=7
     - https://acg.toubiec.cn/random 
     - https://api.ixiaowai.cn/gqapi/gqapi.php
     - https://api.ixiaowai.cn/api/api.php
-    - http://www.dmoe.cc/random.php
     
     #- /medias/featureimages/0.jpg
 
@@ -540,6 +540,6 @@ icp:
   
 #使用jsDelivr cdn加速静态
 jsDelivr:
-  enable: false #本地开发测试时关闭
+  enable: true #本地开发测试时关闭
   url: https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest
   
