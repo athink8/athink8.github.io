@@ -246,6 +246,7 @@ myProjects:
 # 在“关于”页面配置"我的技能"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 mySkills:
   enable: true
+  otherskills: false 
   data:
     Java:
       background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
@@ -539,6 +540,6 @@ icp:
   
 #使用jsDelivr cdn加速静态
 jsDelivr:
-  enable: true #本地开发测试时关闭
+  enable: false #本地开发测试时关闭
   url: https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest
   
