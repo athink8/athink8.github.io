@@ -101,6 +101,7 @@ music:
   listMaxHeight: 600px #列表最大高度
   mini: true
 
+
 # Whether to display the videos.
 # 是否在首页显示视频.
 video:
@@ -276,13 +277,13 @@ myGallery:
     - https://api.paugram.com/wallpaper/?source=gt
     - https://cdn.mom1.cn/?mom=302&name=1
     - https://cdn.mom1.cn/?mom=302&name=2
-    - http://api.mtyqx.cn/api/random.php
-    - http://www.dmoe.cc/random.php
+    - https://cdn.mom1.cn/?mom=302&name=4
+    - https://cdn.mom1.cn/?mom=302&name=5
+    - https://cdn.mom1.cn/?mom=302&name=6
     - https://acg.toubiec.cn/random 
     - https://api.ixiaowai.cn/gqapi/gqapi.php
     - https://api.ixiaowai.cn/api/api.php
     - http://www.dmoe.cc/random.php
-    - https://acg.toubiec.cn/random?
     
     #- /medias/featureimages/0.jpg
 
@@ -538,6 +539,6 @@ icp:
   
 #使用jsDelivr cdn加速静态
 jsDelivr:
-  enable: true
-  url: https://cdn.jsdelivr.net/gh/athink8/athink8.github.io 
+  enable: true #本地开发测试时关闭
+  url: https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest
   
