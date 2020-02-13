@@ -74,13 +74,15 @@
                 setInterval(siteTime, 1000);
             </script>
             <% } %>
-            <br>
+            
             <% if (theme.icp.enable) { %>
             <span id="icp"><img src="https://s2.ax1x.com/2020/02/12/1beiqI.png" style="vertical-align: text-bottom;" />
                 <a href="<%- theme.icp.url %>" target="_blank"><%- theme.icp.text %></a>
             </span>
             <% } %>
-        </div>
+				
+        <br>
+		</div>
         <div class="col s12 m4 l4 social-link <%- socialClass %>"><%- partial('_partial/social-link') %></div>
     </div>
 </footer>
