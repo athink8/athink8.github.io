@@ -56,31 +56,6 @@
     </entry>
     
     
-    
-    <entry>
-      <title>你好 hexo</title>
-      <link href="/za-wen/2da5.html"/>
-      <url>/za-wen/2da5.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="你好-hexo"><a href="#你好-hexo" class="headerlink" title="你好 hexo"></a>你好 hexo</h2><blockquote><p>今天天气不错！！</p></blockquote><hr><h3 id="1-加油自己"><a href="#1-加油自己" class="headerlink" title="1.  加油自己"></a>1.  加油自己</h3><ul><li>今天天气不错！！</li><li>明天的你也要努力哦！</li><li>请一直加油下去哦！</li></ul><h3 id="2-一言语录"><a href="#2-一言语录" class="headerlink" title="2.  一言语录"></a>2.  一言语录</h3><blockquote><p>肌肤冰凉，寂静而干燥的空气，洗过的床单让气氛变得格外柔和，那个残忍的男子，说要让我再做一次美梦</p></blockquote><blockquote><p>正因为有了音乐，才有了相遇的瞬间，有了相会的感动，有了相逢的人们，有了邂逅的思念。</p></blockquote><blockquote><p>或许前路永夜，即便如此我也要前进，因为星光即使微弱也会为我照亮前路</p></blockquote><blockquote><p>仿佛要消失般的羸弱，但是，仍旧拼命绽放着光芒。怦怦，怦怦，如同心跳一般，这就是生命之灯</p></blockquote><blockquote><p>你的所言所行，全都闪烁着光芒，太过刺目，于是我闭上双眼，但内心还是无法停止对你的憧憬</p></blockquote><blockquote><p>车轮的金属音，不规则的足音，舌尖上面残留的淡淡红茶苦涩。平凡而无谓的对话，随处可见的风景。即使如此，却还是记得那么明晰。这一定，一定，是身处夏夜的错</p></blockquote><blockquote><p>四月是你的谎言，我知道…是谎言就一定会有被揭穿的时候。</p></blockquote><blockquote><p>继续踏上旅途，在没有你的春天</p></blockquote><blockquote><p>但是在喜欢和不讨厌之间，可是相隔了数亿光年都不止的距离啊！</p></blockquote><blockquote><p>英雄意味着强大，英雄意味着孤独，最后一幕一定是英雄渐行渐远，我的英雄也是那样的存在</p></blockquote><h3 id="3-未来可期"><a href="#3-未来可期" class="headerlink" title="3.未来可期"></a>3.未来可期</h3><pre class=" language-java"><code class="language-java">system<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"未来的你会感谢现在努力的你！加油！"</span><span class="token punctuation">)</span></code></pre><p><a href="https://imgchr.com/i/1vDjL8" target="_blank" rel="noopener"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s2.ax1x.com/2020/02/15/1vDjL8.md.jpg" alt="1vDjL8.md.jpg"></a></p><hr>]]></content>
-      
-      
-      <categories>
-          
-          <category> 杂文 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 测试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
   
   
 </search>
