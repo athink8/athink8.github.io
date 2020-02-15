@@ -585,12 +585,15 @@
 </blockquote>
 <h4 id="3-自定义Js、Css等文件加速"><a href="#3-自定义Js、Css等文件加速" class="headerlink" title="3.  自定义Js、Css等文件加速"></a>3.  自定义Js、Css等文件加速</h4><p>​    使用GitHub+<a href="http://www.jsdelivr.com/" target="_blank" rel="noopener">jsdelivr </a>的方式加速，jsdelivr 可以直接通过引用 Github 的资源，所有用来做CDN加速也不错;</p>
 <p>使用方法：直接引用就行，如：<code>https://cdn.jsdelivr.net/gh/用户名/仓库名/文件</code>。</p>
-<p>如我的用户名为：athink8 ; 仓库名：athink8.github.io ；想引用的文件：/libs/others/clicklove.js</p>
-<p>那引用链接为：<code>https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/libs/others/clicklove.js</code></p>
+<p>如我的用户名为：athink8 ; 仓库名：myGithub.；想引用的文件：/libs/others/clicklove.js</p>
+<p>那引用链接为：</p>
+<p><code>https://cdn.jsdelivr.net/gh</code>/</p>
+<p>​    + <code>athink8/myGithub/libs/others/clicklove.js</code></p>
 <blockquote>
 <p>防坑指南：正常来说你需要GitHub打包才可以标识访问,虽然偷工减料，但是有时候会出现资源未更新的情况，</p>
 <p>​    正确的做法是 加上<code>@latest</code> 这样就可以依然不打包使用最新提交的资源了。</p>
-<p>​    如：<code>https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/others/clicklove.js</code></p>
+<p>​    如:<code>https://cdn.jsdelivr.net/gh/</code></p>
+<p>​    + <code>athink8/myGithub@latest/libs/others/clicklove.js</code></p>
 </blockquote>
 <h4 id="4-图片资源处理"><a href="#4-图片资源处理" class="headerlink" title="4. 图片资源处理"></a>4. 图片资源处理</h4><p>​    图片一般都挺大的，为了加快访问速度当然需要做些变动才行呢。</p>
 <p>​    尽量不使用本地图片，而改成使用线上<code>图床</code>。</p>
