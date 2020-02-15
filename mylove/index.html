@@ -352,6 +352,19 @@
 </header>
 
     
+	<script src="https://cdn.bootcss.com/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+	<script>
+		(function() {
+			let pwd = '0b35b06a22779418f775a804f36485f7bc978071d1709ad263a68f4f18117b11';
+			if (pwd && pwd.length > 0) {
+				if (pwd !== CryptoJS.SHA256(prompt('请输入密码')).toString(CryptoJS.enc.Hex)) {
+					alert('密码错误，将返回主页！');
+					location.href = '/';
+				}
+			}
+		})();
+	</script>
+
 	
 <div class="bg-cover pd-header about-cover">
     <div class="container">
