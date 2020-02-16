@@ -357,8 +357,8 @@
     (function() {
         let pwd = '';
         if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('请输入密码')).toString(CryptoJS.enc.Hex)) {
-                alert('密码错误，将返回主页！');
+            if (pwd !== CryptoJS.SHA256(prompt('请输入暗号')).toString(CryptoJS.enc.Hex)) {
+                alert('暗号错误，将返回主页！');
                 location.href = '/';
             }
         }
