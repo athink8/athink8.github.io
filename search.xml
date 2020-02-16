@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>JAVA反射的整理和理解</title>
+      <link href="/posts/33aa4888.html"/>
+      <url>/posts/33aa4888.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="JAVA反射"><a href="#JAVA反射" class="headerlink" title="JAVA反射"></a>JAVA反射</h2><blockquote><p> <code>星星在你的头顶上闪耀着，与你交互诉说的话语，一句一句地，如同星点般翩然落至眼前</code></p></blockquote><hr><h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><blockquote><p>  JAVA反射机制是在运行状态中.<br>对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性.</p></blockquote><blockquote><p>我们创建的每一个类也都是对象，即类本身是java.lang.Class类的实例对象。这个实例对象称之为类对象，也就是Class对象,或者类类型。</p></blockquote><h3 id="二、方法："><a href="#二、方法：" class="headerlink" title="二、方法："></a>二、方法：</h3><h4 id="1-如何获取-Class文件对象"><a href="#1-如何获取-Class文件对象" class="headerlink" title="1.如何获取.Class文件对象"></a>1.如何获取.Class文件对象</h4><pre><code>a.  通过Object类 getClass()方法获取 Class对象b. 通过类名.class 方式 获取 Class对象c.  通过反射的方式, Class.forName(String classname) 获取Class对象public static Class&lt;?&gt; forName(String className)throws ClassNotFoundException返回与带有给定字符串名的类或接口相关联的 Class 对象</code></pre><h4 id="2-通过反射，获取类中的构造方法，并完成对象的创建"><a href="#2-通过反射，获取类中的构造方法，并完成对象的创建" class="headerlink" title="2.通过反射，获取类中的构造方法，并完成对象的创建"></a>2.通过反射，获取类中的构造方法，并完成对象的创建</h4><ul><li><p>获取指定的构造方法</p><p>  public Constructor<T> getConstructor(Class&lt;?&gt;… parameterTypes)</p></li><li><p>获取指定的public修饰的构造方法</p><p>  public Constructor<T> getDeclaredConstructor(Class&lt;?&gt;… parameterTypes)</p></li><li><p>获取指定的构造方法，包含私有的</p><p>  public Constructor<T> getConstructor(Class&lt;?&gt;… parameterTypes)</p></li><li><p>获取所有的构造方法</p><p>  public Constructor<?>[] getConstructors() 获取所有的public 修饰的构造方法  public Constructor<?>[] getDeclaredConstructors() 获取所有的构造方法，包含私有的</p></li></ul><h4 id="3-通过反射，-获取类中的构造方法，并完成对象的创建"><a href="#3-通过反射，-获取类中的构造方法，并完成对象的创建" class="headerlink" title="3.通过反射， 获取类中的构造方法，并完成对象的创建"></a>3.通过反射， 获取类中的构造方法，并完成对象的创建</h4><pre><code>步骤：a.获取字节码文件对象b.通过字节码文件对象 ，获取到指定的构造方法    getConstructor(参数);c.通过构造方法，创建对象    public T newInstance(Object... initargs)</code></pre><h4 id="4-私有构造方法，创建对象"><a href="#4-私有构造方法，创建对象" class="headerlink" title="4.私有构造方法，创建对象"></a>4.私有构造方法，创建对象</h4><pre><code>a.获取字节码文件对象b.通过字节码文件对象 ，获取到指定的构造方法    getDeclaredConstructor (参数);c.暴力访问     con.setAccessible(true);d.通过构造方法，创建对象     public T newInstance(Object... initargs)</code></pre><h4 id="5-通过反射，获取Class文件中的方法"><a href="#5-通过反射，获取Class文件中的方法" class="headerlink" title="5.通过反射，获取Class文件中的方法"></a>5.通过反射，获取Class文件中的方法</h4><ul><li><p>获取指定的方法</p><p>  public Method getMethod(String name, Class&lt;?&gt;… parameterTypes)</p></li><li><p>获取指定的public方法</p><p>  public Method getDeclaredMethod(String name, Class&lt;?&gt;… parameterTypes)</p></li><li><p>获取指定的任意方法，包含私有的</p><p>  获取所有的方法:<br>  public Method[] getMethods()</p><p>  获取本类与父类中所有public 修饰的方法:<br>  public Method[] getDeclaredMethods()获取本类中包含私有的所有的方法</p></li></ul><blockquote><p>// 数组表示：new Class[]{String.class, String.class}</p></blockquote><h4 id="6-通过反射，调用方法"><a href="#6-通过反射，调用方法" class="headerlink" title="6.通过反射，调用方法"></a>6.通过反射，调用方法</h4><pre><code>步骤：a.获取Class对象b.构造方法，创建对象c.取指定的public方法d.行方法public Object invoke(Object obj, Object... args)</code></pre><h4 id="7-私有方法的调用："><a href="#7-私有方法的调用：" class="headerlink" title="7.私有方法的调用："></a>7.私有方法的调用：</h4><pre><code>a，获取Class对象b,获取构造方法，创建对象c,获取指定的private方法d,开启暴力访问m5.setAccessible(true);e,执行方法public Object invoke(Object obj, Object... args)</code></pre><h4 id="8-通过反射，获取成员变量"><a href="#8-通过反射，获取成员变量" class="headerlink" title="8.通过反射，获取成员变量"></a>8.通过反射，获取成员变量</h4><ul><li><p>获取指定的成员变量</p><p>   public Field getField(String name) </p></li><li><p>获取public修饰的成员变量</p><p>  public Field getDeclaredField(String name)</p></li><li><p>获取任意的成员变量，包含私有</p><p>  public Field[] getFields() </p></li><li><p>获取所有public修饰的成员变量</p><p>  public Field[] getDeclaredFields()</p></li></ul><h4 id="9-通过反射，获取成员-变量，并赋值使用"><a href="#9-通过反射，获取成员-变量，并赋值使用" class="headerlink" title="9.通过反射，获取成员 变量，并赋值使用"></a>9.通过反射，获取成员 变量，并赋值使用</h4><pre><code>步骤：a. 获取字节码文件对象b. 获取构造方法，创建对象c. 获取指定的成员变量d. 对成员变量赋值获取值操作public void set(Object obj, Object value) // 赋值public Object get(Object obj) // 获取值</code></pre><h4 id="10-私有成员变量的使用"><a href="#10-私有成员变量的使用" class="headerlink" title="10.私有成员变量的使用"></a>10.私有成员变量的使用</h4><pre><code>步骤：a. 获取字节码文件对象b. 获取构造方法，创建对象c. 获取指定的成员变量d. 开启暴力访问e. 对成员变量赋值获取值操作public void set(Object obj, Object value) //赋值public Object get(Object obj) //获取值</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> 反射 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>加速博客网站的建议细节</title>
       <link href="/posts/489a4cf4.html"/>
       <url>/posts/489a4cf4.html</url>
