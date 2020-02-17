@@ -64,23 +64,35 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/tags" class="waves-effect waves-light">
+    <a href="" class="waves-effect waves-light">
+
       
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>标签</span>
+      <span>统计</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
+    <ul class="sub-nav menus_item_child ">
       
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      <li>
+        <a href="/tags">
+          
+          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>标签</span>
+        </a>
+      </li>
       
-      <span>分类</span>
-    </a>
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>分类</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -88,7 +100,7 @@
     
     <a href="/archives" class="waves-effect waves-light">
       
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      <i class="fa fa-calendar" style="zoom: 0.6;"></i>
       
       <span>时光轴</span>
     </a>
@@ -119,7 +131,7 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/" class="waves-effect waves-light">
+    <a href="" class="waves-effect waves-light">
 
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
@@ -189,23 +201,36 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/tags" class="waves-effect waves-light">
+		<a href="javascript:;">
 			
-			    <i class="fa-fw fas fa-tags"></i>
+				<i class="fa-fw fas fa-archive"></i>
 			
-			标签
+			统计
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			分类
-		</a>
+            <ul  style="background:  ;" >
+              
+                <li>   
+				
+                  <a href="/tags " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-tags" style="position: absolute;left:50px" ></i>
+			      
+		          <span>标签</span>
+                  </a>
+                </li>
+              
+                <li>   
+				
+                  <a href="/categories " style="margin-left:75px";>
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>分类</span>
+                  </a>
+                </li>
+               
+            </ul>
           
         </li>
         
@@ -213,7 +238,7 @@
 	  
 		<a href="/archives" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-archive"></i>
+			    <i class="fa-fw fa fa-calendar"></i>
 			
 			时光轴
 		</a>
@@ -362,31 +387,25 @@
         cursor: pointer;
         z-index: 100;
     }
-
     #prev-cover {
         position: absolute;
         top: 48%;
         left: 8px;
     }
-
     #next-cover {
         position: absolute;
         top: 48%;
         right: 8px;;
     }
-
     #prev-cover i {
         margin-right: 3px;
     }
-
     #next-cover i {
         margin-left: 3px;
     }
-
     .carousel-control:hover {
         background-color:rgba(0, 0, 0, .4);
     }
-
     .carousel-control i {
         color: #fff;
         font-size: 2.4rem;
@@ -492,7 +511,6 @@
 
     
         
-
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
@@ -542,32 +560,48 @@
 </div>
 
 <script>
+    // TODO 此处的轮播尚需优化，PC/Mobile 在触摸切换时都感觉相当不灵活
     $(function () {
         let coverSlider = $('.carousel');
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
         coverSlider.carousel({
-            duration: Number('50'),
+            duration: Number('150# 切换延迟时间. Switching delay time.'),
             fullWidth: true,
-            indicators: 'true' === 'true'
-        });
-
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
         let carouselIntervalId;
         
         // Loop to call the next cover article picture.
         let autoCarousel = function() {
             carouselIntervalId = setInterval(function () {
                 coverSlider.carousel('next');
-            }, 9000);
+            }, 5000);
         };
         autoCarousel();
         
-
-        let restartPlay = function () {
+        function restartPlay() {
             
             clearInterval(carouselIntervalId);
             autoCarousel();
             
         };
-
         
         // prev and next cover post.
         $('#prev-cover').click(function () {
@@ -581,7 +615,6 @@
         
     });
 </script>
-
 
 
 <main class="content">
@@ -1082,7 +1115,10 @@
 	
 <script type="text/javascript">
 $(function () {
-    searchFunc("https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc(
+		"https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/" + "search.xml",
+		 'searchInput',
+		  'searchResult');
 });
 </script>
     <!-- 回到顶部按钮 -->
