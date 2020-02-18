@@ -3,6 +3,7 @@
 
 
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="keywords" content="关于, 技术,博客,Athink,自由">
@@ -23,6 +24,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/lightgallery/1.6.11/css/lightgallery.min.css">
     
+	<!-- 导航页面box -->
+
+	
 	<!-- 是否开启jsDelivr 加速 -->
 	
 	    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/css/matery.css">
@@ -135,6 +139,17 @@
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
       <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/box" class="waves-effect waves-light">
+      
+      <i class="fa fa-folder-open" style="zoom: 0.6;"></i>
+      
+      <span>导航收藏</span>
     </a>
     
   </li>
@@ -273,6 +288,17 @@
 			    <i class="fa-fw fas fa-address-book"></i>
 			
 			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/box" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fa fa-folder-open"></i>
+			
+			导航收藏
 		</a>
           
         </li>
@@ -447,21 +473,21 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">4</a></span>
+    <span class="count"><a href="/">6</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">3</a></span>
+    <span class="count"><a href="/categories">4</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">6</a></span>
+    <span class="count"><a href="/tags">11</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -477,21 +503,21 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">4</a></span>
+    <span class="count"><a href="/">6</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">3</a></span>
+    <span class="count"><a href="/categories">4</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">6</a></span>
+    <span class="count"><a href="/tags">11</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -627,7 +653,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,4],
+                data: [0,0,0,0,0,0,0,0,0,0,0,0,6],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -669,7 +695,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Java","value":1},{"name":"前端","value":2},{"name":"杂文","value":1}],
+                data: [{"name":"Java","value":1},{"name":"数据库","value":2},{"name":"前端","value":2},{"name":"杂文","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -693,7 +719,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["博客","Java","反射","优化","测试","hexo"]
+                data: ["Redis","博客","Java","反射","命令类型","配置","简介","使用场景","优化","hexo"]
             }
         ],
         yAxis: [
@@ -706,7 +732,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [2,1,1,1,1,1],
+                data: [2,2,1,1,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
