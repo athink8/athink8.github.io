@@ -6,8 +6,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="Java,反射,基础">
-    <meta name="description" content="JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法；对于任意一个对象,都能够调用它的任意一个方法和属性。">
+    <meta name="keywords" content="Java,json">
+    <meta name="description" content="Java的五种json库及操作，包括json-lib、org.json、jackSon、 fastjson、GSON">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>JAVA反射的整理和理解 | Athink_</title>
+    <title>Java的五种json库及操作 | Athink_</title>
     <link rel="icon" type="image/png" href="https://s2.ax1x.com/2020/02/13/1q6iAs.th.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/5.11.1/css/all.min.css">
@@ -427,12 +427,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/10/15UKne.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/10/15UAt1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JAVA反射的整理和理解</h1>
+                    <h1 class="description center-align post-title">Java的五种json库及操作</h1>
                 </div>
             </div>
         </div>
@@ -553,8 +553,8 @@
                                 <span class="chip bg-color">Java</span>
                             </a>
                         
-                            <a href="/tags/%E5%8F%8D%E5%B0%84/">
-                                <span class="chip bg-color">反射</span>
+                            <a href="/tags/json/">
+                                <span class="chip bg-color">json</span>
                             </a>
                         
                     </div>
@@ -578,21 +578,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-16
+                    2020-02-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-16
+                    2020-02-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    948
+                    684
                 </div>
                 
 
@@ -615,102 +615,88 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="JAVA反射"><a href="#JAVA反射" class="headerlink" title="JAVA反射"></a>JAVA反射</h2><blockquote>
-<p> <code>星星在你的头顶上闪耀着，与你交互诉说的话语，一句一句地，如同星点般翩然落至眼前</code></p>
+                <hr>
+<h2 id="Java的五种json库及操作"><a href="#Java的五种json库及操作" class="headerlink" title="Java的五种json库及操作"></a>Java的五种json库及操作</h2><blockquote>
+<p><code>你的所言所行，全都闪烁着光芒，太过刺目，于是我闭上双眼，但内心还是无法停止对你的憧憬</code></p>
 </blockquote>
-<hr>
-<h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><blockquote>
-<p>  JAVA反射机制是在运行状态中.<br>对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性.</p>
+<p>​    Java 中json格式的字符串写法 </p>
+<pre><code>String paramess=&quot;{\&quot;name\&quot;:\&quot;Mahesh\&quot;,\&quot;password\&quot;:21}&quot;;</code></pre><h3 id="1-json-lib"><a href="#1-json-lib" class="headerlink" title="1. json-lib"></a>1. json-lib</h3><blockquote>
+<p>json-lib具有通用性，但是比较麻烦，且时间有些久远，jar包只更新到2010年</p>
+<p>项目地址：<a href="http://json-lib.sourceforge.net/index.html" target="_blank" rel="noopener">http://json-lib.sourceforge.net/index.html</a></p>
 </blockquote>
-<blockquote>
-<p>我们创建的每一个类也都是对象，即类本身是java.lang.Class类的实例对象。这个实例对象称之为类对象，也就是Class对象,或者类类型。</p>
-</blockquote>
-<h3 id="二、方法："><a href="#二、方法：" class="headerlink" title="二、方法："></a>二、方法：</h3><h4 id="1-如何获取-Class文件对象"><a href="#1-如何获取-Class文件对象" class="headerlink" title="1.如何获取.Class文件对象"></a>1.如何获取.Class文件对象</h4><pre><code>a.  通过Object类 getClass()方法获取 Class对象
+<h5 id="1-1-maven依赖"><a href="#1-1-maven依赖" class="headerlink" title="1.1 maven依赖"></a>1.1 maven依赖</h5><pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;net.sf.json-lib&lt;/groupId&gt;
+    &lt;artifactId&gt;json-lib&lt;/artifactId&gt;
+    &lt;version&gt;2.4&lt;/version&gt;
+    &lt;classifier&gt;jdk15&lt;/classifier&gt;//jar包区分jdk1.3和jdk1.5版本
+&lt;/dependency&gt;</code></pre><h5 id="1-2-具体操作"><a href="#1-2-具体操作" class="headerlink" title="1.2 具体操作"></a>1.2 具体操作</h5><ul>
+<li><p>1.2.1 JSONObject与String相互转换</p>
+<pre><code>  JSONObject jsonobject= JSONObject.fromObject(str);
+  String str = JSONObject.toString</code></pre></li>
+<li><p>1.2.2 获取JSONObject数据及遍历JSONArray</p>
+<p>  String str = JSONObject.getInt(“keys”)<br>  String str = JSONObject.getString(“keys”)<br>  JSONArray = JSONObject.getJSONArray(String);</p>
+</li>
+<li><p>遍历：</p>
+<pre><code>  for(i&lt;JSONArray.size())
+  {
+     JSONObject = JSONArray.getJSONObject(i); 
+     JSONObject.getInt()...
+  }
 
-b. 通过类名.class 方式 获取 Class对象
-
-c.  通过反射的方式, Class.forName(String classname) 获取Class对象
-public static Class&lt;?&gt; forName(String className)throws ClassNotFoundException
-返回与带有给定字符串名的类或接口相关联的 Class 对象</code></pre><h4 id="2-通过反射，获取类中的构造方法，并完成对象的创建"><a href="#2-通过反射，获取类中的构造方法，并完成对象的创建" class="headerlink" title="2.通过反射，获取类中的构造方法，并完成对象的创建"></a>2.通过反射，获取类中的构造方法，并完成对象的创建</h4><ul>
-<li><p>获取指定的构造方法</p>
-<p>  public Constructor<T> getConstructor(Class&lt;?&gt;… parameterTypes)</p>
-</li>
-<li><p>获取指定的public修饰的构造方法</p>
-<p>  public Constructor<T> getDeclaredConstructor(Class&lt;?&gt;… parameterTypes)</p>
-</li>
-<li><p>获取指定的构造方法，包含私有的</p>
-<p>  public Constructor<T> getConstructor(Class&lt;?&gt;… parameterTypes)</p>
-</li>
-<li><p>获取所有的构造方法</p>
-<p>  public Constructor<?>[] getConstructors() 获取所有的public 修饰的构造方法
-  public Constructor<?>[] getDeclaredConstructors() 获取所有的构造方法，包含私有的</p>
-</li>
+  Iterator&lt;String&gt; iterator = JSONObject.keys(); 
+    while(iterator.hasNext()){
+      String keys = iterator.next();
+  }</code></pre></li>
+<li><p>1.2.2 JSONObject转对象</p>
+<pre><code>  Grade grade = (Grade)JSONObject.toBean(jsonObject,Grade.class);</code></pre></li>
 </ul>
-<h4 id="3-通过反射，-获取类中的构造方法，并完成对象的创建"><a href="#3-通过反射，-获取类中的构造方法，并完成对象的创建" class="headerlink" title="3.通过反射， 获取类中的构造方法，并完成对象的创建"></a>3.通过反射， 获取类中的构造方法，并完成对象的创建</h4><pre><code>步骤：
-a.获取字节码文件对象
-b.通过字节码文件对象 ，获取到指定的构造方法
-    getConstructor(参数);
-c.通过构造方法，创建对象
-    public T newInstance(Object... initargs)</code></pre><h4 id="4-私有构造方法，创建对象"><a href="#4-私有构造方法，创建对象" class="headerlink" title="4.私有构造方法，创建对象"></a>4.私有构造方法，创建对象</h4><pre><code>a.获取字节码文件对象
-b.通过字节码文件对象 ，获取到指定的构造方法
-    getDeclaredConstructor (参数);
-c.暴力访问
-     con.setAccessible(true);
-d.通过构造方法，创建对象
-     public T newInstance(Object... initargs)</code></pre><h4 id="5-通过反射，获取Class文件中的方法"><a href="#5-通过反射，获取Class文件中的方法" class="headerlink" title="5.通过反射，获取Class文件中的方法"></a>5.通过反射，获取Class文件中的方法</h4><ul>
-<li><p>获取指定的方法</p>
-<p>  public Method getMethod(String name, Class&lt;?&gt;… parameterTypes)</p>
-</li>
-<li><p>获取指定的public方法</p>
-<p>  public Method getDeclaredMethod(String name, Class&lt;?&gt;… parameterTypes)</p>
-</li>
-<li><p>获取指定的任意方法，包含私有的</p>
-<p>  获取所有的方法:<br>  public Method[] getMethods()</p>
-<p>  获取本类与父类中所有public 修饰的方法:<br>  public Method[] getDeclaredMethods()获取本类中包含私有的所有的方法</p>
-</li>
-</ul>
-<blockquote>
-<p>// 数组表示：new Class[]{String.class, String.class}</p>
+<h3 id="2-org-json"><a href="#2-org-json" class="headerlink" title="2.org.json"></a>2.org.json</h3><blockquote>
+<p>与json-lib相类似</p>
 </blockquote>
-<h4 id="6-通过反射，调用方法"><a href="#6-通过反射，调用方法" class="headerlink" title="6.通过反射，调用方法"></a>6.通过反射，调用方法</h4><pre><code>步骤：
-a.获取Class对象
-b.构造方法，创建对象
-c.取指定的public方法
-d.行方法
-public Object invoke(Object obj, Object... args)</code></pre><h4 id="7-私有方法的调用："><a href="#7-私有方法的调用：" class="headerlink" title="7.私有方法的调用："></a>7.私有方法的调用：</h4><pre><code>a，获取Class对象
-b,获取构造方法，创建对象
-c,获取指定的private方法
-d,开启暴力访问
-m5.setAccessible(true);
-e,执行方法
-public Object invoke(Object obj, Object... args)</code></pre><h4 id="8-通过反射，获取成员变量"><a href="#8-通过反射，获取成员变量" class="headerlink" title="8.通过反射，获取成员变量"></a>8.通过反射，获取成员变量</h4><ul>
-<li><p>获取指定的成员变量</p>
-<p>   public Field getField(String name) </p>
-</li>
-<li><p>获取public修饰的成员变量</p>
-<p>  public Field getDeclaredField(String name)</p>
-</li>
-<li><p>获取任意的成员变量，包含私有</p>
-<p>  public Field[] getFields() </p>
-</li>
-<li><p>获取所有public修饰的成员变量</p>
-<p>  public Field[] getDeclaredFields()</p>
-</li>
-</ul>
-<h4 id="9-通过反射，获取成员-变量，并赋值使用"><a href="#9-通过反射，获取成员-变量，并赋值使用" class="headerlink" title="9.通过反射，获取成员 变量，并赋值使用"></a>9.通过反射，获取成员 变量，并赋值使用</h4><pre><code>步骤：
-a. 获取字节码文件对象
-b. 获取构造方法，创建对象
-c. 获取指定的成员变量
-d. 对成员变量赋值获取值操作
-public void set(Object obj, Object value) // 赋值
-public Object get(Object obj) // 获取值</code></pre><h4 id="10-私有成员变量的使用"><a href="#10-私有成员变量的使用" class="headerlink" title="10.私有成员变量的使用"></a>10.私有成员变量的使用</h4><pre><code>步骤：
-a. 获取字节码文件对象
-b. 获取构造方法，创建对象
-c. 获取指定的成员变量
-d. 开启暴力访问
-e. 对成员变量赋值获取值操作
-public void set(Object obj, Object value) //赋值
-public Object get(Object obj) //获取值</code></pre>
+<h5 id="2-1maven依赖"><a href="#2-1maven依赖" class="headerlink" title="2.1maven依赖"></a>2.1maven依赖</h5><pre><code>    &lt;dependency&gt;
+          &lt;groupId&gt;org.json&lt;/groupId&gt;
+          &lt;artifactId&gt;json&lt;/artifactId&gt;
+          &lt;version&gt;20170516&lt;/version&gt;
+    &lt;/dependency&gt;</code></pre><h5 id="2-2-创建json对象"><a href="#2-2-创建json对象" class="headerlink" title="2.2 创建json对象"></a>2.2 创建json对象</h5><pre><code>    JSONObject = new JSONObject(str);</code></pre><h5 id="2-3-操作"><a href="#2-3-操作" class="headerlink" title="2.3 操作"></a>2.3 操作</h5><pre><code>net.sf.json.JSONObject： 没有严格要求获取字段的类型跟getXXX()的类型一样
+org.json.JSONObject：获取的字段类型必须跟getXXX()的类型一样</code></pre><h5 id="2-4-JSONArray-length"><a href="#2-4-JSONArray-length" class="headerlink" title="2.4 JSONArray.length()"></a>2.4 JSONArray.length()</h5><h3 id="3-jackSon"><a href="#3-jackSon" class="headerlink" title="3. jackSon"></a>3. jackSon</h3><blockquote>
+<p>springMVC内置解析器就是jackson </p>
+<p>项目地址：<a href="https://github.com/FasterXML/jackson" target="_blank" rel="noopener">https://github.com/FasterXML/jackson</a></p>
+</blockquote>
+<h5 id="3-1-maven依赖"><a href="#3-1-maven依赖" class="headerlink" title="3.1 maven依赖"></a>3.1 maven依赖</h5><pre><code>    &lt;dependency&gt;
+          &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+          &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
+          &lt;version&gt;2.9.0&lt;/version&gt;
+    &lt;/dependency&gt;</code></pre><h5 id="3-2-对象和String之间的转换"><a href="#3-2-对象和String之间的转换" class="headerlink" title="3.2 对象和String之间的转换"></a>3.2 对象和String之间的转换</h5><pre><code>    ObjectMapper mapper=new ObjectMapper();
+    //json转对象
+    Grade grade=mapper.readValue(json1, Grade.class);
+    //对象转json
+    mapper.writeValueAsString(grade);</code></pre><h5 id="3-3-对JsonNode的遍历"><a href="#3-3-对JsonNode的遍历" class="headerlink" title="3.3 对JsonNode的遍历"></a>3.3 对JsonNode的遍历</h5><pre><code>    JsonNode jsonNode = mapper.readTree(jsonStr);
+    Iterator&lt;String&gt; keys = jsonNode.fieldNames();
+    while(keys.hasNext()){
+        String fieldName = keys.next();
+        System.out.println(fieldName + &quot; : &quot; + jsonNode.path(fieldName).toString());
+    }</code></pre><h3 id="4-fastjson"><a href="#4-fastjson" class="headerlink" title="4. fastjson"></a>4. fastjson</h3><blockquote>
+<p>阿里巴巴开源框架，效率最高</p>
+<p>项目地址：<a href="https://github.com/alibaba/fastjson" target="_blank" rel="noopener">https://github.com/alibaba/fastjson</a></p>
+</blockquote>
+<h5 id="4-1-maven依赖"><a href="#4-1-maven依赖" class="headerlink" title="4.1 maven依赖"></a>4.1 maven依赖</h5><pre><code>    &lt;dependency&gt;
+          &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+          &lt;artifactId&gt;fastjson&lt;/artifactId&gt;
+          &lt;version&gt;1.2.37&lt;/version&gt;
+    &lt;/dependency&gt;</code></pre><h5 id="4-2-String转对象"><a href="#4-2-String转对象" class="headerlink" title="4.2 String转对象"></a>4.2 String转对象</h5><pre><code>    Student stu = JSON.parseObject(json,Student.class);
+    List&lt;String&gt; list=JSON.parseArray(json2, String.class);</code></pre><h5 id="4-3-对象转String"><a href="#4-3-对象转String" class="headerlink" title="4.3 对象转String"></a>4.3 对象转String</h5><pre><code>    JSON.toJSONString(stu);
+    //or String json = JSON.toJSON(stu).toString();</code></pre><h3 id="5-GSON"><a href="#5-GSON" class="headerlink" title="5.GSON"></a>5.GSON</h3><blockquote>
+<p>谷歌产品 ，前功能最全</p>
+<p>项目地址：<a href="https://github.com/google/gson" target="_blank" rel="noopener">https://github.com/google/gson</a></p>
+</blockquote>
+<h5 id="5-1-maven依赖"><a href="#5-1-maven依赖" class="headerlink" title="5.1 maven依赖"></a>5.1 maven依赖</h5><pre><code>    &lt;dependency&gt;
+          &lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;
+          &lt;artifactId&gt;gson&lt;/artifactId&gt;
+          &lt;version&gt;2.8.1&lt;/version&gt;
+    &lt;/dependency&gt;</code></pre><h5 id="5-2-String转对象"><a href="#5-2-String转对象" class="headerlink" title="5.2 String转对象"></a>5.2 String转对象</h5><pre><code>    Gson gson = new Gson();
+    Grade grade = gson.fromJson(json1,Grade.class);
+
+    ArrayList&lt;String&gt; list=gson.fromJson(json2,new TypeToken&lt;ArrayList&lt;String&gt;&gt;(){}.getType());</code></pre><h5 id="5-3-对象转String"><a href="#5-3-对象转String" class="headerlink" title="5.3 对象转String"></a>5.3 对象转String</h5><pre><code>    String json=gson.toJson(grade);</code></pre>
             </div>
             <hr/>
 
@@ -735,7 +721,7 @@ public Object get(Object obj) //获取值</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blog.onfree.cn/posts/33aa4888.html">https://blog.onfree.cn/posts/33aa4888.html</a>
+                    <a href="https://blog.onfree.cn/posts/d5737b81.html">https://blog.onfree.cn/posts/d5737b81.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -777,8 +763,8 @@ public Object get(Object obj) //获取值</code></pre>
                                     <span class="chip bg-color">Java</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8F%8D%E5%B0%84/">
-                                    <span class="chip bg-color">反射</span>
+                                <a href="/tags/json/">
+                                    <span class="chip bg-color">json</span>
                                 </a>
                             
                         </div>
@@ -1219,25 +1205,78 @@ public Object get(Object obj) //获取值</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/fc9ec3a7.html">
+                <a href="/posts/33aa4888.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://i.loli.net/2020/02/10/h8o4eUqB6RHKLvm.jpg" class="responsive-img" alt="Redis简介及使用场景">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s2.ax1x.com/2020/02/10/15UAt1.jpg" class="responsive-img" alt="Java的五种json库及操作">
                         
-                        <span class="card-title">Redis简介及使用场景</span>
+                        <span class="card-title">Java的五种json库及操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Redis 是完全开源免费的，遵守BSD协议，是一个高性能的`key-value`型数据库,易安装和使用，使用场景丰富
+                            JAVA反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法；对于任意一个对象,都能够调用它的任意一个方法和属性。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-18
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-19
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/json/">
+                        <span class="chip bg-color">json</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/6996938c.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s2.ax1x.com/2020/02/10/15UQ7d.jpg" class="responsive-img" alt="Redis的常用命令类型和配置详解">
+                        
+                        <span class="card-title">Redis的常用命令类型和配置详解</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Redis常见五种数据类型：string（字符串），hash（哈希），list（列表），set（集合）及zset(sorted set：有序集合)。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1257,65 +1296,12 @@ public Object get(Object obj) //获取值</code></pre>
                         <span class="chip bg-color">Redis</span>
                     </a>
                     
-                    <a href="/tags/%E7%AE%80%E4%BB%8B/">
-                        <span class="chip bg-color">简介</span>
+                    <a href="/tags/%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B/">
+                        <span class="chip bg-color">命令类型</span>
                     </a>
                     
-                    <a href="/tags/%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">
-                        <span class="chip bg-color">使用场景</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/489a4cf4.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s2.ax1x.com/2020/02/10/15U8ht.jpg" class="responsive-img" alt="加速博客网站的建议细节">
-                        
-                        <span class="card-title">加速博客网站的建议细节</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            当你打开一个网站时迟迟未能看见显示的页面的时候是不是很暴躁好没耐心呢，所以网站的优化对于开发者来说是不可少的工作呢
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-15
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2/">
-                        <span class="chip bg-color">博客</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BC%98%E5%8C%96/">
-                        <span class="chip bg-color">优化</span>
+                    <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">配置</span>
                     </a>
                     
                 </div>
