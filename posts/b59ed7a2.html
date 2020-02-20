@@ -6,8 +6,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="Java,json">
-    <meta name="description" content="Java的五种json库及操作，包括json-lib、org.json、jackSon、 fastjson、GSON">
+    <meta name="keywords" content="Java,转换,Map">
+    <meta name="description" content="Java对象和Map在很多时候常常需要转换，而本文可作为常见转换工具类使用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java的五种json库及操作 | Athink_</title>
+    <title>Java对象和Map转换 | Athink_</title>
     <link rel="icon" type="image/png" href="https://s2.ax1x.com/2020/02/13/1q6iAs.th.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/5.11.1/css/all.min.css">
@@ -427,12 +427,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/10/15UAt1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/10/15UY1f.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java的五种json库及操作</h1>
+                    <h1 class="description center-align post-title">Java对象和Map转换</h1>
                 </div>
             </div>
         </div>
@@ -553,8 +553,8 @@
                                 <span class="chip bg-color">Java</span>
                             </a>
                         
-                            <a href="/tags/json/">
-                                <span class="chip bg-color">json</span>
+                            <a href="/tags/Map/">
+                                <span class="chip bg-color">Map</span>
                             </a>
                         
                     </div>
@@ -578,28 +578,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-19
+                    2020-02-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-19
+                    2020-02-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    684
+                    303
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 				
@@ -615,88 +615,78 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<h2 id="Java的五种json库及操作"><a href="#Java的五种json库及操作" class="headerlink" title="Java的五种json库及操作"></a>Java的五种json库及操作</h2><blockquote>
-<p><code>你的所言所行，全都闪烁着光芒，太过刺目，于是我闭上双眼，但内心还是无法停止对你的憧憬</code></p>
+                <h2 id="Java对象和Map转换"><a href="#Java对象和Map转换" class="headerlink" title="Java对象和Map转换"></a>Java对象和Map转换</h2><blockquote>
+<p><code>或许前路永夜，即便如此我也要前进，因为星光即使微弱也会为我照亮前路</code></p>
 </blockquote>
-<p>​    Java 中json格式的字符串写法 </p>
-<pre><code>String paramess=&quot;{\&quot;name\&quot;:\&quot;Mahesh\&quot;,\&quot;password\&quot;:21}&quot;;</code></pre><h3 id="1-json-lib"><a href="#1-json-lib" class="headerlink" title="1. json-lib"></a>1. json-lib</h3><blockquote>
-<p>json-lib具有通用性，但是比较麻烦，且时间有些久远，jar包只更新到2010年</p>
-<p>项目地址：<a href="http://json-lib.sourceforge.net/index.html" target="_blank" rel="noopener">http://json-lib.sourceforge.net/index.html</a></p>
-</blockquote>
-<h5 id="1-1-maven依赖"><a href="#1-1-maven依赖" class="headerlink" title="1.1 maven依赖"></a>1.1 maven依赖</h5><pre><code>&lt;dependency&gt;
-    &lt;groupId&gt;net.sf.json-lib&lt;/groupId&gt;
-    &lt;artifactId&gt;json-lib&lt;/artifactId&gt;
-    &lt;version&gt;2.4&lt;/version&gt;
-    &lt;classifier&gt;jdk15&lt;/classifier&gt;//jar包区分jdk1.3和jdk1.5版本
-&lt;/dependency&gt;</code></pre><h5 id="1-2-具体操作"><a href="#1-2-具体操作" class="headerlink" title="1.2 具体操作"></a>1.2 具体操作</h5><ul>
-<li><p>1.2.1 JSONObject与String相互转换</p>
-<pre><code>  JSONObject jsonobject= JSONObject.fromObject(str);
-  String str = JSONObject.toString</code></pre></li>
-<li><p>1.2.2 获取JSONObject数据及遍历JSONArray</p>
-<p>  String str = JSONObject.getInt(“keys”)<br>  String str = JSONObject.getString(“keys”)<br>  JSONArray = JSONObject.getJSONArray(String);</p>
-</li>
-<li><p>遍历：</p>
-<pre><code>  for(i&lt;JSONArray.size())
-  {
-     JSONObject = JSONArray.getJSONObject(i); 
-     JSONObject.getInt()...
-  }
+<hr>
+<h3 id="1-将Javabean对象装换为map"><a href="#1-将Javabean对象装换为map" class="headerlink" title="1. 将Javabean对象装换为map"></a>1. 将Javabean对象装换为map</h3><pre class=" language-java"><code class="language-java">        <span class="token comment" spellcheck="true">/**
+         * @param bean
+         * @return
+         */</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token operator">&lt;</span>T<span class="token operator">></span> Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">></span> <span class="token function">beanToMap</span><span class="token punctuation">(</span>T bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">></span> map <span class="token operator">=</span> Maps<span class="token punctuation">.</span><span class="token function">newHashMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>bean <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                BeanMap beanMap <span class="token operator">=</span> BeanMap<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>bean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span>Object key <span class="token operator">:</span> beanMap<span class="token punctuation">.</span><span class="token function">keySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>key <span class="token operator">+</span> <span class="token string">""</span><span class="token punctuation">,</span> beanMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> map<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span></code></pre>
+<h3 id="2-将map装换为Javabean对象"><a href="#2-将map装换为Javabean对象" class="headerlink" title="2.将map装换为Javabean对象"></a>2.将map装换为Javabean对象</h3><pre class=" language-java"><code class="language-java">        <span class="token comment" spellcheck="true">/**
+         * @param map
+         * @param bean
+         * @return
+         */</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token operator">&lt;</span>T<span class="token operator">></span> T <span class="token function">mapToBean</span><span class="token punctuation">(</span>Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">></span> map<span class="token punctuation">,</span> T bean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            BeanMap beanMap <span class="token operator">=</span> BeanMap<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>bean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            beanMap<span class="token punctuation">.</span><span class="token function">putAll</span><span class="token punctuation">(</span>map<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> bean<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span></code></pre>
+<h3 id="3-将List转换为List-lt-Map-lt-String-Object-gt-gt"><a href="#3-将List转换为List-lt-Map-lt-String-Object-gt-gt" class="headerlink" title="3.将List转换为List&lt;Map&lt;String, Object&gt;&gt;"></a>3.将List<T>转换为List&lt;Map&lt;String, Object&gt;&gt;</h3><pre class=" language-java"><code class="language-java">        <span class="token comment" spellcheck="true">/**
+         * @param objList
+         * @return
+         * @throws JsonGenerationException
+         * @throws JsonMappingException
+         * @throws IOException
+         */</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token operator">&lt;</span>T<span class="token operator">></span> List<span class="token operator">&lt;</span>Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">>></span> <span class="token function">objectsToMaps</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>T<span class="token operator">></span> objList<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            List<span class="token operator">&lt;</span>Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">>></span> list <span class="token operator">=</span> Lists<span class="token punctuation">.</span><span class="token function">newArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>objList <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> objList<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">></span> map <span class="token operator">=</span> null<span class="token punctuation">;</span>
+                T bean <span class="token operator">=</span> null<span class="token punctuation">;</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> size <span class="token operator">=</span> objList<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    bean <span class="token operator">=</span> objList<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    map <span class="token operator">=</span> <span class="token function">beanToMap</span><span class="token punctuation">(</span>bean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>map<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> list<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span></code></pre>
+<h3 id="4-将List-lt-Map-lt-String-Object-gt-gt-转换为List"><a href="#4-将List-lt-Map-lt-String-Object-gt-gt-转换为List" class="headerlink" title="4. 将List&lt;Map&lt;String,Object&gt;&gt;转换为List"></a>4. 将List&lt;Map&lt;String,Object&gt;&gt;转换为List<T></h3><pre class=" language-java"><code class="language-java">    <span class="token comment" spellcheck="true">/**
+         * @param maps
+         * @param clazz
+         * @return
+         * @throws InstantiationException
+         * @throws IllegalAccessException
+       */</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token operator">&lt;</span>T<span class="token operator">></span> List<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token function">mapsToObjects</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">>></span> maps<span class="token punctuation">,</span> Class<span class="token operator">&lt;</span>T<span class="token operator">></span> clazz<span class="token punctuation">)</span>
+                <span class="token keyword">throws</span> InstantiationException<span class="token punctuation">,</span> IllegalAccessException <span class="token punctuation">{</span>
+            List<span class="token operator">&lt;</span>T<span class="token operator">></span> list <span class="token operator">=</span> Lists<span class="token punctuation">.</span><span class="token function">newArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>maps <span class="token operator">!=</span> null <span class="token operator">&amp;&amp;</span> maps<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">></span> map <span class="token operator">=</span> null<span class="token punctuation">;</span>
+                T bean <span class="token operator">=</span> null<span class="token punctuation">;</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> size <span class="token operator">=</span> maps<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    map <span class="token operator">=</span> maps<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    bean <span class="token operator">=</span> clazz<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token function">mapToBean</span><span class="token punctuation">(</span>map<span class="token punctuation">,</span> bean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>bean<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> list<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span></code></pre>
+<p>…</p>
 
-  Iterator&lt;String&gt; iterator = JSONObject.keys(); 
-    while(iterator.hasNext()){
-      String keys = iterator.next();
-  }</code></pre></li>
-<li><p>1.2.2 JSONObject转对象</p>
-<pre><code>  Grade grade = (Grade)JSONObject.toBean(jsonObject,Grade.class);</code></pre></li>
-</ul>
-<h3 id="2-org-json"><a href="#2-org-json" class="headerlink" title="2.org.json"></a>2.org.json</h3><blockquote>
-<p>与json-lib相类似</p>
-</blockquote>
-<h5 id="2-1maven依赖"><a href="#2-1maven依赖" class="headerlink" title="2.1maven依赖"></a>2.1maven依赖</h5><pre><code>    &lt;dependency&gt;
-          &lt;groupId&gt;org.json&lt;/groupId&gt;
-          &lt;artifactId&gt;json&lt;/artifactId&gt;
-          &lt;version&gt;20170516&lt;/version&gt;
-    &lt;/dependency&gt;</code></pre><h5 id="2-2-创建json对象"><a href="#2-2-创建json对象" class="headerlink" title="2.2 创建json对象"></a>2.2 创建json对象</h5><pre><code>    JSONObject = new JSONObject(str);</code></pre><h5 id="2-3-操作"><a href="#2-3-操作" class="headerlink" title="2.3 操作"></a>2.3 操作</h5><pre><code>net.sf.json.JSONObject： 没有严格要求获取字段的类型跟getXXX()的类型一样
-org.json.JSONObject：获取的字段类型必须跟getXXX()的类型一样</code></pre><h5 id="2-4-JSONArray-length"><a href="#2-4-JSONArray-length" class="headerlink" title="2.4 JSONArray.length()"></a>2.4 JSONArray.length()</h5><h3 id="3-jackSon"><a href="#3-jackSon" class="headerlink" title="3. jackSon"></a>3. jackSon</h3><blockquote>
-<p>springMVC内置解析器就是jackson </p>
-<p>项目地址：<a href="https://github.com/FasterXML/jackson" target="_blank" rel="noopener">https://github.com/FasterXML/jackson</a></p>
-</blockquote>
-<h5 id="3-1-maven依赖"><a href="#3-1-maven依赖" class="headerlink" title="3.1 maven依赖"></a>3.1 maven依赖</h5><pre><code>    &lt;dependency&gt;
-          &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
-          &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
-          &lt;version&gt;2.9.0&lt;/version&gt;
-    &lt;/dependency&gt;</code></pre><h5 id="3-2-对象和String之间的转换"><a href="#3-2-对象和String之间的转换" class="headerlink" title="3.2 对象和String之间的转换"></a>3.2 对象和String之间的转换</h5><pre><code>    ObjectMapper mapper=new ObjectMapper();
-    //json转对象
-    Grade grade=mapper.readValue(json1, Grade.class);
-    //对象转json
-    mapper.writeValueAsString(grade);</code></pre><h5 id="3-3-对JsonNode的遍历"><a href="#3-3-对JsonNode的遍历" class="headerlink" title="3.3 对JsonNode的遍历"></a>3.3 对JsonNode的遍历</h5><pre><code>    JsonNode jsonNode = mapper.readTree(jsonStr);
-    Iterator&lt;String&gt; keys = jsonNode.fieldNames();
-    while(keys.hasNext()){
-        String fieldName = keys.next();
-        System.out.println(fieldName + &quot; : &quot; + jsonNode.path(fieldName).toString());
-    }</code></pre><h3 id="4-fastjson"><a href="#4-fastjson" class="headerlink" title="4. fastjson"></a>4. fastjson</h3><blockquote>
-<p>阿里巴巴开源框架，效率最高</p>
-<p>项目地址：<a href="https://github.com/alibaba/fastjson" target="_blank" rel="noopener">https://github.com/alibaba/fastjson</a></p>
-</blockquote>
-<h5 id="4-1-maven依赖"><a href="#4-1-maven依赖" class="headerlink" title="4.1 maven依赖"></a>4.1 maven依赖</h5><pre><code>    &lt;dependency&gt;
-          &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
-          &lt;artifactId&gt;fastjson&lt;/artifactId&gt;
-          &lt;version&gt;1.2.37&lt;/version&gt;
-    &lt;/dependency&gt;</code></pre><h5 id="4-2-String转对象"><a href="#4-2-String转对象" class="headerlink" title="4.2 String转对象"></a>4.2 String转对象</h5><pre><code>    Student stu = JSON.parseObject(json,Student.class);
-    List&lt;String&gt; list=JSON.parseArray(json2, String.class);</code></pre><h5 id="4-3-对象转String"><a href="#4-3-对象转String" class="headerlink" title="4.3 对象转String"></a>4.3 对象转String</h5><pre><code>    JSON.toJSONString(stu);
-    //or String json = JSON.toJSON(stu).toString();</code></pre><h3 id="5-GSON"><a href="#5-GSON" class="headerlink" title="5.GSON"></a>5.GSON</h3><blockquote>
-<p>谷歌产品 ，前功能最全</p>
-<p>项目地址：<a href="https://github.com/google/gson" target="_blank" rel="noopener">https://github.com/google/gson</a></p>
-</blockquote>
-<h5 id="5-1-maven依赖"><a href="#5-1-maven依赖" class="headerlink" title="5.1 maven依赖"></a>5.1 maven依赖</h5><pre><code>    &lt;dependency&gt;
-          &lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;
-          &lt;artifactId&gt;gson&lt;/artifactId&gt;
-          &lt;version&gt;2.8.1&lt;/version&gt;
-    &lt;/dependency&gt;</code></pre><h5 id="5-2-String转对象"><a href="#5-2-String转对象" class="headerlink" title="5.2 String转对象"></a>5.2 String转对象</h5><pre><code>    Gson gson = new Gson();
-    Grade grade = gson.fromJson(json1,Grade.class);
-
-    ArrayList&lt;String&gt; list=gson.fromJson(json2,new TypeToken&lt;ArrayList&lt;String&gt;&gt;(){}.getType());</code></pre><h5 id="5-3-对象转String"><a href="#5-3-对象转String" class="headerlink" title="5.3 对象转String"></a>5.3 对象转String</h5><pre><code>    String json=gson.toJson(grade);</code></pre>
             </div>
             <hr/>
 
@@ -721,7 +711,7 @@ org.json.JSONObject：获取的字段类型必须跟getXXX()的类型一样</cod
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blog.onfree.cn/posts/d5737b81.html">https://blog.onfree.cn/posts/d5737b81.html</a>
+                    <a href="https://blog.onfree.cn/posts/b59ed7a2.html">https://blog.onfree.cn/posts/b59ed7a2.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -763,8 +753,8 @@ org.json.JSONObject：获取的字段类型必须跟getXXX()的类型一样</cod
                                     <span class="chip bg-color">Java</span>
                                 </a>
                             
-                                <a href="/tags/json/">
-                                    <span class="chip bg-color">json</span>
+                                <a href="/tags/Map/">
+                                    <span class="chip bg-color">Map</span>
                                 </a>
                             
                         </div>
@@ -1201,9 +1191,10 @@ org.json.JSONObject：获取的字段类型必须跟getXXX()的类型一样</cod
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/b59ed7a2.html">
                     <div class="card-image">
@@ -1221,9 +1212,9 @@ org.json.JSONObject：获取的字段类型必须跟getXXX()的类型一样</cod
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1236,6 +1227,7 @@ org.json.JSONObject：获取的字段类型必须跟getXXX()的类型一样</cod
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1258,31 +1250,31 @@ org.json.JSONObject：获取的字段类型必须跟getXXX()的类型一样</cod
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/6996938c.html">
+                <a href="/posts/d5737b81.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s2.ax1x.com/2020/02/10/15UQ7d.jpg" class="responsive-img" alt="Redis的常用命令类型和配置详解">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s2.ax1x.com/2020/02/10/15UAt1.jpg" class="responsive-img" alt="Java的五种json库及操作">
                         
-                        <span class="card-title">Redis的常用命令类型和配置详解</span>
+                        <span class="card-title">Java的五种json库及操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Redis常见五种数据类型：string（字符串），hash（哈希），list（列表），set（集合）及zset(sorted set：有序集合)。
+                            Java的五种json库及操作，包括json-lib、org.json、jackSon、 fastjson、GSON
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                    数据库
+                            <a href="/categories/Java/" class="post-category">
+                                    Java
                                 </a>
                             
                             
@@ -1292,16 +1284,12 @@ org.json.JSONObject：获取的字段类型必须跟getXXX()的类型一样</cod
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Redis/">
-                        <span class="chip bg-color">Redis</span>
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
-                    <a href="/tags/%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B/">
-                        <span class="chip bg-color">命令类型</span>
-                    </a>
-                    
-                    <a href="/tags/%E9%85%8D%E7%BD%AE/">
-                        <span class="chip bg-color">配置</span>
+                    <a href="/tags/json/">
+                        <span class="chip bg-color">json</span>
                     </a>
                     
                 </div>
