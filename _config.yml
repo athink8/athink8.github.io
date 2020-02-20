@@ -121,6 +121,8 @@ prism_plugin:
 search:
   path: search.xml
   field: post
+  format: html
+  limit: 100
   
 #中文链接转拼音
 permalink_pinyin:

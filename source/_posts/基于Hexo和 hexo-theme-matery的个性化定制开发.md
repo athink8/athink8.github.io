@@ -5,7 +5,7 @@ categories:
 tags:
   - 博客
   - hexo
-top: true
+top: false
 cover: true
 keywords: hexo,hexo-theme-matery,博客,个性化定制
 summary: 基于Hexo和 hexo-theme-matery的个性化定制开发，hexo 是基于node.js制作的一个博客工具，支持多种主题更换，主要是基于YAML来配置所需信息即可，通过markdown编写文章

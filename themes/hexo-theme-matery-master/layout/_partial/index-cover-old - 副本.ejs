@@ -8,25 +8,31 @@
         cursor: pointer;
         z-index: 100;
     }
+
     #prev-cover {
         position: absolute;
         top: 48%;
         left: 8px;
     }
+
     #next-cover {
         position: absolute;
         top: 48%;
         right: 8px;;
     }
+
     #prev-cover i {
         margin-right: 3px;
     }
+
     #next-cover i {
         margin-left: 3px;
     }
+
     .carousel-control:hover {
         background-color:rgba(0, 0, 0, .4);
     }
+
     .carousel-control i {
         color: #fff;
         font-size: 2.4rem;
@@ -83,6 +89,7 @@ var coverPostsCount = coverPosts.length;
                 if (!str && str.length === 0) {
                     return 0;
                 }
+
                 var hash = 0;
                 for (var i = 0, len = str.length; i < len; i++) {
                     hash = ((hash << 5) - hash) + str.charCodeAt(i);
@@ -90,9 +97,11 @@ var coverPostsCount = coverPosts.length;
                 }
                 return hash;
             };
+
             var featureImages = theme.featureImages;
             var imgCount = featureImages.length;
         %>
+
         <% for (var i = 0; i < coverPostsCount; i++) { %>
             <%
                 var post = coverPosts[i];
@@ -126,32 +135,14 @@ var coverPostsCount = coverPosts.length;
 </div>
 
 <script>
-    // TODO 此处的轮播尚需优化，PC/Mobile 在触摸切换时都感觉相当不灵活
     $(function () {
         let coverSlider = $('.carousel');
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
-        }
         coverSlider.carousel({
             duration: Number('<%- theme.cover.duration %>'),
             fullWidth: true,
-            indicators: '<%- theme.cover.showIndicators %>' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
+            indicators: '<%- theme.cover.showIndicators %>' === 'true'
+        });
+
         let carouselIntervalId;
         <% if (theme.cover.autoLoop) { %>
         // Loop to call the next cover article picture.
@@ -162,12 +153,14 @@ var coverPostsCount = coverPosts.length;
         };
         autoCarousel();
         <% } %>
-        function restartPlay() {
+
+        let restartPlay = function () {
             <% if (theme.cover.autoLoop) { %>
             clearInterval(carouselIntervalId);
             autoCarousel();
             <% } %>
         };
+
         <% if (theme.cover.showPrevNext) { %>
         // prev and next cover post.
         $('#prev-cover').click(function () {
@@ -179,5 +172,7 @@ var coverPostsCount = coverPosts.length;
             restartPlay();
         });
         <% } %>
+		
+		
     });
 </script>

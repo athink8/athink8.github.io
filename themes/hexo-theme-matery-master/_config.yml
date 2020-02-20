@@ -4,23 +4,30 @@ menu:
   首页:
     url: /
     icon: fas fa-home
-  标签:
-    url: /tags
-    icon: fas fa-tags
-  分类:
-    url: /categories
-    icon: fas fa-bookmark
+  统计:
+    url: 
+    icon: fas fa-archive
+    children:
+      - name: 标签
+        url: /tags
+        icon: fas fa-tags
+      - name: 分类  
+        url: /categories
+        icon: fas fa-bookmark   
   时光轴:
     url: /archives
-    icon: fas fa-archive
+    icon: fa fa-calendar
   留言板:
     url: /contact
     icon: fas fa-comments
   友情链接:
     url: /friends
     icon: fas fa-address-book
+  导航收藏:
+    url: /box
+    icon: fa fa-folder-open
   关于:
-    url: /
+    url: 
     icon: fas fa-user-circle
     children:
       - name: 关于我
@@ -29,7 +36,13 @@ menu:
       - name: mylove    #这是新添加的，在原有配置基础上添加
         url: /mylove
         icon: fa fa-heart
-         
+ 
+#  标签:
+#    url: /tags
+#    icon: fas fa-tags
+#  分类:
+#   url: /categories
+#    icon: fas fa-bookmark 
   # 二级菜单写法如下
   #Medias:
   #  icon: fas fa-list
@@ -66,8 +79,8 @@ cover:
   showPrevNext: true # 是否显示左右切换按钮. Whether to display the left and right toggle buttons.
   showIndicators: true # 是否显示指示器. # Whether to display the indicators
   autoLoop: true # 是否自动轮播. Whether it is automatically rotated.
-  duration: 50 # 切换延迟时间. Switching delay time.
-  intervalTime: 9000 # 自动切换下一张的间隔时间. Automatically switch the interval of the next one.
+  duration: 170# 切换延迟时间. Switching delay time.
+  intervalTime: 5000 # 自动切换下一张的间隔时间. Automatically switch the interval of the next one.
   useConfig: false # 是否使用配置文件, 在 _data/covers.json 下配置推荐文章, false则使用主题在文章中的配置 cover coverImg
   # useConfig 使用方式: 将主题 hexo-theme-matery/source/_data/covers.json 移动到 my-blog/source/_data/下修改配置即可
 
@@ -541,5 +554,5 @@ icp:
 #使用jsDelivr cdn加速静态
 jsDelivr:
   enable: true #本地开发测试时关闭
-  url: https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest
+  url: https://cdn.jsdelivr.net/gh/athink8/athink8.github.io
   

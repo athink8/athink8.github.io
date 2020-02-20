@@ -4,7 +4,7 @@ categories:
   - 杂文
 tags:
   - 测试
-cover: true
+cover: false
 keywords: '你好,hexo'
 summary: 今天天气不错！！今天天气不错！！请一直加油下去哦！！加油自己，你可以的!!英雄意味着强大，英雄意味着孤独，最后一幕一定是英雄渐行渐远，我的英雄也是那样的存在
 abbrlink: 509442df
