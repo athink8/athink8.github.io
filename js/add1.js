@@ -1,3 +1,17 @@
+//在页面未加载完毕之前显示的loading Html自定义内容
+var _LoadingHtml = '<img src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/medias/loding.gif" />';
+//呈现loading效果
+document.write(_LoadingHtml);
+//监听加载状态改变
+document.onreadystatechange = completeLoading;
+//加载状态为complete时移除loading效果
+function completeLoading() {
+	if (document.readyState == "complete") {
+		var loadingMask = document.getElementById('loadingDiv');
+		loadingMask.parentNode.removeChild(loadingMask);
+	}
+}
+
 $(function() {
 
 	/*  添加信息到控制面板*/
@@ -26,5 +40,5 @@ $(function() {
 			}, 2000);
 		}
 	});
-	
+
 })
