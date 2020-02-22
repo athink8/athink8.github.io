@@ -27,8 +27,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/athink8/cdn/icon/strawberry/style.css">
 	<!-- 是否开启jsDelivr 加速 -->
 	
-	    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/css/matery.css">
-	    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/css/my.css">
+	    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/css/matery.css">
+	    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/css/my.css">
 	
  
     <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
@@ -43,6 +43,56 @@
     	  s.parentNode.insertBefore(hm, s);
     	})();
     </script>
+	 
+	 
+	    <!-- 添加页面加载前动画-->
+	     <style>
+	    	#pageLoading {
+	    		position: fixed;
+	    		z-index: 1000;
+	    		width: 100%;
+	    		height: 100%;
+	    		top: 0;
+	    		left: 0;
+	    		text-align: center;
+	    		background-color: rgba(239,254,254,1);
+	    		margin: 0 auto;
+	    	}
+	    	
+	    	.pageLoadingInfo {
+	    		margin: 0 auto;
+	    		margin-top: 15%;
+	    		width: 400px;
+	    		height: 400px;
+	    		color: #696969;
+	    		font-family: 'Microsoft YaHei';
+	    		font-size: 20px;
+	    		text-align: center;
+	    		overflow: hidden;
+	    	}
+	    	
+	    	.pageLoadingInfo img {
+	    		width: 200px;
+	    		height: 200px;
+	    		object-fit: cover;
+	    	}
+	     </style>
+	    <script>
+	    	var _LoadingHtml='<div id="pageLoading">'+
+	    			'<div class="pageLoadingInfo">'+
+	    			'<img class="LoadImg" src=https://cdn.jsdelivr.net/gh/athink8/cdn/icon/loading/loading7.gif alt />'+
+	    			'<p>&nbsp;&nbsp;精彩马上到来，请不要走开哦！</p>'+
+					'<p>φ(≧ω≦*)♪</p>'+
+	    			'</div></div>';
+	    	document.write(_LoadingHtml);
+	    	document.onreadystatechange = completeLoading;
+	    	function completeLoading() {
+	    	  if (document.readyState == "complete") {
+	    	 var loadingMask = document.getElementById('pageLoading');
+	    	 loadingMask.parentNode.removeChild(loadingMask);
+	    	  }
+	    	}
+	    </script> 
 	 
 	 
 <meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
@@ -1061,9 +1111,9 @@
     
         <!-- 是否开启jsDelivr 加速 -->
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/aplayer/APlayer.min.css">
-	<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/aplayer/APlayer.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/Meting/Meting.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/libs/aplayer/APlayer.min.css">
+	<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/libs/aplayer/APlayer.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/libs/Meting/Meting.min.js"></script>
 	
 
 <div class="">
@@ -1213,13 +1263,13 @@
 
 <!-- 是否开启jsDelivr 加速 -->
 
-	<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/js/search.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/js/search.js"></script>
 
 	
 <script type="text/javascript">
 $(function () {
     searchFunc(
-		"https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/" + "search.xml",
+		"https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/" + "search.xml",
 		 'searchInput',
 		  'searchResult');
 });
@@ -1241,11 +1291,11 @@ $(function () {
 	
 	<!-- 是否开启jsDelivr 加速 -->
 	
-		<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/js/matery.js"></script>
-		<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/js/add1.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/js/matery.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/js/add1.js"></script>
 	
 	
-	<!-- <script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/others/snow.js"></script> -->
+	<!-- <script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/libs/others/snow.js"></script> -->
 		
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
@@ -1270,14 +1320,14 @@ $(function () {
 
     
 		
-			<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/others/clicklove.js" 
+			<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/libs/others/clicklove.js" 
 					async="async"></script>
 		
     
 		
     
 		
-			<script async src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/busuanzi/busuanzi.pure.mini.js"></script>
+			<script async src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/libs/busuanzi/busuanzi.pure.mini.js"></script>
 		
     
 
@@ -1289,7 +1339,7 @@ $(function () {
     <script type="text/javascript" color="0,0,255"
         pointColor="0,0,255" opacity='0.7'
         zIndex="-1" count="99"
-        src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/background/canvas-nest.js"></script>
+        src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/libs/background/canvas-nest.js"></script>
     
 
     
@@ -1299,7 +1349,7 @@ $(function () {
     
 		<!-- 是否开启jsDelivr 加速 -->
 		
-			<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/instantpage/instantpage.js" type="module"></script>
+			<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/libs/instantpage/instantpage.js" type="module"></script>
 		
     
 	
