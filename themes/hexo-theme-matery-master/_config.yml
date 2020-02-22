@@ -556,3 +556,9 @@ jsDelivr:
   enable: true #本地开发测试时关闭
   url: https://cdn.jsdelivr.net/gh/athink8/athink8.github.io
   
+ #页面加载前动画
+pageLoading:
+  enable: true
+  url: https://cdn.jsdelivr.net/gh/athink8/cdn/icon/loading/loading7.gif
+  ptitle: '精彩马上到来，请不要走开哦！'
+  pface: 'φ(≧ω≦*)♪' #颜表情

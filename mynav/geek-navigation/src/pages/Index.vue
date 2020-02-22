@@ -155,7 +155,7 @@ export default {
     },
 
     async getData() {
-      const res = await this.$http.get("/boxlib/nav.json");
+      const res = await this.$http.get("/nav.json");
       this.data = res.data;
     },
     dataScroll() {

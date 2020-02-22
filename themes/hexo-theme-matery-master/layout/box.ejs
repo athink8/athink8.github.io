@@ -3,8 +3,60 @@
 <main >
 	<script type="text/javascript">
 		$(function() {
+			/* 导航栏添加颜色 */
 			$("#navContainer").addClass("addHeadColor")
+			// $("img").attr({ src: $(this).attr("data-original"), alt: "Test Image" });
+			
+			/* 打开弹框 */
+			$('.modal').modal({
+				dismissible: true, // Modal can be dismissed by clicking outside of the modal
+				opacity: .6, // Opacity of modal background
+				in_duration: 300, // Transition in duration
+				out_duration: 200, // Transition out duration
+				starting_top: '10%', // Starting top style attribute
+				ending_top: '10%', // Ending top style attribute
+			});
+			
+			<!-- 手机菜单 -->
+			$('select').formSelect();
+			$(".m-boxNav select").change(function() {
+				console.log($(".m-boxNav select").val())
+				window.location.href = ($(".m-boxNav select").val())
+			})
+			
+			/* 到达顶层按钮显示 */
+			$(".boxContentDiv").scroll(function() {
+				if($(".boxContentDiv").scrollTop()>0){
+					$('.box-up').show()
+				}else{
+					$('.box-up').hide()
+				}
+				
+			})
+			/*  到达顶层*/
+			$('.box-up').on('click', function() {
+				var size = $(".boxContentDiv").scrollTop();
+				huadong(size, 400, 20)
+			});
+			
+			/* 平滑滑动的方法 */
+			function huadong(size, time, eTime) {
+				var size = size;
+				var time = time;
+				var eTime = eTime;
+				var eSize = size / (time / eTime);
+				var scollSize = eSize;
+				var interval1 = setInterval(function() {
+					$(".boxContentDiv").scrollTop(size - scollSize);
+					if (scollSize >= size) {
+						clearInterval(interval1);
+					}
+					scollSize = eSize + scollSize;
+				}, eTime)
+			}
+						
 		})
+		
 		
 	</script>
 	<style>
@@ -15,10 +67,11 @@
 
 		/* 总box div */
 		.box {
-			height: 530px;
-			background-color: rgba(196,196,196 ,0.8);
-			border: 12px solid rgba(255,255,255,0.9);
+			height: 552px;
+			background-color: rgba(196,196,196 ,0.4);
+			border: 12px solid rgba(255,255,255,0.8);
 			border-radius: 0 0 2px 2px;
+			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 7px 10px 0 rgba(0, 0, 0, 0.12);
 		}
 
 		.box * {
@@ -28,8 +81,9 @@
 		/* 左边菜单项div */
 		.boxNavDiv {
 			background-color: rgba(90, 90, 90, 0.8);
-			height: 100%;
+			height: 98%;
 			overflow: scroll;
+			overflow-x: auto;
 		}
 
 		/* 左边菜单项里的logo div*/
@@ -53,8 +107,8 @@
 			font-size: 21px;
 			border: 2px solid rgba(204, 204, 255, 1);
 			cursor: pointer;
-			background-color: rgba(214, 165, 92, 1);
-			text-align: center;
+			background-color: rgba(214, 165, 92, 0.6);
+			text-align: left;
 			line-height: 47px;
 		}
 
@@ -65,7 +119,7 @@
 		/* 右边内容主体 */
 		.boxContentDiv {
 			background-color: rgba(221, 221, 221, 0.5);
-			height: 100%;
+			height: 98%;
 			overflow: scroll;
 		}
 
@@ -168,6 +222,27 @@
 			-webkit-transform: scale(2);
 			transform: scale(2);
 		}
+		
+		.box-aboutInfo p{
+			font-size: 18px;
+		}
+		
+		.box-up{
+			position: fixed;
+			left: 80%;
+			top: 73%;
+		}
+		
+		.m-boxNav {
+			padding: 0 10px 0 10px;
+			background-color: lightskyblue;
+			border: 1px solid coral;
+			position: fixed;
+			left: 51%;
+			top: 12%;
+			width: 170px;
+			z-index: 10;
+		}
 	</style>
 		
 	<%
@@ -177,9 +252,41 @@
 	}
 	%>
 	
-	<br>
 	<div class="container">
 		<div class="row box">
+			
+			<!-- 手机菜单 -->
+			<% if (box.length>0) { %>
+				<div class="input-field m-boxNav hide-on-med-and-up">
+					<select>
+					<option value="" disabled selected>类型</option>
+					<% for (var i = 0, len =box.length; i < len; i++) { %>
+						<option value="#m<%-i%>"><%- box[i].title %></option>
+					<% } %>
+					</select>
+				</div>
+			<% }%>
+			
+			<!-- 向上按钮 -->
+			<a class="btn-floating waves-effect waves-light red box-up" style="display: none;"><i class="czs-arrow-up-l"></i></a>
+			<!-- 免责申明 -->
+			<div class="col l12 m12 s12" style="text-align: right;"><a class="modal-trigger teal lighten-5" href="#modal1">关于本导航收藏</a></div>
+			<div id="modal1" class="modal modal-fixed-footer">
+				<div class="modal-content box-aboutInfo">
+					<h4><i class="czs-face-l"></i>关于本导航页面</h4><br />
+					<h5><i class="czs-about-l" ></i>免责声明：</h5>
+					<p>1. 本站导航收藏里所有的图标、网址信息等归原网站所有，本网站只做信息整理而已。</p>
+					<p>2. 关于本站导航收藏里的所有网站均未进行深度访问，请访客自行对访问内容进行辨别，本站不对导航网站里内容负责。</p>
+					<p>3. 本站属公益性网站，不涉及任何商业运营活动。</p><br />
+					<h5><i class="czs-doc-edit-l"></i>联系我：</h5>
+					<p>本站唯一域名: <a href="https://blog.onfree.cn">https://blog.onfree.cn</a></p>
+					<p>如果你有任何疑问或困惑，欢迎留言或者邮件我：<span style="color: #009688;">athink8@163.com</span></p>
+					<p>如果你有关于比较好或有趣的网站，欢迎提交我哦！谢谢</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">同意</a>
+				</div>
+			</div>
 			
 			<!-- 菜单 -->
 			<div class="hide-on-med-and-down col l3 m3 s12 boxNavDiv side-nav">
@@ -187,7 +294,9 @@
 				<div class="boxNav">
 					<% if (box.length>0) { %>
 					    <% for (var i = 0, len =box.length; i < len; i++) { %>
-					    	<a href="#m<%-i%>" class="waves-teal btn-flat waves-effect waves-green"><%- box[i].title %></a>
+					    	<a href="#m<%-i%>" class="waves-teal btn-flat waves-effect waves-green">
+								<i class="<%- box[i].icon %>"></i>&nbsp<%- box[i].title %>
+							</a>
 					    <% } %>
 					<% }%>
 				</div>
@@ -198,13 +307,15 @@
 				<% if (box.length>0) { %>
 				    <% for (var i = 0, len =box.length; i < len; i++) { %>
 						<div id="m<%-i%>" class="row boxContent ">
-							<div class="boxContentTitle m12 center-align"><%- box[i].title %></div><hr>
+							<div class="boxContentTitle m12 center-align">
+								<i class="<%- box[i].icon %>">&nbsp</i><%- box[i].title %>
+							</div><hr>
 							<div class="row boxCarts">
 								<% for (var j = 0, len2 =box[i].sites.length; j < len2; j++) { %>
 									<div class="col m4 s12 l4">
 										<div class="boxCart ts1">
-											<a href="<%- box[i].sites[j].href %>">
-												<img src="<%- box[i].sites[j].logo %>" class="boxCartIcon">
+											<a href="<%- box[i].sites[j].href%>" >
+												<img class="boxCartIcon" src=<%- box[i].sites[j].logo %> alt="">
 												<div class="boxCartTitleInfo">
 													<div class="bcTitle"><%- box[i].sites[j].name %></div><hr />
 													<div class="bcInfo"><%- box[i].sites[j].desc %></div>	
@@ -218,7 +329,6 @@
 				    <% } %>
 				<% } %>
 			</div>
-			
 		</div>
 	</div>
 </main>

@@ -1,292 +1,282 @@
 [{
 	"_id": "5ce77a75afdec884fab9599d",
-	"title": "[产品]新品推荐",
+	"title": "常用工具箱",
 	"icon": "czs-bookmark-l",
 	"sites": [ {
-		"name": "Kickstarter",
-		"href": "https://www.kickstarter.com/",
-		"desc": "全球著名的新品众筹平台",
-		"logo": "http://chuangzaoshi.com/assets/images/P/kickstarter.png"
+		"name": "一个工具箱",
+		"href": "http://www.atoolbox.net",
+		"desc": "好用的工具箱都在这里！",
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/A/yigegongjuxiang.hbzvhdbl7ad.png"
 	}, {
-		"name": "Steam",
-		"href": "http://store.steampowered.com/",
-		"desc": "全球最大的综合性数字发行平台",
-		"logo": "http://chuangzaoshi.com/assets/images/P/steam.png"
-	}, {
-		"name": "知晓程序",
-		"href": "https://minapp.com/",
-		"desc": "微信小程序应用商店和大全",
-		"logo": "http://chuangzaoshi.com/assets/images/P/minapp.png"
+		"name": "站长工具",
+		"href": "http://tool.chinaz.com/",
+		"desc": "包含常见工具",
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/A/zhanzhanggongju.png"
 	}]
 }, {
 	"_id": "5ce77a75afdec884fab9599e",
-	"title": "[产品]产品资讯",
+	"title": "［产品］产品资讯",
 	"icon": "czs-cup-l",
 	"sites": [{
 		"name": "TechCrunch",
 		"href": "http://techcrunch.com/",
 		"desc": "国外的互联网新产品资讯新闻",
-		"logo": "http://chuangzaoshi.com/assets/images/P/techcrunch.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(4).png"
 	}, {
 		"name": "The Verge",
 		"href": "http://www.theverge.com/",
 		"desc": "美国最酷科技媒体",
-		"logo": "http://chuangzaoshi.com/assets/images/P/theverge.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(5).png"
 	}, {
 		"name": "人人都是产品经理",
 		"href": "http://www.woshipm.com/",
 		"desc": "产品经理、产品爱好者学习交流平台",
-		"logo": "http://chuangzaoshi.com/assets/images/P/woshipm.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(6).png"
 	}, {
 		"name": "36氪",
 		"href": "http://36kr.com/",
 		"desc": "为创业者提供最好的产品和服务",
-		"logo": "http://chuangzaoshi.com/assets/images/P/36kr.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(7).png"
 	}, {
 		"name": "极客公园",
 		"href": "http://www.geekpark.net/",
 		"desc": "热点产品的深度分析,发掘产品和趋势的价值",
-		"logo": "http://chuangzaoshi.com/assets/images/P/geekpark.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(8).png"
 	}, {
 		"name": "少数派",
 		"href": "http://sspai.com/",
 		"desc": "专注于移动APP编辑精选",
-		"logo": "http://chuangzaoshi.com/assets/images/P/sspai.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(9).png"
 	}, {
 		"name": "iFixit",
 		"href": "https://www.ifixit.com/",
 		"desc": "智能硬件产品拆卸和维修",
-		"logo": "http://chuangzaoshi.com/assets/images/P/ifixit.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(10).png"
 	}, {
 		"name": "zealer",
 		"href": "http://www.zealer.com/",
 		"desc": "科技达人王自如数码产品测评平台",
-		"logo": "http://chuangzaoshi.com/assets/images/P/zealer.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(11).png"
 	}, {
 		"name": "PMCAFF",
 		"href": "http://www.pmcaff.com/",
 		"desc": "产品经理的社区和资讯站点",
-		"logo": "http://chuangzaoshi.com/assets/images/P/pmcaff.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(12).png"
 	}, {
 		"name": "小众软件",
 		"href": "http://www.appinn.com/",
 		"desc": "分享免费、小巧、有趣、实用软件的网站",
-		"logo": "http://chuangzaoshi.com/assets/images/P/appinn.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(13).png"
 	}, {
 		"name": "LiveSino",
 		"href": "http://livesino.net/",
 		"desc": "专注于微软产品和技术的资讯博客",
-		"logo": "http://chuangzaoshi.com/assets/images/P/livesino.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(14).png"
 	}, {
 		"name": "Solidot",
 		"href": "http://solidot.net/",
 		"desc": "关注科技和开源的奇客资讯",
-		"logo": "http://chuangzaoshi.com/assets/images/P/solidot.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(15).png"
 	}]
 }, {
 	"_id": "5ce77a75afdec884fab9599f",
-	"title": "[产品]原型工具",
-	"icon": "czs-prototype-l",
+	"title": "［产品］原型工具",
+	"icon": "czs-buy-l",
 	"sites": [{
 		"name": "Axure",
 		"href": "http://www.axure.com/",
 		"desc": "专业的快速原型设计工具",
-		"logo": "http://chuangzaoshi.com/assets/images/P/axure.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(16).png"
 	}, {
 		"name": "墨刀",
 		"href": "https://modao.cc/",
 		"desc": "专业制作移动APP应用原型工具",
-		"logo": "http://chuangzaoshi.com/assets/images/P/modao.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(17).png"
 	}, {
 		"name": "Sketch",
 		"href": "https://www.sketchapp.com/",
 		"desc": "专注于UI设计+原型图工具",
-		"logo": "http://chuangzaoshi.com/assets/images/P/sketch.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(18).png"
 	}, {
 		"name": "Mockplus",
 		"href": "https://www.mockplus.cn/",
 		"desc": "简洁快速的原型图设计工具",
-		"logo": "http://chuangzaoshi.com/assets/images/P/mockplus.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(19).png"
 	}]
 }, {
 	"_id": "5ce77a75afdec884fab959a0",
-	"title": "[产品]思维导图",
+	"title": "［产品］思维导图",
 	"icon": "czs-control-rank",
 	"sites": [{
 		"name": "Xmind",
 		"href": "http://www.xmind.net/",
 		"desc": "一款非常实用的商业思维导图软件",
-		"logo": "http://chuangzaoshi.com/assets/images/P/xmind.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(20).png"
 	}, {
 		"name": "Mindnode",
 		"href": "http://mindnode.com/",
 		"desc": "非常优秀思维导图APP",
-		"logo": "http://chuangzaoshi.com/assets/images/P/mindnode.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(21).png"
 	}, {
 		"name": "百度脑图",
 		"href": "http://naotu.baidu.com/",
 		"desc": "百度便捷的流程图思维工具",
-		"logo": "http://chuangzaoshi.com/assets/images/P/baidunaotu.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(22).png"
 	}, {
 		"name": "MindManager",
 		"href": "https://www.mindjet.com/",
 		"desc": "简单强大的心智图",
-		"logo": "http://chuangzaoshi.com/assets/images/P/mindjet.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(23).png"
 	}, {
 		"name": "Novamind",
 		"href": "https://www.novamind.com/",
 		"desc": "思维导图和PPT融合在一起",
-		"logo": "http://chuangzaoshi.com/assets/images/P/novamind.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(24).png"
 	}, {
 		"name": "iMindmap",
 		"href": "https://imindmap.com/",
 		"desc": "独特强大可创建3D视角的思维导图",
-		"logo": "http://chuangzaoshi.com/assets/images/P/imindmap.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(25).png"
 	}, {
 		"name": "iThoughtsX",
 		"href": "https://www.toketaware.com/",
 		"desc": "非常优秀的Mac平台思维导图",
-		"logo": "http://chuangzaoshi.com/assets/images/P/ithonghtsx.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(26).png"
 	}, {
 		"name": "Lighten",
 		"href": "http://lighten.xmind.net/",
 		"desc": "XMind团队推出的iOS脑图App",
-		"logo": "http://chuangzaoshi.com/assets/images/P/lighten.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(27).png"
 	}]
 }, {
 	"_id": "5ce77a75afdec884fab959a1",
-	"title": "[产品]协同工作",
-	"icon": "czs-gene",
+	"title": "［产品］协同工作",
+	"icon": "czs-blackboard-l",
 	"sites": [{
 		"name": "Worktile",
 		"href": "https://worktile.com/",
 		"desc": "在线团队协同办公、项目管理工具",
-		"logo": "http://chuangzaoshi.com/assets/images/P/worktile.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(28).png"
 	}, {
 		"name": "Teambition",
 		"href": "https://www.teambition.com/",
 		"desc": "国内领先的团队协作工具",
-		"logo": "http://chuangzaoshi.com/assets/images/P/teambition.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(29).png"
 	}, {
 		"name": "Onenote",
 		"href": "http://www.onenote.com/",
 		"desc": "微软强大的云笔记，支持多用户协作",
-		"logo": "http://chuangzaoshi.com/assets/images/P/onenote.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(30).png"
 	}, {
 		"name": "印象笔记",
 		"href": "https://www.yinxiang.com/",
 		"desc": "简洁好用的云笔记",
-		"logo": "http://chuangzaoshi.com/assets/images/P/yinxiang.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(31).png"
 	}, {
 		"name": "Trello",
 		"href": "https://trello.com/",
 		"desc": "项目进度管理和发布、协同工作平台",
-		"logo": "http://chuangzaoshi.com/assets/images/P/trello.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(32).png"
 	}, {
 		"name": "蓝湖",
 		"href": "https://lanhuapp.com/",
 		"desc": "设计师的产品协作平台",
-		"logo": "http://chuangzaoshi.com/assets/images/P/lanhuapp.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(33).png"
 	}]
 }, {
 	"_id": "5ce77a75afdec884fab959a2",
-	"title": "[产品]文档编辑",
+	"title": "［产品］文档编辑",
 	"icon": "czs-write-l ",
 	"sites": [{
 		"name": "Notion",
 		"href": "https://www.notion.so/",
 		"desc": "集文档丨wiki丨任务的协同创作平台",
-		"logo": "http://chuangzaoshi.com/assets/images/P/notion.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(34).png"
 	}, {
 		"name": "Google文档",
 		"href": "https://www.google.com/intl/zh-CN/docs/about/",
 		"desc": "Google免费在线创建和编辑文档",
-		"logo": "http://chuangzaoshi.com/assets/images/P/googledocs.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(35).png"
 	}, {
 		"name": "石墨文档",
 		"href": "https://shimo.im/",
 		"desc": "支持多人协作的在线文档",
-		"logo": "http://chuangzaoshi.com/assets/images/P/shimo.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(36).png"
 	}, {
 		"name": "微软Office",
 		"href": "https://products.office.com/",
 		"desc": "微软Word丨PPT丨Excel等文档办公套装",
-		"logo": "http://chuangzaoshi.com/assets/images/P/office.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(37).png"
 	}, {
 		"name": "Quip",
 		"href": "https://quip.com/",
 		"desc": "让您的小组和您的工作充满活力",
-		"logo": "http://chuangzaoshi.com/assets/images/P/quip.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(38).png"
 	}]
 }, {
 	"_id": "5ce77a75afdec884fab959a3",
-	"title": "[产品]云盘储存",
+	"title": "［产品］云盘储存",
 	"icon": "czs-storage-l",
 	"sites": [{
 		"name": "OneDrive",
 		"href": "http://onedrive.com/",
 		"desc": "微软云存储，支持在线Offiec编辑",
-		"logo": "http://chuangzaoshi.com/assets/images/P/onedrive.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(39).png"
 	}, {
 		"name": "DropBox",
 		"href": "https://www.dropbox.com/",
 		"desc": "全球最优秀的在线云存储",
-		"logo": "http://chuangzaoshi.com/assets/images/P/dropbox.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(40).png"
 	}, {
 		"name": "GoogleDrive",
 		"href": "https://www.google.com/intl/zh-CN/drive/",
 		"desc": "Google在线云存储服务",
-		"logo": "http://chuangzaoshi.com/assets/images/P/googledrive.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(41).png"
 	}, {
 		"name": "iCloud",
 		"href": "https://www.icloud.com/",
 		"desc": "苹果在线存储和云服务",
-		"logo": "http://chuangzaoshi.com/assets/images/P/icloud.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(42).png"
 	}, {
 		"name": "百度网盘",
 		"href": "https://pan.baidu.com/",
 		"desc": "国内最大百度旗下网盘服务",
-		"logo": "http://chuangzaoshi.com/assets/images/P/baiduyun.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(43).png"
 	}, {
 		"name": "微云",
 		"href": "https://www.weiyun.com/",
 		"desc": "腾讯QQ网盘服务",
-		"logo": "http://chuangzaoshi.com/assets/images/P/weiyun.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(44).png"
 	}, {
 		"name": "坚果云",
 		"href": "https://www.jianguoyun.com/",
 		"desc": "小众服务稳定的网盘",
-		"logo": "http://chuangzaoshi.com/assets/images/P/jianguoyun.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(45).png"
 	}]
 }, {
 	"_id": "5ce77a75afdec884fab959a4",
-	"title": "[产品]趣味产品",
+	"title": "［产品］趣味产品",
 	"icon": "czs-chemistry-l",
 	"sites": [{
 		"name": "小猪动图",
 		"href": "http://www.piggif.com/",
 		"desc": "GIF动图中文搜索和制作",
-		"logo": "http://chuangzaoshi.com/assets/images/O/piggif.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(1).png"
 	}, {
 		"name": "IFTTT",
 		"href": "https://ifttt.com/discover",
 		"desc": "触发你的智能生活,让生活更极客更简单",
-		"logo": "http://chuangzaoshi.com/assets/images/P/ifttt.png"
-	}, {
-		"name": "GIF搜索",
-		"href": "http://soogif.com/",
-		"desc": "Gif动图中文搜索平台",
-		"logo": "http://chuangzaoshi.com/assets/images/F/soogif.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(46).png"
+	},{
 		"name": "Giphy",
 		"href": "http://giphy.com/",
 		"desc": "全球在线动态GIF图片搜索引擎",
-		"logo": "http://chuangzaoshi.com/assets/images/P/giphy.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(47).png"
 	}, {
 		"name": "imgur",
 		"href": "http://imgur.com/",
 		"desc": "全球免费的图片分享和图床网站",
-		"logo": "http://chuangzaoshi.com/assets/images/P/imgur.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(48).png"
 	}]
 }, {
 	"_id": "5ce77a75afdec884fab959a5",
@@ -296,234 +286,197 @@
 		"name": "w3schools",
 		"href": "http://www.w3schools.com/",
 		"desc": "WEB初学者教程网站",
-		"logo": "http://chuangzaoshi.com/assets/images/C/w3schools.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(1).png"
 	}, {
 		"name": "Bootstrap",
 		"href": "http://getbootstrap.com/",
 		"desc": "用于前端开发的开源工具包",
-		"logo": "http://chuangzaoshi.com/assets/images/C/bootstrap.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(31).png" 
 	}, {
 		"name": "codepen",
 		"href": "http://codepen.io/",
 		"desc": "前端炫酷样式技能效果",
-		"logo": "http://chuangzaoshi.com/assets/images/C/codepen.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(2).png"
 	}, {
 		"name": "Fontawesome",
 		"href": "http://fontawesome.io/",
 		"desc": "全球著名的前端图标字体库",
-		"logo": "http://chuangzaoshi.com/assets/images/C/fontawesome.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(3).png"
 	}, {
 		"name": "OOPS",
 		"href": "http://oops.re/ ",
 		"desc": "404优秀设计案例展示",
-		"logo": "http://chuangzaoshi.com/assets/images/C/oops.png"
-	}, {
-		"name": "Mimo APP",
-		"href": "https://getmimo.com/",
-		"desc": "一款很棒的编程学习APP",
-		"logo": "http://chuangzaoshi.com/assets/images/C/mimo.png"
-	}, {
-		"name": "CodeCast",
-		"href": "http://codecast.me/",
-		"desc": "在线实时编程预览",
-		"logo": "http://chuangzaoshi.com/assets/images/C/codecast.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(4).png"
+	},{
 		"name": "Navnav",
 		"href": "http://navnav.co/",
 		"desc": "CSS/JS炫酷前端动效",
-		"logo": "http://chuangzaoshi.com/assets/images/C/navnav.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(5).png" 
 	}, {
 		"name": "WEUI",
 		"href": "https://weui.io/",
 		"desc": "微信官方小程序UI样式库",
-		"logo": "http://chuangzaoshi.com/assets/images/C/weui.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(113).png"
 	}, {
 		"name": "Facebook-code",
 		"href": "https://code.facebook.com/projects/",
 		"desc": "facebook开放资源",
-		"logo": "http://chuangzaoshi.com/assets/images/C/facebookcode.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(6).png"
 	}, {
 		"name": "SnapSVG",
 		"href": "http://snapsvg.io/",
 		"desc": "SVG动效的JS库",
-		"logo": "http://chuangzaoshi.com/assets/images/C/snapsvg.png"
-	}, {
-		"name": "JSfiddle",
-		"href": "https://jsfiddle.net/",
-		"desc": "在线实时JS测试编程",
-		"logo": "http://chuangzaoshi.com/assets/images/C/jsfiddle.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(7).png"
 	}, {
 		"name": "codemyui",
 		"href": "https://codemyui.com/",
 		"desc": "采集有趣的网站UI代码片段",
-		"logo": "http://chuangzaoshi.com/assets/images/C/codemyui.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(8).png"
 	}, {
 		"name": "codrops",
 		"href": "https://tympanus.net/codrops/",
 		"desc": "网站UI交互源码分享",
-		"logo": "http://chuangzaoshi.com/assets/images/C/codrops.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(9).png"
 	}, {
 		"name": "htmlarrows",
 		"href": "http://htmlarrows.com/",
 		"desc": "提供HMTL的特殊符号",
-		"logo": "http://chuangzaoshi.com/assets/images/C/htmlarrows.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(10).png"
 	}, {
 		"name": "copypastecharacter",
 		"href": "http://www.copypastecharacter.com/",
 		"desc": "特殊符号大全表",
-		"logo": "http://chuangzaoshi.com/assets/images/C/copypastecharacter.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(11).png"
 	}, {
 		"name": "CSSDeck",
 		"href": "http://cssdeck.com/",
 		"desc": "在线CSS前端代码Demo样式效果",
-		"logo": "http://chuangzaoshi.com/assets/images/C/cssdeck.png"
-	}, {
-		"name": "Animista",
-		"href": "http://animista.net/",
-		"desc": "CSS动态效果样式在线自定义",
-		"logo": "http://chuangzaoshi.com/assets/images/C/animista.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(12).png"
+	},{
 		"name": "html5 Platform",
 		"href": "https://platform.html5.org/",
 		"desc": "HTML5的web浏览技术图谱",
-		"logo": "http://chuangzaoshi.com/assets/images/C/platform.png"
-	}, {
-		"name": "草莓图标",
-		"href": "http://chuangzaoshi.com/icon/",
-		"desc": "为开发者设计的一套免费开源图标库",
-		"logo": "http://chuangzaoshi.com/assets/images/D/caomei.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(13).png"
+	},{
 		"name": "树莓派",
 		"href": "https://www.raspberrypi.org/",
 		"desc": "编程教育而设计的微电脑",
-		"logo": "http://chuangzaoshi.com/assets/images/C/raspberry.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(14).png"
 	}, {
 		"name": "w3techs",
 		"href": "https://w3techs.com",
 		"desc": "web网站技术调查报告",
-		"logo": "http://chuangzaoshi.com/assets/images/C/w3techs.png\t"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(15).png"
 	}, {
 		"name": "CSS-Tricks",
 		"href": "https://css-tricks.com/",
 		"desc": "优秀的CSS前端技术分享博客",
-		"logo": "http://chuangzaoshi.com/assets/images/C/css-tricks.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(16).png"
 	}]
 }, {
 	"_id": "5ce77a75afdec884fab959a6",
 	"title": "［前端］前端框架",
-	"icon": "czs-prototype-l",
+	"icon": "czs-credit-card-l",
 	"sites": [{
 		"name": "React",
 		"href": "https://facebook.github.io/react/",
 		"desc": "facebook强大的JavaScript框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/reactjs.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(17).png"
 	}, {
 		"name": "Angularjs",
 		"href": "https://angularjs.org/",
 		"desc": "Google开发的前端技术框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/angularjs.png "
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(18).png"
 	}, {
 		"name": "JQuery",
 		"href": "http://jquery.com/",
 		"desc": "一个快速、简洁的JavaScript框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/jquery.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(19).png"
 	}, {
 		"name": "Foundation",
 		"href": "http://foundation.zurb.com/",
 		"desc": "高级响应式前端框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/foundation.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(20).png"
 	}, {
 		"name": "Material UI",
 		"href": "http://www.material-ui.com/",
 		"desc": "一组反应元件，实现谷歌的材料设计",
-		"logo": "http://chuangzaoshi.com/assets/images/C/material-ui.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(21).png"
 	}, {
 		"name": "Vuejs",
 		"href": "http://cn.vuejs.org/",
 		"desc": "小巧精致,渐进式JavaScript 框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/vuejs.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(22).png"
 	}, {
 		"name": "Sass",
 		"href": "http://sass-lang.com/",
 		"desc": "世界级强大的专业CSS扩展语言",
-		"logo": "http://chuangzaoshi.com/assets/images/C/sass.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(23).png"
 	}, {
 		"name": "MaterialDesignLite",
 		"href": "https://getmdl.io/",
 		"desc": "Google官方轻量级MaterialDesignLite版",
-		"logo": "http://chuangzaoshi.com/assets/images/C/getmdl.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(24).png"
 	}, {
 		"name": "Material Design",
 		"href": "https://material.io/guidelines/",
 		"desc": "Google官方MaterialDesign指南",
-		"logo": "http://chuangzaoshi.com/assets/images/C/material.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(25).png"
 	}, {
 		"name": "Flat UI",
 		"href": "http://designmodo.github.io/Flat-UI/",
 		"desc": "扁平化多彩风格UI",
-		"logo": "http://chuangzaoshi.com/assets/images/C/flatui.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(26).png"
 	}, {
 		"name": "Pure",
 		"href": "https://purecss.io/",
 		"desc": "轻型响应式CSS框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/purecss.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(27).png"
 	}, {
 		"name": "Semantic UI",
 		"href": "https://semantic-ui.com/",
 		"desc": "语义化设计的前端开源框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/semanticui.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(28).png"
 	}, {
 		"name": "Element",
 		"href": "http://element.eleme.io/#/zh-CN",
 		"desc": "饿了么出品基于Vue2.0前端组件库",
-		"logo": "http://chuangzaoshi.com/assets/images/C/element.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(29).png"
 	}, {
 		"name": "AntDesign",
 		"href": "https://ant.design/",
 		"desc": "蚂蚁金服的UI设计语言",
-		"logo": "http://chuangzaoshi.com/assets/images/C/antdesign.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(30).png"
 	}, {
 		"name": "Bootcss",
 		"href": "www.bootcss.com/",
 		"desc": "Bootstrap中文爱好者网站",
-		"logo": "http://chuangzaoshi.com/assets/images/C/bootstrap.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(31).png"
 	}, {
 		"name": "Less",
 		"href": "http://lesscss.org/",
 		"desc": "CSS一种动态样式预处理语言",
-		"logo": "http://chuangzaoshi.com/assets/images/C/lesscss.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(32).png"
 	}, {
 		"name": "Emberjs",
 		"href": "https://www.emberjs.com/",
 		"desc": "Web应用程序开发的MVC框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/emberjs.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(33).png"
 	}, {
 		"name": "Aurelia",
 		"href": "http://aurelia.io/",
 		"desc": "javaScript客户端框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/aurelia.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(34).png"
 	}, {
 		"name": "Laravel",
 		"href": "https://laravel.com/",
 		"desc": "一套简洁优雅的PHP Web开发框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/laravel.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(42).png"
 	}, {
 		"name": "Flutter",
 		"href": "https://flutter.io/",
 		"desc": "Google跨平台(iOS和Android)原生应用UI框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/flutter.png"
-	}, {
-		"_id": "5cea9aa3911e3e09c8f01f27",
-		"name": "VantUI",
-		"href": "https://youzan.github.io/vant/#/zh-CN/quickstart",
-		"desc": "有赞团队开发的Vue前端UI框架",
-		"logo": "https://img.yzcdn.cn/public_files/2017/12/18/fd78cf6bb5d12e2a119d0576bedfd230.png"
-	}, {
-		"_id": "5cedff7f9dfda2168a1f469c",
-		"name": "docusaurus",
-		"href": "https://docusaurus.io/",
-		"desc": "使用React编写静态文档框架",
-		"logo": "https://docusaurus.io/img/docusaurus.svg"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(35).png"
 	}]
 }, {
 	"_id": "5ce77a75afdec884fab959a7",
@@ -533,72 +486,62 @@
 		"name": "V2EX",
 		"href": "http://www.v2ex.com/",
 		"desc": "IT创意工作者社区",
-		"logo": "http://chuangzaoshi.com/assets/images/C/v2ex.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(36).png"
 	}, {
 		"name": "cnode",
 		"href": "https://cnodejs.org/",
 		"desc": "js专业中文社区",
-		"logo": "http://chuangzaoshi.com/assets/images/C/cnodejs.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(37).png"
 	}, {
 		"name": "Stackoverflow",
 		"href": "http://stackoverflow.com/",
 		"desc": "全球专业的程序员IT技术问答社区",
-		"logo": "http://chuangzaoshi.com/assets/images/C/stackoverflow.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(38).png"
 	}, {
 		"name": "HackerNews",
 		"href": "https://news.ycombinator.com/",
 		"desc": "HackerNews黑客极客社区",
-		"logo": "http://chuangzaoshi.com/assets/images/C/hackernews.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(39).png"
 	}, {
 		"name": "Github",
 		"href": "https://github.com/",
 		"desc": "面向开源及私有软件项目的托管平台",
-		"logo": "http://chuangzaoshi.com/assets/images/C/github.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(105).png"
 	}, {
 		"name": "开源中国",
 		"href": "http://www.oschina.net/",
 		"desc": "目前国内最大的开源技术社区",
-		"logo": "http://chuangzaoshi.com/assets/images/C/oschina.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(40).png"
 	}, {
 		"name": "掘金",
 		"href": "https://juejin.im/",
 		"desc": "高质量的技术社区",
-		"logo": "http://chuangzaoshi.com/assets/images/C/xitu.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(41).png"
 	}, {
 		"name": "LaravelChina",
 		"href": "https://laravel-china.org/",
 		"desc": "PHP和Laravel开发者社区",
-		"logo": "http://chuangzaoshi.com/assets/images/C/laravel.png"
-	}, {
-		"name": "DiyCode",
-		"href": "https://www.diycode.cc/",
-		"desc": "致力于构建开发工程师社区",
-		"logo": "http://chuangzaoshi.com/assets/images/F/diycode2.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(42).png"
+	},{
 		"name": "Segmentfault",
 		"href": "https://segmentfault.com/",
 		"desc": "编程爱好者技术交流的平台",
-		"logo": "http://chuangzaoshi.com/assets/images/C/segmentfault.png"
-	}, {
-		"name": "Coding冒泡",
-		"href": "https://coding.net/pp",
-		"desc": "开发者交流分享社区",
-		"logo": "http://chuangzaoshi.com/assets/images/C/coding.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(43).png"
 	}, {
 		"name": "awesomes",
 		"href": "https://www.awesomes.cn/",
 		"desc": "web前端开发资源库",
-		"logo": "http://chuangzaoshi.com/assets/images/C/awesomescn.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(44).png"
 	}, {
 		"name": "RunJS",
 		"href": "http://runjs.cn/",
 		"desc": "在线编辑、分享JavaScript代码社区",
-		"logo": "http://chuangzaoshi.com/assets/images/C/runjs.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(45).png"
 	}, {
 		"name": "光谷社区",
 		"href": "http://www.guanggoo.com/",
 		"desc": "武汉光谷互联网IT社区",
-		"logo": "http://chuangzaoshi.com/assets/images/C/guanggoo.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(46).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959a8",
@@ -608,57 +551,52 @@
 		"name": "Mimo APP",
 		"href": "https://getmimo.com/",
 		"desc": "一款很棒的编程学习APP",
-		"logo": "http://chuangzaoshi.com/assets/images/C/mimo.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(47).png"
 	}, {
 		"name": "w3school中文",
 		"href": "http://www.w3school.com.cn/",
 		"desc": "编程入门学习及技术文档查询网站",
-		"logo": "http://chuangzaoshi.com/assets/images/C/w3cshool.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(48).png"
 	}, {
 		"name": "CSS Reference",
 		"href": "http://cssreference.io/",
 		"desc": "非常棒的免费的CSS属性指导手册",
-		"logo": "http://chuangzaoshi.com/assets/images/C/cssreference.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(49).png"
 	}, {
 		"name": "CodeCademy",
 		"href": "https://www.codecademy.com/",
 		"desc": "在线趣味互动模式编程学习平台",
-		"logo": "http://chuangzaoshi.com/assets/images/C/codecademy.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(50).png"
 	}, {
 		"name": "udacity",
 		"href": "https://cn.udacity.com/",
 		"desc": "传授硅谷的名企官方课程",
-		"logo": "http://chuangzaoshi.com/assets/images/C/udacity.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(51).png"
 	}, {
 		"name": "mozilla开发者",
 		"href": "https://developer.mozilla.org/zh-CN/",
 		"desc": "开发者网络(MDN)提供有关开放网络技术",
-		"logo": "http://chuangzaoshi.com/assets/images/C/mozilla.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(52).png"
 	}, {
 		"name": "webplatform",
 		"href": "http://www.webplatform.org/",
 		"desc": "发布Web标准有关的最新以及高品质信息",
-		"logo": "http://chuangzaoshi.com/assets/images/C/webplatform.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(53).png"
 	}, {
 		"name": "可汗学院",
 		"href": "https://www.khanacademy.org/",
 		"desc": "著名的非营利在线教育网站",
-		"logo": "http://chuangzaoshi.com/assets/images/C/khanacademy.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(54).png"
 	}, {
 		"name": "CODE",
 		"href": "http://code.org/",
 		"desc": "适用于初级的免费游戏式编程教学",
-		"logo": "http://chuangzaoshi.com/assets/images/C/code.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(55).png"
 	}, {
 		"name": "JStips",
 		"href": "http://www.jstips.co/",
 		"desc": "每天一条JS小知识点",
-		"logo": "http://chuangzaoshi.com/assets/images/C/jstips.png"
-	}, {
-		"name": "廖雪峰",
-		"href": "https://www.liaoxuefeng.com",
-		"desc": "力荐：精品编程教程技术大牛博客",
-		"logo": "http://chuangzaoshi.com/assets/images/F/liaoxuefeng.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(56).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959a9",
@@ -668,42 +606,37 @@
 		"name": "Mobi.css",
 		"href": "http://getmobicss.com/",
 		"desc": "轻量灵活的移动端 CSS 框架。",
-		"logo": "http://chuangzaoshi.com/assets/images/C/getmobicss.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(57).png"
 	}, {
 		"name": "MDUI",
 		"href": "http://www.mdui.org/docs/",
 		"desc": "轻量级的Material Design前端框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/mdui.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(58).png"
 	}, {
 		"name": "layui",
 		"href": "http://www.layui.com/",
 		"desc": "面向前后端程序员的模块化前端框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/layui.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(59).png"
 	}, {
 		"name": "vux",
 		"href": "https://vux.li/",
 		"desc": "基于Vue和 Weui的移动端框架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/vux.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(60).png"
 	}, {
 		"name": "QMUIios",
 		"href": "http://qmuiteam.com/ios/page/index.html",
 		"desc": "腾讯旗下团队 IOS UI解决方案",
-		"logo": "http://chuangzaoshi.com/assets/images/C/qmuiios.png"
-	}, {
-		"name": "QMUIweb",
-		"href": "http://qmuiteam.com/web/page/index.html",
-		"desc": "腾讯旗下团队 web UI解决方案",
-		"logo": "http://chuangzaoshi.com/assets/images/C/qmuiios.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(61).png"
+	},{
 		"name": "iView",
 		"href": "https://www.iviewui.com/",
 		"desc": "一套基于 Vue.js 的高质量 UI 组件库",
-		"logo": "http://chuangzaoshi.com/assets/images/C/iviewui.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(62).png"
 	}, {
 		"name": "Halo",
 		"href": "https://github.com/ruibaby/halo",
 		"desc": "Java 开发的博客系统",
-		"logo": "http://chuangzaoshi.com/assets/images/C/halo.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(63).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959aa",
@@ -713,92 +646,92 @@
 		"name": "CodeCast",
 		"href": "http://codecast.me/launch/",
 		"desc": "在线实时编程预览",
-		"logo": "http://chuangzaoshi.com/assets/images/C/codecast.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(64).png"
 	}, {
 		"name": "JSfiddle",
 		"href": "https://jsfiddle.net/",
 		"desc": "在线实时JS测试编程",
-		"logo": "http://chuangzaoshi.com/assets/images/C/jsfiddle.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(65).png"
 	}, {
 		"name": "CSS triangle",
 		"href": "http://apps.eky.hk/css-triangle-generator/",
 		"desc": "css三角形样式在线生成",
-		"logo": "http://chuangzaoshi.com/assets/images/C/eky.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(66).png"
 	}, {
 		"name": "json-generator",
 		"href": "http://beta.json-generator.com/",
 		"desc": "模拟生成JSON数据",
-		"logo": "http://chuangzaoshi.com/assets/images/C/jsongenerator.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(67).png"
 	}, {
 		"name": "JSbin",
 		"href": "http://jsbin.com/",
 		"desc": "JS和CSS的代码片段在线调试",
-		"logo": "http://chuangzaoshi.com/assets/images/C/jsbin.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(68).png"
 	}, {
 		"name": "CSS按钮生成",
 		"href": "http://www.cssbuttongenerator.com/",
 		"desc": "CSS按钮样式在线生成",
-		"logo": "http://chuangzaoshi.com/assets/images/C/cssbuttongenerator.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(69).png"
 	}, {
 		"name": "CSS Gradient",
 		"href": "http://www.colorzilla.com/gradient-editor/",
 		"desc": "CSS渐变在线生成器",
-		"logo": "http://chuangzaoshi.com/assets/images/C/gradienteditor.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(70).png"
 	}, {
 		"name": "Dabblet",
 		"href": "http://dabblet.com/",
 		"desc": "一款简单前端在线编辑器",
-		"logo": "http://chuangzaoshi.com/assets/images/C/dabblet.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(71).png"
 	}, {
 		"name": "CSScomb",
 		"href": "http://csscomb.com/",
 		"desc": "一个超棒的CSS属性排序工具",
-		"logo": "http://chuangzaoshi.com/assets/images/C/csscomb.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(72).png"
 	}, {
 		"name": "Animista",
 		"href": "http://animista.net/",
 		"desc": "CSS动态效果样式在线自定义",
-		"logo": "http://chuangzaoshi.com/assets/images/C/animista.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(73).png"
 	}, {
 		"name": "EnjoyCSS",
 		"href": "http://enjoycss.com/LnM/code/",
 		"desc": "先进的CSS3可视化在线编程",
-		"logo": "http://chuangzaoshi.com/assets/images/C/enjoycss.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(74).png"
 	}, {
 		"name": "CubicBezier",
 		"href": "http://cubic-bezier.com/",
 		"desc": "CSS3贝塞尔曲线在线调试工具",
-		"logo": "http://chuangzaoshi.com/assets/images/C/cubicbezier.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(75).png"
 	}, {
 		"name": "Ceaser",
 		"href": "https://matthewlein.com/ceaser/",
 		"desc": "CSS贝塞尔动画在线调试工具",
-		"logo": "http://chuangzaoshi.com/assets/images/C/ceaser.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(76).png"
 	}, {
 		"name": "FontConverter",
 		"href": "http://www.freefontconverter.com/#",
 		"desc": "将字体转成网页webfont专用字体",
-		"logo": "http://chuangzaoshi.com/assets/images/C/freefontconverter.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(77).png"
 	}, {
 		"name": "Everythingfonts",
 		"href": "https://everythingfonts.com/font-face",
 		"desc": "@font-face网页字体文件格式转换",
-		"logo": "http://chuangzaoshi.com/assets/images/C/everythingfonts.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(78).png"
 	}, {
 		"name": "AnimateCss",
 		"href": "https://daneden.github.io/animate.css/",
 		"desc": "一款强大的预设css3动画库",
-		"logo": "http://chuangzaoshi.com/assets/images/C/animatecss.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(79).png"
 	}, {
 		"name": "CSSgenerator",
 		"href": "https://cssgenerator.org/",
 		"desc": "CSS各种对象样式和效果在线生成",
-		"logo": "http://chuangzaoshi.com/assets/images/C/cssgenerator.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(80).png"
 	}, {
 		"name": "AniCollection",
 		"href": "http://anicollection.github.io/",
 		"desc": "CSS3动效预设收藏集合",
-		"logo": "http://chuangzaoshi.com/assets/images/C/anicollection.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(81).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959ab",
@@ -808,87 +741,77 @@
 		"name": "Github",
 		"href": "https://github.com/",
 		"desc": "全球知名的开源及私有项目托管平台",
-		"logo": "http://chuangzaoshi.com/assets/images/C/github.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(105).png" 
 	}, {
 		"name": "gitlab",
 		"href": "https://gitlab.com/",
 		"desc": "免费无限制的开源及私有项目托管",
-		"logo": "http://chuangzaoshi.com/assets/images/C/gitlab.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(82).png"
 	}, {
 		"name": "Bitbucket",
 		"href": "https://bitbucket.org/",
 		"desc": "采用Mercurial和Git的分布式版本控制",
-		"logo": "http://chuangzaoshi.com/assets/images/C/bitbucket.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(83).png"
 	}, {
 		"name": "Sourceforge",
 		"href": "https://sourceforge.net/",
 		"desc": "开放源代码软件开发平台和仓库",
-		"logo": "http://chuangzaoshi.com/assets/images/C/sourceforge.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(84).png"
 	}, {
 		"name": "Coding",
 		"href": "https://coding.net/",
 		"desc": "面向开发者的云端开发托管平台",
-		"logo": "http://chuangzaoshi.com/assets/images/C/coding.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(85).png"
 	}, {
 		"name": "码云",
 		"href": "https://git.oschina.net/",
 		"desc": "开源中国代码托管平台",
-		"logo": "http://chuangzaoshi.com/assets/images/C/gitoschina.png"
-	}, {
-		"name": "CODE",
-		"href": "https://code.csdn.net/",
-		"desc": "CSDN代码托管平台",
-		"logo": "http://chuangzaoshi.com/assets/images/logo.png"
-	}, {
-		"name": "Kelude",
-		"href": "https://code.aliyun.com/",
-		"desc": "阿里云代码托管平台",
-		"logo": "http://chuangzaoshi.com/assets/images/D/kelude.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(86).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959ac",
 	"title": "［前端］构建工具",
-	"icon": "czs-container-l",
+	"icon": "czs-building-l",
 	"sites": [{
 		"name": "Nodejs",
 		"href": "https://nodejs.org/en/",
 		"desc": "基于ChromeV8引擎的JS运行环境",
-		"logo": "http://chuangzaoshi.com/assets/images/C/nodejs.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(87).png"
 	}, {
 		"name": "Grunt",
 		"href": "https://gruntjs.com/",
 		"desc": "JavaScript世界的构建工具",
-		"logo": "http://chuangzaoshi.com/assets/images/C/gruntjs.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(88).png"
 	}, {
 		"name": "Gulp",
 		"href": "http://gulpjs.com/",
 		"desc": "基于流的自动化构建工具",
-		"logo": "http://chuangzaoshi.com/assets/images/C/gulpjs.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(89).png"
 	}, {
 		"name": "Yeoman",
 		"href": "http://yeoman.io/",
 		"desc": "前端构建脚手架",
-		"logo": "http://chuangzaoshi.com/assets/images/C/yeoman.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(90).png"
 	}, {
 		"name": "webpack",
 		"href": "http://webpack.github.io/",
 		"desc": "模块加载器兼打包工具",
-		"logo": "http://chuangzaoshi.com/assets/images/C/webpack.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(91).png"
 	}, {
 		"name": "Npmjs",
 		"href": "https://www.npmjs.com/",
 		"desc": "JS管理包及强大的构建工具",
-		"logo": "http://chuangzaoshi.com/assets/images/C/npmjs.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(92).png"
 	}, {
 		"name": "Bower",
 		"href": "https://bower.io/",
 		"desc": "客户端技术的软件包管理器",
-		"logo": "http://chuangzaoshi.com/assets/images/C/bower.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(93).png"
 	}, {
 		"name": "Yarn",
 		"href": "https://yarnpkg.com/zh-Hans/",
 		"desc": "facebook出品新型包管理器",
-		"logo": "http://chuangzaoshi.com/assets/images/C/yarnpkg.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(94).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959ad",
@@ -898,42 +821,42 @@
 		"name": "Fiddler",
 		"href": "http://www.telerik.com/fiddler",
 		"desc": "免费强大的HTTP调试抓包代理软件",
-		"logo": "http://chuangzaoshi.com/assets/images/C/fiddler.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(95).png"
 	}, {
 		"name": "HttpWatch",
 		"href": "http://www.httpwatch.com/",
 		"desc": "一款强大的网页HTTP数据分析软件",
-		"logo": "http://chuangzaoshi.com/assets/images/C/httpwatch.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(96).png"
 	}, {
 		"name": "Gtmetrix",
 		"href": "https://gtmetrix.com/",
 		"desc": "网站在线性能测试分析、优化建议",
-		"logo": "http://chuangzaoshi.com/assets/images/C/gtmetrix.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(97).png"
 	}, {
 		"name": "PageSpeed",
 		"href": "http://developers.google.com/speed/pagespeed/insights/",
 		"desc": "Google在线性能测试网站、优化建议",
-		"logo": "http://chuangzaoshi.com/assets/images/D/google.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(56).png"
 	}, {
 		"name": "HTML validator",
 		"href": "http://validator.w3.org/",
 		"desc": "W3C的HTML有效性验证",
-		"logo": "http://chuangzaoshi.com/assets/images/C/w3.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(98).png"
 	}, {
 		"name": "CSS validator",
 		"href": "http://jigsaw.w3.org/css-validator/",
 		"desc": "W3C的CSS有效性验证",
-		"logo": "http://chuangzaoshi.com/assets/images/C/w3.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(98).png"
 	}, {
 		"name": "Responsinator",
 		"href": "http://www.responsinator.com/",
 		"desc": "各大尺寸设备响应式屏幕效果显示",
-		"logo": "http://chuangzaoshi.com/assets/images/C/responsinator.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(99).png"
 	}, {
 		"name": "Browser Sandbox",
 		"href": "https://turbo.net/browsers",
 		"desc": "各大平台浏览器兼容性在线测试",
-		"logo": "http://chuangzaoshi.com/assets/images/C/turbo.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(100).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959ae",
@@ -943,42 +866,42 @@
 		"name": "Wordpress",
 		"href": "https://wordpress.org/",
 		"desc": "功能强大的内容管理系统",
-		"logo": "http://chuangzaoshi.com/assets/images/C/wordpress.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(101).png"
 	}, {
 		"name": "Flarum",
 		"href": "http://flarum.org/ ",
 		"desc": "优雅简洁漂亮的轻论坛系统",
-		"logo": "http://chuangzaoshi.com/assets/images/C/flarum.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(102).png"
 	}, {
 		"name": "Hexo",
 		"href": "https://hexo.io/",
 		"desc": "比较极客的简洁轻便的博文平台",
-		"logo": "http://chuangzaoshi.com/assets/images/C/hexo.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(103).png"
 	}, {
 		"name": "Typecho",
 		"href": "http://typecho.org/",
 		"desc": "轻量级博客程序",
-		"logo": "http://chuangzaoshi.com/assets/images/C/typecho.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(104).png"
 	}, {
 		"name": "Gitpage",
 		"href": "https://pages.github.com/",
 		"desc": "Github旗下免费的无限流量博客",
-		"logo": "http://chuangzaoshi.com/assets/images/C/github.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(105).png"
 	}, {
 		"name": "Jekyll",
 		"href": "http://jekyllrb.com/",
 		"desc": "简单静态网页博客程序",
-		"logo": "http://chuangzaoshi.com/assets/images/C/jekyll.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(106).png"
 	}, {
 		"name": "Ghost",
 		"href": "https://ghost.org/",
 		"desc": "Node.js构建的开源博客平台",
-		"logo": "http://chuangzaoshi.com/assets/images/C/ghost.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(107).png"
 	}, {
 		"name": "Wix",
 		"href": "https://www.wix.com/",
 		"desc": "免费的响应式商业化建站方案",
-		"logo": "http://chuangzaoshi.com/assets/images/C/wix.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(108).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959af",
@@ -988,22 +911,22 @@
 		"name": "ubuntu",
 		"href": "https://www.ubuntu.com/",
 		"desc": "以桌面应用为主的开源Linux操作系统",
-		"logo": "http://chuangzaoshi.com/assets/images/C/ubuntu.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(109).png"
 	}, {
 		"name": "Debian",
 		"href": "http://www.debian.org/",
 		"desc": "最遵GNU规范的开源Linux系统",
-		"logo": "http://chuangzaoshi.com/assets/images/C/debian.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(110).png"
 	}, {
 		"name": "Redhat",
 		"href": "https://www.redhat.com/",
 		"desc": "应用最广泛的商业Linux系统",
-		"logo": "http://chuangzaoshi.com/assets/images/C/redhat.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(111).png"
 	}, {
 		"name": "Centos",
 		"href": "https://www.centos.org/",
 		"desc": "Redhat内核开源免费的linux系统",
-		"logo": "http://chuangzaoshi.com/assets/images/C/centos.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/C/c(112).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959b0",
@@ -1013,52 +936,52 @@
 		"name": "阿里万网",
 		"href": "https://wanwang.aliyun.com/",
 		"desc": "中国域名主流服务提供商",
-		"logo": "http://chuangzaoshi.com/assets/images/O/aliyun.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(2).png"
 	}, {
 		"name": "Godaddy",
 		"href": "https://godaddy.com/",
 		"desc": "美国老牌全球最大的域名服务商",
-		"logo": "http://chuangzaoshi.com/assets/images/O/godaddy.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(3).png"
 	}, {
 		"name": "Namecheap",
 		"href": "https://www.namecheap.com/",
 		"desc": "优惠比较多的域名品牌商",
-		"logo": "http://chuangzaoshi.com/assets/images/O/namecheap.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(4).png"
 	}, {
 		"name": "Namesilo",
 		"href": "https://www.namesilo.com/",
 		"desc": "提供永久的免费域名隐私保护",
-		"logo": "http://chuangzaoshi.com/assets/images/O/namesilo.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(5).png"
 	}, {
 		"name": "Domainr",
 		"href": "https://domainr.com/",
 		"desc": "强大简洁的域名多后缀搜索",
-		"logo": "http://chuangzaoshi.com/assets/images/O/domainr.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(6).png"
 	}, {
 		"name": "Gandi",
 		"href": "http://www.gandi.net/",
 		"desc": "国外国别后缀最多的域名提供商",
-		"logo": "http://chuangzaoshi.com/assets/images/O/gandi.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(7).png"
 	}, {
 		"name": "易名中国",
 		"href": "http://www.ename.com/",
 		"desc": "中国最大的域名交易平台",
-		"logo": "http://chuangzaoshi.com/assets/images/O/ename.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(8).png"
 	}, {
 		"name": "Domcomp",
 		"href": "https://www.domcomp.com/",
 		"desc": "提供各大服务商域名价格对比",
-		"logo": "http://chuangzaoshi.com/assets/images/O/domcomp.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(9).png"
 	}, {
 		"name": "Emoji域名",
 		"href": "https://xn--qeiaa.ws/",
 		"desc": "全球首家表情域名注册",
-		"logo": "http://chuangzaoshi.com/assets/images/O/emoji.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(10).png"
 	}, {
 		"name": "ZEIT",
 		"href": "https://zeit.co/",
 		"desc": "简约强大的极客域名查询购买",
-		"logo": "http://chuangzaoshi.com/assets/images/O/zeit.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(11).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959b1",
@@ -1068,47 +991,37 @@
 		"name": "Google趋势",
 		"href": "https://www.google.com/trends/",
 		"desc": "google数据和图表了解全球热度",
-		"logo": "http://chuangzaoshi.com/assets/images/O/trends.png"
-	}, {
-		"name": "百度指数",
-		"href": "http://index.baidu.com/",
-		"desc": "百度互联网数据分享平台",
-		"logo": "http://chuangzaoshi.com/assets/images/O/baidu.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(12).png"
+	},{
 		"name": "阿里指数",
 		"href": "https://alizs.taobao.com/",
 		"desc": "电商行业价格、供应、采购趋势分析",
-		"logo": "http://chuangzaoshi.com/assets/images/O/alizs.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(13).png"
 	}, {
 		"name": "天眼查",
 		"href": "http://www.tianyancha.com/",
 		"desc": "查找企业信息资质",
-		"logo": "http://chuangzaoshi.com/assets/images/O/tianyancha.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(14).png"
 	}, {
 		"name": "站长工具",
 		"href": "http://tool.chinaz.com/",
 		"desc": "站长工具数据查询网站",
-		"logo": "http://chuangzaoshi.com/assets/images/O/chinaz.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(15).png"
 	}, {
 		"name": "Archive",
 		"href": "https://archive.org/web/",
 		"desc": "能查找到网页历史缓存界面",
-		"logo": "http://chuangzaoshi.com/assets/images/O/archive.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(16).png"
 	}, {
 		"name": "Alexa排名",
 		"href": "http://www.alexa.com/",
 		"desc": "互联网网站的世界排名",
-		"logo": "http://chuangzaoshi.com/assets/images/O/alexa.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(17).png"
 	}, {
 		"name": "APPannie",
 		"href": "https://www.appannie.com/",
 		"desc": "移动端APP应用分析和市场数据",
-		"logo": "http://chuangzaoshi.com/assets/images/O/appannie.png"
-	}, {
-		"name": "Similarweb",
-		"href": "https://www.similarweb.com/",
-		"desc": "好用的网站排名丨流量数据分析",
-		"logo": "http://chuangzaoshi.com/assets/images/O/similarweb.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(18).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959b2",
@@ -1118,27 +1031,27 @@
 		"name": "Antv",
 		"href": "https://antv.alipay.com/",
 		"desc": "蚂蚁金服专业数据可视化规范",
-		"logo": "http://chuangzaoshi.com/assets/images/O/antv.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(19).png"
 	}, {
 		"name": "Pixelmap",
 		"href": "https://pixelmap.amcharts.com/# ",
 		"desc": "在线地图可视化应用",
-		"logo": "http://chuangzaoshi.com/assets/images/O/pixelmap.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(20).png"
 	}, {
 		"name": "Echarts",
 		"href": "http://echarts.baidu.com/",
 		"desc": "百度数据可视化",
-		"logo": "http://chuangzaoshi.com/assets/images/O/echarts.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(21).png"
 	}, {
 		"name": "Plotly",
 		"href": "https://plot.ly/",
 		"desc": "现代炫酷的商业数据可视化科学",
-		"logo": "http://chuangzaoshi.com/assets/images/O/plotly.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(22).png"
 	}, {
 		"name": "Datamatic",
 		"href": "http://datamatic.io/",
 		"desc": "可编辑web数据可视化",
-		"logo": "http://chuangzaoshi.com/assets/images/P/datamatic.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/p/p(49).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959b3",
@@ -1148,27 +1061,27 @@
 		"name": "SurveyMonkey",
 		"href": "https://www.surveymonkey.com/",
 		"desc": "全球著名的在线问卷调查服务",
-		"logo": "http://chuangzaoshi.com/assets/images/O/surveymonkey.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(23).png"
 	}, {
 		"name": "Google表单",
 		"href": "https://www.google.com/intl/zh-CN/forms/about/",
 		"desc": "Google创建调查问卷和分析结果",
-		"logo": "http://chuangzaoshi.com/assets/images/O/googleforms.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(24).png"
 	}, {
 		"name": "腾讯问卷",
 		"href": "https://wj.qq.com/",
 		"desc": "腾讯问卷调查",
-		"logo": "http://chuangzaoshi.com/assets/images/O/wj.qq.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(25).png"
 	}, {
 		"name": "麦客",
 		"href": "http://www.mikecrm.com/",
 		"desc": "简洁易用的表单制作与联系人管理工具",
-		"logo": "http://chuangzaoshi.com/assets/images/O/mikecrm.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(26).png"
 	}, {
 		"name": "问卷星",
 		"href": "http://www.sojump.com/",
 		"desc": "国内使用较多的问卷调查表",
-		"logo": "http://chuangzaoshi.com/assets/images/O/sojump.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(27).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959b4",
@@ -1178,32 +1091,27 @@
 		"name": "微信公众号",
 		"href": "https://mp.weixin.qq.com/",
 		"desc": "腾讯订阅、服务号的平台",
-		"logo": "http://chuangzaoshi.com/assets/images/O/weixin.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(28).png"
 	}, {
 		"name": "知乎专栏",
 		"href": "https://zhuanlan.zhihu.com/",
 		"desc": "知乎随心写作，自由表达平台",
-		"logo": "http://chuangzaoshi.com/assets/images/O/zhihu.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(29).png"
 	}, {
 		"name": "简书",
 		"href": "http://www.jianshu.com/",
 		"desc": "写作与阅读整合一起的博客平台",
-		"logo": "http://chuangzaoshi.com/assets/images/O/jianshu.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(30).png"
 	}, {
 		"name": "UC云观",
 		"href": "http://mp.uc.cn/",
 		"desc": "UC旗下自媒体平台",
-		"logo": "http://chuangzaoshi.com/assets/images/O/yunguan.png"
-	}, {
-		"name": "熊掌号",
-		"href": "https://xiongzhang.baidu.com/",
-		"desc": "百度旗下自媒体",
-		"logo": "http://chuangzaoshi.com/assets/images/logo.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(31).png"
+	},{
 		"name": "头条号",
 		"href": "https://mp.toutiao.com/",
 		"desc": "今日头条旗下新兴创作平台",
-		"logo": "http://chuangzaoshi.com/assets/images/O/toutiaohao.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(32).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959b5",
@@ -1213,37 +1121,32 @@
 		"name": "壹伴",
 		"href": "https://yiban.io/",
 		"desc": "微信公众号编辑器Chrome插件",
-		"logo": "http://chuangzaoshi.com/assets/images/O/yiban.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(33).png"
 	}, {
 		"name": "秀米",
 		"href": "http://xiumi.us/",
 		"desc": "H5制作及图文排版在线工具",
-		"logo": "http://chuangzaoshi.com/assets/images/O/xiumi.png "
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(34).png"
 	}, {
 		"name": "易企秀",
 		"href": "http://www.eqxiu.com/ ",
 		"desc": "免费H5页面微场景制作工具",
-		"logo": "http://chuangzaoshi.com/assets/images/O/eqxiu.png "
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(35).png"
 	}, {
 		"name": "canvas",
 		"href": "http://canvas.qq.com/",
 		"desc": "腾讯多模板在线图片设计工具",
-		"logo": "http://chuangzaoshi.com/assets/images/O/canvas.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(36).png"
 	}, {
 		"name": "Event",
 		"href": "http://event.tezign.com/",
 		"desc": "特赞旗下的营销热点日历",
-		"logo": "http://chuangzaoshi.com/assets/images/O/event.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(37).png"
 	}, {
 		"name": "创客贴",
 		"href": "https://www.chuangkit.com/",
 		"desc": "免费在线平面设计工具",
-		"logo": "http://chuangzaoshi.com/assets/images/O/chuangkit.png"
-	}, {
-		"name": "鹿班",
-		"href": "https://luban.aliyun.com/",
-		"desc": "阿里人工智能电商Banner广告图制作",
-		"logo": "http://chuangzaoshi.com/assets/images/D/luban.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(38).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959b6",
@@ -1253,27 +1156,27 @@
 		"name": "Google收录",
 		"href": "https://www.google.com/webmasters/tools/submit-url",
 		"desc": "Google搜索网站提交收录入口[需登录]",
-		"logo": "http://chuangzaoshi.com/assets/images/O/google.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(39).png"
 	}, {
 		"name": "百度收录",
 		"href": "http://zhanzhang.baidu.com/linksubmit/url",
 		"desc": "百度搜索网站提交收录入口",
-		"logo": "http://chuangzaoshi.com/assets/images/O/baidu.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(40).png"
 	}, {
 		"name": "Bing收录",
 		"href": "http://www.bing.com/toolbox/submit-site-url",
 		"desc": "Bing搜索网站提交收录入口",
-		"logo": "http://chuangzaoshi.com/assets/images/O/bing.png "
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(41).png"
 	}, {
 		"name": "搜狗收录",
 		"href": "http://fankui.help.sogou.com/index.php/",
 		"desc": "搜狗搜索网站提交收录入口",
-		"logo": "http://chuangzaoshi.com/assets/images/O/sougou.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(42).png"
 	}, {
 		"name": "神马搜索收录",
 		"href": "http://zhanzhang.sm.cn/",
 		"desc": "UC浏览器移动平台搜索提交入口",
-		"logo": "http://chuangzaoshi.com/assets/images/O/sm.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(43).png"
 	}]
 }, {
 	"_id": "5ce77a76afdec884fab959b7",
@@ -1283,137 +1186,117 @@
 		"name": "Appannie",
 		"href": "https://www.appannie.com/cn/",
 		"desc": "移动端APP应用分析和市场数据",
-		"logo": "http://chuangzaoshi.com/assets/images/O/appannie.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(44).png"
 	}, {
 		"name": "KeywordTool",
 		"href": "http://keywordtool.io/app-store",
 		"desc": "免费的APP Store关键词优化",
-		"logo": "http://chuangzaoshi.com/assets/images/O/keywordtool.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(45).png"
 	}, {
 		"name": "SearchMan",
 		"href": "https://searchman.com/",
 		"desc": "App Store关键词优化工具",
-		"logo": "http://chuangzaoshi.com/assets/images/O/searchman.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(46).png"
 	}, {
 		"name": "MobileAction",
 		"href": "https://www.mobileaction.co/",
 		"desc": "移动数据分析和优化工具",
-		"logo": "http://chuangzaoshi.com/assets/images/O/mobileaction.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(47).png"
 	}, {
 		"name": "Apptweak",
 		"href": "https://www.apptweak.com/",
 		"desc": "App Store数据优化工具",
-		"logo": "http://chuangzaoshi.com/assets/images/O/apptweak.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(48).png"
 	}, {
 		"name": "AsoDesk",
 		"href": "https://asodesk.com/",
 		"desc": "提升IOS和Andriod排名可见度",
-		"logo": "http://chuangzaoshi.com/assets/images/O/asodesk.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(49).png"
 	}, {
 		"name": "aso100",
 		"href": "https://aso100.com/",
 		"desc": "[国内]移动APP推广数据分析平台",
-		"logo": "http://chuangzaoshi.com/assets/images/O/aso100.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(50).png"
 	}, {
 		"name": "appbk",
 		"href": "http://appbk.com/",
 		"desc": "[国内]App Store搜索优化平台",
-		"logo": "http://chuangzaoshi.com/assets/images/O/appbk.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/O/o(51).png"
 	}]
 }, {
 	"_id": "5ce77a77afdec884fab959b8",
 	"title": "［设计］热门推荐",
-	"icon": "czs-trophy-l",
+	"icon": "czs-medal-l",
 	"sites": [{
 		"name": "Dribbble",
 		"href": "https://dribbble.com/",
 		"desc": "全球UI设计师作品秀社区",
-		"logo": "http://chuangzaoshi.com/assets/images/D/dribbble.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(2).png"
 	}, {
 		"name": "Behance",
 		"href": "https://www.behance.net/",
 		"desc": "Adobe旗下设计师创意视觉社区",
-		"logo": "http://chuangzaoshi.com/assets/images/D/behance.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(3).png"
 	}, {
 		"name": "Logopond",
 		"href": "http://logopond.com/",
 		"desc": "国外LOGO展示社区",
-		"logo": "http://chuangzaoshi.com/assets/images/D/logopond.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(4).png"
 	}, {
 		"name": "Ello",
 		"href": "https://ello.co/",
 		"desc": "创意工作者网络社区和资讯",
-		"logo": "http://chuangzaoshi.com/assets/images/D/ello.png"
-	}, {
-		"name": "MyFont",
-		"href": "http://www.myfonts.com/",
-		"desc": "最新时尚的商业英文字体",
-		"logo": "http://chuangzaoshi.com/assets/images/D/myfonts.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(5).png"
 	}, {
 		"name": "站酷",
 		"href": "http://www.zcool.com.cn/",
 		"desc": "国内综合设计展示平台",
-		"logo": "http://chuangzaoshi.com/assets/images/D/zool.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(6).png"
 	}, {
 		"name": "Sketchfab",
 		"href": "https://sketchfab.com/",
 		"desc": "全球最极致3D设计模型在线展示平台",
-		"logo": "http://chuangzaoshi.com/assets/images/D/sketchfab.png"
-	}, {
-		"name": "AdobeColor",
-		"href": "https://color.adobe.com/",
-		"desc": "非常便捷的在线配色网站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/adobecolor.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(7).png"
+	},{
 		"name": "lapa",
 		"href": "http://lapa.ninja/",
 		"desc": "优秀LandingPage落地页收集",
-		"logo": "http://chuangzaoshi.com/assets/images/D/lapa.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(8).png"
 	}, {
 		"name": "Fubiz",
 		"href": "http://www.fubiz.net/",
 		"desc": "法国每日新鲜创意灵感分享",
-		"logo": "http://chuangzaoshi.com/assets/images/D/fubiz.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(9).png"
 	}, {
 		"name": "UIgradients",
 		"href": "http://uigradients.com/",
 		"desc": "简洁舒服的渐变配色",
-		"logo": "http://chuangzaoshi.com/assets/images/D/uigradients.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(10).png"
 	}, {
 		"name": "Vimeo动画",
 		"href": "https://vimeo.com/categories/animation",
 		"desc": "视频分享平台创意动画频道[需要翻墙]",
-		"logo": "http://chuangzaoshi.com/assets/images/D/vimeo.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(11).png"
 	}, {
 		"name": "MyModernMet",
 		"href": "http://mymodernmet.com/",
 		"desc": "视觉创意和艺术爱好者网站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/mymodernmet.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(12).png"
 	}, {
 		"name": "Cartrdge",
 		"href": "https://cartrdge.com/",
 		"desc": "游戏素材项目分享社区",
-		"logo": "http://chuangzaoshi.com/assets/images/D/cartrdge.png"
-	}, {
-		"name": "Mesh Gradients",
-		"href": "https://lstore.graphics/meshgradients/",
-		"desc": "流行的网格渐变背景免费下载",
-		"logo": "http://chuangzaoshi.com/assets/images/D/lstore.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(13).png"
 	}, {
 		"name": "UI中国",
 		"href": "http://www.ui.cn/",
 		"desc": "中国本地化UI设计展示平台",
-		"logo": "http://chuangzaoshi.com/assets/images/D/ui.cn.png"
-	}, {
-		"name": "大邦创新",
-		"href": "http://bigbang-consulting.com",
-		"desc": "创新型用户体验设计公司",
-		"logo": "http://chuangzaoshi.com/assets/images/D/bigbang-consulting.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(14).png"
+	},{
 		"name": "manypixels",
 		"href": "https://gallery.manypixels.co/",
 		"desc": "免版权小人场景矢量插画素材",
-		"logo": "http://chuangzaoshi.com/assets/images/D/manypixels.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(15).png"
 	}]
 }, {
 	"_id": "5ce77a77afdec884fab959b9",
@@ -1423,257 +1306,242 @@
 		"name": "Muzli",
 		"href": "http://muz.li/",
 		"desc": "设计灵感资源聚合",
-		"logo": "http://chuangzaoshi.com/assets/images/D/muzli.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(16).png"
 	}, {
 		"name": "Pinterest",
 		"href": "https://www.pinterest.com/",
 		"desc": "全球美图收藏采集站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/pinterest.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(17).png"
 	}, {
 		"name": "Panda",
 		"href": "http://usepanda.com/app/",
 		"desc": "设计作品和资讯文摘订阅平台",
-		"logo": "http://chuangzaoshi.com/assets/images/D/panda.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(18).png"
 	}, {
 		"name": "花瓣",
 		"href": "http://huaban.com/",
 		"desc": "中国美图收藏采集站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/huaban.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(19).png"
 	}, {
 		"name": "FWA",
 		"href": "https://thefwa.com/",
 		"desc": "创意媒体艺术设计作品展",
-		"logo": "http://chuangzaoshi.com/assets/images/D/thefwa.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(20).png"
 	}, {
 		"name": "Deviantart",
 		"href": "http://www.deviantart.com/",
 		"desc": "分享各类艺术创作的设计社区",
-		"logo": "http://chuangzaoshi.com/assets/images/D/deviantart.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(21).png"
 	}, {
 		"name": "365designers",
 		"href": "http://365awesomedesigners.com/",
 		"desc": "365天每天推荐一个设计师作品",
-		"logo": "http://chuangzaoshi.com/assets/images/D/365awesomedesigners.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(22).png"
 	}, {
 		"name": "abduzeedo",
 		"href": "http://abduzeedo.com/",
 		"desc": "创意灵感和教程的设计博客",
-		"logo": "http://chuangzaoshi.com/assets/images/D/abduzeedo.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(23).png"
 	}, {
 		"name": "Bestfolios",
 		"href": "http://bestfolios.com/main",
 		"desc": "产品丨界面丨插画灵感设计画廊",
-		"logo": "http://chuangzaoshi.com/assets/images/D/bestfolios.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(24).png"
 	}, {
 		"name": "Land-book",
 		"href": "https://land-book.com/",
 		"desc": "精挑细选的美站收集",
-		"logo": "http://chuangzaoshi.com/assets/images/D/land-book.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(25).png"
 	}, {
 		"name": "淘靈感",
 		"href": "https://www.mydesy.com/",
 		"desc": "台湾灵感创意视觉资讯收集网",
-		"logo": "http://chuangzaoshi.com/assets/images/D/mydesy.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(26).png"
 	}, {
 		"name": "CSS设计奖",
 		"href": "http://www.cssdesignawards.com/",
 		"desc": "全球优秀CSS网页设计奖提名网",
-		"logo": "http://chuangzaoshi.com/assets/images/D/cssdesignawards.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(27).png"
 	}, {
 		"name": "SpirationGrid",
 		"href": "http://theinspirationgrid.com/",
 		"desc": "创意灵感收录集合",
-		"logo": "http://chuangzaoshi.com/assets/images/D/theinspirationgrid.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(28).png"
 	}]
 }, {
 	"_id": "5ce77a77afdec884fab959ba",
 	"title": "［设计］界面交互",
-	"icon": "czs-platform-l",
+	"icon": "czs-briefcase-l",
 	"sites": [{
 		"name": "Reeoo",
 		"href": "http://reeoo.com/",
 		"desc": "全球最火热的酷站画廊",
-		"logo": "http://chuangzaoshi.com/assets/images/D/reeoo.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(29).png"
 	}, {
 		"name": "UImovement",
 		"href": "https://uimovement.com/",
 		"desc": "移动界面UI动效展示",
-		"logo": "http://chuangzaoshi.com/assets/images/D/uimovement.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(30).png"
 	}, {
 		"name": "ElastiCode",
 		"href": "http://www.elasticode.com/allapps.php",
 		"desc": "优秀APP交互动效收集",
-		"logo": "http://chuangzaoshi.com/assets/images/D/elasticode.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(31).png"
 	}, {
 		"name": "UIinteractions",
 		"href": "https://uiinteractions.com/",
 		"desc": "动态效果展示",
-		"logo": "http://chuangzaoshi.com/assets/images/D/uiinteractions.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(32).png"
 	}, {
 		"name": "4DB",
 		"href": "http://4db.cc/ ",
 		"desc": "日本网页设计风格展",
-		"logo": "http://chuangzaoshi.com/assets/images/D/4db.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(33).png"
 	}, {
 		"name": "Freshdesign",
 		"href": "http://freshdesign.io/",
 		"desc": "MG动态效果展示",
-		"logo": "http://chuangzaoshi.com/assets/images/D/freshdesign.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(34).png"
 	}, {
 		"name": "Pttrns",
 		"href": "http://pttrns.com/",
 		"desc": "专业收集APP截图的网站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/pttrns.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(35).png"
 	}, {
 		"name": "collectUI",
 		"href": "http://collectui.com/",
 		"desc": "设计师灵感设计案例作品的站点",
-		"logo": "http://chuangzaoshi.com/assets/images/D/collectui.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(36).png"
 	}, {
 		"name": "uplabs",
 		"href": "https://www.uplabs.com/",
 		"desc": "采集前端作品设计、iOS UI设计",
-		"logo": "http://chuangzaoshi.com/assets/images/D/uplabs.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(37).png"
 	}, {
 		"name": "OnePageLove",
 		"href": "https://onepagelove.com/",
 		"desc": "网站和APP单页界面欣赏",
-		"logo": "http://chuangzaoshi.com/assets/images/D/onepagelove.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(38).png"
 	}, {
 		"name": "Awwwards",
 		"href": "http://www.awwwards.com/",
 		"desc": "为精美及创意的设计UI颁奖站点",
-		"logo": "http://chuangzaoshi.com/assets/images/D/awwwards.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(39).png"
 	}, {
 		"name": "Freebiesbug",
 		"href": "http://freebiesbug.com/",
 		"desc": "高质量设计网站、资源聚合站点",
-		"logo": "http://chuangzaoshi.com/assets/images/D/freebiesbug.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(40).png"
 	}, {
 		"name": "UIgarage",
 		"href": "https://uigarage.net/",
 		"desc": "UI灵感收集聚合站点",
-		"logo": "http://chuangzaoshi.com/assets/images/D/uigarage.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(41).png"
 	}, {
 		"name": "littlebigdetails",
 		"href": "http://littlebigdetails.com/",
 		"desc": "设计细节动效灵感分享网站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/littlebigdetails.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(42).png"
 	}, {
 		"name": "Calltoidea",
 		"href": "http://www.calltoidea.com/",
 		"desc": "收集优秀UI组件元素设计的站点",
-		"logo": "http://chuangzaoshi.com/assets/images/D/calltoidea.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(43).png"
 	}, {
 		"name": "muuuuu",
 		"href": "http://muuuuu.org/",
 		"desc": "日本漂亮的酷站收集[需翻墙]",
-		"logo": "http://chuangzaoshi.com/assets/images/D/muuuuu.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(44).png"
 	}, {
 		"name": "Noteloop",
 		"href": "https://www.noteloop.com/kit/fui/",
 		"desc": "收集科幻电影场景里UI交互界面",
-		"logo": "http://chuangzaoshi.com/assets/images/D/noteloop.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(45).png"
 	}, {
 		"name": "sitesee",
 		"href": "https://sitesee.co/",
 		"desc": "收录漂亮的界面设计网站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/sitesee.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(46).png"
 	}, {
 		"name": "BestWebsite",
 		"href": "https://bestwebsite.gallery/",
 		"desc": "漂亮的酷站收集展示",
-		"logo": "http://chuangzaoshi.com/assets/images/D/bestwebsite.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(47).png"
 	}, {
 		"name": "Straightline",
 		"href": "http://bm.straightline.jp/",
 		"desc": "日式风格设计网页收录展示",
-		"logo": "http://chuangzaoshi.com/assets/images/D/straightline.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(48).png"
 	}, {
 		"name": "webdesignclip",
 		"href": "http://www.webdesignclip.com/",
 		"desc": "丰富的日式响应式设计收录站点",
-		"logo": "http://chuangzaoshi.com/assets/images/D/webdesignclip.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(49).png"
 	}, {
 		"name": "CSSwinner",
 		"href": "http://www.csswinner.com/",
 		"desc": "优秀CSS网站界面和交互设计获奖作品",
-		"logo": "http://chuangzaoshi.com/assets/images/D/csswinner.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(50).png"
 	}, {
 		"name": "SiteinSpire",
 		"href": "https://www.siteinspire.com/",
 		"desc": "优秀网页设计展示平台",
-		"logo": "http://chuangzaoshi.com/assets/images/D/siteinspire.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(51).png"
 	}, {
 		"name": "UseYourInterface",
 		"href": "http://useyourinterface.com/",
 		"desc": "界面交互响应设计收录网站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/useyourinterface.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(52).png"
 	}, {
 		"name": "lovelyUI",
 		"href": "http://www.lovelyui.com/",
 		"desc": "可爱的UI手机界面设计搜集",
-		"logo": "http://chuangzaoshi.com/assets/images/D/lovelyui.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(53).png"
 	}]
 }, {
 	"_id": "5ce77a77afdec884fab959bb",
 	"title": "［设计］设计规范",
 	"icon": "czs-read-l",
 	"sites": [{
-		"name": "Android设计",
-		"href": "https://developer.android.com/design/index.html",
-		"desc": "安卓官方设计指南",
-		"logo": "http://chuangzaoshi.com/assets/images/D/android.png"
-	}, {
 		"name": "安卓尺寸",
 		"href": "https://material.io/devices/ ",
 		"desc": "Google安卓主流设备尺寸",
-		"logo": "http://chuangzaoshi.com/assets/images/D/android-screen.png"
-	}, {
-		"name": "Apple设计",
-		"href": "https://developer.apple.com/design/",
-		"desc": "苹果官方设计指南",
-		"logo": "http://chuangzaoshi.com/assets/images/D/apple.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(54).png"
 	}, {
 		"name": "Screensiz",
 		"href": "http://screensiz.es/phone",
 		"desc": "移动屏幕尺寸规范",
-		"logo": "http://chuangzaoshi.com/assets/images/D/screensiz.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(55).png"
 	}, {
 		"name": "Google设计",
 		"href": "https://design.google.com/",
 		"desc": "谷歌官方设计指南",
-		"logo": "http://chuangzaoshi.com/assets/images/D/google.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(56).png"
 	}, {
 		"name": "Material设计",
 		"href": "https://material.io/",
 		"desc": "MaterialDesign设计官方指南",
-		"logo": "http://chuangzaoshi.com/assets/images/D/material.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(57).png"
 	}, {
 		"name": "Modern设计",
 		"href": "https://www.microsoft.com/en-us/design",
 		"desc": "微软Modern官方设计语言",
-		"logo": "http://chuangzaoshi.com/assets/images/D/modern.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(58).png"
 	}, {
 		"name": "Android设计·中国",
 		"href": "https://developer.android.google.cn/design/index.html",
 		"desc": "安卓官方设计指南中国版·不用翻墙",
-		"logo": "http://chuangzaoshi.com/assets/images/D/android.png"
-	}, {
-		"name": "WEUI",
-		"href": "https://weui.io/",
-		"desc": "微信官方小程序UI样式库",
-		"logo": "http://chuangzaoshi.com/assets/images/C/weui.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(59).png"
+	},  {
 		"name": "iPhone尺寸",
 		"href": "https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions",
 		"desc": "iPhone各设备屏幕尺寸信息参数",
-		"logo": "http://chuangzaoshi.com/assets/images/D/paintcodeapp.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(60).png"
 	}, {
 		"name": "Fluent Design",
 		"href": "https://www.microsoft.com/design/fluent/",
 		"desc": "Window10全新设计语言",
-		"logo": "http://chuangzaoshi.com/assets/images/D/fluent.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(61).png"
 	}]
 }, {
 	"_id": "5ce77a77afdec884fab959bc",
@@ -1683,142 +1551,132 @@
 		"name": "CloudConvert",
 		"href": "https://cloudconvert.org/",
 		"desc": "云端在线图片格式转换",
-		"logo": "http://chuangzaoshi.com/assets/images/D/cloudconvert.png"
-	}, {
-		"name": "TinyPng",
-		"href": "https://tinypng.com/",
-		"desc": "超完美PNG压缩工具",
-		"logo": "http://chuangzaoshi.com/assets/images/D/tinypng.png"
-	}, {
-		"name": "FindMyfont",
-		"href": "http://www.myfonts.com/WhatTheFont/",
-		"desc": "英文上传图片查找字体",
-		"logo": "http://chuangzaoshi.com/assets/images/D/myfonts.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(62).png"
+	},{
 		"name": "qiuziti",
 		"href": "http://www.qiuziti.com/",
 		"desc": "中文上传图片字体查找",
-		"logo": "http://chuangzaoshi.com/assets/images/D/qiuziti.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(64).png"
 	}, {
 		"name": "PxCook",
 		"href": "http://fancynode.com.cn/pxcook",
 		"desc": "高效易用的自动标注工具",
-		"logo": "http://chuangzaoshi.com/assets/images/D/pxcook.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(65).png"
 	}, {
 		"name": "Jpegmini",
 		"href": "http://www.jpegmini.com/",
 		"desc": "JPG图片压缩工具",
-		"logo": "http://chuangzaoshi.com/assets/images/D/jpegmini.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(66).png"
 	}, {
 		"name": "Smallpdf",
 		"href": "https://smallpdf.com/cn",
 		"desc": "专注于PDF格式互转、压缩等功能",
-		"logo": "http://chuangzaoshi.com/assets/images/D/smallpdf.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(67).png"
 	}, {
 		"name": "Logojoy",
 		"href": "http://logojoy.com/app.php",
 		"desc": "根据条件匹配在线生成Logo",
-		"logo": "http://chuangzaoshi.com/assets/images/D/logojoy.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(68).png"
 	}, {
 		"name": "Bezier Game",
 		"href": "http://bezier.method.ac/",
 		"desc": "贝塞尔曲线练习",
-		"logo": "http://chuangzaoshi.com/assets/images/D/bezier.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(69).png"
 	}, {
 		"name": "PDFcandy",
 		"href": "https://pdfcandy.com/",
 		"desc": "汇集众多常用PDF在线工具",
-		"logo": "http://chuangzaoshi.com/assets/images/D/pdfcandy.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(70).png"
 	}, {
 		"name": "QRhacker",
 		"href": "http://www.qrhacker.com/",
 		"desc": "国外创建二维码在线应用",
-		"logo": "http://chuangzaoshi.com/assets/images/D/qrhacker.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(71).png"
 	}, {
 		"name": "草料二维码",
 		"href": "https://cli.im/",
 		"desc": "国内创建二维码在线应用",
-		"logo": "http://chuangzaoshi.com/assets/images/D/cli.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(72).png"
 	}, {
 		"name": "optimizilla",
 		"href": "http://optimizilla.com/",
 		"desc": "支持JPEG和PNG格式在线压缩工具",
-		"logo": "http://chuangzaoshi.com/assets/images/D/optimizilla.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(73).png"
 	}, {
 		"name": "waifu2x",
 		"href": "http://waifu2x.udp.jp/",
 		"desc": "图片智能算法无损放大",
-		"logo": "http://chuangzaoshi.com/assets/images/D/waifu2x.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(74).png"
 	}, {
 		"name": "VectorMagic",
 		"href": "https://vectormagic.com/",
 		"desc": "收费！非常强大的位图转矢量图",
-		"logo": "http://chuangzaoshi.com/assets/images/D/vectormagic.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(75).png"
 	}, {
 		"name": "FlattyShadow",
 		"href": "http://flattyshadow.com/",
 		"desc": "图标长投影在线生成",
-		"logo": "http://chuangzaoshi.com/assets/images/D/flattyshadow.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(76).png"
 	}, {
 		"name": "WeaveSilk",
 		"href": "http://weavesilk.com/",
 		"desc": "炫酷对称艺术纹理特效绘制",
-		"logo": "http://chuangzaoshi.com/assets/images/D/weavesilk.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(77).png"
 	}, {
 		"name": "QuickMark",
 		"href": "http://www.quickmark.com.tw/cht/qrcode-datamatrix-generator/",
 		"desc": "台湾一家二维码在线制作和APP程序",
-		"logo": "http://chuangzaoshi.com/assets/images/D/quickmark.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(78).png"
 	}, {
 		"name": "Autodraw",
 		"href": "https://autodraw.com/",
 		"desc": "谷歌绘画智能匹配相应图形[需翻墙]",
-		"logo": "http://chuangzaoshi.com/assets/images/D/autodraw.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(79).png"
 	}, {
 		"name": "Grid",
 		"href": "http://grid.guide/",
 		"desc": "网页网格栅格化工具",
-		"logo": "http://chuangzaoshi.com/assets/images/D/grid.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(80).png"
 	}, {
 		"name": "Loading",
 		"href": "https://loading.io/",
 		"desc": "制作GIF丨SVG丨CSS加载动画图标",
-		"logo": "http://chuangzaoshi.com/assets/images/D/loading.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(81).png"
 	}, {
 		"name": "Logaster",
 		"href": "https://www.logaster.cn",
 		"desc": "在线免费创建简单logo及名片设计",
-		"logo": "http://chuangzaoshi.com/assets/images/D/logaster.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(82).png"
 	}, {
 		"name": "Goimg.io",
 		"href": "https://goimg.io/",
 		"desc": "智能在线图片压缩",
-		"logo": "http://chuangzaoshi.com/assets/images/F/goimg.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/F/f(4).png" 
 	}, {
 		"name": "Preloaders",
 		"href": "https://icons8.com/preloaders/",
 		"desc": "Loading加载动画在线制作",
-		"logo": "http://chuangzaoshi.com/assets/images/D/preloaders.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(83).png"
 	}, {
 		"name": "ClippingMagic",
 		"href": "https://clippingmagic.com",
 		"desc": "在线抠图工具",
-		"logo": "http://chuangzaoshi.com/assets/images/D/clippingmagic.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(84).png"
 	}, {
 		"name": "Squoosh",
 		"href": "https://squoosh.app/",
 		"desc": "Google在线优化压缩图片(支持webp)",
-		"logo": "http://chuangzaoshi.com/assets/images/D/squoosh.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(85).png"
 	}, {
 		"name": "Photopea",
 		"href": "https://www.photopea.com/",
 		"desc": "在线打开PSD丨Sketch丨Gimp编辑器",
-		"logo": "http://chuangzaoshi.com/assets/images/D/photopea.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(86).png"
 	}, {
 		"name": "鹿班",
 		"href": "https://luban.aliyun.com/",
 		"desc": "阿里人工智能电商Banner广告图制作",
-		"logo": "http://chuangzaoshi.com/assets/images/D/luban.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(87).png"
 	}]
 }, {
 	"_id": "5ce77a77afdec884fab959bd",
@@ -1828,102 +1686,102 @@
 		"name": "icomoon",
 		"href": "https://icomoon.io/",
 		"desc": "矢量图打包成图标字体的技术平台",
-		"logo": "http://chuangzaoshi.com/assets/images/D/icomoon.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(88).png"
 	}, {
 		"name": "iconfont",
 		"href": "http://www.iconfont.cn/plus",
 		"desc": "阿里团队图标字体及图标素材下载平台",
-		"logo": "http://chuangzaoshi.com/assets/images/D/iconfont.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(89).png"
 	}, {
 		"name": "Easyicon",
 		"href": "http://www.easyicon.net/",
 		"desc": "图标搜索大全",
-		"logo": "http://chuangzaoshi.com/assets/images/D/easyicon.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(90).png"
 	}, {
 		"name": "TheNounProject",
 		"href": "https://thenounproject.com/",
 		"desc": "高质量图标下载",
-		"logo": "http://chuangzaoshi.com/assets/images/D/thenounproject.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(91).png"
 	}, {
 		"name": "iconfinder",
 		"href": "https://www.iconfinder.com/",
 		"desc": "高质量付费图标下载",
-		"logo": "http://chuangzaoshi.com/assets/images/D/iconfinder.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(92).png"
 	}, {
 		"name": "themify",
 		"href": "http://themify.me/themify-icons",
 		"desc": "一套免费特色iconfont图标支持WP插件",
-		"logo": "http://chuangzaoshi.com/assets/images/D/themify.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(93).png"
 	}, {
 		"name": "iconmonstr",
 		"href": "http://iconmonstr.com/",
 		"desc": "精美免费简洁icon",
-		"logo": "http://chuangzaoshi.com/assets/images/D/iconmonstr.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(94).png"
 	}, {
 		"name": "Logodust",
 		"href": "http://logodust.com/",
 		"desc": "特赞！提供开源免费的LOGO",
-		"logo": "http://chuangzaoshi.com/assets/images/D/logodust.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(95).png"
 	}, {
 		"name": "Iconjar",
 		"href": "http://geticonjar.com/freebies",
 		"desc": "免费图标素材管理工具",
-		"logo": "http://chuangzaoshi.com/assets/images/D/geticonjar.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(96).png"
 	}, {
 		"name": "Flaticon",
 		"href": "http://www.flaticon.com/",
 		"desc": "海量扁平化免费的图标库",
-		"logo": "http://chuangzaoshi.com/assets/images/D/flaticon.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(97).png"
 	}, {
 		"name": "iconstore",
 		"href": "http://iconstore.co/",
 		"desc": "免费商用的高质量图标素材站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/iconstore.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(98).png"
 	}, {
 		"name": "Logoeps",
 		"href": "http://www.logoeps.com/",
 		"desc": "各大国际品牌logo矢量图",
-		"logo": "http://chuangzaoshi.com/assets/images/D/logoeps.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(99).png"
 	}, {
 		"name": "IOSicongallery",
 		"href": "http://iosicongallery.com/",
 		"desc": "IOS平台APP图标收录和欣赏",
-		"logo": "http://chuangzaoshi.com/assets/images/D/iosicongallery.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(100).png"
 	}, {
 		"name": "Emojione",
 		"href": "http://emojione.com/demo/",
 		"desc": "Emoji表情图标整理",
-		"logo": "http://chuangzaoshi.com/assets/images/D/emojione.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(101).png"
 	}, {
 		"name": "iconninja",
 		"href": "http://www.iconninja.com/",
 		"desc": "海量图标搜索可生成css sprites",
-		"logo": "http://chuangzaoshi.com/assets/images/D/iconninja.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(102).png"
 	}, {
 		"name": "icons8",
 		"href": "https://icons8.com/web-app/new-icons/all",
 		"desc": "系统平台风格和web图标库",
-		"logo": "http://chuangzaoshi.com/assets/images/D/icons8.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(103).png"
 	}, {
 		"name": "iconsfeed",
 		"href": "http://www.iconsfeed.com/",
 		"desc": "iOS系统应用图标收集和分享",
-		"logo": "http://chuangzaoshi.com/assets/images/D/iconsfeed.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(104).png"
 	}, {
 		"name": "草莓图标",
 		"href": "http://chuangzaoshi.com/icon/",
 		"desc": "为开发者设计的一套免费开源图标库",
-		"logo": "http://chuangzaoshi.com/assets/images/D/caomei.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(105).png"
 	}, {
 		"name": "IKonate",
 		"href": "http://ikonate.com/",
 		"desc": "完全可定制和使用的矢量图标库",
-		"logo": "http://chuangzaoshi.com/assets/images/D/ikonate.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(106).png"
 	}, {
 		"name": "logolab",
 		"href": "https://logolab.app/home",
 		"desc": "帮设计师只管检查logo的工具",
-		"logo": "http://chuangzaoshi.com/assets/images/D/logolab.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(107).png"
 	}]
 }, {
 	"_id": "5ce77a77afdec884fab959be",
@@ -1933,122 +1791,107 @@
 		"name": "Freepik",
 		"href": "http://www.freepik.com/",
 		"desc": "免费高质量矢量图下载",
-		"logo": "http://chuangzaoshi.com/assets/images/D/freepik.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(108).png"
 	}, {
 		"name": "Subtlepatterns",
 		"href": "http://subtlepatterns.com/",
 		"desc": "简洁大气的背景纹理素材",
-		"logo": "http://chuangzaoshi.com/assets/images/D/subtlepatterns.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(109).png"
 	}, {
 		"name": "Shutterstock",
 		"href": "http://www.shutterstock.com/",
 		"desc": "全球最大的设计素材收费库",
-		"logo": "http://chuangzaoshi.com/assets/images/D/shutterstock.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(110).png"
 	}, {
 		"name": "Firmbee",
 		"href": "https://firmbee.com/",
 		"desc": "Firmbee精品设备和场景mockup素材",
-		"logo": "http://chuangzaoshi.com/assets/images/D/firmbee.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(111).png"
 	}, {
 		"name": "Mockup",
 		"href": "https://mockup.zone/",
 		"desc": "收费高质量的专业mockup模板",
-		"logo": "http://chuangzaoshi.com/assets/images/D/mockup.png"
-	}, {
-		"name": "Dunnnk",
-		"href": "http://dunnnk.com/",
-		"desc": "智能设备场景模板下载",
-		"logo": "http://chuangzaoshi.com/assets/images/logo.png"
-	}, {
-		"name": "Graphictwister",
-		"href": "https://graphictwister.com/",
-		"desc": "平面海报、设备场景模板下载",
-		"logo": "http://chuangzaoshi.com/assets/images/D/graphictwister.png"
-	}, {
-		"name": "Canva",
-		"href": "https://www.canva.com/",
-		"desc": "海报模板输出设计",
-		"logo": "http://chuangzaoshi.com/assets/images/D/canva.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(112).png"
+	},{
 		"name": "Themeforest",
 		"href": "https://themeforest.net/",
 		"desc": "主题森林-全球UI作品出售平台",
-		"logo": "http://chuangzaoshi.com/assets/images/D/themeforest.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(115).png"
 	}, {
 		"name": "UI8",
 		"href": "https://ui8.net/",
 		"desc": "漂亮的商业UI模板售卖平台",
-		"logo": "http://chuangzaoshi.com/assets/images/D/ui8.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(116).png"
 	}, {
 		"name": "Fribbble",
 		"href": "http://www.fribbble.com/",
 		"desc": "Dribbble上一些免费的设计PSD源文件",
-		"logo": "http://chuangzaoshi.com/assets/images/D/fribbble.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(117).png"
 	}, {
 		"name": "Texturer",
 		"href": "http://texturer.com/",
 		"desc": "3D建模纹理特效素材",
-		"logo": "http://chuangzaoshi.com/assets/images/D/texturer.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(118).png"
 	}, {
 		"name": "CSSauthor",
 		"href": "http://www.cssauthor.com/",
 		"desc": "对设计和开发有帮助的优质设计资源",
-		"logo": "http://chuangzaoshi.com/assets/images/D/cssauthor.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(119).png"
 	}, {
 		"name": "Principlerepo",
 		"href": "http://principlerepo.com/",
 		"desc": "高质量Principle原型丨动效设计资源",
-		"logo": "http://chuangzaoshi.com/assets/images/D/principlerepo.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(120).png"
 	}, {
 		"name": "千图网",
 		"href": "http://www.58pic.com/",
 		"desc": "海量原创设计模板免费下载",
-		"logo": "http://chuangzaoshi.com/assets/images/D/58pic.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(121).png"
 	}, {
 		"name": "昵图网",
 		"href": "http://www.nipic.com/index.html",
 		"desc": "国内海量平面免费素材下载",
-		"logo": "http://chuangzaoshi.com/assets/images/D/nipic.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(122).png"
 	}, {
 		"name": "素材中国",
 		"href": "http://www.sccnn.com/",
 		"desc": "海量免费素材共享平台",
-		"logo": "http://chuangzaoshi.com/assets/images/D/sccnn.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(123).png"
 	}, {
 		"name": "PatternLibrary",
 		"href": "http://thepatternlibrary.com",
 		"desc": "随机下拉背景纹理酷",
-		"logo": "http://chuangzaoshi.com/assets/images/D/thepatternlibrary.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(124).png"
 	}, {
 		"name": "SketchHunt",
 		"href": "http://sketchhunt.com/",
 		"desc": "Sketch设计素材资源、插件和教程",
-		"logo": "http://chuangzaoshi.com/assets/images/D/sketchhunt.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(125).png"
 	}, {
 		"name": "Vecteezy",
 		"href": "https://www.vecteezy.com/",
 		"desc": "免费矢量素材搜索和下载",
-		"logo": "http://chuangzaoshi.com/assets/images/D/vecteezy.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(126).png"
 	}, {
 		"name": "HeroPatterns",
 		"href": "http://www.heropatterns.com/",
 		"desc": "矢量和CSS网页背景纹理配色生成",
-		"logo": "http://chuangzaoshi.com/assets/images/D/heropatterns.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(127).png"
 	}, {
 		"name": "UIKit",
 		"href": "http://www.uikit.me/",
 		"desc": "免费高质量UI设计资源下载",
-		"logo": "http://chuangzaoshi.com/assets/images/D/uikit.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(128).png"
 	}, {
 		"name": "Pixeden",
 		"href": "http://www.pixeden.com/",
 		"desc": "免费高质量设计素材模板分享",
-		"logo": "http://chuangzaoshi.com/assets/images/D/pixeden.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(129).png"
 	}, {
 		"name": "GraphicsFuel",
 		"href": "http://www.graphicsfuel.com/",
 		"desc": "国外免费设计素材模板下载站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/graphicsfuel.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(130).png"
 	}]
 }, {
 	"_id": "5ce77a77afdec884fab959bf",
@@ -2058,87 +1901,87 @@
 		"name": "ZoommyAPP",
 		"href": "http://zoommyapp.com/",
 		"desc": "聚合各大免费高清图库的APP",
-		"logo": "http://chuangzaoshi.com/assets/images/D/zoommyapp.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(131).png"
 	}, {
 		"name": "Unsplash",
 		"href": "https://unsplash.com/",
 		"desc": "高质量免费版权的图库素材",
-		"logo": "http://chuangzaoshi.com/assets/images/D/unsplash.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(132).png"
 	}, {
 		"name": "Startupstockp",
 		"href": "http://startupstockphotos.com/",
 		"desc": "初创公司精品免费图库",
-		"logo": "http://chuangzaoshi.com/assets/images/D/startupstockp.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(133).png"
 	}, {
 		"name": "Magdeleine",
 		"href": "http://magdeleine.co/",
 		"desc": "免费高清灵感图片",
-		"logo": "http://chuangzaoshi.com/assets/images/D/magdeleine.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(134).png"
 	}, {
 		"name": "Splitshire",
 		"href": "https://www.splitshire.com/",
 		"desc": "免费高清摄影图库",
-		"logo": "http://chuangzaoshi.com/assets/images/D/splitshire.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(135).png"
 	}, {
 		"name": "Pexels",
 		"href": "https://www.pexels.com/",
 		"desc": "精品免费图库分享",
-		"logo": "http://chuangzaoshi.com/assets/images/D/pexels.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(136).png"
 	}, {
 		"name": "Flickr",
 		"href": "https://www.flickr.com/explore",
 		"desc": "雅虎旗下摄影师图片分享网站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/flickr.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(137).png"
 	}, {
 		"name": "500px",
 		"href": "https://500px.com/",
 		"desc": "全球著名摄影师图片展示和售卖平台",
-		"logo": "http://chuangzaoshi.com/assets/images/D/500px.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(138).png"
 	}, {
 		"name": "Sketch.im",
 		"href": "http://sketch.cm/",
 		"desc": "国内不错的Sketch站点资源",
-		"logo": "http://chuangzaoshi.com/assets/images/D/sketchim.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(139).png"
 	}, {
 		"name": "FoodiesFeed",
 		"href": "https://foodiesfeed.com/",
 		"desc": "专注于免费食品图片素材的分享",
-		"logo": "http://chuangzaoshi.com/assets/images/D/foodiesfeed.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(140).png"
 	}, {
 		"name": "Pixabay",
 		"href": "https://pixabay.com/",
 		"desc": "免费的高清图片、矢量图片、艺术插花",
-		"logo": "http://chuangzaoshi.com/assets/images/D/pixabay.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(141).png"
 	}, {
 		"name": "Pakutaso",
 		"href": "https://www.pakutaso.com/",
 		"desc": "日式照片素材免费分享站点",
-		"logo": "http://chuangzaoshi.com/assets/images/D/pakutaso.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(142).png"
 	}, {
 		"name": "Stocksnap",
 		"href": "https://stocksnap.io/",
 		"desc": "每周免版权高清图片分享",
-		"logo": "http://chuangzaoshi.com/assets/images/D/stocksnap.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(143).png"
 	}, {
 		"name": "Hellorf",
 		"href": "http://www.hellorf.com/",
 		"desc": "站酷海洛创意收费正版图库",
-		"logo": "http://chuangzaoshi.com/assets/images/D/hellorf.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(144).png"
 	}, {
 		"name": "123rf",
 		"href": "http://www.123rf.com.cn/",
 		"desc": "企业摄影和创意素材正版图片库网",
-		"logo": "http://chuangzaoshi.com/assets/images/D/123rf.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(145).png"
 	}, {
 		"name": "BingGallery",
 		"href": "http://www.bing.com/gallery/",
 		"desc": "微软必应搜索精美壁纸画廊",
-		"logo": "http://chuangzaoshi.com/assets/images/D/binggallery.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(146).png"
 	}, {
 		"name": "HDwallpapers",
 		"href": "https://www.hdwallpapers.net/",
 		"desc": "高清壁纸图片分享网站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/hdwallpapers.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(147).png"
 	}]
 }, {
 	"_id": "5ce77a77afdec884fab959c0",
@@ -2148,67 +1991,67 @@
 		"name": "AdobeColor",
 		"href": "https://color.adobe.com/",
 		"desc": "Adobe专业配色工具",
-		"logo": "http://chuangzaoshi.com/assets/images/D/adobecolor.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(148).png"
 	}, {
 		"name": "Nipponcolors",
 		"href": "http://nipponcolors.com/",
 		"desc": "日本古典传统配色网站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/nipponcolors.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(149).png"
 	}, {
 		"name": "Colorfavs",
 		"href": "http://www.colorfavs.com/",
 		"desc": "上传并匹配提取图片风格的颜色",
-		"logo": "http://chuangzaoshi.com/assets/images/D/colorfavs.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(150).png"
 	}, {
 		"name": "Coolors",
 		"href": "https://coolors.co/",
 		"desc": "在线快速配色生成工具",
-		"logo": "http://chuangzaoshi.com/assets/images/D/coolors.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(151).png"
 	}, {
 		"name": "Colorhunt",
 		"href": "http://www.colorhunt.co/",
 		"desc": "每天更新一组简洁舒服的配色方案",
-		"logo": "http://chuangzaoshi.com/assets/images/D/colorhunt.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(152).png"
 	}, {
 		"name": "MD调色器",
 		"href": "https://www.materialpalette.com/blue/purple",
 		"desc": "MaterialDesign强大的在线配色",
-		"logo": "http://chuangzaoshi.com/assets/images/D/materialpalette.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(153).png"
 	}, {
 		"name": "webgradients",
 		"href": "https://webgradients.com/",
 		"desc": "itmeo旗下180个漂亮渐变色模板",
-		"logo": "http://chuangzaoshi.com/assets/images/D/webgradients.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(154).png"
 	}, {
 		"name": "Trianglify",
 		"href": "http://qrohlf.com/trianglify-generator/",
 		"desc": "炫酷多边形背景色块生成",
-		"logo": "http://chuangzaoshi.com/assets/images/D/trianglifygenerator.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(155).png"
 	}, {
 		"name": "ColourLovers",
 		"href": "http://www.colourlovers.com/",
 		"desc": "全球设计师色彩分享交流社区",
-		"logo": "http://chuangzaoshi.com/assets/images/D/colourlovers.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(156).png"
 	}, {
 		"name": "WebColourData",
 		"href": "http://webcolourdata.com/",
 		"desc": "通过网址获取分析网站配色",
-		"logo": "http://chuangzaoshi.com/assets/images/D/webcolourdata.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(157).png"
 	}, {
 		"name": "中国传统色",
 		"href": "http://zhongguose.com/",
 		"desc": "中科院色谱的中国传统色",
-		"logo": "http://chuangzaoshi.com/assets/images/D/zhongguose.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(158).png"
 	}, {
 		"name": "Mesh Gradients",
 		"href": "https://lstore.graphics/meshgradients/",
 		"desc": "流行的网格渐变背景免费下载",
-		"logo": "http://chuangzaoshi.com/assets/images/D/lstore.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(159).png"
 	}, {
 		"name": "Picular",
 		"href": "https://picular.co/",
 		"desc": "色彩搜索引擎",
-		"logo": "http://chuangzaoshi.com/assets/images/D/picular.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(160).png"
 	}]
 }, {
 	"_id": "5ce77a77afdec884fab959c1",
@@ -2218,47 +2061,42 @@
 		"name": "Fontsup",
 		"href": "https://fontsup.com/",
 		"desc": "免费英文字体下载库",
-		"logo": "http://chuangzaoshi.com/assets/images/D/fontsup.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(161).png"
 	}, {
 		"name": "Fonts2u",
 		"href": "http://zh.fonts2u.com/",
 		"desc": "详细分类免费字体搜索下载库",
-		"logo": "http://chuangzaoshi.com/assets/images/D/fonts2u.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(162).png"
 	}, {
 		"name": "Urbanfonts",
 		"href": "https://www.urbanfonts.com/",
 		"desc": "免费英文字体搜索下载站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/urbanfonts.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(163).png"
 	}, {
 		"name": "myfonts",
 		"href": "http://www.myfonts.com/",
 		"desc": "最新时尚的商业英文字体",
-		"logo": "http://chuangzaoshi.com/assets/images/D/myfonts.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(164).png"
 	}, {
 		"name": "苹方字体",
 		"href": "https://developer.apple.com/fonts/",
 		"desc": "苹果最新的系统界面字体San Francisco",
-		"logo": "http://chuangzaoshi.com/assets/images/D/apple.png"
-	}, {
-		"name": "思源黑体",
-		"href": "https://typekit.com/fonts/source-han-sans-simplified-chinese",
-		"desc": "Adobe、Google出品的开源中文黑体",
-		"logo": "http://chuangzaoshi.com/assets/images/D/siyuanheiti.png"
-	}, {
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(165).png"
+	},{
 		"name": "Comicneue",
 		"href": "http://comicneue.com/",
 		"desc": "免费手写可爱字体官网下载",
-		"logo": "http://chuangzaoshi.com/assets/images/D/comicneue.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(166).png"
 	}, {
 		"name": "Typekit",
 		"href": "https://typekit.com/",
 		"desc": "Adobe出品的web在线字库",
-		"logo": "http://chuangzaoshi.com/assets/images/D/typekit.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(167).png"
 	}, {
 		"name": "思源宋体",
 		"href": "https://source.typekit.com/source-han-serif/",
 		"desc": "Adobe、Google出品的开源中文宋体",
-		"logo": "http://chuangzaoshi.com/assets/images/D/siyuanheiti.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(168).png"
 	}]
 }, {
 	"_id": "5ce77a77afdec884fab959c2",
@@ -2268,87 +2106,87 @@
 		"name": "Medium",
 		"href": "https://medium.design/",
 		"desc": "国外精美的设计文章欣赏",
-		"logo": "http://chuangzaoshi.com/assets/images/D/medium.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(169).png"
 	}, {
 		"name": "sketchchina",
 		"href": "http://www.sketchchina.com/",
 		"desc": "sketch中国资源插件分享社区",
-		"logo": "http://chuangzaoshi.com/assets/images/D/sketchchina.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(170).png"
 	}, {
 		"name": "AnywayFM",
 		"href": "http://anyway.fm/",
 		"desc": "设计经验、历程杂谈的一款播客节目",
-		"logo": "http://chuangzaoshi.com/assets/images/D/anyway.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(171).png"
 	}, {
 		"name": "优设",
 		"href": "http://www.uisdc.com/",
 		"desc": "国内设计师教程分享文章",
-		"logo": "http://chuangzaoshi.com/assets/images/D/uisdc.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(172).png"
 	}, {
 		"name": "Envato教程",
 		"href": "https://design.tutsplus.com/tutorials",
 		"desc": "Envato时尚设计效果教程",
-		"logo": "http://chuangzaoshi.com/assets/images/D/envato.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(173).png"
 	}, {
 		"name": "UX Coffee 设计咖",
 		"href": "http://podcast.uxcoffee.co/",
 		"desc": "关注产品设计和注用户体验FM播客",
-		"logo": "http://chuangzaoshi.com/assets/images/D/uxcoffee.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(174).png"
 	}, {
 		"name": "字谈字畅",
 		"href": "http://www.lizhi.fm/1852153/",
 		"desc": "华语字体排印主题FM播客节目",
-		"logo": "http://chuangzaoshi.com/assets/images/D/typeisbeautiful.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(175).png"
 	}, {
 		"name": "图月志",
 		"href": "http://iconmoon.com/blog2/",
 		"desc": "JJYing的界面设计个人博客",
-		"logo": "http://chuangzaoshi.com/assets/images/D/iconmoon.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(176).png"
 	}, {
 		"name": "Heydesigner",
 		"href": "http://heydesigner.com/",
 		"desc": "设计师和前端开发者的美文收录",
-		"logo": "http://chuangzaoshi.com/assets/images/D/heydesigner.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(177).png"
 	}, {
 		"name": "webdesignerdepot",
 		"href": "http://www.webdesignerdepot.com/",
 		"desc": "网页设计教程和文章学习平台",
-		"logo": "http://chuangzaoshi.com/assets/images/D/webdesignerdepot.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(178).png"
 	}, {
 		"name": "Textuts",
 		"href": "http://textuts.com/",
 		"desc": "专注于Text文字特效教程收录",
-		"logo": "http://chuangzaoshi.com/assets/images/D/textuts.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(179).png"
 	}, {
 		"name": "异能电台",
 		"href": "https://www.yineng.fm/",
 		"desc": "话题非常广的设计师FM播客",
-		"logo": "http://chuangzaoshi.com/assets/images/D/yineng.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(180).png"
 	}, {
 		"name": "Gigantic",
 		"href": "www.gigantic.click",
 		"desc": "卡通角色插画设计教程(YouTube频道)",
-		"logo": "http://chuangzaoshi.com/assets/images/D/gigantic.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(181).png"
 	}, {
 		"name": "DesignerNews",
 		"href": "https://www.designernews.co/",
 		"desc": "最前沿的设计师行业资讯",
-		"logo": "http://chuangzaoshi.com/assets/images/D/designernews.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(182).png"
 	}, {
 		"name": "PixelJoint",
 		"href": "http://pixeljoint.com/",
 		"desc": "像素艺术爱好者交流学习社区",
-		"logo": "http://chuangzaoshi.com/assets/images/D/pixeljoint.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(183).png"
 	}, {
 		"name": "DesignToday",
 		"href": "https://www.designtoday.io/",
 		"desc": "英文设计文章精选集合站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/designtoday.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(184).png"
 	}, {
 		"name": "Smashing",
 		"href": "https://www.smashingmagazine.com/",
 		"desc": "WEB设计开发杂志博客",
-		"logo": "http://chuangzaoshi.com/assets/images/D/smashingmagazine.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(185).png"
 	}]
 }, {
 	"_id": "5ce77a77afdec884fab959c3",
@@ -2358,96 +2196,96 @@
 		"name": "eicodesign",
 		"href": "http://eicodesign.com/",
 		"desc": "国内专业界设计团队",
-		"logo": "http://chuangzaoshi.com/assets/images/D/eicodesign.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(186).png"
 	}, {
 		"name": "腾讯ISUX",
 		"href": "https://isux.tencent.com/",
 		"desc": "社交用户体验设计",
-		"logo": "http://chuangzaoshi.com/assets/images/D/isuxtencent.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(187).png"
 	}, {
 		"name": "腾讯CDC",
 		"href": "http://cdc.tencent.com/",
 		"desc": "腾讯用户研究与体验设计中心",
-		"logo": "http://chuangzaoshi.com/assets/images/D/cdctencent.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(188).png"
 	}, {
 		"name": "腾讯MXD",
 		"href": "http://mxd.tencent.com/",
 		"desc": "移动互联网设计中心",
-		"logo": "http://chuangzaoshi.com/assets/images/D/mxdtencent.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(189).png"
 	}, {
 		"name": "阿里巴巴",
 		"href": "http://www.aliued.com/",
 		"desc": "阿里巴巴用户体验设计部",
-		"logo": "http://chuangzaoshi.com/assets/images/D/alibaba.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(190).png"
 	}, {
 		"name": "阿里妈妈MUX",
 		"href": "http://mux.alimama.com/",
 		"desc": "阿里妈妈MUX",
-		"logo": "http://chuangzaoshi.com/assets/images/D/alimama.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(191).png"
 	}, {
 		"name": "Frog设计",
 		"href": "http://www.frogdesign.cn/",
 		"desc": "跨国设计与战略咨询公司",
-		"logo": "http://chuangzaoshi.com/assets/images/D/frogdesign.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(192).png"
 	}, {
 		"name": "新浪UED",
 		"href": "http://ued.sina.com/",
 		"desc": "新浪用户体验设计部",
-		"logo": "http://chuangzaoshi.com/assets/images/D/sinaued.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(193).png"
 	}, {
 		"name": "百度EUX",
 		"href": "http://eux.baidu.com/",
 		"desc": "百度企业产品用户中心",
-		"logo": "http://chuangzaoshi.com/assets/images/D/baidueux.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(194).png"
 	}, {
 		"name": "网易GUX",
 		"href": "http://gux.163.com/",
 		"desc": "网易游戏用户体验中心",
-		"logo": "http://chuangzaoshi.com/assets/images/D/wangyigux.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(195).png"
 	}, {
 		"name": "百度MUX",
 		"href": "http://mux.baidu.com/",
 		"desc": "百度用户体验中心",
-		"logo": "http://chuangzaoshi.com/assets/images/D/baidumux.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(196).png"
 	}, {
 		"name": "uedc",
 		"href": "http://uedc.163.com/",
 		"desc": "网易用户体验设计中心",
-		"logo": "http://chuangzaoshi.com/assets/images/D/uedc163.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(197).png"
 	}, {
 		"name": "TGideas",
 		"href": "http://tgideas.qq.com/",
 		"desc": "腾讯游戏官方设计团队",
-		"logo": "http://chuangzaoshi.com/assets/images/D/tgideas.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(198).png"
 	}, {
 		"name": "U一点",
 		"href": "http://www.aliued.cn/",
 		"desc": "阿里巴巴用户体验设计博客",
-		"logo": "http://chuangzaoshi.com/assets/images/D/aliued.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(199).png"
 	}, {
 		"name": "360UXC",
 		"href": "http://uxc.360.cn/",
 		"desc": "360UXC用户体验设计中心",
-		"logo": "http://chuangzaoshi.com/assets/images/D/uxc360.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(200).png"
 	}, {
 		"name": "JDC",
 		"href": "http://jdc.jd.com/",
 		"desc": "京东设计中心",
-		"logo": "http://chuangzaoshi.com/assets/images/D/jdc.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(201).png"
 	}, {
 		"name": "Tubik Studio",
 		"href": "http://tubikstudio.com/",
 		"desc": "在视觉和界面领域比较有名的工作者",
-		"logo": "http://chuangzaoshi.com/assets/images/D/tubikstudio.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(202).png"
 	}, {
 		"name": "Facebook Design",
 		"href": "http://facebook.design/",
 		"desc": "Facebook设计团队网站",
-		"logo": "http://chuangzaoshi.com/assets/images/D/facebook.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(203).png"
 	}, {
 		"name": "大邦创新",
 		"href": "http://bigbang-consulting.com",
 		"desc": "创新型用户体验设计公司",
-		"logo": "http://chuangzaoshi.com/assets/images/D/bigbang-consulting.png"
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/cdn/icon/1/D/d(204).png"
 	}]
 }]

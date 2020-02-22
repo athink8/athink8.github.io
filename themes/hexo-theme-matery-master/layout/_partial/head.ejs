@@ -84,8 +84,8 @@
     <link rel="stylesheet" type="text/css" href="<%- theme.libs.css.aos %>">
     <link rel="stylesheet" type="text/css" href="<%- theme.libs.css.animate %>">
     <link rel="stylesheet" type="text/css" href="<%- theme.libs.css.lightgallery %>">
-    
-	
+    <!-- 草莓图标库-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/athink8/cdn/icon/strawberry/style.css">
 	<!-- 是否开启jsDelivr 加速 -->
 	<% if (theme.jsDelivr.enable) { %>
 	    <link rel="stylesheet" type="text/css" href="<%- theme.jsDelivr.url %>/css/matery.css">
@@ -107,4 +107,56 @@
     	  s.parentNode.insertBefore(hm, s);
     	})();
     </script>
+	 
+	 <% if (theme.pageLoading.enable) { %>
+	    <!-- 添加页面加载前动画-->
+	     <style>
+	    	#pageLoading {
+	    		position: fixed;
+	    		z-index: 1000;
+	    		width: 100%;
+	    		height: 100%;
+	    		top: 0;
+	    		left: 0;
+	    		text-align: center;
+	    		background-color: rgba(239,254,254,1);
+	    		margin: 0 auto;
+	    	}
+	    	
+	    	.pageLoadingInfo {
+	    		margin: 0 auto;
+	    		margin-top: 15%;
+	    		width: 400px;
+	    		height: 400px;
+	    		color: #696969;
+	    		font-family: 'Microsoft YaHei';
+	    		font-size: 20px;
+	    		text-align: center;
+	    		overflow: hidden;
+	    	}
+	    	
+	    	.pageLoadingInfo img {
+	    		width: 200px;
+	    		height: 200px;
+	    		object-fit: cover;
+	    	}
+	     </style>
+	    <script>
+	    	var _LoadingHtml='<div id="pageLoading">'+
+	    			'<div class="pageLoadingInfo">'+
+	    			'<img class="LoadImg" src=<%- theme.pageLoading.url %> alt />'+
+	    			'<p>&nbsp;&nbsp;<%- theme.pageLoading.ptitle %></p>'+
+					'<p><%- theme.pageLoading.pface %></p>'+
+	    			'</div></div>';
+	    	document.write(_LoadingHtml);
+	    	document.onreadystatechange = completeLoading;
+	    	function completeLoading() {
+	    	  if (document.readyState == "complete") {
+	    	 var loadingMask = document.getElementById('pageLoading');
+	    	 loadingMask.parentNode.removeChild(loadingMask);
+	    	  }
+	    	}
+	    </script> 
+	 <% } %>
+	 
 </head>

@@ -138,6 +138,7 @@ githubEmojis:
    customEmojis
   
 #懒加载
+# 当 src=url 这样写法时懒加载失效
 lazyload:
  enable: true 
  onlypost: false

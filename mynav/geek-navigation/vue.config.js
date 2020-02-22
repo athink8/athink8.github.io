@@ -5,27 +5,13 @@ function resolve(dir) {
     return path.join(__dirname, dir)
 }
 module.exports = {
-    publicPath: './boxlib/',
-	outputDir: "dist",
-	assetsDir: "static",
+    publicPath: './',
 	
     chainWebpack: config => {
         config.resolve.alias
             .set('images', resolve('src/assets/img/'))
             .set('styles', resolve('src/assets/styles/'))
     },
-	/* 生产环境的source map */
-	    productionSourceMap: true,
-	    integrity: false,
-	    configureWebpack: {
-	        resolve: {
-	            alias: {
-	                'assets': '@/assets',
-	                'components': '@/components',
-	                'views': '@/views',
-	            }
-	        }
-	    },
     css: {
         loaderOptions: {
             sass: {
