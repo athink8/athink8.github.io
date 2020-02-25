@@ -6,8 +6,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="Redis,SpringBoot,整合,组件">
-    <meta name="description" content=" SpringBoot整合redis组件,通过简单配置即可使用Redis，可作为缓存中间件来使用加快响应，减少负担..">
+    <meta name="keywords" content="Tomcat,ssl,https,Tomcat上ssl证书安装">
+    <meta name="description" content="在Tomcat上正确的配置ssl证书,可使你的网站使用HTTPS协议，能够让你的网站更加安全，同时也使域名显示更加美观">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>SpringBoot整合redis组件 | Athink_</title>
+    <title>Tomcat上ssl证书安装 | Athink_</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/5.11.1/css/all.min.css">
@@ -479,12 +479,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/10/15UKne.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/10/15UP0J.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SpringBoot整合redis组件</h1>
+                    <h1 class="description center-align post-title">Tomcat上ssl证书安装</h1>
                 </div>
             </div>
         </div>
@@ -601,16 +601,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Redis/">
-                                <span class="chip bg-color">Redis</span>
+                            <a href="/tags/Tomcat/">
+                                <span class="chip bg-color">Tomcat</span>
                             </a>
                         
-                            <a href="/tags/SpringBoot/">
-                                <span class="chip bg-color">SpringBoot</span>
+                            <a href="/tags/ssl/">
+                                <span class="chip bg-color">ssl</span>
                             </a>
                         
-                            <a href="/tags/%E6%95%B4%E5%90%88/">
-                                <span class="chip bg-color">整合</span>
+                            <a href="/tags/https/">
+                                <span class="chip bg-color">https</span>
                             </a>
                         
                     </div>
@@ -621,8 +621,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/SpringBoot/" class="post-category">
-                                SpringBoot
+                            <a href="/categories/Tomcat/" class="post-category">
+                                Tomcat
                             </a>
                         
                     </div>
@@ -634,21 +634,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-23
+                    2020-02-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-23
+                    2020-02-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    578
+                    515
                 </div>
                 
 
@@ -671,114 +671,57 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="SpringBoot整合redis组件"><a href="#SpringBoot整合redis组件" class="headerlink" title="SpringBoot整合redis组件"></a>SpringBoot整合redis组件</h2><blockquote>
-<p><code>不要跟过去的自己比，要期待未来的自己，珍爱现在的自己</code></p>
+                <h2 id="Tomcat上ssl证书安装"><a href="#Tomcat上ssl证书安装" class="headerlink" title="Tomcat上ssl证书安装"></a>Tomcat上ssl证书安装</h2><blockquote>
+<p><code>正是因为这一点一滴觉得还有希望的自己，才是最无可救药的吧。</code></p>
 </blockquote>
-<h3 id="1-添加Redis相关依赖"><a href="#1-添加Redis相关依赖" class="headerlink" title="1.添加Redis相关依赖"></a>1.添加Redis相关依赖</h3><pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--Redis相关依赖--></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-data-redis<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
-<h3 id="2-application-properties中redis相关配置"><a href="#2-application-properties中redis相关配置" class="headerlink" title="2.application.properties中redis相关配置"></a>2.<strong>application.properties中redis相关配置</strong></h3><pre class=" language-xml"><code class="language-xml"># Redis数据库索引（默认为0）
-spring.redis.database=0  
-# Redis服务器地址
-spring.redis.host=127.0.0.1
-# Redis服务器连接端口
-spring.redis.port=6379  
-# Redis服务器连接密码（默认为空）
-spring.redis.password=
-# 连接池最大连接数（使用负值表示没有限制）
-spring.redis.jedis.pool.max-active=200 
-# 连接池最大阻塞等待时间（使用负值表示没有限制）
-spring.redis.jedis.pool.max-wait=-1
-# 连接池中的最大空闲连接
-spring.redis.jedis.pool.max-idle=10 
-# 连接池中的最小空闲连接
-spring.redis.jedis.pool.min-idle=10 
-# 连接超时时间（毫秒）
-spring.redis.timeout=1000</code></pre>
-<h3 id="3-redis自定义配置"><a href="#3-redis自定义配置" class="headerlink" title="3.redis自定义配置"></a>3.redis自定义配置</h3><blockquote>
-<p>SpringBoot自动在容器中生成了一个<code>RedisTemplate</code>和一个<code>StringRedisTemplate</code></p>
+<hr>
+<p>在Tomcat上正确的配置ssl证书,可使你的网站的HTTP转为HTTPS协议，能够让你的网站更加安全，同时也使域名在浏览器上显示小绿标更加美观点。</p>
+<p><strong>HTTPS有如下特点：</strong></p>
+<ol>
+<li>内容加密：采用混合加密技术，中间者无法直接查看明文内容</li>
+<li>验证身份：通过证书认证客户端访问的是自己的服务器</li>
+<li>保护数据完整性：防止传输的内容被中间人冒充或者篡改</li>
+</ol>
+<h3 id="1-在server-xm配置证书"><a href="#1-在server-xm配置证书" class="headerlink" title="1.在server.xm配置证书"></a>1.在server.xm配置证书</h3><blockquote>
+<p>添加如下 并在主端口修改  redirectPort=”443” </p>
 </blockquote>
-<p> 第一种：（添加方式添加配置）</p>
-<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyRedisConfig</span> <span class="token punctuation">{</span>
+<pre><code>&lt;Connector port=&quot;443&quot;
+    protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot; 
+    SSLEnabled=&quot;true&quot;
+    scheme=&quot;https&quot;
+    secure=&quot;true&quot;
+    keystoreFile=&quot;/tomcat8/conf/mySSL/2826717_onfree.cn.pfx&quot;   
+    keystoreType=&quot;PKCS12&quot;
+    keystorePass=&quot;TlB73znA&quot;   
+    clientAuth=&quot;false&quot;
+    SSLProtocol=&quot;TLSv1+TLSv1.1+TLSv1.2&quot;
+    ciphers=&quot;TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,
+    TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA&quot;/&gt;
 
-    <span class="token comment" spellcheck="true">/**
-      * 修改默认序列化得方式为Json解析
-    **/</span>
-    <span class="token annotation punctuation">@Bean</span>
-    <span class="token keyword">public</span> RedisTemplate<span class="token operator">&lt;</span>Object<span class="token punctuation">,</span> Employee<span class="token operator">></span> <span class="token function">empRedisTemplate</span><span class="token punctuation">(</span>
-            RedisConnectionFactory redisConnectionFactory<span class="token punctuation">)</span>
-            <span class="token keyword">throws</span> UnknownHostException <span class="token punctuation">{</span>
-        RedisTemplate<span class="token operator">&lt;</span>Object<span class="token punctuation">,</span> Employee<span class="token operator">></span> template <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RedisTemplate</span><span class="token operator">&lt;</span>Object<span class="token punctuation">,</span> Employee<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        template<span class="token punctuation">.</span><span class="token function">setConnectionFactory</span><span class="token punctuation">(</span>redisConnectionFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        Jackson2JsonRedisSerializer<span class="token operator">&lt;</span>Employee<span class="token operator">></span> ser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Jackson2JsonRedisSerializer</span><span class="token operator">&lt;</span>Employee<span class="token operator">></span><span class="token punctuation">(</span>Employee<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        template<span class="token punctuation">.</span><span class="token function">setDefaultSerializer</span><span class="token punctuation">(</span>ser<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> template<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token annotation punctuation">@Bean</span>
-    <span class="token keyword">public</span> RedisTemplate<span class="token operator">&lt;</span>Object<span class="token punctuation">,</span> Department<span class="token operator">></span> <span class="token function">deptRedisTemplate</span><span class="token punctuation">(</span>
-            RedisConnectionFactory redisConnectionFactory<span class="token punctuation">)</span>
-            <span class="token keyword">throws</span> UnknownHostException <span class="token punctuation">{</span>
-        RedisTemplate<span class="token operator">&lt;</span>Object<span class="token punctuation">,</span> Department<span class="token operator">></span> template <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RedisTemplate</span><span class="token operator">&lt;</span>Object<span class="token punctuation">,</span> Department<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        template<span class="token punctuation">.</span><span class="token function">setConnectionFactory</span><span class="token punctuation">(</span>redisConnectionFactory<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        Jackson2JsonRedisSerializer<span class="token operator">&lt;</span>Department<span class="token operator">></span> ser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Jackson2JsonRedisSerializer</span><span class="token operator">&lt;</span>Department<span class="token operator">></span><span class="token punctuation">(</span>Department<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        template<span class="token punctuation">.</span><span class="token function">setDefaultSerializer</span><span class="token punctuation">(</span>ser<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> template<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+SSLCipherSuite:配置符合PFS规范的加密套餐,苹果ATS特性服务器需要（是否配置自行选择）
 
+ciphers：服务器加密套件（是否配置自行选择）
 
-    <span class="token comment" spellcheck="true">//CacheManagerCustomizers可以来定制缓存的一些规则</span>
-    <span class="token annotation punctuation">@Primary</span>  <span class="token comment" spellcheck="true">//将某个缓存管理器作为默认的</span>
-    <span class="token annotation punctuation">@Bean</span>
-    <span class="token keyword">public</span> RedisCacheManager <span class="token function">employeeCacheManager</span><span class="token punctuation">(</span>RedisTemplate<span class="token operator">&lt;</span>Object<span class="token punctuation">,</span> Employee<span class="token operator">></span> empRedisTemplate<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        RedisCacheManager cacheManager <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RedisCacheManager</span><span class="token punctuation">(</span>empRedisTemplate<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//key多了一个前缀</span>
-        <span class="token comment" spellcheck="true">//使用前缀，默认会将CacheName作为key的前缀</span>
-        cacheManager<span class="token punctuation">.</span><span class="token function">setUsePrefix</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> cacheManager<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+SSLProtocol：在服务端TLS协议中启用TLS1.2，苹果ATS特性服务器和微信小程序都需要TLS版本为1.2以上，这个还需要jdk支持TLS1.2，jdk1.6和jdk1.7都需要第三方插件，jdk1.8默认支持TLS1.2（是否配置自行选择）
 
-    <span class="token annotation punctuation">@Bean</span>
-    <span class="token keyword">public</span> RedisCacheManager <span class="token function">deptCacheManager</span><span class="token punctuation">(</span>RedisTemplate<span class="token operator">&lt;</span>Object<span class="token punctuation">,</span> Department<span class="token operator">></span> deptRedisTemplate<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        RedisCacheManager cacheManager <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RedisCacheManager</span><span class="token punctuation">(</span>deptRedisTemplate<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//key多了一个前缀</span>
-        <span class="token comment" spellcheck="true">//使用前缀，默认会将CacheName作为key的前缀</span>
-        cacheManager<span class="token punctuation">.</span><span class="token function">setUsePrefix</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> cacheManager<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+keystoreFile：证书文件的绝对路径
 
-
-<span class="token punctuation">}</span></code></pre>
-<p> 第二种：（重写redisTemplate）</p>
-<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RedisConfig</span> <span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Bean</span>
-    <span class="token annotation punctuation">@SuppressWarnings</span><span class="token punctuation">(</span><span class="token string">"all"</span><span class="token punctuation">)</span>
-    <span class="token keyword">public</span> RedisTemplate<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">></span> <span class="token function">redisTemplate</span><span class="token punctuation">(</span>RedisConnectionFactory factory<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        RedisTemplate<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">></span> template <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RedisTemplate</span><span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Object<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        template<span class="token punctuation">.</span><span class="token function">setConnectionFactory</span><span class="token punctuation">(</span>factory<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        Jackson2JsonRedisSerializer jackson2JsonRedisSerializer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Jackson2JsonRedisSerializer</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        ObjectMapper om <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        om<span class="token punctuation">.</span><span class="token function">setVisibility</span><span class="token punctuation">(</span>PropertyAccessor<span class="token punctuation">.</span>ALL<span class="token punctuation">,</span> JsonAutoDetect<span class="token punctuation">.</span>Visibility<span class="token punctuation">.</span>ANY<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        om<span class="token punctuation">.</span><span class="token function">enableDefaultTyping</span><span class="token punctuation">(</span>ObjectMapper<span class="token punctuation">.</span>DefaultTyping<span class="token punctuation">.</span>NON_FINAL<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        jackson2JsonRedisSerializer<span class="token punctuation">.</span><span class="token function">setObjectMapper</span><span class="token punctuation">(</span>om<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        StringRedisSerializer stringRedisSerializer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringRedisSerializer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// key采用String的序列化方式</span>
-        template<span class="token punctuation">.</span><span class="token function">setKeySerializer</span><span class="token punctuation">(</span>stringRedisSerializer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// hash的key也采用String的序列化方式</span>
-        template<span class="token punctuation">.</span><span class="token function">setHashKeySerializer</span><span class="token punctuation">(</span>stringRedisSerializer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// value序列化方式采用jackson</span>
-        template<span class="token punctuation">.</span><span class="token function">setValueSerializer</span><span class="token punctuation">(</span>jackson2JsonRedisSerializer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// hash的value序列化方式采用jackson</span>
-        template<span class="token punctuation">.</span><span class="token function">setHashValueSerializer</span><span class="token punctuation">(</span>jackson2JsonRedisSerializer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        template<span class="token punctuation">.</span><span class="token function">afterPropertiesSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> template<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-
+keystorePass：证书密码，这个文件里面</code></pre><h3 id="2-在web-xml配置强制将http跳转至https（可选配置）"><a href="#2-在web-xml配置强制将http跳转至https（可选配置）" class="headerlink" title="2.在web.xml配置强制将http跳转至https（可选配置）"></a>2.在web.xml配置强制将http跳转至https（可选配置）</h3><pre><code>#在&lt;/welcome-file-list&gt;后添加以下内容：
+&lt;login-config&gt;  
+    &lt;!-- Authorization setting for SSL --&gt;  
+    &lt;auth-method&gt;CLIENT-CERT&lt;/auth-method&gt;  
+    &lt;realm-name&gt;Client Cert Users-only Area&lt;/realm-name&gt;  
+&lt;/login-config&gt;  
+&lt;security-constraint&gt;  
+    &lt;!-- Authorization setting for SSL --&gt;  
+    &lt;web-resource-collection &gt;  
+        &lt;web-resource-name &gt;SSL&lt;/web-resource-name&gt;  
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;  
+    &lt;/web-resource-collection&gt;  
+    &lt;user-data-constraint&gt;  
+        &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;  
+    &lt;/user-data-constraint&gt;  
+&lt;/security-constraint&gt;</code></pre>
             </div>
             <hr/>
 
@@ -803,7 +746,7 @@ spring.redis.timeout=1000</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blog.onfree.cn/posts/c0ba78a5.html">https://blog.onfree.cn/posts/c0ba78a5.html</a>
+                    <a href="https://blog.onfree.cn/posts/2fddf34.html">https://blog.onfree.cn/posts/2fddf34.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -841,16 +784,16 @@ spring.redis.timeout=1000</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Redis/">
-                                    <span class="chip bg-color">Redis</span>
+                                <a href="/tags/Tomcat/">
+                                    <span class="chip bg-color">Tomcat</span>
                                 </a>
                             
-                                <a href="/tags/SpringBoot/">
-                                    <span class="chip bg-color">SpringBoot</span>
+                                <a href="/tags/ssl/">
+                                    <span class="chip bg-color">ssl</span>
                                 </a>
                             
-                                <a href="/tags/%E6%95%B4%E5%90%88/">
-                                    <span class="chip bg-color">整合</span>
+                                <a href="/tags/https/">
+                                    <span class="chip bg-color">https</span>
                                 </a>
                             
                         </div>
@@ -1287,9 +1230,10 @@ spring.redis.timeout=1000</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/2fddf34.html">
                     <div class="card-image">
@@ -1307,9 +1251,9 @@ spring.redis.timeout=1000</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1322,6 +1266,7 @@ spring.redis.timeout=1000</code></pre>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1348,19 +1293,19 @@ spring.redis.timeout=1000</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/2d8346af.html">
+                <a href="/posts/c0ba78a5.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/medias/bg1.jpg" class="responsive-img" alt="Java中HttpClient使用">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s2.ax1x.com/2020/02/10/15UKne.jpg" class="responsive-img" alt="SpringBoot整合redis组件">
                         
-                        <span class="card-title">Java中HttpClient使用</span>
+                        <span class="card-title">SpringBoot整合redis组件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在Java中HttpClient使用，在 Internet，HTTP 协议上是使用得最多、最重要的协议了,HttpClient 是 Apache Jakarta Common 下的子项目..
+                             SpringBoot整合redis组件,通过简单配置即可使用Redis，可作为缓存中间件来使用加快响应，减少负担..
                         
                     </div>
                     <div class="publish-info">
@@ -1371,8 +1316,8 @@ spring.redis.timeout=1000</code></pre>
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/SpringBoot/" class="post-category">
+                                    SpringBoot
                                 </a>
                             
                             
@@ -1382,12 +1327,16 @@ spring.redis.timeout=1000</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/Redis/">
+                        <span class="chip bg-color">Redis</span>
                     </a>
                     
-                    <a href="/tags/HttpClient/">
-                        <span class="chip bg-color">HttpClient</span>
+                    <a href="/tags/SpringBoot/">
+                        <span class="chip bg-color">SpringBoot</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B4%E5%90%88/">
+                        <span class="chip bg-color">整合</span>
                     </a>
                     
                 </div>

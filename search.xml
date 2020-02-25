@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Tomcat上ssl证书安装</title>
+      <link href="/posts/2fddf34.html"/>
+      <url>/posts/2fddf34.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Tomcat上ssl证书安装"><a href="#Tomcat上ssl证书安装" class="headerlink" title="Tomcat上ssl证书安装"></a>Tomcat上ssl证书安装</h2><blockquote><p><code>正是因为这一点一滴觉得还有希望的自己，才是最无可救药的吧。</code></p></blockquote><hr><p>在Tomcat上正确的配置ssl证书,可使你的网站的HTTP转为HTTPS协议，能够让你的网站更加安全，同时也使域名在浏览器上显示小绿标更加美观点。</p><p><strong>HTTPS有如下特点：</strong></p><ol><li>内容加密：采用混合加密技术，中间者无法直接查看明文内容</li><li>验证身份：通过证书认证客户端访问的是自己的服务器</li><li>保护数据完整性：防止传输的内容被中间人冒充或者篡改</li></ol><h3 id="1-在server-xm配置证书"><a href="#1-在server-xm配置证书" class="headerlink" title="1.在server.xm配置证书"></a>1.在server.xm配置证书</h3><blockquote><p>添加如下 并在主端口修改  redirectPort=”443” </p></blockquote><pre><code>&lt;Connector port=&quot;443&quot;    protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;     SSLEnabled=&quot;true&quot;    scheme=&quot;https&quot;    secure=&quot;true&quot;    keystoreFile=&quot;/tomcat8/conf/mySSL/2826717_onfree.cn.pfx&quot;       keystoreType=&quot;PKCS12&quot;    keystorePass=&quot;TlB73znA&quot;       clientAuth=&quot;false&quot;    SSLProtocol=&quot;TLSv1+TLSv1.1+TLSv1.2&quot;    ciphers=&quot;TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,    TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA&quot;/&gt;SSLCipherSuite:配置符合PFS规范的加密套餐,苹果ATS特性服务器需要（是否配置自行选择）ciphers：服务器加密套件（是否配置自行选择）SSLProtocol：在服务端TLS协议中启用TLS1.2，苹果ATS特性服务器和微信小程序都需要TLS版本为1.2以上，这个还需要jdk支持TLS1.2，jdk1.6和jdk1.7都需要第三方插件，jdk1.8默认支持TLS1.2（是否配置自行选择）keystoreFile：证书文件的绝对路径keystorePass：证书密码，这个文件里面</code></pre><h3 id="2-在web-xml配置强制将http跳转至https（可选配置）"><a href="#2-在web-xml配置强制将http跳转至https（可选配置）" class="headerlink" title="2.在web.xml配置强制将http跳转至https（可选配置）"></a>2.在web.xml配置强制将http跳转至https（可选配置）</h3><pre><code>#在&lt;/welcome-file-list&gt;后添加以下内容：&lt;login-config&gt;      &lt;!-- Authorization setting for SSL --&gt;      &lt;auth-method&gt;CLIENT-CERT&lt;/auth-method&gt;      &lt;realm-name&gt;Client Cert Users-only Area&lt;/realm-name&gt;  &lt;/login-config&gt;  &lt;security-constraint&gt;      &lt;!-- Authorization setting for SSL --&gt;      &lt;web-resource-collection &gt;          &lt;web-resource-name &gt;SSL&lt;/web-resource-name&gt;          &lt;url-pattern&gt;/*&lt;/url-pattern&gt;      &lt;/web-resource-collection&gt;      &lt;user-data-constraint&gt;          &lt;transport-guarantee&gt;CONFIDENTIAL&lt;/transport-guarantee&gt;      &lt;/user-data-constraint&gt;  &lt;/security-constraint&gt;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tomcat </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Tomcat </tag>
+            
+            <tag> ssl </tag>
+            
+            <tag> https </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SpringBoot整合redis组件</title>
       <link href="/posts/c0ba78a5.html"/>
       <url>/posts/c0ba78a5.html</url>
