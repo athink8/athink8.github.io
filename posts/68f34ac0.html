@@ -599,7 +599,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2k
                 </div>
                 
 
@@ -1004,23 +1004,13 @@ if(userBean != null){
 </ol>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
 <li><p>Listener</p>
-<p>  8个 </p>
-<p>  三种类型  </p>
-<pre><code>  针对三个作用域的创建和销毁
-  针对三个作用域的值改变 【添加 | 替换 | 移除】
-  针对session中的值 【钝化 活化】 ， 【绑定  解绑】</code></pre><p>  钝化 ( 序列化 ) </p>
-<pre><code>  内存中的对象存储到硬盘 
-
-  超时失效。 session销毁了。 </code></pre><p>  非正常关闭服务器， 钝化  。 正常关闭服务器 销毁</p>
-<p>  设置了session，多久时间。 context.xml</p>
-<p>  活化 (反序列化)</p>
-<pre><code>  从硬盘里面读取到内存</code></pre></li>
+<p>  三种类型 </p>
+<p>  针对三个作用域的创建和销毁<br>  针对三个作用域的值改变 【添加 | 替换 | 移除】</p>
+</li>
 </ul>
 <blockquote>
+<p>ServletContextListner  ： 应用被部署的时候， 服务器加载这个项目的时候，做一些初始化工作， 任务调度。<br>    HttpSessionListener    ： 统计在线人数<br>    HttpSessionActivationListener  ： 钝化活化处理</p>
 </blockquote>
-<pre><code>ServletContextListner  ： 应用被部署的时候， 服务器加载这个项目的时候，做一些初始化工作， 任务调度。
-HttpSessionListener    ： 统计在线人数
-HttpSessionActivationListener  ： 钝化活化处理</code></pre><p>​        </p>
 <ul>
 <li>Filter </li>
 </ul>
