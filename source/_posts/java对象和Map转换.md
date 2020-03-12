@@ -8,7 +8,7 @@ tags:
 cover: false
 top: false
 keywords: 'Java,转换,Map'
-summary: Java对象和Map在很多时候常常需要转换，而本文可作为常见转换工具类使用
+summary: 'Java对象和Map在很多时候常常需要转换，而本文可作为常见转换工具类来使用											..'
 abbrlink: b59ed7a2
 date: 2020-02-20 20:30:00
 ---

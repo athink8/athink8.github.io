@@ -141,8 +141,8 @@ recommend:
 
 # Configure website favicon and LOGO
 # 配置网站favicon和网站LOGO
-favicon: https://s2.ax1x.com/2020/02/13/1q6iAs.th.png
-logo: https://s2.ax1x.com/2020/02/13/1q6iAs.th.png
+favicon: https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/medias/logo.png
+logo: https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/medias/logo.png
 
 # The configuration of the second button in the home banner,
 # including the display name of the button, the font awesome icon, and the hyperlink to the button.
@@ -437,9 +437,9 @@ libs:
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
 featureImages:
-- https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/medias/bg1.jpg
-- https://api.ixiaowai.cn/gqapi/gqapi.php
+#- https://api.ixiaowai.cn/gqapi/gqapi.php?sss
 - https://i.loli.net/2020/02/10/h8o4eUqB6RHKLvm.jpg
+- https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/medias/bg1.jpg
 - https://s2.ax1x.com/2020/02/10/15UAt1.jpg
 - https://s2.ax1x.com/2020/02/10/15Ui79.jpg
 - https://s2.ax1x.com/2020/02/10/15UkkR.jpg
@@ -452,6 +452,17 @@ featureImages:
 - https://s2.ax1x.com/2020/02/10/15U8ht.jpg
 - https://s2.ax1x.com/2020/02/10/15UY1f.jpg
 - https://s2.ax1x.com/2020/02/10/15UNjS.jpg
+- https://s1.ax1x.com/2020/03/12/8eirkT.md.jpg
+- https://s1.ax1x.com/2020/03/12/8eiB7V.md.jpg
+- https://s1.ax1x.com/2020/03/12/8ei000.md.jpg
+- https://s1.ax1x.com/2020/03/12/8eiU6s.md.jpg
+- https://s1.ax1x.com/2020/03/12/8eiaXn.md.jpg
+- https://s1.ax1x.com/2020/03/12/8eistU.md.jpg
+- https://s1.ax1x.com/2020/03/12/8eiyhF.md.jpg
+- https://s1.ax1x.com/2020/03/12/8eicp4.md.jpg
+- https://s1.ax1x.com/2020/03/12/8ei2c9.md.jpg
+- https://s1.ax1x.com/2020/03/12/8eih0x.md.jpg
+- https://s1.ax1x.com/2020/03/12/8eiIAK.md.jpg
 
 
 # default configs that the default policy for every articles/posts
@@ -550,15 +561,35 @@ icp:
   enable: false
   url: # 备案链接
   text: 1# 备案信息
+
+#又拍云logo
+youpaiyun:
+  enable: true
+  url: 'https://www.upyun.com'
+  logo: 'https://cdn.jsdelivr.net/gh/athink8/cdn/imgs/other/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png'
   
-#使用jsDelivr cdn加速静态
+#使用jsDelivr cdn加速静态@latest
 jsDelivr:
   enable: true #本地开发测试时关闭
-  url: https://cdn.jsdelivr.net/gh/athink8/athink8.github.io
+  url: https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest
   
- #页面加载前动画
+#页面加载前动画
 pageLoading:
-  enable: true
+  enable: false
   url: https://cdn.jsdelivr.net/gh/athink8/cdn/icon/loading/loading7.gif
   ptitle: '精彩马上到来，请不要走开哦！'
   pface: 'φ(≧ω≦*)♪' #颜表情
+  
+#friends 页面提示文字
+friendTitle:
+  enable: true
+  text: '至各位朋友们:<br>
+        &nbsp&nbsp你们好呀，如需添加友链，请在下方留言哦，我会尽快处理的哦！谢谢！<br><hr>
+        ––前提:<br>
+        1. 你的博客是活跃的 <br>
+        2. 价值观正确，博客里不存在违反道德，违法违规的内容 <br><hr>
+        ––格式如下:<br>
+        网站名称：Athink_ <br>
+        网站地址：https://blog.onfree.cn/ <br>
+        网站描述：博客 || 分享生活点滴·分享技术成长 <br>
+        网站图标：https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/medias/logo.png'

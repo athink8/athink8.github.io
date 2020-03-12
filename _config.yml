@@ -6,7 +6,7 @@
 title: Athink_
 subtitle: 自由源于努力
 description: 博客||分享生活点滴·分享技术成长
-keywords: 技术,博客,Athink,自由
+keywords: 技术,博客,Athink,自由,新浪博客,专栏,网易博客,blog,百度
 author: Athink_
 language: zh-CN
 timezone: ''
@@ -58,7 +58,7 @@ future: true
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 12
+  per_page: 9
   order_by: -date
 
 # Category & Tag
@@ -81,7 +81,7 @@ use_date_for_updated: false
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 12
+per_page: 9
 pagination_dir: page
 
 # Include / Exclude file(s)

@@ -3,6 +3,11 @@
 	"title": "常用工具箱",
 	"icon": "czs-bookmark-l",
 	"sites": [ {
+		"name": "Athink_工具箱",
+		"href": "https://tool.onfree.cn/",
+		"desc": "折折腾腾,梦想实现",
+		"logo": "https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/medias/logo.png"
+	}, {
 		"name": "一个工具箱",
 		"href": "http://www.atoolbox.net",
 		"desc": "好用的工具箱都在这里！",
