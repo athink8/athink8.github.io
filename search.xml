@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>Spring控制反转(IOC)方式</title>
+      <link href="/posts/631766d3.html"/>
+      <url>/posts/631766d3.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Spring控制反转-IOC-方式"><a href="#Spring控制反转-IOC-方式" class="headerlink" title="Spring控制反转(IOC)方式"></a>Spring控制反转(IOC)方式</h2><blockquote><p><code>实现自己既定的目标，必须能耐得住寂寞单干。</code></p></blockquote><p>Spring框架则避免了调用者与工厂之间的耦合，通过spring容器“宏观调控”，调用者只要被动接受spring容器为调用者的成员变量赋值即可，而不需要主动获取被依赖对象。这种被动获取的方式就叫做依赖注入(DI)，又叫控制反转(IOC)。</p><h4 id="1-通过-setter-方法"><a href="#1-通过-setter-方法" class="headerlink" title="1.通过 setter 方法"></a>1.通过 setter 方法</h4><ul><li><p>bean类：</p><pre><code>  private User2 user2;  public void setUser2(User2 user2) {      this.user2 = user2;  }</code></pre></li><li><p>applicationContext.xml：</p><pre><code>  &lt;bean id=&quot;user2&quot; class=&quot;com.ioc.User2&quot;&gt;&lt;/bean&gt;  &lt;bean id=&quot;user1&quot; class=&quot;com.ioc.User1&quot;&gt;      &lt;property name=&quot;name&quot; value=&quot;jz&quot;&gt;&lt;/property&gt;      &lt;property name=&quot;user2&quot; ref=&quot;user2&quot;&gt;&lt;/property&gt;  &lt;/bean&gt;</code></pre></li></ul><h4 id="2-通过constructor-构造方法"><a href="#2-通过constructor-构造方法" class="headerlink" title="2.通过constructor 构造方法"></a>2.通过constructor 构造方法</h4><ul><li><p>bean类：</p><pre><code>  private User2 user2;      public User1(User2 user2){          this.user2=user2;      }</code></pre></li><li><p>applicationContext.xml：</p><pre><code>  &lt;bean id=&quot;user2&quot; class=&quot;com.ioc.User2&quot;&gt;&lt;/bean&gt;  &lt;bean id=&quot;user1&quot; class=&quot;com.ioc.User1&quot;&gt;      &lt;constructor-arg name=&quot;name&quot; value=&quot;jz&quot; /&gt;      &lt;constructor-arg name=&quot;user2&quot; ref=&quot;user2&quot; /&gt;  &lt;/bean&gt;</code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Spring </tag>
+            
+            <tag> IOC </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spring介绍</title>
+      <link href="/posts/af11a1b8.html"/>
+      <url>/posts/af11a1b8.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Spring介绍"><a href="#Spring介绍" class="headerlink" title="Spring介绍"></a>Spring介绍</h2><blockquote><p><code>有志者自有千计万计，无志者只感千难万难。</code></p></blockquote><p>Spring框架是由于软件开发的复杂性而创建的。Spring使用的是基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅仅限于服务器端的开发。从简单性、可测试性和松耦合性角度而言，绝大部分Java应用都可以从Spring中受益。</p><h3 id="1-Spring框架包的下载"><a href="#1-Spring框架包的下载" class="headerlink" title="1.Spring框架包的下载"></a>1.Spring框架包的下载</h3><blockquote><p><a href="http://repo.spring.io/simple/libs-release-local/org/springframework/spring/" target="_blank" rel="noopener">http://repo.spring.io/simple/libs-release-local/org/springframework/spring/</a></p></blockquote><h3 id="2-spring框架体系"><a href="#2-spring框架体系" class="headerlink" title="2.spring框架体系"></a>2.spring框架体系</h3><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/athink8/cdn/imgs/arctle/Spring1.png" alt="image"></p><h3 id="3-spring-核心容器"><a href="#3-spring-核心容器" class="headerlink" title="3.spring 核心容器"></a>3.spring 核心容器</h3><ul><li><p>BeanFactory接口: </p><p>  Resource resource = new FileSystemResource(“beans.xml”);<br>  BeanFactora factory = new XmlBeanFactory(resource);</p></li><li><p>ApplicationContext接口：</p><blockquote></blockquote><p>  从类路径下加载配置文件:  ClassPathXmlApplicationContext</p><p>  从硬盘的绝对路径下加载配置文件: FileSystemXmlApplication</p></li></ul><h3 id="4-spring配置详解"><a href="#4-spring配置详解" class="headerlink" title="4.spring配置详解"></a>4.spring配置详解</h3><h4 id="4-1、元素属性"><a href="#4-1、元素属性" class="headerlink" title="4.1、元素属性"></a>4.1、元素属性</h4><ul><li><p>bean元素:使用该元素描述需要spring容器管理对象</p></li><li><p>name属性:给被管理的对象起个名字,获得对象时getBean(“name值”)</p></li><li><p>class属性:被管理对象的完整类名</p></li><li><p>id属性:与name属性一模一样，名称不可重复，不能使用特殊字符</p></li></ul><p><strong>name和id之间的一些注意点:</strong></p><pre><code>1 配置两个相同的 id 或者 name 都不能通过。2 如果既配置了 id ，也配置了 name ，则两个都生效。如果id和name都没有指定，则用类全名作为name，如&lt;bean class=&quot;com.stamen.BeanLifeCycleImpl&quot;&gt;,则你可以通过getBean(&quot;com.stamen.BeanLifeCycleImpl&quot;)返回该实例3 如果配置基本类的时候，注解和配置文件都使用的时候，注解和配置文件中 name 相同的时候， 则两个冲突，配置文件生效。如果配置基本类的时候，注解和配置文件都使用的时候，注解和配置文件中 name 不相同的时候， 则两个不冲突，都能够生效。</code></pre><h4 id="4-2、bean元素进阶"><a href="#4-2、bean元素进阶" class="headerlink" title="4.2、bean元素进阶"></a>4.2、bean元素进阶</h4><ol><li><p>scope属性</p><p> (1) singleton  (默认值 )  </p><blockquote><p>单例对象:被标识为单例的对象在spring容器中只会存在一个实例</p></blockquote><p> (2) prototype    </p><blockquote><p>多例原型:被标识为多例的对象,每次在获得才会被创建,每次创建都是新的对象</p></blockquote><p> (3)request</p><blockquote><p>Web环境下,对象与request生命周期一致    </p></blockquote><p> (4)session</p><blockquote><p>Web环境下,对象与session生命周期一致</p></blockquote></li></ol><blockquote><p>总结:绝大多数情况下，使用单例singleton(默认值)，但是在与struts整合时候，务必要用prototype多例，因为struts2在每次请求都会创建一个新的Action，若为单例，在多请求情况下，每个请求找找spring拿的都是同一个action。</p></blockquote><ol start="2"><li><p>生命周期属性(了解)———初始化和销毁</p><p> (1)配置一个方法作为生命周期初始化方法,spring会在对象创建之后立刻调用 init-method</p><p> (2)配置一个方法作为生命周期的销毁方法,spring容器在关闭并销毁所有容器中的对象之前调用destory-method</p><pre><code> &lt;bean init-method=“init”  destory-method=“destory”&gt;&lt;/bean&gt; //对应注解为@PostConstruct &lt;bean name=“hello” class=“完整类名”&gt;&lt;/bean&gt; //对应注解为@PreDestory</code></pre></li></ol><ol start="3"><li><p>模块化配置,即分模块配置(导入其他spring配置文件)</p><pre><code> &lt;beans&gt;     &lt;import resource = “spring配置文件的全路径名” /&gt; &lt;/beans&gt;</code></pre></li></ol><h4 id="4-3、spring三种对象的创建方式"><a href="#4-3、spring三种对象的创建方式" class="headerlink" title="4.3、spring三种对象的创建方式"></a>4.3、spring三种对象的创建方式</h4><pre><code>(1)空参数构造(重要)(2)静态工厂创建(调用静态方法创建)调用UserFactory类的静态createUser方法创建名为user的对象,放入容器    &lt;bean name=&quot;user&quot; class=&quot;cn.itcats.UserFactory&quot; factory-method=&quot;createUser&quot;&gt;&lt;/bean&gt;(3)实例工厂创建(调用非静态方法创建)——需要配置两个bean，因为无法通过类名调用非静态方法    &lt;bean name=&quot;user2&quot; factory-bean=&quot;userFactory&quot; factory-method=&quot;createUser&quot;&gt;&lt;/bean&gt;    &lt;bean name=“userFactory” class=“cn.itcats.UserFactory”&gt;&lt;/bean&gt;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spring </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Spring </tag>
+            
+            <tag> 简介 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Spring JDBC和事务管理</title>
       <link href="/posts/461ef513.html"/>
       <url>/posts/461ef513.html</url>
