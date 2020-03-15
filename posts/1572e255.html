@@ -6,8 +6,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="Java,反射,基础">
-    <meta name="description" content="Java反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法；对于任意一个对象,都能够调用它的任意一个方法和属性。|Athink|Athink_博客，分享生活点滴·分享技术成长">
+    <meta name="keywords" content="Spring,mybatis,SpringMVC,配置,xml,Athink_,blog.onfree.cn,博客">
+    <meta name="description" content="在使用Spring、SpringMVC和mybatis开发时，往往要配置的文件信息太多了，自己敲的话太麻烦了，以下整理了关于了常见的配置信息|Athink|Athink_博客，分享生活点滴·分享技术成长">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java反射的整理和理解 | Athink_</title>
+    <title>Spring及mybatis等xml常见配置 | Athink_</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/5.11.1/css/all.min.css">
@@ -430,12 +430,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/10/15U8ht.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/10/15UKne.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java反射的整理和理解</h1>
+                    <h1 class="description center-align post-title">Spring及mybatis等xml常见配置</h1>
                 </div>
             </div>
         </div>
@@ -552,12 +552,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/Spring/">
+                                <span class="chip bg-color">Spring</span>
                             </a>
                         
-                            <a href="/tags/%E5%8F%8D%E5%B0%84/">
-                                <span class="chip bg-color">反射</span>
+                            <a href="/tags/mybatis/">
+                                <span class="chip bg-color">mybatis</span>
+                            </a>
+                        
+                            <a href="/tags/SpringMVC/">
+                                <span class="chip bg-color">SpringMVC</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                                <span class="chip bg-color">配置</span>
                             </a>
                         
                     </div>
@@ -568,8 +576,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/Spring/" class="post-category">
+                                Spring
                             </a>
                         
                     </div>
@@ -581,28 +589,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-16
+                    2020-03-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-02-23
+                    2020-03-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    948
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    10 分
                 </div>
                 
 				
@@ -618,102 +626,233 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Java反射"><a href="#Java反射" class="headerlink" title="Java反射"></a>Java反射</h2><blockquote>
-<p> <code>星星在你的头顶上闪耀着，与你交互诉说的话语，一句一句地，如同星点般翩然落至眼前</code></p>
+                <h2 id="Spring及mybatis等xml常见配置"><a href="#Spring及mybatis等xml常见配置" class="headerlink" title="Spring及mybatis等xml常见配置"></a>Spring及mybatis等xml常见配置</h2><blockquote>
+<p><code>世界会向那些有目标和远见的人让路。</code></p>
 </blockquote>
-<hr>
-<h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><blockquote>
-<p>  JAVA反射机制是在运行状态中.<br>对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性.</p>
-</blockquote>
-<blockquote>
-<p>我们创建的每一个类也都是对象，即类本身是java.lang.Class类的实例对象。这个实例对象称之为类对象，也就是Class对象,或者类类型。</p>
-</blockquote>
-<h3 id="二、方法："><a href="#二、方法：" class="headerlink" title="二、方法："></a>二、方法：</h3><h4 id="1-如何获取-Class文件对象"><a href="#1-如何获取-Class文件对象" class="headerlink" title="1.如何获取.Class文件对象"></a>1.如何获取.Class文件对象</h4><pre><code>a.  通过Object类 getClass()方法获取 Class对象
+<p>总所周知，在使用Spring、SpringMVC和mybatis开发时，往往要配置的文件信息太多了，自己敲的话太麻烦了，以下整理了关于了常见的配置信息，可直接复制粘贴修改使用就好啦。</p>
+<h3 id="1-web-xml"><a href="#1-web-xml" class="headerlink" title="1.web.xml :"></a>1.web.xml :</h3><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot; 
+xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot; 
+id=&quot;WebApp_ID&quot; version=&quot;3.1&quot;&gt;
 
-b. 通过类名.class 方式 获取 Class对象
+&lt;!-- 欢迎页 --&gt;
+&lt;welcome-file-list&gt;
+    &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
+&lt;/welcome-file-list&gt;
 
-c.  通过反射的方式, Class.forName(String classname) 获取Class对象
-public static Class&lt;?&gt; forName(String className)throws ClassNotFoundException
-返回与带有给定字符串名的类或接口相关联的 Class 对象</code></pre><h4 id="2-通过反射，获取类中的构造方法，并完成对象的创建"><a href="#2-通过反射，获取类中的构造方法，并完成对象的创建" class="headerlink" title="2.通过反射，获取类中的构造方法，并完成对象的创建"></a>2.通过反射，获取类中的构造方法，并完成对象的创建</h4><ul>
-<li><p>获取指定的构造方法</p>
-<p>  public Constructor<T> getConstructor(Class&lt;?&gt;… parameterTypes)</p>
-</li>
-<li><p>获取指定的public修饰的构造方法</p>
-<p>  public Constructor<T> getDeclaredConstructor(Class&lt;?&gt;… parameterTypes)</p>
-</li>
-<li><p>获取指定的构造方法，包含私有的</p>
-<p>  public Constructor<T> getConstructor(Class&lt;?&gt;… parameterTypes)</p>
-</li>
-<li><p>获取所有的构造方法</p>
-<p>  public Constructor<?>[] getConstructors() 获取所有的public 修饰的构造方法
-  public Constructor<?>[] getDeclaredConstructors() 获取所有的构造方法，包含私有的</p>
-</li>
-</ul>
-<h4 id="3-通过反射，-获取类中的构造方法，并完成对象的创建"><a href="#3-通过反射，-获取类中的构造方法，并完成对象的创建" class="headerlink" title="3.通过反射， 获取类中的构造方法，并完成对象的创建"></a>3.通过反射， 获取类中的构造方法，并完成对象的创建</h4><pre><code>步骤：
-a.获取字节码文件对象
-b.通过字节码文件对象 ，获取到指定的构造方法
-    getConstructor(参数);
-c.通过构造方法，创建对象
-    public T newInstance(Object... initargs)</code></pre><h4 id="4-私有构造方法，创建对象"><a href="#4-私有构造方法，创建对象" class="headerlink" title="4.私有构造方法，创建对象"></a>4.私有构造方法，创建对象</h4><pre><code>a.获取字节码文件对象
-b.通过字节码文件对象 ，获取到指定的构造方法
-    getDeclaredConstructor (参数);
-c.暴力访问
-     con.setAccessible(true);
-d.通过构造方法，创建对象
-     public T newInstance(Object... initargs)</code></pre><h4 id="5-通过反射，获取Class文件中的方法"><a href="#5-通过反射，获取Class文件中的方法" class="headerlink" title="5.通过反射，获取Class文件中的方法"></a>5.通过反射，获取Class文件中的方法</h4><ul>
-<li><p>获取指定的方法</p>
-<p>  public Method getMethod(String name, Class&lt;?&gt;… parameterTypes)</p>
-</li>
-<li><p>获取指定的public方法</p>
-<p>  public Method getDeclaredMethod(String name, Class&lt;?&gt;… parameterTypes)</p>
-</li>
-<li><p>获取指定的任意方法，包含私有的</p>
-<p>  获取所有的方法:<br>  public Method[] getMethods()</p>
-<p>  获取本类与父类中所有public 修饰的方法:<br>  public Method[] getDeclaredMethods()获取本类中包含私有的所有的方法</p>
-</li>
-</ul>
-<blockquote>
-<p>// 数组表示：new Class[]{String.class, String.class}</p>
-</blockquote>
-<h4 id="6-通过反射，调用方法"><a href="#6-通过反射，调用方法" class="headerlink" title="6.通过反射，调用方法"></a>6.通过反射，调用方法</h4><pre><code>步骤：
-a.获取Class对象
-b.构造方法，创建对象
-c.取指定的public方法
-d.行方法
-public Object invoke(Object obj, Object... args)</code></pre><h4 id="7-私有方法的调用："><a href="#7-私有方法的调用：" class="headerlink" title="7.私有方法的调用："></a>7.私有方法的调用：</h4><pre><code>a，获取Class对象
-b,获取构造方法，创建对象
-c,获取指定的private方法
-d,开启暴力访问
-m5.setAccessible(true);
-e,执行方法
-public Object invoke(Object obj, Object... args)</code></pre><h4 id="8-通过反射，获取成员变量"><a href="#8-通过反射，获取成员变量" class="headerlink" title="8.通过反射，获取成员变量"></a>8.通过反射，获取成员变量</h4><ul>
-<li><p>获取指定的成员变量</p>
-<p>   public Field getField(String name) </p>
-</li>
-<li><p>获取public修饰的成员变量</p>
-<p>  public Field getDeclaredField(String name)</p>
-</li>
-<li><p>获取任意的成员变量，包含私有</p>
-<p>  public Field[] getFields() </p>
-</li>
-<li><p>获取所有public修饰的成员变量</p>
-<p>  public Field[] getDeclaredFields()</p>
-</li>
-</ul>
-<h4 id="9-通过反射，获取成员-变量，并赋值使用"><a href="#9-通过反射，获取成员-变量，并赋值使用" class="headerlink" title="9.通过反射，获取成员 变量，并赋值使用"></a>9.通过反射，获取成员 变量，并赋值使用</h4><pre><code>步骤：
-a. 获取字节码文件对象
-b. 获取构造方法，创建对象
-c. 获取指定的成员变量
-d. 对成员变量赋值获取值操作
-public void set(Object obj, Object value) // 赋值
-public Object get(Object obj) // 获取值</code></pre><h4 id="10-私有成员变量的使用"><a href="#10-私有成员变量的使用" class="headerlink" title="10.私有成员变量的使用"></a>10.私有成员变量的使用</h4><pre><code>步骤：
-a. 获取字节码文件对象
-b. 获取构造方法，创建对象
-c. 获取指定的成员变量
-d. 开启暴力访问
-e. 对成员变量赋值获取值操作
-public void set(Object obj, Object value) //赋值
-public Object get(Object obj) //获取值</code></pre>
+&lt;!-- 配置Spring --&gt;
+  &lt;context-param&gt; 
+    &lt;param-name&gt; contextConfigLocation &lt;/param-name&gt; 
+    &lt;param-value&gt;classpath:applicationContext.xml&lt;/param-value&gt; 
+&lt;/context-param&gt; 
+
+&lt;!-- 配置监听器 --&gt;
+&lt;listener&gt; 
+    &lt;listener-class&gt; org.springframework.web.context.ContextLoaderListener &lt;/listener-class&gt; 
+&lt;/listener&gt;
+
+  &lt;!-- 前端配置器 spring mvc--&gt;
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+    &lt;init-param&gt;
+      &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+      &lt;param-value&gt;classpath:spring-mvc.xml&lt;/param-value&gt;
+    &lt;/init-param&gt;
+    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+  &lt;/servlet&gt;
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+
+  &lt;!-- 中文处理过滤 --&gt;
+  &lt;filter&gt;
+    &lt;filter-name&gt;Encoding&lt;/filter-name&gt;
+    &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;/filter-class&gt;
+    &lt;init-param&gt;
+      &lt;param-name&gt;encoding&lt;/param-name&gt;
+      &lt;param-value&gt;UTF-8&lt;/param-value&gt;
+    &lt;/init-param&gt;
+    &lt;init-param&gt;
+     &lt;param-name&gt;forceEncoding&lt;/param-name&gt;
+    &lt;param-value&gt;true&lt;/param-value&gt;
+&lt;/init-param&gt;
+  &lt;/filter&gt;
+  &lt;filter-mapping&gt;
+    &lt;filter-name&gt;Encoding&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+  &lt;/filter-mapping&gt;
+&lt;/web-app&gt;</code></pre><h3 id="2-applicationContext-xml"><a href="#2-applicationContext-xml" class="headerlink" title="2. applicationContext.xml:"></a>2. applicationContext.xml:</h3><pre><code>&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot; 
+xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;
+xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-4.3.xsd 
+http://www.springframework.org/schema/aop 
+http://www.springframework.org/schema/aop/spring-aop-4.3.xsd 
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx-4.3.xsd&quot;&gt;
+
+&lt;!-- 加载db.properties --&gt;
+&lt;context:property-placeholder location=&quot;classpath:db.properties&quot;/&gt;
+
+&lt;!-- 加载log4j.properties --&gt;
+&lt;context:property-placeholder location=&quot;classpath:log4j.properties&quot; /&gt;
+
+&lt;!-- 配置数据源 --&gt;
+&lt;bean id=&quot;datasource&quot; class=&quot;org.apache.commons.dbcp2.BasicDataSource&quot;&gt;
+    &lt;property name=&quot;driverClassName&quot; value=&quot;${jdbc.driver}&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;url&quot; value=&quot;${jdbc.url}&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;username&quot; value=&quot;${jdbc.username}&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;password&quot; value=&quot;${jdbc.password}&quot;&gt;&lt;/property&gt;
+    &lt;!-- 最大连接数 --&gt;
+    &lt;property name=&quot;maxTotal&quot; value=&quot;${jdbc.maxTotal}&quot;&gt;&lt;/property&gt; 
+     &lt;!-- 最大空闲连接数 --&gt;
+    &lt;property name=&quot;maxIdle&quot; value=&quot;${jdbc.maxIdle}&quot;&gt;&lt;/property&gt;
+     &lt;!-- 初始化连接数 --&gt;
+     &lt;property name=&quot;initialSize&quot; value=&quot;${jdbc.initialSize}&quot;&gt;&lt;/property&gt; 
+&lt;/bean&gt;
+
+&lt;!-- 配置事务管理 --&gt;
+&lt;bean id=&quot;transactionManager&quot; class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;datasource&quot;/&gt;
+&lt;/bean&gt;
+
+&lt;!-- 开启事务注解 --&gt;
+&lt;tx:annotation-driven transaction-manager=&quot;transactionManager&quot;/&gt;
+
+&lt;!-- 配置 MyBatis的工厂 --&gt;
+&lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt;
+    &lt;!-- 数据源 --&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;datasource&quot; /&gt;
+    &lt;!-- 配置MyBatis的核心配置文件所在位置 --&gt;
+    &lt;property name=&quot;configLocation&quot; value=&quot;classpath:mybatis-config.xml&quot; /&gt;
+&lt;/bean&gt;
+
+&lt;!-- 配置Mapper 自动扫描器 --&gt;
+&lt;bean class=&quot;org.mybatis.spring.mapper.MapperScannerConfigurer&quot;&gt;
+    &lt;property name=&quot;basePackage&quot; value=&quot;com.dao&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;!-- 开启注解扫描com.service --&gt;    
+&lt;context:component-scan base-package=&quot;com.service&quot;/&gt;
+
+&lt;/beans&gt;</code></pre><h3 id="3-mybatis-config-xml"><a href="#3-mybatis-config-xml" class="headerlink" title="3. mybatis-config.xml"></a>3. mybatis-config.xml</h3><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;!DOCTYPE configuration
+ PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;
+ &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;
+&lt;configuration&gt;
+    &lt;typeAliases&gt;
+        &lt;package name=&quot;com.po&quot;/&gt;
+    &lt;/typeAliases&gt;
+    &lt;mappers&gt;
+        &lt;mapper resource=&quot;com/dao/Userdao.xml&quot;/&gt;
+    &lt;/mappers&gt;
+&lt;/configuration&gt;</code></pre><h3 id="4-mybatis-mapper-xml"><a href="#4-mybatis-mapper-xml" class="headerlink" title="4.mybatis-mapper.xml"></a>4.mybatis-mapper.xml</h3><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;!DOCTYPE mapper
+  PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;
+  &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;
+
+&lt;mapper namespace=&quot;com.mapper.StudentMapper&quot;&gt;
+    &lt;select id=&quot;findbyid&quot; parameterType=&quot;Integer&quot; resultMap=&quot;StudentResult&quot;&gt;
+        select *from student where id=#{id}
+    &lt;/select&gt;
+
+&lt;/mapper&gt;</code></pre><h3 id="5-spring-mvc-xml"><a href="#5-spring-mvc-xml" class="headerlink" title="5.spring-mvc.xml"></a>5.spring-mvc.xml</h3><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+   xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+   xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+   xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;
+   xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+                          http://www.springframework.org/schema/beans/spring-beans.xsd
+                          http://www.springframework.org/schema/context 
+                          http://www.springframework.org/schema/context/spring-context.xsd
+                          http://www.springframework.org/schema/mvc
+                          http://www.springframework.org/schema/mvc/spring-mvc.xsd&quot;&gt;
+
+&lt;context:component-scan base-package=&quot;com.controller&quot;&gt;&lt;/context:component-scan&gt;
+&lt;!--&lt;bean name=&quot;/index&quot; class=&quot;com.controller.Controller1 &quot;/&gt;--&gt;
+
+&lt;!-- 定义视图 --&gt;
+&lt;bean id=&quot;viewResolver&quot; class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;
+    &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/jsp/&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;!-- 配置注解驱动 
+    自动注册org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+    和org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter --&gt;
+&lt;mvc:annotation-driven /&gt;
+
+&lt;!-- 配置静态资源的访问映射 使其不被前端控制器拦截 --&gt;
+&lt;mvc:resources location=&quot;/js/&quot; mapping=&quot;/js/**&quot; /&gt;
+&lt;!-- 使用使用默认的服务器请求处理器自动判断筛选 --&gt;
+&lt;!-- &lt;mvc:default-servlet-handler/&gt; --&gt;
+
+&lt;!-- 配置拦截器 --&gt;
+&lt;mvc:interceptors&gt;
+    &lt;!-- 全局拦截器 --&gt;
+    &lt;!--&lt;bean class=&quot;&quot; /&gt;  --&gt;
+    &lt;mvc:interceptor&gt;
+           &lt;mvc:mapping path=&quot;/**&quot;/&gt; &lt;!-- 配置拦截器作用的路径 --&gt;
+        &lt;mvc:exclude-mapping path=&quot;&quot;/&gt; &lt;!-- 配置拦截器不作用的路径 --&gt;
+           &lt;bean class=&quot;com.interceptor.LoginInterceptor&quot;&gt;&lt;/bean&gt;
+    &lt;/mvc:interceptor&gt;
+&lt;/mvc:interceptors&gt;
+
+&lt;!-- 配置文件上传解析器 multipartResolver --&gt;
+&lt;!-- 因为CommonsMultipartResolver内部是引用MultipartResolver字符串来完成文件解析 所以指定的ID必须为multipartResolver  --&gt;
+&lt;bean id=&quot;multipartResolver&quot; class=&quot;org.springframework.web.multipart.commons.CommonsMultipartResolver&quot;&gt;
+    &lt;!-- 配置缓存中最大阈值 低于此值，只保留在内存里，超过此阈值，生成硬盘上的临时文件 --&gt;
+    &lt;property name=&quot;maxInMemorySize&quot; value=&quot;&quot; /&gt; 
+    &lt;!-- 推迟文件解析 --&gt;
+    &lt;property name=&quot;resolveLazily&quot; value=&quot;&quot;/&gt;
+    &lt;!-- 允许文件上传的最大尺寸 --&gt;
+    &lt;property name=&quot;maxUploadSize&quot; value=&quot;10485760&quot; /&gt;
+    &lt;!-- 默认编码格式 --&gt;
+    &lt;property name=&quot;defaultEncoding&quot; value=&quot;UTF-8&quot; /&gt;
+&lt;/bean&gt;
+
+&lt;!-- 显示装配的自定义的转换器 --&gt;
+&lt;!-- &lt;mvc:annotation-driven conversion-service=&quot;conversionservice1&quot;&gt;&lt;/mvc:annotation-driven&gt; --&gt;
+
+&lt;!-- 自定义类型转换器配置 converters--&gt;
+&lt;!-- &lt;bean id=&quot;conversionservice1&quot; class=&quot;org.springframework.context.support.ConversionServiceFactoryBean&quot;&gt;
+    &lt;property name=&quot;converters&quot;&gt;
+        &lt;set&gt;
+            &lt;bean class=&quot;com.converter.DateConverter&quot;&gt;&lt;/bean&gt;
+        &lt;/set&gt;
+    &lt;/property&gt;
+&lt;/bean&gt; --&gt;
+
+&lt;!-- 自定义类型转换器配置formatters--&gt;
+&lt;!-- &lt;bean id=&quot;conversionservice2&quot; class=&quot;org.springframework.format.support.FormattingConversionServiceFactoryBean&quot;&gt;
+    &lt;property name=&quot;formatters&quot;&gt;
+        &lt;set&gt;
+            &lt;bean class=&quot;com.converter.DateFormatter&quot;&gt;&lt;/bean&gt;
+        &lt;/set&gt;
+    &lt;/property&gt;
+&lt;/bean&gt; --&gt;
+
+&lt;/beans&gt;</code></pre><h3 id="6-db-properties"><a href="#6-db-properties" class="headerlink" title="6.db.properties"></a>6.db.properties</h3><pre><code>jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/test1
+jdbc.username=root
+jdbc.password=123456
+jdbc.maxTotal=30
+jdbc.maxIdle=10
+jdbc.initialSize=5</code></pre><h3 id="7-log4j-properties"><a href="#7-log4j-properties" class="headerlink" title="7.log4j.properties"></a>7.log4j.properties</h3><pre><code># Global logging configuration
+log4j.rootLogger=ERROR, stdout
+# MyBatis logging configuration...
+log4j.logger.com=DEBUG
+# Console output...
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%5p [%t] - %m%n</code></pre>
             </div>
             <hr/>
 
@@ -738,7 +877,7 @@ public Object get(Object obj) //获取值</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blog.onfree.cn/posts/33aa4888.html">https://blog.onfree.cn/posts/33aa4888.html</a>
+                    <a href="https://blog.onfree.cn/posts/1572e255.html">https://blog.onfree.cn/posts/1572e255.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -776,12 +915,20 @@ public Object get(Object obj) //获取值</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/Spring/">
+                                    <span class="chip bg-color">Spring</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8F%8D%E5%B0%84/">
-                                    <span class="chip bg-color">反射</span>
+                                <a href="/tags/mybatis/">
+                                    <span class="chip bg-color">mybatis</span>
+                                </a>
+                            
+                                <a href="/tags/SpringMVC/">
+                                    <span class="chip bg-color">SpringMVC</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                                    <span class="chip bg-color">配置</span>
                                 </a>
                             
                         </div>
@@ -1218,54 +1365,60 @@ public Object get(Object obj) //获取值</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/fc9ec3a7.html">
+                <a href="/posts/1572e255.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s2.ax1x.com/2020/02/10/15UAt1.jpg" class="responsive-img" alt="Redis简介及使用场景">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s2.ax1x.com/2020/02/10/15UKne.jpg" class="responsive-img" alt="Spring及mybatis等xml常见配置">
                         
-                        <span class="card-title">Redis简介及使用场景</span>
+                        <span class="card-title">Spring及mybatis等xml常见配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Redis 是完全开源免费的，遵守BSD协议，是一个高性能的`key-value`型数据库,易安装和使用，使用场景丰富
+                            在使用Spring、SpringMVC和mybatis开发时，往往要配置的文件信息太多了，自己敲的话太麻烦了，以下整理了关于了常见的配置信息
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                    数据库
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AE%80%E4%BB%8B/">
-                        <span class="chip bg-color">简介</span>
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
                     </a>
                     
-                    <a href="/tags/Redis/">
-                        <span class="chip bg-color">Redis</span>
+                    <a href="/tags/mybatis/">
+                        <span class="chip bg-color">mybatis</span>
                     </a>
                     
-                    <a href="/tags/%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">
-                        <span class="chip bg-color">使用场景</span>
+                    <a href="/tags/SpringMVC/">
+                        <span class="chip bg-color">SpringMVC</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                        <span class="chip bg-color">配置</span>
                     </a>
                     
                 </div>
@@ -1279,31 +1432,31 @@ public Object get(Object obj) //获取值</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/489a4cf4.html">
+                <a href="/posts/631766d3.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s2.ax1x.com/2020/02/10/15UQ7d.jpg" class="responsive-img" alt="优化加速博客网站的建议细节">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/medias/bg1.jpg" class="responsive-img" alt="Spring控制反转(IOC)方式">
                         
-                        <span class="card-title">优化加速博客网站的建议细节</span>
+                        <span class="card-title">Spring控制反转(IOC)方式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            当你打开一个网站时迟迟未能看见显示的页面的时候是不是很暴躁好没耐心呢，所以网站的优化对于开发者来说是不可少的工作呢
+                             Spring框架则避免了调用者与工厂之间的耦合，通过spring容器“宏观调控”，调用者只要被动接受spring容器为调用者的成员变量
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
                                 </a>
                             
                             
@@ -1313,12 +1466,12 @@ public Object get(Object obj) //获取值</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2/">
-                        <span class="chip bg-color">博客</span>
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
                     </a>
                     
-                    <a href="/tags/%E4%BC%98%E5%8C%96/">
-                        <span class="chip bg-color">优化</span>
+                    <a href="/tags/IOC/">
+                        <span class="chip bg-color">IOC</span>
                     </a>
                     
                 </div>
