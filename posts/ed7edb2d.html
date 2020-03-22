@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="JavaMail,Java,SpringBoot,组件,11分钟,11,blog.onfree.cn,Athink">
+    <meta name="keywords" content="war,Java,SpringBoot,打包,11分钟,11,blog.onfree.cn,Athink">
     <meta name="description" content="Athink_博客|Athink，blog.onfree.cn-分享生活点滴·分享技术成长。athink博客,技术,Athink,自由,专栏,blog,生活,网站seo优化,实用工具,福利资源,经验教程,Java,Spring,SpringBoot,微服务,资源分享,分享生活点滴,分享技术成长;专攻Java，微服务">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>11分钟实现SpringBoot实现邮件发送 | Athink_|Athink_博客-Athink|Java|微服务|hexo|资源|优化|影视|工具|分享生活点滴·分享技术成长</title>
+    <title>11分钟实现springBoot打war包和发布 | Athink_|Athink_博客-Athink|Java|微服务|hexo|资源|优化|影视|工具|分享生活点滴·分享技术成长</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/5.11.1/css/all.min.css">
@@ -430,12 +430,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s1.ax1x.com/2020/03/17/8NOToQ.md.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.ax1x.com/2020/02/10/15UY1f.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">11分钟实现SpringBoot实现邮件发送</h1>
+                    <h1 class="description center-align post-title">11分钟实现springBoot打war包和发布</h1>
                 </div>
             </div>
         </div>
@@ -552,12 +552,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SpringBoot/">
-                                <span class="chip bg-color">SpringBoot</span>
-                            </a>
-                        
-                            <a href="/tags/JavaMail/">
-                                <span class="chip bg-color">JavaMail</span>
+                            <a href="/tags/war/">
+                                <span class="chip bg-color">war</span>
                             </a>
                         
                     </div>
@@ -581,28 +577,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-20
+                    2020-03-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-20
+                    2020-03-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    536
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    2 分
                 </div>
                 
 				
@@ -618,248 +614,72 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="11分钟实现SpringBoot实现邮件发送"><a href="#11分钟实现SpringBoot实现邮件发送" class="headerlink" title="11分钟实现SpringBoot实现邮件发送"></a>11分钟实现SpringBoot实现邮件发送</h2><blockquote>
-<p><code>一个人的快乐，不是因为他拥有的多，而是因为他计较的少</code></p>
+                <h2 id="11分钟实现springBoot打war包和发布"><a href="#11分钟实现springBoot打war包和发布" class="headerlink" title="11分钟实现springBoot打war包和发布"></a>11分钟实现springBoot打war包和发布</h2><blockquote>
+<p><code>平安是幸，知足是福，清心是禄，寡欲是寿</code></p>
 </blockquote>
-<hr>
-<p>邮件发送在很多场景都需要使用，比如注册登录需要邮箱验证等；</p>
-<p>而要想网络上实现邮件功能，必须要有专门的<strong>邮件服务器</strong>。这些邮件服务器类似于现实生活中的邮局，它主要负责接收用户投递过来的邮件，并把邮件投递到邮件接收者的电子邮箱中。</p>
-<h3 id="一、邮件传输协议"><a href="#一、邮件传输协议" class="headerlink" title="一、邮件传输协议"></a>一、邮件传输协议</h3><ul>
-<li><p>SMTP服务器地址</p>
-<p>一般是 smtp.xxx.com，比如163邮箱是smtp.163.com，qq邮箱是smtp.qq.com。</p>
-</li>
-<li><p>SMTP协议</p>
-<p>通常把处理用户smtp请求(邮件发送请求)的服务器称之为SMTP服务器(邮件发送服务器)。</p>
-</li>
-<li><p>POP3协议</p>
-<p>通常把处理用户pop3请求(邮件接收请求)的服务器称之为POP3服务器(邮件接收服务器)。</p>
-</li>
-</ul>
-<h3 id="二、邮件发送流程"><a href="#二、邮件发送流程" class="headerlink" title="二、邮件发送流程"></a>二、邮件发送流程</h3><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/athink8/cdn@master/imgs/arctle/java%E9%82%AE%E7%AE%B1%E5%8F%91%E9%80%81.png" alt="image"></p>
-<h3 id="三、SpringBoot整合"><a href="#三、SpringBoot整合" class="headerlink" title="三、SpringBoot整合"></a>三、SpringBoot整合</h3><ul>
-<li><p>pom</p>
-<pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--添加maill的依赖支持--></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-mail<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
-</li>
-<li><p>yml</p>
-<pre class=" language-yml"><code class="language-yml">spring:
-  mail:
-    #自定义的邮箱发送者
-    sender: athink8@163.com
-    host: smtp.163.com    #服务地址
-    username: athink8@163.com #邮件发送者
-    password: asdfghjkqwert    #smtp/POP3 密钥
-    protocol: smtp    #服务协议
-    default-encoding: UTF-8</code></pre>
-</li>
-<li><p>类MailBean</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span>Serializable<span class="token punctuation">;</span>
+<p>用springBoot使开发变得很简便，其内置Tomcat更是实现了无法外置Tomcat启动项目，大大提高了便利性，然而有时候需要统一管理程序，或发布多个同端口项目时，不得不得打包成War包，方便防止在所需发布的服务器上。</p>
+<h4 id="一、修改打包形式"><a href="#一、修改打包形式" class="headerlink" title="一、修改打包形式"></a>一、修改打包形式</h4><blockquote>
+<p>在pom.xml里设置 </p>
+</blockquote>
+<pre><code>    &lt;packaging&gt;war&lt;/packaging&gt;</code></pre><h4 id="二、移除嵌入式tomcat插件"><a href="#二、移除嵌入式tomcat插件" class="headerlink" title="二、移除嵌入式tomcat插件"></a>二、移除嵌入式tomcat插件</h4><blockquote>
+<p>在pom.xml里找到spring-boot-starter-web依赖节点，添加<exclusions></exclusions>之间的内容，</p>
+</blockquote>
+<pre><code>    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;!-- 移除嵌入式tomcat插件 --&gt;
+        &lt;exclusions&gt;
+            &lt;exclusion&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-starter-tomcat&lt;/artifactId&gt;
+            &lt;/exclusion&gt;
+        &lt;/exclusions&gt;
+    &lt;/dependency&gt;</code></pre><h4 id="三、添加servlet-api的依赖"><a href="#三、添加servlet-api的依赖" class="headerlink" title="三、添加servlet-api的依赖"></a>三、添加servlet-api的依赖</h4><blockquote>
+<p>下面两种方式都可以，任选其一</p>
+</blockquote>
+<pre><code>    &lt;dependency&gt;
+        &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+        &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+        &lt;version&gt;3.1.0&lt;/version&gt;
+        &lt;scope&gt;provided&lt;/scope&gt;
+    &lt;/dependency&gt;</code></pre><blockquote>
+<pre><code>    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.tomcat&lt;/groupId&gt;
+        &lt;artifactId&gt;tomcat-servlet-api&lt;/artifactId&gt;
+        &lt;version&gt;8.0.36&lt;/version&gt;
+        &lt;scope&gt;provided&lt;/scope&gt;
+    &lt;/dependency&gt;</code></pre></blockquote>
+<h4 id="四、修改启动类，并重写初始化方法"><a href="#四、修改启动类，并重写初始化方法" class="headerlink" title="四、修改启动类，并重写初始化方法"></a>四、修改启动类，并重写初始化方法</h4><blockquote>
+<p>平常用main方法启动的方式，都有一个App的启动类，代码如下：</p>
+</blockquote>
+<pre><code>    @SpringBootApplication
+    public class Application {
+        public static void main(String[] args) {
+            SpringApplication.run(Application.class, args);
+        }
+    }</code></pre><blockquote>
+<p>需要类似于web.xml的配置方式来启动spring上下文了，在Application类的同级添加一个SpringBootStartApplication类，其代码如下:</p>
+</blockquote>
+<pre><code>    /**
+     * 修改启动类，继承 SpringBootServletInitializer 并重写 configure 方法
+     */
+    public class SpringBootStartApplication extends SpringBootServletInitializer {
 
-<span class="token comment" spellcheck="true">/**
- * author: jz
- * Time: 2019/9/24 13:54
- **/</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MailBean</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">{</span>
-    <span class="token keyword">private</span> String recipient<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//邮件接收人</span>
-    <span class="token keyword">private</span> String subject<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//邮件主题</span>
-    <span class="token keyword">private</span> String content<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//邮件内容</span>
-    <span class="token keyword">private</span> String attachmentFilename<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//附件内容</span>
-    <span class="token keyword">private</span> String attachmentSource<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//附件路径内容</span>
-
-    <span class="token keyword">public</span> <span class="token function">MailBean</span><span class="token punctuation">(</span>String recipient<span class="token punctuation">,</span> String subject<span class="token punctuation">,</span> String content<span class="token punctuation">,</span> String attachmentFilename<span class="token punctuation">,</span> String attachmentSource<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>recipient <span class="token operator">=</span> recipient<span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>subject <span class="token operator">=</span> subject<span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>content <span class="token operator">=</span> content<span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>attachmentFilename <span class="token operator">=</span> attachmentFilename<span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>attachmentSource <span class="token operator">=</span> attachmentSource<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token function">MailBean</span><span class="token punctuation">(</span>String recipient<span class="token punctuation">,</span> String subject<span class="token punctuation">,</span> String content<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>recipient <span class="token operator">=</span> recipient<span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>subject <span class="token operator">=</span> subject<span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>content <span class="token operator">=</span> content<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token function">MailBean</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">}</span>   </code></pre>
-</li>
-<li><p>mail操作类</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> athink<span class="token punctuation">.</span>athink_travel<span class="token punctuation">.</span>service<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> athink<span class="token punctuation">.</span>athink_travel<span class="token punctuation">.</span>domain<span class="token punctuation">.</span>MailBean<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>beans<span class="token punctuation">.</span>factory<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>Autowired<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>beans<span class="token punctuation">.</span>factory<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>Value<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>core<span class="token punctuation">.</span>io<span class="token punctuation">.</span>FileSystemResource<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>mail<span class="token punctuation">.</span>SimpleMailMessage<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>mail<span class="token punctuation">.</span>javamail<span class="token punctuation">.</span>JavaMailSender<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>mail<span class="token punctuation">.</span>javamail<span class="token punctuation">.</span>MimeMessageHelper<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span>Service<span class="token punctuation">;</span>
-<span class="token keyword">import</span> javax<span class="token punctuation">.</span>mail<span class="token punctuation">.</span>internet<span class="token punctuation">.</span>MimeMessage<span class="token punctuation">;</span>
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span>File<span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">/**
- * author: jz
- * Time: 2019/9/24 14:06
- **/</span>
-
-<span class="token annotation punctuation">@Service</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MailService</span> <span class="token punctuation">{</span>
-
-    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"${spring.mail.sender}"</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//yml里的配置</span>
-    <span class="token keyword">private</span> String MAIL_SENDER<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//邮件发送者</span>
-
-    <span class="token annotation punctuation">@Autowired</span>
-    <span class="token keyword">private</span> JavaMailSender javaMailSender<span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 发送一个简单格式的邮件
-     *
-     * @param mailBean
-     */</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sendSimpleMail</span><span class="token punctuation">(</span>MailBean mailBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-            SimpleMailMessage simpleMailMessage <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleMailMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//邮件发送人</span>
-            simpleMailMessage<span class="token punctuation">.</span><span class="token function">setFrom</span><span class="token punctuation">(</span>MAIL_SENDER<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//邮件接收人</span>
-            simpleMailMessage<span class="token punctuation">.</span><span class="token function">setTo</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getRecipient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//邮件主题</span>
-            simpleMailMessage<span class="token punctuation">.</span><span class="token function">setSubject</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getSubject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//邮件内容</span>
-            simpleMailMessage<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//这里添加抄送人名称列表</span>
-            String<span class="token punctuation">[</span><span class="token punctuation">]</span> ccList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span>MAIL_SENDER<span class="token punctuation">}</span><span class="token punctuation">;</span>
-            simpleMailMessage<span class="token punctuation">.</span><span class="token function">setCc</span><span class="token punctuation">(</span>ccList<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//这里添加密送人名称列表</span>
-            String<span class="token punctuation">[</span><span class="token punctuation">]</span> bccList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span>MAIL_SENDER<span class="token punctuation">}</span><span class="token punctuation">;</span>
-            simpleMailMessage<span class="token punctuation">.</span><span class="token function">setBcc</span><span class="token punctuation">(</span>bccList<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//发送邮件</span>
-            javaMailSender<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>simpleMailMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"邮件发送success"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"邮件发送失败："</span> <span class="token operator">+</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 发送一个HTML格式的邮件
-     *
-     * @param mailBean
-     */</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sendHTMLMail</span><span class="token punctuation">(</span>MailBean mailBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        MimeMessage mimeMailMessage <span class="token operator">=</span> null<span class="token punctuation">;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-            mimeMailMessage <span class="token operator">=</span> javaMailSender<span class="token punctuation">.</span><span class="token function">createMimeMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            MimeMessageHelper mimeMessageHelper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MimeMessageHelper</span><span class="token punctuation">(</span>mimeMailMessage<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setFrom</span><span class="token punctuation">(</span>MAIL_SENDER<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setTo</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getRecipient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setSubject</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getSubject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//这里添加抄送人名称列表</span>
-            String<span class="token punctuation">[</span><span class="token punctuation">]</span> ccList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span>MAIL_SENDER<span class="token punctuation">}</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setCc</span><span class="token punctuation">(</span>ccList<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//这里添加密送人名称列表</span>
-            String<span class="token punctuation">[</span><span class="token punctuation">]</span> bccList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span>MAIL_SENDER<span class="token punctuation">}</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setBcc</span><span class="token punctuation">(</span>bccList<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            javaMailSender<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>mimeMailMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"邮件发送success"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"邮件发送失败："</span> <span class="token operator">+</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 发送带附件格式的邮件
-     *
-     * @param mailBean
-     */</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sendAttachmentMail</span><span class="token punctuation">(</span>MailBean mailBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        MimeMessage mimeMailMessage <span class="token operator">=</span> null<span class="token punctuation">;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-            mimeMailMessage <span class="token operator">=</span> javaMailSender<span class="token punctuation">.</span><span class="token function">createMimeMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            MimeMessageHelper mimeMessageHelper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MimeMessageHelper</span><span class="token punctuation">(</span>mimeMailMessage<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setFrom</span><span class="token punctuation">(</span>MAIL_SENDER<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setTo</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getRecipient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setSubject</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getSubject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//这里添加抄送人名称列表</span>
-            String<span class="token punctuation">[</span><span class="token punctuation">]</span> ccList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span>MAIL_SENDER<span class="token punctuation">}</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setCc</span><span class="token punctuation">(</span>ccList<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//这里添加密送人名称列表</span>
-            String<span class="token punctuation">[</span><span class="token punctuation">]</span> bccList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span>MAIL_SENDER<span class="token punctuation">}</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setBcc</span><span class="token punctuation">(</span>bccList<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//文件路径</span>
-            FileSystemResource file <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileSystemResource</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getAttachmentSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">addAttachment</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getAttachmentFilename</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> file<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-            javaMailSender<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>mimeMailMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"邮件发送success"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"邮件发送失败："</span> <span class="token operator">+</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 发送带静态资源的邮件
-     *
-     * @param mailBean
-     */</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sendInlineMail</span><span class="token punctuation">(</span>MailBean mailBean<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        MimeMessage mimeMailMessage <span class="token operator">=</span> null<span class="token punctuation">;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-            mimeMailMessage <span class="token operator">=</span> javaMailSender<span class="token punctuation">.</span><span class="token function">createMimeMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            MimeMessageHelper mimeMessageHelper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MimeMessageHelper</span><span class="token punctuation">(</span>mimeMailMessage<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setFrom</span><span class="token punctuation">(</span>MAIL_SENDER<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setTo</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getRecipient</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setSubject</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getSubject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span><span class="token string">"&lt;html>&lt;body>"</span> <span class="token operator">+</span> mailBean<span class="token punctuation">.</span><span class="token function">getContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"&lt;/body>&lt;/html>"</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//这里添加抄送人名称列表</span>
-            String<span class="token punctuation">[</span><span class="token punctuation">]</span> ccList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span>MAIL_SENDER<span class="token punctuation">}</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setCc</span><span class="token punctuation">(</span>ccList<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//这里添加密送人名称列表</span>
-            String<span class="token punctuation">[</span><span class="token punctuation">]</span> bccList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span>MAIL_SENDER<span class="token punctuation">}</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">setBcc</span><span class="token punctuation">(</span>bccList<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//文件路径</span>
-            FileSystemResource file <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileSystemResource</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getAttachmentSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            mimeMessageHelper<span class="token punctuation">.</span><span class="token function">addAttachment</span><span class="token punctuation">(</span>mailBean<span class="token punctuation">.</span><span class="token function">getAttachmentFilename</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> file<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-            javaMailSender<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>mimeMailMessage<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"邮件发送success"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"邮件发送失败："</span> <span class="token operator">+</span> e<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span></code></pre>
-</li>
-<li><p>好了，测试下呗</p>
-<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@RunWith</span><span class="token punctuation">(</span>SpringRunner<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
-<span class="token annotation punctuation">@SpringBootTest</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AthinkTravelApplicationTests</span> <span class="token punctuation">{</span>
-
-    <span class="token annotation punctuation">@Autowired</span>
-    UserService userservice<span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@Test</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">contextLoads</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
-        <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    MailService mailService<span class="token punctuation">;</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 做测试用</span>
-        MailBean mail1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MailBean</span><span class="token punctuation">(</span><span class="token string">"888880@qq.com"</span><span class="token punctuation">,</span> <span class="token string">"Athink -注册用户激活"</span><span class="token punctuation">,</span>
-                <span class="token string">"尊敬的用户你好："</span> <span class="token operator">+</span> <span class="token string">"&lt;br/>&lt;a href=\"http://localhost:8080/user/code?email="</span> <span class="token operator">+</span> <span class="token number">123</span> <span class="token operator">+</span> <span class="token string">"&amp;code="</span> <span class="token operator">+</span> <span class="token number">123</span> <span class="token operator">+</span> <span class="token string">"\">点击激活&lt;/a>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        mailService<span class="token punctuation">.</span><span class="token function">sendHTMLMail</span><span class="token punctuation">(</span>mail1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token punctuation">}</span></code></pre>
-<hr>
-</li>
-</ul>
-
+        @Override
+        protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+            // 注意这里要指向原先用main方法执行的Application启动类
+            return builder.sources(Application.class);
+        }
+    }</code></pre><h4 id="五-application-propertis添加"><a href="#五-application-propertis添加" class="headerlink" title="五 application.propertis添加"></a>五 application.propertis添加</h4><blockquote>
+<p>当需要发布多个springboot项目到tomcat时需要添加如下，否则报错如下</p>
+</blockquote>
+<blockquote>
+<p>Caused by: org.springframework.jmx.export.UnableToRegisterMBeanException: Unable to register MBean [HikariDataSource (HikariPool-2)] with key ‘dataSource’; nested exception is javax.management.InstanceAlreadyExistsException: com.zaxxer.hikari:name=dataSource,type=HikariDataSource</p>
+</blockquote>
+<pre><code>    spring.jmx.enabled=false；</code></pre><blockquote>
+<p>或者如下：        </p>
+</blockquote>
+<pre><code>    spring.jmx.default-domain</code></pre><h4 id="六、打包部署"><a href="#六、打包部署" class="headerlink" title="六、打包部署"></a>六、打包部署</h4>
             </div>
             <hr/>
 
@@ -884,7 +704,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blog.onfree.cn/posts/f5433e08.html">https://blog.onfree.cn/posts/f5433e08.html</a>
+                    <a href="https://blog.onfree.cn/posts/ed7edb2d.html">https://blog.onfree.cn/posts/ed7edb2d.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -922,12 +742,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SpringBoot/">
-                                    <span class="chip bg-color">SpringBoot</span>
-                                </a>
-                            
-                                <a href="/tags/JavaMail/">
-                                    <span class="chip bg-color">JavaMail</span>
+                                <a href="/tags/war/">
+                                    <span class="chip bg-color">war</span>
                                 </a>
                             
                         </div>
@@ -1364,9 +1180,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/ed7edb2d.html">
                     <div class="card-image">
@@ -1384,9 +1201,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1399,6 +1216,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1417,24 +1235,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/63687d21.html">
+                <a href="/posts/f5433e08.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s1.ax1x.com/2020/03/17/8NOHij.md.jpg" class="responsive-img" alt="11分钟学会springboot热部署">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s1.ax1x.com/2020/03/17/8NOToQ.md.jpg" class="responsive-img" alt="11分钟实现SpringBoot实现邮件发送">
                         
-                        <span class="card-title">11分钟学会springboot热部署</span>
+                        <span class="card-title">11分钟实现SpringBoot实现邮件发送</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             spring为开发者提供了一个名为spring-boot-devtools的模块来使Spring Boot应用支持热部署，提高开发者的开发效率，无需.
+                             邮件发送在很多场景都需要使用，比如注册登录需要邮箱验证等；而要想网络上实现邮件功能，必须要有专门的邮件服务器。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-20
                             </span>
                         <span class="publish-author">
                             
@@ -1455,8 +1273,8 @@
                         <span class="chip bg-color">SpringBoot</span>
                     </a>
                     
-                    <a href="/tags/%E7%83%AD%E9%83%A8%E7%BD%B2/">
-                        <span class="chip bg-color">热部署</span>
+                    <a href="/tags/JavaMail/">
+                        <span class="chip bg-color">JavaMail</span>
                     </a>
                     
                 </div>
