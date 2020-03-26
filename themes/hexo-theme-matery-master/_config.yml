@@ -61,11 +61,15 @@ menu:
   #      icon: fas fa-image
 
 
+#大标题
+#title: Athink_
+#description: '博客||分享生活点滴·分享技术成长' 
+#description: 'Athink_博客,blog.onfree.cn-分享生活点滴·分享技术成长。Athink_博客|athink博客,技术,博客,Athink,自由,专栏,blog,生活,网站seo优化,模板美化,实用工具,福利资源,博客经验教程,Java,Spring,SpringBoot,微服务,资源分享,分享生活点滴,分享技术成长;专攻Java，微服务，提供个性化网站定制服务，承接Java后台项目，给予你100分满意。'
  
 # Website start time.
 # 站点运行开始时间.
 time:
-  enable: true
+  enable: false
   year: 2020 # 年份
   month: 02 # 月份
   date: 10 # 日期
@@ -96,7 +100,7 @@ dream:
 # Whether to display the musics.
 # 是否在首页显示音乐.
 music:
-  enable: true
+  enable: false
   title: #非吸底模式 有效
    enable: false
    show: 听听音乐
@@ -463,6 +467,27 @@ featureImages:
 - https://s1.ax1x.com/2020/03/12/8ei2c9.md.jpg
 - https://s1.ax1x.com/2020/03/12/8eih0x.md.jpg
 - https://s1.ax1x.com/2020/03/12/8eiIAK.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NOjyV.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NOLzq.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NObJs.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NOToQ.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NOHij.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NOvLT.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NXpo4.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NXCFJ.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NXkS1.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NXPY9.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NXVOK.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NXAQx.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NXQfA.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NX3lt.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NXwfs.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NXDlq.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NXt0S.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NX6mT.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NXRk4.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NX511.md.jpg
+- https://s1.ax1x.com/2020/03/17/8NXWtJ.md.jpg
 
 
 # default configs that the default policy for every articles/posts

@@ -1,5 +1,5 @@
 ---
-title: Redis的常用命令类型和配置详解
+title: 11分钟详解Redis的常用命令类型和配置
 categories:
   - 数据库
 tags:
@@ -8,13 +8,13 @@ tags:
   - 配置
 cover: false
 top: false
-keywords: 'Redis,配置,命令类型'
+keywords: 'Redis,配置,命令类型,11分钟,11,blog.onfree.cn,Athink'
 summary: Redis常见五种数据类型：string（字符串），hash（哈希），list（列表），set（集合）及zset(sorted set：有序集合)。
 abbrlink: 6996938c
 date: 2020-02-18 19:00:00
 ---
 
-## Redis的常用命令类型和配置详解
+## 11分钟详解Redis的常用命令类型和配置
 
 > `苦恼着，歇斯底里着，痛苦着，不断挣扎的数月时间，这一切会在未来的某一瞬间得到回报。我们或许就是被那个瞬间迷住的，一种无可救药的生物吧`
 

@@ -1,5 +1,5 @@
 ---
-title: Java反射的整理和理解
+title: 11分钟理解Java反射
 categories:
   - Java
 tags:
@@ -7,13 +7,13 @@ tags:
   - 反射
 cover: false
 top: false
-keywords: 'Java,反射,基础'
+keywords: 'Java,反射,基础,11分钟,11,blog.onfree.cn,Athink'
 summary: 'Java反射机制是在运行状态中,对于任意一个类,都能够知道这个类的所有属性和方法；对于任意一个对象,都能够调用它的任意一个方法和属性。'
 abbrlink: 33aa4888
 date: 2020-02-16 00:00:00
 ---
 
-## Java反射
+## 11分钟理解Java反射
 
 >  `星星在你的头顶上闪耀着，与你交互诉说的话语，一句一句地，如同星点般翩然落至眼前`
 

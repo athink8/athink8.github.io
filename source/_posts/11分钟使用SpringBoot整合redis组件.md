@@ -1,5 +1,5 @@
 ---
-title: SpringBoot整合redis组件
+title: 11分钟使用SpringBoot整合redis组件
 categories:
   - SpringBoot
 tags:
@@ -8,13 +8,13 @@ tags:
   - 整合
 cover: false
 top: false
-keywords: 'Redis,SpringBoot,整合,组件'
+keywords: 'Redis,SpringBoot,整合,组件,11分钟,11,blog.onfree.cn,Athink'
 summary: ' SpringBoot整合redis组件,通过简单配置即可使用Redis，可作为缓存中间件来使用加快响应，减少负担..'
 abbrlink: c0ba78a5
 date: 2020-02-23 20:00:00
 ---
 
-##  SpringBoot整合redis组件
+##  11分钟使用SpringBoot整合redis组件
 
 > `不要跟过去的自己比，要期待未来的自己，珍爱现在的自己`
 

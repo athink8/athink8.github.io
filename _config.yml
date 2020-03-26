@@ -3,11 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Athink_
 subtitle: 自由源于努力
-description: 博客||分享生活点滴·分享技术成长
-keywords: 技术,博客,Athink,自由,新浪博客,专栏,网易博客,blog,百度
-author: Athink_
+title: Athink_
+description: '博客||分享生活点滴·分享技术成长'
+#以下是给百度看的
+title1: 'Athink_博客-Athink|Java|微服务|hexo|资源|优化|影视|工具|分享生活点滴·分享技术成长'
+description1: 'Athink_博客|Athink，blog.onfree.cn-分享生活点滴·分享技术成长。athink博客,技术,Athink,自由,专栏,blog,生活,网站seo优化,实用工具,福利资源,经验教程,Java,Spring,SpringBoot,微服务,资源分享,分享生活点滴,分享技术成长;专攻Java，微服务'
+keywords: 'Athink_博客,athink博客,11,11分钟,技术,博客,Athink,自由,blog,生活,优化,工具,福利资源,经验教程,Java,Spring,微服务,资源分享,分享生活点滴,分享技术成长'
+author: 'Athink'
 language: zh-CN
 timezone: ''
 
@@ -122,7 +125,7 @@ search:
   path: search.xml
   field: post
   format: html
-  limit: 100
+  limit: 99
   
 #中文链接转拼音
 permalink_pinyin:
@@ -171,7 +174,7 @@ baidusitemap:
 
 #主动推送  
 baidu_url_submit:
-  count: 5 ## 提交最新的五个链接
-  host: https://blog.onfree.cn ## 百度站长平台中注册的域名
-  token: s4uxGbZAao0v0aln ## 准入秘钥
-  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+  count: '8' ## 提交最新的五个链接
+  host: 'https://blog.onfree.cn' ## 百度站长平台中注册的域名
+  token: 's4uxGbZAao0v0aln'  ## 准入秘钥
+  path: 'baidu_urls.txt' ## 文本文档的地址， 新链接会保存在此文本文档里

@@ -1,5 +1,5 @@
 ---
-title: Spring AOP浅析
+title: 11分钟浅析Spring AOP
 categories:
   - Spring
 tags:
@@ -7,13 +7,13 @@ tags:
   - AOP
 cover: false
 top: false
-keywords: 'Spring,SpringBoot,AOP'
+keywords: 'Spring,SpringBoot,AOP,11分钟,11,blog.onfree.cn,Athink'
 summary: ' Spring Aop在实际生产中往往很多地方都需要，如最常用的权限检查和日志记录等，都是web开发中必可少的..'
 abbrlink: 145eface
 date: 2020-03-11 20:00:00
 ---
 
-## Spring AOP浅析
+## 11分钟浅析Spring AOP
 
 > `既然认准这条路，何必去打听要走多久`
 

@@ -1,5 +1,5 @@
 ---
-title: Spring MVC详析
+title: 11分钟详析Spring MVC
 categories:
   - Spring
 tags:
@@ -7,13 +7,13 @@ tags:
   - Spring MVC
 cover: false
 top: false
-keywords: 'Spring,SpringBoot,Spring MVC'
+keywords: 'Spring,SpringBoot,Spring MVC,11分钟,11,blog.onfree.cn,Athink'
 summary: Spring MVC是当前最优秀的MVC框架，支持注解配置，易用性有了大幅度的提高，使用简单，学习成本低，灵活性高，易拓展
 abbrlink: 65754b0a
 date: 2020-03-12 10:00:00
 ---
 
-## Spring MVC详析
+## 11分钟详析Spring MVC
 
 > `我手中的魔法，是守护挚爱的力量，是坚定这个信念所必须的力量，我一定会拯救你的，无论在何时、何地。`
 
@@ -534,7 +534,7 @@ T convert(S source)
         		
         	}
         }
-    
+        
             <!-- 配置拦截器 -->
         	<mvc:interceptors>
         		<!-- 全局拦截器 -->

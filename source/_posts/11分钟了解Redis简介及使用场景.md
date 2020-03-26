@@ -1,5 +1,5 @@
 ---
-title: Redis简介及使用场景
+title: 11分钟了解Redis简介及使用场景
 categories:
   - 数据库
 tags:
@@ -8,13 +8,13 @@ tags:
   - 使用场景
 cover: false
 top: false
-keywords: 'Redis,简介,使用场景,安装'
+keywords: 'Redis,简介,使用场景,安装,数据库,11分钟,11,blog.onfree.cn,Athink'
 summary: 'Redis 是完全开源免费的，遵守BSD协议，是一个高性能的`key-value`型数据库,易安装和使用，使用场景丰富'
 abbrlink: fc9ec3a7
 date: 2020-02-18 08:00:00
 ---
 
-## Redis 简介及使用场景
+## 11分钟了解Redis简介及使用场景
 
 > `星星在你的头顶上闪耀着，与你交互诉说的话语，一句一句地，如同星点般翩然落至眼前`
 

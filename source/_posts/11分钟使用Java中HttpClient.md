@@ -1,5 +1,5 @@
 ---
-title: Java中HttpClient使用
+title: 11分钟使用Java中HttpClient
 categories:
   - Java
 tags:
@@ -7,13 +7,13 @@ tags:
   - HttpClient
 cover: false
 top: false
-keywords: 'Java,HttpClient'
+keywords: 'Java,HttpClient,11分钟,11,blog.onfree.cn,Athink'
 summary: '在Java中HttpClient使用，在 Internet，HTTP 协议上是使用得最多、最重要的协议了,HttpClient 是 Apache Jakarta Common 下的子项目..'
 date: '2020-02-23 00:00:00'
 abbrlink: 2d8346af
 ---
 
-## Java中HttpClient使用
+## 11分钟使用Java中HttpClient
 
 > `从现在开始，我将追寻你的名字`
 

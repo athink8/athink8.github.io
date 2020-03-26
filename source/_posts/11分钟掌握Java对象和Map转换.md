@@ -1,5 +1,5 @@
 ---
-title: Java对象和Map转换
+title: 11分钟掌握Java对象和Map转换
 categories:
   - Java
 tags:
@@ -7,13 +7,13 @@ tags:
   - Map
 cover: false
 top: false
-keywords: 'Java,转换,Map'
+keywords: 'Java,转换,Map,11分钟,11,blog.onfree.cn,Athink'
 summary: 'Java对象和Map在很多时候常常需要转换，而本文可作为常见转换工具类来使用											..'
 abbrlink: b59ed7a2
 date: 2020-02-20 20:30:00
 ---
 
-## Java对象和Map转换
+## 11分钟掌握Java对象和Map转换
 
 > `或许前路永夜，即便如此我也要前进，因为星光即使微弱也会为我照亮前路`
 

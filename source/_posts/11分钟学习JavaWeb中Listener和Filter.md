@@ -1,5 +1,5 @@
 ---
-title: JavaWeb中Listener和Filter
+title: 11分钟学习JavaWeb中Listener和Filter
 categories:
   - JavaWeb
 tags:
@@ -8,13 +8,13 @@ tags:
   - Filter
 cover: false
 top: false
-keywords: 'JavaWeb,Listener,Filter'
+keywords: 'JavaWeb,Listener,Filter,11分钟,11,blog.onfree.cn,Athink'
 summary: ' JavaWeb中Listener是个监听器，能够监听某一个事件的发生和状态的改变和，而Filter呢则是个过滤器,能够对客户端发出来的请求进行过滤'
 abbrlink: 68f34ac0
 date: 2020-03-11 21:00:00
 ---
 
-## JavaWeb中Listener 和 Filter
+## 11分钟学习JavaWeb中Listener和Filter
 
 > `别迷惘，别烦恼，加速吧，只要行动就好，别停下，迷惘什么的一点都不像你，像那样纵身轻跃，拾级而上，就像那一天一样，让我再次追逐你的身影，我的英雄`
 

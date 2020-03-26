@@ -1,5 +1,5 @@
 ---
-title: 基于Hexo和 hexo-theme-matery的个性化定制开发
+title: 11分钟个性化定制hexo开发个人博客
 categories:
   - 前端
 tags:
@@ -7,12 +7,12 @@ tags:
   - hexo
 top: false
 cover: false
-keywords: hexo,hexo-theme-matery,博客,个性化定制
+keywords: 'hexo,hexo-theme-matery,博客,个性化定制,11分钟,11,blog.onfree.cn,Athink'
 summary: 基于Hexo和 hexo-theme-matery的个性化定制开发，hexo 是基于node.js制作的一个博客工具，支持多种主题更换，主要是基于YAML来配置所需信息即可，通过markdown编写文章
 abbrlink: c1595c80
 ---
 
-## 基于Hexo和 hexo-theme-matery的个性化定制开发
+## 11分钟个性化定制hexo开发个人博客
 
 > `就算悲伤难抑，遍体鳞伤地处于谷底，也不能停止演奏！`
 

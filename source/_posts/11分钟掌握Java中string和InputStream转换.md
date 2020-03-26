@@ -1,5 +1,5 @@
 ---
-title: Java中string和InputStream转换
+title: 11分钟掌握Java中string和InputStream转换
 categories:
   - Java
 tags:
@@ -8,13 +8,13 @@ tags:
   - 转换
 cover: false
 top: false
-keywords: 'Java,转换,IO流'
+keywords: 'Java,转换,IO流,11分钟,11,blog.onfree.cn,Athink'
 summary: 'JAVA中string和InputStream转换, 对于经常使用IO流来处理时往往需要对对象进行转换,本文主要讲述InputStream转化为String和String转化为InputStream的方法'
 abbrlink: ca446a09
 date: 2020-02-23 00:00:00
 ---
 
-## Java中string和InputStream转换
+## 11分钟掌握Java中string和InputStream转换
 
 > `相信奇迹的人本身就和奇迹一样了不起啊`
 

@@ -1,5 +1,5 @@
 ---
-title: Tomcat上ssl证书安装
+title: 11分钟安装ssl证书在Tomcat上
 categories:
   - Tomcat
 tags:
@@ -8,13 +8,13 @@ tags:
   - https
 cover: false
 top: false
-keywords: 'Tomcat,ssl,https,Tomcat上ssl证书安装'
+keywords: 'Tomcat,ssl,https,Tomcat上ssl证书安装,11分钟,11,blog.onfree.cn,Athink'
 summary: '在Tomcat上正确的配置ssl证书,可使你的网站使用HTTPS协议，能够让你的网站更加安全，同时也使域名显示更加美观'
 abbrlink: 2fddf34
 date: 2020-02-26 20:00:00
 ---
 
-## Tomcat上ssl证书安装
+## 11分钟安装ssl证书在Tomcat上
 
 > `正是因为这一点一滴觉得还有希望的自己，才是最无可救药的吧。`
 
@@ -44,7 +44,7 @@ date: 2020-02-26 20:00:00
         SSLProtocol="TLSv1+TLSv1.1+TLSv1.2"
         ciphers="TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,
         TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA"/>
-
+    
     SSLCipherSuite:配置符合PFS规范的加密套餐,苹果ATS特性服务器需要（是否配置自行选择）
     
     ciphers：服务器加密套件（是否配置自行选择）
