@@ -126,9 +126,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> logback </tag>
+            
+            <tag> Java </tag>
             
             <tag> 日志 </tag>
             
@@ -267,9 +267,9 @@
       
         <tags>
             
-            <tag> 简介 </tag>
-            
             <tag> Spring </tag>
+            
+            <tag> 简介 </tag>
             
         </tags>
       
@@ -657,9 +657,9 @@
       
         <tags>
             
-            <tag> Redis </tag>
-            
             <tag> 简介 </tag>
+            
+            <tag> Redis </tag>
             
             <tag> 使用场景 </tag>
             
