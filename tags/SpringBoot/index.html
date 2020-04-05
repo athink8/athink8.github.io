@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="标签: springBoot, Athink_博客,athink博客,11,11分钟,技术,博客,Athink,自由,blog,生活,优化,工具,福利资源,经验教程,Java,Spring,微服务,资源分享,分享生活点滴,分享技术成长">
+    <meta name="keywords" content="标签: springBoot, Athink_博客,athink博客,微服务,11,11分钟,技术,博客,Athink,自由,blog,生活,优化,工具,福利,经验教程,Java,Spring,资源分享,分享生活点滴,分享技术成长">
     <meta name="description" content="Athink_博客|Athink，blog.onfree.cn-分享生活点滴·分享技术成长。athink博客,技术,Athink,自由,专栏,blog,生活,网站seo优化,实用工具,福利资源,经验教程,Java,Spring,SpringBoot,微服务,资源分享,分享生活点滴,分享技术成长;专攻Java，微服务">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -343,7 +343,7 @@
         <li><div class="divider"></div></li>
         <li>
             <a href="https://github.com/athink8" class="waves-effect waves-light" target="_blank">
-                <i class="fab fa-github-square fa-fw"></i>Github
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
         
@@ -399,7 +399,7 @@
 </style>
 
 <a href="https://github.com/athink8" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
-   data-tooltip="Github" data-position="left" data-delay="50">
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
         <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
@@ -723,19 +723,19 @@
                 </a>
                 
                 
-                <a href="/tags/JavaMail/" title="JavaMail: 1">
+                <a href="/tags/JavaScript/" title="JavaScript: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="JavaMail" style="background-color: #D5F5E3;">JavaMail
+                            data-tagname="JavaScript" style="background-color: #85C1E9;">JavaScript
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/javascript/" title="javascript: 1">
+                <a href="/tags/JavaMail/" title="JavaMail: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="javascript" style="background-color: #FFF;">javascript
+                            data-tagname="JavaMail" style="background-color: #D5F5E3;">JavaMail
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -858,19 +858,10 @@
                 </a>
                 
                 
-                <a href="/tags/SpringCloud/" title="SpringCloud: 1">
+                <a href="/tags/%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B/" title="命令类型: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="SpringCloud" style="background-color: #FFF;">SpringCloud
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="微服务: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="微服务" style="background-color: #D7BDE2;">微服务
+                            data-tagname="命令类型" style="background-color: #F5EEF8;">命令类型
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -885,10 +876,19 @@
                 </a>
                 
                 
-                <a href="/tags/%E5%91%BD%E4%BB%A4%E7%B1%BB%E5%9E%8B/" title="命令类型: 1">
+                <a href="/tags/SpringCloud/" title="SpringCloud: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="命令类型" style="background-color: #F5EEF8;">命令类型
+                            data-tagname="SpringCloud" style="background-color: #FFF;">SpringCloud
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" title="微服务: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="微服务" style="background-color: #D7BDE2;">微服务
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -1086,6 +1086,109 @@
         <div class="search-header">
             <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
             <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<!-- 是否开启jsDelivr 加速 -->
+
+	<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/js/search.js"></script>
+
+	
+<script type="text/javascript">
+$(function () {
+    searchFunc(
+		"https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/" + "search.xml",
+		 'searchInput',
+		  'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://cdn.bootcss.com/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.bootcss.com/masonry/4.0.0/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.bootcss.com/aos/3.0.0-beta.6/aos.js"></script>
+    <script src="https://cdn.bootcss.com/scrollprogress/3.0.2/scrollProgress.min.js"></script>
+    <script src="https://cdn.bootcss.com/lightgallery/1.6.11/js/lightgallery-all.min.js"></script>
+
+	
+	<!-- 是否开启jsDelivr 加速 -->
+	
+		<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/js/matery.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/js/add1.js"></script>
+	
+	
+	<!-- <script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/others/snow.js"></script> -->
+		
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+		
+			<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/others/clicklove.js" 
+					async="async"></script>
+		
+    
+		
+    
+		
+			<script async src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/busuanzi/busuanzi.pure.mini.js"></script>
+		
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+    
+    
+		<!-- 是否开启jsDelivr 加速 -->
+		
+			<script src="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/libs/instantpage/instantpage.js" type="module"></script>
+		
+    
+	
+
+<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight+250||document.documentElement.clientHeight+250)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
+
+</html>
+键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>
