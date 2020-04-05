@@ -34,7 +34,7 @@ menu:
         url: /about
         icon: fas fa-user-circle
       - name: mylove    #这是新添加的，在原有配置基础上添加
-        url: /mylove
+        url: /myl
         icon: fa fa-heart
  
 #  标签:
@@ -348,8 +348,8 @@ livere:
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
   enable: true
-  appId: JRF9GJFiTtq472Rfl4TExkzc-9Nh9j0Va
-  appKey: JHg0HpgcopCoARrLoxrQfeLK
+  appId: 
+  appKey: 
   notify: false
   verify: true
   visitor: true
