@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>11分钟学会Multipartfile与File类型转换</title>
+      <link href="/posts/8422ff12.html"/>
+      <url>/posts/8422ff12.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="11分钟学会Multipartfile与File类型转换"><a href="#11分钟学会Multipartfile与File类型转换" class="headerlink" title="11分钟学会Multipartfile与File类型转换"></a>11分钟学会Multipartfile与File类型转换</h2><blockquote><p><code>生命不是要超越别人，而是要超越自己</code></p></blockquote><h3 id="1、Multipartfile转File"><a href="#1、Multipartfile转File" class="headerlink" title="1、Multipartfile转File"></a>1、Multipartfile转File</h3><pre class=" language-java"><code class="language-java">File file <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span> FileUtils<span class="token punctuation">.</span><span class="token function">copyInputStreamToFile</span><span class="token punctuation">(</span>multipartFile<span class="token punctuation">.</span><span class="token function">getInputStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> file<span class="token punctuation">)</span><span class="token punctuation">;</span>  </code></pre><h3 id="2、File转Multipartfile"><a href="#2、File转Multipartfile" class="headerlink" title="2、File转Multipartfile"></a>2、File转Multipartfile</h3><pre class=" language-java"><code class="language-java">File file <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"src/test/resources/input.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>FileInputStream input <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">;</span>MultipartFile multipartFile <span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">MockMultipartFile</span><span class="token punctuation">(</span><span class="token string">"file"</span><span class="token punctuation">,</span> file<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"text/plain"</span><span class="token punctuation">,</span> IOUtils<span class="token punctuation">.</span><span class="token function">toByteArray</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> SpringBoot </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SpringBoot </tag>
+            
+            <tag> 类型装换 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>11分钟学会SpringBoot配置Druid数据源</title>
       <link href="/posts/5431f2db.html"/>
       <url>/posts/5431f2db.html</url>
@@ -22,9 +49,9 @@
             
             <tag> SpringBoot </tag>
             
-            <tag> 整合 </tag>
-            
             <tag> Druid </tag>
+            
+            <tag> 整合 </tag>
             
         </tags>
       
@@ -404,9 +431,9 @@
       
         <tags>
             
-            <tag> Spring </tag>
-            
             <tag> 简介 </tag>
+            
+            <tag> Spring </tag>
             
         </tags>
       
