@@ -14,3 +14,4 @@ Disallow: /friends/
 Disallow: /libs/
 Disallow: /medias/
 Disallow: /mylove
+Disallow: /box/
