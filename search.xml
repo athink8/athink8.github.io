@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title>11分钟学会Tomcat多项目映射</title>
+      <link href="/posts/a6cbb12f.html"/>
+      <url>/posts/a6cbb12f.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="11分钟学会Tomcat多项目映射"><a href="#11分钟学会Tomcat多项目映射" class="headerlink" title="11分钟学会Tomcat多项目映射"></a>11分钟学会Tomcat多项目映射</h2><blockquote><p><code>正是因为这一点一滴觉得还有希望的自己，才是最无可救药的吧。</code></p></blockquote><hr><p>默认当多个项目放在webapps里时，会检索全部项目，同时通过二级目录的方式如<code>localhost/项目名</code>进行区分和访问；</p><p>而有时候想要每个项目都单独映射到不同的域名来访问，又将如何做呢，不妨试试以下配置修改。</p><h3 id="一、可查看文档配置说明了解"><a href="#一、可查看文档配置说明了解" class="headerlink" title="一、可查看文档配置说明了解"></a>一、可查看文档配置说明了解</h3><p>虚拟路径部署文件說明路径：</p><pre class=" language-xml"><code class="language-xml">http://localhost:8080/docs/config/context.html</code></pre><h3 id="二、在server-xml-标签内配置"><a href="#二、在server-xml-标签内配置" class="headerlink" title="二、在server.xml 标签内配置"></a>二、在server.xml 标签内配置</h3><pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!-- 注释掉原来默认的Host--></span>      <span class="token comment" spellcheck="true">&lt;!-- &lt;Host name="localhost"  appBase="webapps"            unpackWARs="true" autoDeploy="true">      &lt;/Host>  --></span><span class="token comment" spellcheck="true">&lt;!--新增2个项目的配置--></span><span class="token comment" spellcheck="true">&lt;!--docBase表示文件路径及名字,尽量指向新的文件夹，不要指向webapps     path 指虚拟访问路径 为空时表示/访问 --></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Host</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>blog.onfree.cn<span class="token punctuation">"</span></span>  <span class="token attr-name">unpackWARs</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">autoDeploy</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">xmlValidation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span> <span class="token attr-name">xmlNamespaceAware</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Context</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">docBase</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/usr/local/tomcat/apache-tomcat8/myapps/blog<span class="token punctuation">"</span></span> <span class="token attr-name">debug</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">reloadable</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Host</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Host</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tool.onfree.cn<span class="token punctuation">"</span></span>  <span class="token attr-name">unpackWARs</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">autoDeploy</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">xmlValidation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span> <span class="token attr-name">xmlNamespaceAware</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Context</span> <span class="token attr-name">path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">docBase</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/usr/local/tomcat/apache-tomcat8/myapps/tool<span class="token punctuation">"</span></span> <span class="token attr-name">debug</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">reloadable</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Host</span><span class="token punctuation">></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tomcat </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Tomcat </tag>
+            
+            <tag> 配置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>11分钟解决Tomcat中文乱码</title>
+      <link href="/posts/e14a457.html"/>
+      <url>/posts/e14a457.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="11分钟解决Tomcat中文乱码"><a href="#11分钟解决Tomcat中文乱码" class="headerlink" title="11分钟解决Tomcat中文乱码"></a>11分钟解决Tomcat中文乱码</h2><blockquote><p><code>正是因为这一点一滴觉得还有希望的自己，才是最无可救药的吧。</code></p></blockquote><hr><p>可能安装和使用Tomcat时，会出现控制台或输出日志乱码的问题。</p><p>以下是解决中文乱码的常用方法，不妨试试。</p><h3 id="一、控制台乱码解决"><a href="#一、控制台乱码解决" class="headerlink" title="一、控制台乱码解决"></a>一、控制台乱码解决</h3><pre><code>目录conf/logging.properties所有的“encoding = UTF-8”都修改为“encoding = GBK”</code></pre><h3 id="二、输出日志乱码解决"><a href="#二、输出日志乱码解决" class="headerlink" title="二、输出日志乱码解决"></a>二、输出日志乱码解决</h3><pre><code>JAVA_OPTS=&quot;$JAVA_OPTS $JSSE_OPTS -Dfile.encoding=GBK -Dsun.jnu.encoding=GBK&quot;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tomcat </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Tomcat </tag>
+            
+            <tag> 配置 </tag>
+            
+            <tag> 中文乱码 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>11分钟学会jquery-validation 表单验证</title>
       <link href="/posts/792a0b29.html"/>
       <url>/posts/792a0b29.html</url>
@@ -429,11 +485,11 @@
             
             <tag> Spring </tag>
             
+            <tag> 配置 </tag>
+            
             <tag> mybatis </tag>
             
             <tag> SpringMVC </tag>
-            
-            <tag> 配置 </tag>
             
         </tags>
       
