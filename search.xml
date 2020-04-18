@@ -20,9 +20,9 @@
       
         <tags>
             
-            <tag> Tomcat </tag>
-            
             <tag> 配置 </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
@@ -47,9 +47,9 @@
       
         <tags>
             
-            <tag> Tomcat </tag>
-            
             <tag> 配置 </tag>
+            
+            <tag> Tomcat </tag>
             
             <tag> 中文乱码 </tag>
             
@@ -485,11 +485,11 @@
             
             <tag> Spring </tag>
             
-            <tag> 配置 </tag>
-            
             <tag> mybatis </tag>
             
             <tag> SpringMVC </tag>
+            
+            <tag> 配置 </tag>
             
         </tags>
       
