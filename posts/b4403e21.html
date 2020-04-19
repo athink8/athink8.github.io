@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="Java,转换,IO流,11分钟,11,blog.onfree.cn,Athink">
+    <meta name="keywords" content="Spring,SpringBoot,Spring MVC,11分钟,11,blog.onfree.cn,Athink">
     <meta name="description" content="Athink_博客|Athink，blog.onfree.cn-分享生活点滴·分享技术成长。athink博客,技术,Athink,自由,专栏,blog,生活,网站seo优化,实用工具,福利资源,经验教程,Java,Spring,SpringBoot,微服务,资源分享,分享生活点滴,分享技术成长;专攻Java，微服务">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>11分钟掌握Java中string和InputStream转换 - Athink_博客</title>
+    <title>11分钟详析Spring MVC - Athink_博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/5.11.1/css/all.min.css">
@@ -430,12 +430,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s1.ax1x.com/2020/03/12/8ei2c9.md.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s1.ax1x.com/2020/03/12/8eiyhF.md.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">11分钟掌握Java中string和InputStream转换</h1>
+                    <h1 class="description center-align post-title">11分钟详析Spring MVC</h1>
                 </div>
             </div>
         </div>
@@ -552,16 +552,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/Spring/">
+                                <span class="chip bg-color">Spring</span>
                             </a>
                         
-                            <a href="/tags/IO%E6%B5%81/">
-                                <span class="chip bg-color">IO流</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%BD%AC%E6%8D%A2/">
-                                <span class="chip bg-color">转换</span>
+                            <a href="/tags/Spring-MVC/">
+                                <span class="chip bg-color">Spring MVC</span>
                             </a>
                         
                     </div>
@@ -572,8 +568,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/Spring/" class="post-category">
+                                Spring
                             </a>
                         
                     </div>
@@ -585,28 +581,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-23
+                    2020-03-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-05
+                    2020-04-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    335
+                    4.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    22 分
                 </div>
                 
 				
@@ -622,44 +618,584 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="11分钟掌握Java中string和InputStream转换"><a href="#11分钟掌握Java中string和InputStream转换" class="headerlink" title="11分钟掌握Java中string和InputStream转换"></a>11分钟掌握Java中string和InputStream转换</h2><blockquote>
-<p><code>相信奇迹的人本身就和奇迹一样了不起啊</code></p>
+                <h2 id="11分钟详析Spring-MVC"><a href="#11分钟详析Spring-MVC" class="headerlink" title="11分钟详析Spring MVC"></a>11分钟详析Spring MVC</h2><blockquote>
+<p><code>我手中的魔法，是守护挚爱的力量，是坚定这个信念所必须的力量，我一定会拯救你的，无论在何时、何地。</code></p>
 </blockquote>
 <hr>
-<h3 id="1、InputStream转化为String"><a href="#1、InputStream转化为String" class="headerlink" title="1、InputStream转化为String"></a>1、InputStream转化为String</h3><h4 id="1-1-JDK原生提供"><a href="#1-1-JDK原生提供" class="headerlink" title="1.1 JDK原生提供"></a>1.1 JDK原生提供</h4><h5 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h5><pre><code>byte[] bytes = new byte[0];
-bytes = new byte[inputStream.available()];
-inputStream.read(bytes);
-String str = new String(bytes);</code></pre><h5 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h5><pre><code>String result = new BufferedReader(new InputStreamReader(inputStream))
-        .lines().collect(Collectors.joining(System.lineSeparator()));</code></pre><h5 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h5><pre><code>String result = new BufferedReader(new InputStreamReader(inputStream))
-       .lines().parallel().collect(Collectors.joining(System.lineSeparator()));</code></pre><h5 id="方法四："><a href="#方法四：" class="headerlink" title="方法四："></a>方法四：</h5><pre><code>Scanner s = new Scanner(inputStream).useDelimiter(&quot;\\A&quot;);
-String str = s.hasNext() ? s.next() : &quot;&quot;;</code></pre><h5 id="方法五："><a href="#方法五：" class="headerlink" title="方法五："></a>方法五：</h5><pre><code>String resource = new Scanner(inputStream).useDelimiter(&quot;\\Z&quot;).next();
-return resource;</code></pre><h5 id="方法六："><a href="#方法六：" class="headerlink" title="方法六："></a>方法六：</h5><pre><code>StringBuilder sb = new StringBuilder();
-String line;
+<p>Spring MVC是当前最优秀的MVC框架，支持注解配置，易用性有了大幅度的提高，使用简单，学习成本低，灵活性高，易拓展。</p>
+<h3 id="1-工作流程"><a href="#1-工作流程" class="headerlink" title="1. 工作流程"></a>1. 工作流程</h3><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/athink8/cdn/imgs/arctle/Springmvc1.png" alt="image"></p>
+<pre><code>    &lt;!-- 配置处理器 Handle，映射 “/controller1”请求 --&gt;
+    &lt;bean name=&quot;/controller1&quot; class=&quot;com.controller.Controller1&quot; /&gt;
+    &lt;!-- 已下默认不用写 在Spring 4.0 会自动使用默认的来处理 --&gt;
+    &lt;!-- 处理器映射器  将处理器的name作为URL请求进行查找--&gt;
+    &lt;bean class=&quot;org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping&quot;/&gt;    
+    &lt;!-- 处理器适配器 配置对处理器中handleRequest（）方法的调用 --&gt;
+    &lt;bean class=&quot;org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter&quot;/&gt;
+    &lt;!--视图解析器  --&gt;
+    &lt;bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;/&gt;</code></pre><h3 id="2-DispatcherServlet"><a href="#2-DispatcherServlet" class="headerlink" title="2. DispatcherServlet"></a>2. DispatcherServlet</h3><pre><code>    &lt;!-- 配置Springmvc --&gt;
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+            &lt;param-value&gt;classpath:spring-mvc.xml&lt;/param-value&gt;
+        &lt;/init-param&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+    &lt;/servlet&gt;
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;</code></pre><blockquote>
+<p>// <load-on-startup> 1为启动程序立即加载该<servlet> </p>
+</blockquote>
+<blockquote>
+<p>//  <url-pattern> /  为拦截所有URL交给DispatcherServlet处理</p>
+</blockquote>
+<h3 id="3-Controller-层"><a href="#3-Controller-层" class="headerlink" title="3.Controller 层"></a>3.Controller 层</h3><h4 id="3-1实现接口-org-springframework-web-servlet-mvc-Controller"><a href="#3-1实现接口-org-springframework-web-servlet-mvc-Controller" class="headerlink" title="3.1实现接口 org.springframework.web.servlet.mvc.Controller"></a>3.1实现接口 org.springframework.web.servlet.mvc.Controller</h4><pre><code>public class Controller1 implements Controller {
+    public ModelAndView handleRequest(HttpServletRequest arg0, HttpServletResponse arg1) throws Exception {
+        ModelAndView modelAndView =new ModelAndView();
+        modelAndView.addObject(&quot;msg&quot;, &quot;hello world&quot;);
+        modelAndView.setViewName(&quot;WEB-INF/jsp/index1.jsp&quot;);
+        return modelAndView;
+    }
 
-BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
-while ((line = br.readLine()) != null) {
-    sb.append(line);
+    &lt;!-- 配置处理器 Handle，映射 “/controller1”请求 --&gt;
+    &lt;bean name=&quot;/controller1&quot; class=&quot;com.controller.Controller1&quot; /&gt;</code></pre><h4 id="3-2-使用注解-Controller-RequestMapping"><a href="#3-2-使用注解-Controller-RequestMapping" class="headerlink" title="3.2 使用注解 @Controller   @RequestMapping"></a>3.2 使用注解 @Controller   @RequestMapping</h4><pre><code>@Controller
+@RequestMapping(value=&quot;/hello&quot;)  //标注在类上时所有请求前必须有定义的名称下&quot;/hello
+public class Controller1{
+
+    //跳转登录界面
+    @RequestMapping(value=&quot;/login&quot;,method=RequestMethod.GET)  //使用 /login 即可调用
+    public String toLogin(){
+        return &quot;login&quot;;
+    }
+
+    //获取登录视图传递来的信息进行配对 成功后视图跳转
+    @RequestMapping(value=&quot;/login&quot;,method=RequestMethod.POST)
+    public String login(User user,Model model,HttpSession session) {
+        System.out.println(&quot;当前用户： &quot;+user);
+        String name=user.getName();
+        String password=user.getPassword();
+        if(name.equals(&quot;jz&quot;)&amp;&amp;password.equals(&quot;123&quot;)) {
+            session.setAttribute(&quot;session_user&quot;, user);
+            //redirect 重定向的意思时跳转到相应的方法而不是跳到jsp视图
+            return &quot;redirect:main&quot;;  
+        }else if(name.equals(&quot;aa&quot;)&amp;&amp;password.equals(&quot;123&quot;)) {
+            session.setAttribute(&quot;session_user&quot;, user);
+            return &quot;redirect:upload&quot;;
+        }
+        model.addAttribute(&quot;msg&quot;, &quot;用户名或密码错误&quot;);
+        return &quot;login&quot;;
+    }</code></pre><blockquote>
+<p>//组合注解:   GetMapping  PostMapping  PutMapping  DeleteMapping  PatchMapping</p>
+</blockquote>
+<h3 id="4-视图解析器"><a href="#4-视图解析器" class="headerlink" title="4. 视图解析器"></a>4. 视图解析器</h3><pre><code>   &lt;!-- 定义视图 --&gt;
+    &lt;bean id=&quot;viewResolver&quot; class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;
+        &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/jsp/&quot;&gt;&lt;/property&gt;
+        &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;&gt;&lt;/property&gt;
+    &lt;/bean&gt;</code></pre><h3 id="5-数据绑定"><a href="#5-数据绑定" class="headerlink" title="5.数据绑定"></a>5.数据绑定</h3><h4 id="5-1绑定默认数据类型"><a href="#5-1绑定默认数据类型" class="headerlink" title="5.1绑定默认数据类型"></a>5.1绑定默认数据类型</h4><ul>
+<li>HttpServletRequest</li>
+<li>HttpServletResponse</li>
+<li>HttpSession</li>
+<li>Model/ModelMap  <blockquote>
+<p>//model是接口  ModelMap是接口实现 作用是将数据填充到Request</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="5-2绑定简单数据类型"><a href="#5-2绑定简单数据类型" class="headerlink" title="5.2绑定简单数据类型"></a>5.2绑定简单数据类型</h4><pre><code>String 、Interget、double..
+//视图传递来的name属性要和控制器方法的形参相同
+//不同要使用注解 @RequestParam(value=&quot;name&quot;) String name 定义</code></pre><h4 id="5-3绑定POJO类型"><a href="#5-3绑定POJO类型" class="headerlink" title="5.3绑定POJO类型"></a>5.3绑定POJO类型</h4><blockquote>
+</blockquote>
+<pre><code>public String login(User user) {}</code></pre><blockquote>
+</blockquote>
+<pre><code>&lt;form action=&quot;${pageContext.request.contextPath}/hello/login &quot; method=&quot;post&quot; onsubmit=&quot;return check() &quot;&gt;  
+            账号： &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot;&gt;&lt;br/&gt;
+            密码： &lt;input type=&quot;password&quot; name=&quot;password&quot; id=&quot;password&quot;&gt;&lt;br/&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;登录&quot;&gt;
+            &lt;input type=&quot;reset&quot; value=&quot;重置&quot;&gt;
+    &lt;/form&gt;</code></pre><blockquote>
+<p>//解决请求参数中中文乱码问题</p>
+</blockquote>
+<pre><code>    &lt;!-- 字符过滤为UTF-8 --&gt;
+&lt;filter&gt;
+    &lt;filter-name&gt;Encoding&lt;/filter-name&gt;
+    &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;/filter-class&gt;
+    &lt;init-param&gt;
+        &lt;param-name&gt;encoding&lt;/param-name&gt;
+        &lt;param-value&gt;UTF-8&lt;/param-value&gt;
+    &lt;/init-param&gt;
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+    &lt;filter-name&gt;Encoding&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;</code></pre><h4 id="5-4绑定包装POJO类型"><a href="#5-4绑定包装POJO类型" class="headerlink" title="5.4绑定包装POJO类型"></a>5.4绑定包装POJO类型</h4><pre><code>public class Order {
+    private Integer id;
+    private User user;
 }
-String str = sb.toString();
-return str;</code></pre><h5 id="方法七："><a href="#方法七：" class="headerlink" title="方法七："></a>方法七：</h5><pre><code>ByteArrayOutputStream result = new ByteArrayOutputStream();
-byte[] buffer = new byte[inStream.available()];
-int length;
-while ((length = inputStream.read(buffer)) != -1) {
-    result.write(buffer, 0, length);
+
+    //获取order.jsp界面传递来的参数
+    @RequestMapping(&quot;/order&quot;)
+    public String order(Order order) {
+        System.out.println(order);
+        return &quot;index2&quot;;
+    }
+
+    &lt;form action=&quot;${pageContext.request.contextPath}/hello/order &quot; method=&quot;post&quot;&gt; 
+        订单号： &lt;input type=&quot;text&quot; name=&quot;order.id&quot;&gt;&lt;br/&gt;
+        用户名： &lt;input type=&quot;text&quot; name=&quot;user.name&quot;&gt;&lt;br/&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;继续&quot;&gt;
+        &lt;input type=&quot;reset&quot; value=&quot;重置&quot;&gt;
+    &lt;/form&gt;</code></pre><blockquote>
+<p>//两种规范：</p>
+</blockquote>
+<blockquote>
+<p>1.查询条件参数是包装类的直接基本属性 则参数名直接用对应的属性名</p>
+</blockquote>
+<blockquote>
+<p>2.查询条件参数是包装类的POJO的子属性  则参数名必须为 【对象.属性】对象为包装类里POJO的对象名</p>
+</blockquote>
+<h4 id="5-5自定义绑定数据"><a href="#5-5自定义绑定数据" class="headerlink" title="5.5自定义绑定数据"></a>5.5自定义绑定数据</h4><h5 id="5-5-1-Converter转换器-源格式可以为任何格式"><a href="#5-5-1-Converter转换器-源格式可以为任何格式" class="headerlink" title="5.5.1 Converter转换器  //源格式可以为任何格式"></a>5.5.1 Converter转换器  //源格式可以为任何格式</h5><blockquote>
+<p>public interface Converter&lt;S, T&gt;{<br>T convert(S source)<br>}    //S 为源格式 T为目标格式</p>
+</blockquote>
+<pre><code>public class DateConverter implements Converter&lt;String, Date&gt; {
+    public Date convert(String source) {
+        String datePattern=&quot;yyyy-MM-dd HH:MM:SS&quot;;
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat(datePattern);
+        try {
+            return simpleDateFormat.parse(source);
+        } catch (ParseException e) {
+            throw new IllegalArgumentException(&quot;无效格式，请使用这种格式&quot;+datePattern);
+        }
+    }
 }
-String str = result.toString(StandardCharsets.UTF_8.name());
-return str;</code></pre><h5 id="方法八："><a href="#方法八：" class="headerlink" title="方法八："></a>方法八：</h5><pre><code>BufferedInputStream bis = new BufferedInputStream(inputStream);
-ByteArrayOutputStream buf = new ByteArrayOutputStream();
-int result = bis.read();
-while(result != -1) {
-    buf.write((byte) result);
-    result = bis.read();
-}
-String str = buf.toString();
-return str;</code></pre><h4 id="1-2-Apache-Common提供"><a href="#1-2-Apache-Common提供" class="headerlink" title="1.2  Apache Common提供"></a>1.2  Apache Common提供</h4><h5 id="方法九："><a href="#方法九：" class="headerlink" title="方法九："></a>方法九：</h5><pre><code>StringWriter writer = new StringWriter();
-IOUtils.copy(inputStream, writer, StandardCharsets.UTF_8.name());
-String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方法十：" class="headerlink" title="方法十："></a>方法十：</h5><pre><code>String str = IOUtils.toString(inputStream, &quot;utf-8&quot;);</code></pre><h4 id="1-3-Google-Guava提供"><a href="#1-3-Google-Guava提供" class="headerlink" title="1.3  Google Guava提供"></a>1.3  Google Guava提供</h4><h5 id="方法十一："><a href="#方法十一：" class="headerlink" title="方法十一："></a>方法十一：</h5><pre><code>String str = CharStreams.toString(new InputStreamReader(inputStream, StandardCharsets.UTF_8));</code></pre><h5 id="方法十二："><a href="#方法十二：" class="headerlink" title="方法十二："></a>方法十二：</h5><pre><code>String str = new String(ByteStreams.toByteArray(inputStream));</code></pre><h3 id="2、String转化为InputStream"><a href="#2、String转化为InputStream" class="headerlink" title="2、String转化为InputStream"></a>2、String转化为InputStream</h3><h4 id="2-1-JDK原生提供"><a href="#2-1-JDK原生提供" class="headerlink" title="2.1 JDK原生提供"></a>2.1 JDK原生提供</h4><pre><code>InputStream is = new ByteArrayInputStream(str.getBytes());</code></pre><h4 id="2-2-Apache-Common提供"><a href="#2-2-Apache-Common提供" class="headerlink" title="2.2 Apache Common提供"></a>2.2 Apache Common提供</h4><pre><code>InputStream targetStream = IOUtils.toInputStream(str, StandardCharsets.UTF_8.name());</code></pre><h4 id="2-3-Google-Guava提供"><a href="#2-3-Google-Guava提供" class="headerlink" title="2.3 Google Guava提供"></a>2.3 Google Guava提供</h4><pre><code>InputStream targetStream =
-        new ReaderInputStream(CharSource.wrap(str).openStream(), StandardCharsets.UTF_8.name());</code></pre>
+
+
+xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;
+xsi:schemaLocation=&quot;http://www.springframework.org/schema/mvc
+                              http://www.springframework.org/schema/mvc/spring-mvc.xsd&quot;
+    &lt;!-- 显示装配的自定义的转换器 --&gt;
+  &lt;mvc:annotation-driven conversion-service=&quot;conversionservice1&quot;&gt;&lt;/mvc:annotation-driven&gt; 
+
+    &lt;!-- 自定义类型转换器配置 converters--&gt;
+  &lt;bean id=&quot;conversionservice1&quot; class=&quot;org.springframework.context.support.ConversionServiceFactoryBean&quot;&gt;
+        &lt;property name=&quot;converters&quot;&gt;
+            &lt;set&gt;
+                &lt;bean class=&quot;com.converter.DateConverter&quot;&gt;&lt;/bean&gt;
+            &lt;/set&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;</code></pre><blockquote>
+</blockquote>
+<pre><code>    //通过自定义绑定数据Converter或DateFormat 获取Date
+    @RequestMapping(&quot;customDate&quot;)
+    public String customDate(Date date) {
+        System.out.println(date);
+        return &quot;index2&quot;;
+    }</code></pre><h5 id="5-5-2-Formatter格式化-源格式只能为String"><a href="#5-5-2-Formatter格式化-源格式只能为String" class="headerlink" title="5.5.2 Formatter格式化  //源格式只能为String"></a>5.5.2 Formatter格式化  //源格式只能为String</h5><blockquote>
+<p>public interface Formatter<T> extends Printer<T>,Parser<T>{}</p>
+</blockquote>
+<pre><code>public class DateFormatter implements Formatter&lt;Date&gt; {
+    private String datePattern=&quot;yyyy-MM-dd HH:MM:SS&quot;;
+    private SimpleDateFormat simpleDateFormat;
+    //返回目标对象的字符串
+    public String print(Date date, Locale locale) {
+        return new SimpleDateFormat().format(date);
+    }
+    //利用指定的local将一个String类型解析成目类型
+    public Date parse(String source, Locale locale) throws ParseException {
+        simpleDateFormat=new SimpleDateFormat(datePattern);
+        return simpleDateFormat.parse(source);
+    }
+}</code></pre><blockquote>
+</blockquote>
+<pre><code>xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;
+xsi:schemaLocation=&quot;http://www.springframework.org/schema/mvc
+                              http://www.springframework.org/schema/mvc/spring-mvc.xsd&quot;
+    &lt;!-- 显示装配的自定义的转换器 --&gt;
+  &lt;mvc:annotation-driven conversion-service=&quot;conversionservice1&quot;&gt;&lt;/mvc:annotation-driven&gt; 
+    &lt;!-- 自定义类型转换器配置formatters--&gt;
+    &lt;bean id=&quot;conversionservice2&quot; class=&quot;org.springframework.format.support.FormattingConversionServiceFactoryBean&quot;&gt;
+        &lt;property name=&quot;formatters&quot;&gt;
+            &lt;set&gt;
+                &lt;bean class=&quot;com.converter.DateFormatter&quot;&gt;&lt;/bean&gt;
+            &lt;/set&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;</code></pre><h4 id="5-6绑定数组"><a href="#5-6绑定数组" class="headerlink" title="5.6绑定数组"></a>5.6绑定数组</h4><pre><code>    //获取绑定要执行删除的数组 
+    @RequestMapping(&quot;/delID&quot;)
+    public String delID(Integer[] ids) {
+        if(ids!=null) {
+            for (Integer id : ids) {
+                System.out.println(&quot;你删除了第 &quot;+id+&quot;数据&quot;);
+            }
+        }else{
+            System.out.println(&quot;ids为null&quot;);
+        }
+        return &quot;editUser&quot;;
+    }
+    &lt;form action=&quot;${pageContext.request.contextPath}/hello/delID&quot; method=&quot;post&quot;&gt;
+        &lt;table border=1 width=&quot;20%&quot;&gt;
+            &lt;thead&gt;删除用户&lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;选择&lt;/td&gt;
+                    &lt;td&gt;用户名&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt; &lt;input type=&quot;checkbox&quot; name=&quot;ids&quot; value=&quot;1&quot;&gt;&lt;/input&gt; &lt;/td&gt;
+                    &lt;td&gt;aa&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt; &lt;input type=&quot;checkbox&quot; name=&quot;ids&quot; value=&quot;2&quot;&gt;&lt;/input&gt; &lt;/td&gt;
+                    &lt;td&gt;bb&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;br/&gt;&lt;input type=&quot;submit&quot; value=&quot;确定&quot;&gt;
+    &lt;/form&gt;</code></pre><h4 id="5-6绑定集合"><a href="#5-6绑定集合" class="headerlink" title="5.6绑定集合"></a>5.6绑定集合</h4><blockquote>
+<p>//后台不允许使用集合作为形参 只能用包装类来包装一个集合</p>
+</blockquote>
+<blockquote>
+<p>public class UserList {<br>    private List<User> userList;<br>}</p>
+</blockquote>
+<pre><code>    //获取绑定要执行修改数据的集合
+    @RequestMapping(&quot;/editUser&quot;)
+    public String editUser(UserList userList1) {
+        List&lt;User&gt; users=userList1.getUserList();
+        for (User user : users) {
+            if(user.getId()!=null) {
+                System.out.println(&quot;修改了第 &quot;+user.getId()+&quot;数据&quot;);
+                System.out.println(&quot;用户名为：&quot;+user.getName());
+            }
+        }
+        return &quot;index2&quot;;
+    }
+
+&lt;form action=&quot;${pageContext.request.contextPath}/hello/editUser&quot; method=&quot;post&quot;&gt;
+        &lt;table border=1&gt;
+            &lt;thead&gt;修改用户&lt;/thead&gt;
+            &lt;tr&gt;
+                &lt;td&gt;选择&lt;/td&gt;
+                &lt;td&gt;用户名&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt; &lt;input type=&quot;checkbox&quot; name=&quot;userList[0].id&quot; value=&quot;1&quot;&gt;&lt;/input&gt; &lt;/td&gt;
+                &lt;td&gt; &lt;input type=&quot;text&quot; name=&quot;userList[0].name&quot; value=&quot;jz&quot;&gt;&lt;/input&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt; &lt;input type=&quot;checkbox&quot; name=&quot;userList[1].id&quot; value=&quot;2&quot;&gt;&lt;/input&gt; &lt;/td&gt;
+                &lt;td&gt; &lt;input type=&quot;text&quot; name=&quot;userList[1].name&quot; value=&quot;aa&quot;&gt;&lt;/input&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;br/&gt;&lt;input type=&quot;submit&quot; value=&quot;确定&quot;&gt;
+    &lt;/form&gt;</code></pre><h3 id="6-JSON-和RESTful"><a href="#6-JSON-和RESTful" class="headerlink" title="6.JSON 和RESTful"></a>6.JSON 和RESTful</h3><h4 id="6-1-JSON-格式"><a href="#6-1-JSON-格式" class="headerlink" title="6.1 JSON 格式"></a>6.1 JSON 格式</h4><blockquote>
+<p>对象结构：</p>
+</blockquote>
+<pre><code>{
+key1:value1,
+key2:value2
+}</code></pre><blockquote>
+<p>数组结构：</p>
+</blockquote>
+<pre><code>[
+value1,
+value2
+]</code></pre><h4 id="6-2JSON数据交换"><a href="#6-2JSON数据交换" class="headerlink" title="6.2JSON数据交换"></a>6.2JSON数据交换</h4><blockquote>
+<p>包类：</p>
+</blockquote>
+<blockquote>
+<p>jackson-annotations-2.9.9.jar</p>
+</blockquote>
+<blockquote>
+<p>jackson-core-2.9.9.jar</p>
+</blockquote>
+<blockquote>
+<p>databind-2.9.9.jar</p>
+</blockquote>
+<blockquote>
+<p>注解：</p>
+</blockquote>
+<blockquote>
+<p>@RequestBody  //将请求体的数据绑定在形参上  作用在形参<br>@ResponseBody  //返回JSON格式  作用在方法上</p>
+</blockquote>
+<pre><code>    &lt;!-- 配置注解驱动 
+自动注册 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+        和org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter 
+--&gt;
+    &lt;mvc:annotation-driven /&gt;
+    &lt;!--第1种. 配置静态资源的访问映射 使其不被前端控制器拦截 --&gt;
+    &lt;mvc:resources location=&quot;/js/&quot; mapping=&quot;/js/**&quot; /&gt;
+    &lt;!-- 第2种.使用使用默认的服务器请求处理器自动判断筛选 --&gt;
+    &lt;!-- &lt;mvc:default-servlet-handler/&gt; --&gt;</code></pre><p>​    </p>
+<blockquote>
+</blockquote>
+<pre><code>//测试JSON 
+@RequestMapping(value=&quot;/login2&quot;,method=RequestMethod.POST)
+@ResponseBody  //返回JSON格式
+public User login2(@RequestBody User user) {
+    System.out.println(&quot;login2 测试&quot;);
+    System.out.println(user);
+    return user;
+}</code></pre><blockquote>
+</blockquote>
+<pre><code>&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Insert title here&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;${pageContext.request.contextPath}/js/jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        function check() {
+            var name=$(&quot;#name&quot;).val();
+            var password=$(&quot;#password&quot;).val();
+            if(name==null||password==null||name==&quot;&quot;||password==&quot;&quot;){
+                alert(&quot;账号或密码不能为空！！&quot;);
+                return false;
+            }
+            return true;
+        }
+//使用JQuery的AJAX传递JSON格式
+        function login2(){
+            //alert(&quot;1&quot;);
+            var name=$(&quot;#name&quot;).val();
+            var password=$(&quot;#password&quot;).val();
+            var id=1;    
+            if(check()){
+                $.ajax({
+//url前往路径
+                    url:&quot;${pageContext.request.contextPath}/hello/login2&quot;, 
+                    type:&quot;post&quot;,
+//data请求发送的数据
+                    data:JSON.stringify({id:id,name:name,password:password}),
+//json格式时 必须为application/json
+                    contentType:&quot;application/json;charset=UTF-8&quot;,
+//定义回调属性为json
+                    dataType:&quot;json&quot;,
+                    success:function(data){
+                        alert(data.name+data.password);
+                    }    
+                });
+            }    
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- ${pageContext.request.contextPath}&lt;br/&gt;--&gt;
+    &lt;div style=&quot;color: red&quot;&gt;${msg}&lt;/div&gt;
+    &lt;form action=&quot;${pageContext.request.contextPath}/hello/login &quot; method=&quot;post&quot; onsubmit=&quot;return check()&quot;&gt; 
+        账号： &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot;&gt;&lt;br/&gt;
+        密码： &lt;input type=&quot;password&quot; name=&quot;password&quot; id=&quot;password&quot;&gt;&lt;br/&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;登录&quot;&gt;
+        &lt;input type=&quot;reset&quot; value=&quot;重置&quot;&gt;
+        &lt;input type=&quot;button&quot; value=&quot;登录2&quot; onclick=&quot;login2()&quot; /&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><h4 id="6-3RESTful风格"><a href="#6-3RESTful风格" class="headerlink" title="6.3RESTful风格"></a>6.3RESTful风格</h4><blockquote>
+<p>如：<a href="http://hello/items/1" target="_blank" rel="noopener">http://hello/items/1</a><br>//参数写在连接之后</p>
+</blockquote>
+<pre><code>    //用RESTful风格测试JSON
+    @RequestMapping(value=&quot;/user/{id}&quot;,method=RequestMethod.GET)
+    @ResponseBody
+    public User selectUser(@PathVariable(&quot;id&quot;) Integer id) {
+        User user1=new User();
+        //模拟在数据库找到此ID数据
+        if(id.equals(1)) {
+            user1.setName(&quot;jzz&quot;);
+            user1.setId(id);
+            System.out.println(&quot;ID: &quot;+user1.getId()+&quot; 用户名： &quot;+user1.getName());
+        }else {
+            System.out.println(&quot;没有找到此ID的用户&quot;);
+        }
+        return user1;
+    }</code></pre><blockquote>
+</blockquote>
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;${pageContext.request.contextPath}/js/jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        function select1(){
+            //alert(&quot;1&quot;);
+            var id=$(&quot;#number&quot;).val();
+            $.ajax({
+                url:&quot;${pageContext.request.contextPath}/hello/user/&quot;+id,
+                type:&quot;GET&quot;,
+                dataType:&quot;json&quot;,
+                success:function(data){
+                    if(data.id!=null&amp;&amp;data.name!=null){
+                        alert(&quot;id: &quot;+data.id+&quot;用户名： &quot;+data.name);
+                    }else{
+                        alert(&quot;没有找到此ID的用户&quot;);
+                    }
+                }
+
+            }) 
+        }
+    &lt;/script&gt;</code></pre><h3 id="7-拦截器interceptor"><a href="#7-拦截器interceptor" class="headerlink" title="7.拦截器interceptor"></a>7.拦截器interceptor</h3><ul>
+<li><p>// 拦截器需实现接口 HandlerInterceptor 或它的实现类 HandlerInterceptorAdapter</p>
+</li>
+<li><p>//或者 实现接口WebRequestInterceptor或实现类WebRequestHandlerInterceptorAdapter</p>
+<pre><code>  public class LoginInterceptor extends HandlerInterceptorAdapter {
+          //此方法在控制器方法前执行  返回true时继续执行  fasle时中断控制器方法及拦截器方法
+      public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object object) throws Exception {
+          //判断是否登录 /login 连接
+          String url=request.getRequestURI();
+          System.out.println(&quot;当前连接：&quot;+url);
+          if(url.indexOf(&quot;/login&quot;)&gt;=0) {
+              return true;
+          }
+          if(url.indexOf(&quot;/login2&quot;)&gt;=0) {
+              return true;
+          }
+
+          //判断session是否有数据User用户
+          HttpSession session=request.getSession();
+          User user =(User) session.getAttribute(&quot;session_user&quot;);
+          if(user!=null) {
+              return true;
+          }
+
+      //不符合条件重新转发到登录界面
+      request.setAttribute(&quot;msg&quot;, &quot;你还没有登录，请登录！&quot;);
+      request.getRequestDispatcher(&quot;/WEB-INF/jsp/login.jsp&quot;).forward(request, response);
+      return false;
+  }
+  //此方法在控制器调用之后 视图解析前执行  以便对模型和视图进行修改
+  public void postHandle(HttpServletRequest request, HttpServletResponse response, Object object, ModelAndView modelAndView)
+          throws Exception {
+      // TODO Auto-generated method stub
+
+  }
+  //此方法在视图解析之后进行  可进行资源清理、日子记录等等
+      public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object object, Exception arg3)
+              throws Exception {
+          // TODO Auto-generated method stub
+
+      }
+  }
+
+      &lt;!-- 配置拦截器 --&gt;
+      &lt;mvc:interceptors&gt;
+          &lt;!-- 全局拦截器 --&gt;
+          &lt;!--&lt;bean class=&quot;&quot; /&gt;  --&gt;
+          &lt;mvc:interceptor&gt;
+              &lt;mvc:mapping path=&quot;/**&quot;/&gt; &lt;!-- 配置拦截器作用的路径 --&gt;
+              &lt;mvc:exclude-mapping path=&quot;&quot;/&gt; &lt;!-- 配置拦截器不作用的路径 --&gt;
+              &lt;bean class=&quot;com.interceptor.LoginInterceptor&quot;&gt;&lt;/bean&gt;
+          &lt;/mvc:interceptor&gt;
+      &lt;/mvc:interceptors&gt;</code></pre></li>
+</ul>
+<blockquote>
+<p>/* 假设配置多个拦截器interceptor1   interceptor2<br>则其拦截器的方法的调用的顺序是：<br>interceptor1(preHandle) - interceptor2(preHandle) - handleAdapter(Handle) -interceptor2(postHandle) - interceptor1(postHandle) - DispatcherServlet(reader) - interceptor2(afterCompletion) -  interceptor1(afterCompletion)  */</p>
+</blockquote>
+<h3 id="7-文件上传"><a href="#7-文件上传" class="headerlink" title="7.文件上传"></a>7.文件上传</h3><blockquote>
+<p>类包：</p>
+</blockquote>
+<ul>
+<li><p>commons-fileupload-1.4.jar </p>
+</li>
+<li><p>commons-io-2.6.jar</p>
+<pre><code>  &lt;!-- 配置文件上传解析器 multipartResolver --&gt;
+      &lt;!-- 因为CommonsMultipartResolver内部是引用MultipartResolver字符串来完成文件解析 所以指定的ID必须为multipartResolver  --&gt;
+  &lt;bean id=&quot;multipartResolver&quot; class=&quot;org.springframework.web.multipart.commons.CommonsMultipartResolver&quot;&gt;
+      &lt;!-- 配置缓存中最大阈值 低于此值，只保留在内存里，超过此阈值，生成硬盘上的临时文件 --&gt;
+      &lt;property name=&quot;maxInMemorySize&quot; value=&quot;&quot; /&gt; 
+      &lt;!-- 推迟文件解析 --&gt;
+      &lt;property name=&quot;resolveLazily&quot; value=&quot;&quot;/&gt;
+      &lt;!-- 允许文件上传的最大尺寸 --&gt;
+      &lt;property name=&quot;maxUploadSize&quot; value=&quot;10485760&quot; /&gt;
+      &lt;!-- 默认编码格式 --&gt;
+      &lt;property name=&quot;defaultEncoding&quot; value=&quot;UTF-8&quot; /&gt;
+  &lt;/bean&gt;</code></pre></li>
+</ul>
+<blockquote>
+</blockquote>
+<pre><code>&lt;!--  enctype属性必须为&quot;multipart/form-data&quot;   multiple=&quot;multiple&quot; 表示可以多文件上传 --&gt;
+    &lt;form id=&quot;form1&quot; action=&quot;${pageContext.request.contextPath}/hello/upload&quot; enctype=&quot;multipart/form-data&quot; method=&quot;post&quot; onsubmit=&quot;return check()&quot; &gt;
+        上传人： &lt;input type=&quot;text&quot; id=&quot;name1&quot; name=&quot;name1&quot; /&gt; &lt;br/&gt;    
+        &lt;input type=&quot;file&quot; multiple=&quot;multiple&quot;  name=&quot;ufile&quot; id=&quot;ufile&quot; /&gt;
+        &lt;input type=&quot;submit&quot; value=&quot;上传&quot; /&gt;
+    &lt;/form&gt;</code></pre><blockquote>
+</blockquote>
+<pre><code>//上传文件处理
+    @RequestMapping(value=&quot;/upload&quot; ,method=RequestMethod.POST)
+    public String upload(@RequestParam(value=&quot;name1&quot;) String name1,@RequestParam(value=&quot;ufile&quot;) List&lt;MultipartFile&gt; ufile,HttpServletRequest request,HttpSession session) {
+
+        //System.out.println(&quot;1成功&quot;);
+        User user=(User) session.getAttribute(&quot;session_user&quot;);
+        //System.out.println(user);
+
+        //判断上传文件是否存在
+        if(!ufile.isEmpty()&amp;&amp;ufile.size()&gt;0) {
+            for (MultipartFile multipartFile : ufile) {
+                //获取上传文件的源名字
+                String sfilename=multipartFile.getOriginalFilename();
+                //上传文件的最后的保存路径
+                String dirPath=request.getServletContext().getRealPath(&quot;/upload&quot;)+&quot;/&quot;+user.getName();
+                System.out.println(&quot;dirPath :&quot;+dirPath);
+                //假设目录不存在 就创建目录
+                File pathfile=new File(dirPath);
+                if(!pathfile.exists()) {
+                    pathfile.mkdirs();
+                }
+                //上传文件的最后的文件名 上传人_UUID_源文件名
+                String lfilename=name1+&quot;_&quot;+UUID.randomUUID()+&quot; &quot;+sfilename;
+                try {
+                    multipartFile.transferTo(new File(dirPath,lfilename));
+                } catch (IllegalStateException | IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    System.out.println(&quot;错误&quot;+e);
+                }
+            }
+            return &quot;index2&quot;;
+        }else {
+            System.out.println(&quot;错误2&quot;);
+            return null;
+        }
+    }</code></pre><blockquote>
+<p>// MultipartFile 接口常用方法</p>
+</blockquote>
+<ul>
+<li>byte[] getBytes() 返回文件的内容作为一个字节数组</li>
+<li>String getContentType() 返回文件的内容类型</li>
+<li>InputStream getInputStream() 返回InputStream读取文件的内容</li>
+<li>String getName() 返回参数的名称多部分的形式</li>
+<li>String getOriginalFilename() 返回原来的文件名</li>
+<li>long getSize() 返回文件的大小,以字节为单位</li>
+<li>boolean isEmpty() 返回是否上传文件是空</li>
+<li>void transferTo(File dest) 接收到的文件转移到给定的目标文件。</li>
+</ul>
+<h3 id="8-文件下载"><a href="#8-文件下载" class="headerlink" title="8.文件下载"></a>8.文件下载</h3><blockquote>
+<p>// 使用 ResponseEntity&lt;byte[]&gt; 对象设置 HttpHeaders 和 HttpStatus 配置信息下载</p>
+</blockquote>
+<pre><code>&lt;%@ page import=&quot;java.net.URLEncoder&quot;%&gt;
+...
+&lt;a href=&quot;${pageContext.request.contextPath}/hello/download?
+filename=&lt;%=URLEncoder.encode(&quot;看.jpg&quot;,&quot;UTF-8&quot;)%&gt;&quot;&gt;下载&lt;/a&gt;
+
+//下载文件处理
+    @RequestMapping(value=&quot;/download&quot;)
+    public ResponseEntity&lt;byte[]&gt; download(@RequestParam(&quot;filename&quot;) String filename,HttpSession session,HttpServletRequest request) throws IOException{
+        System.out.println(&quot;download 开始！&quot;);
+        //System.out.println(filename);
+
+        User user =(User) session.getAttribute(&quot;session_user&quot;);
+        //下载文件路径
+    //String pathname=request.getServletContext().getRealPath(&quot;/upload&quot;)+&quot;/&quot;+user.getName();
+    //File pathfile=new File(pathname+File.separator+filename);
+        File pathfile=new File(&quot;C:\\Users\\jz\\Pictures\\Camera Roll\\&quot;+filename);
+        System.out.println(pathfile);
+        if(!pathfile.exists()) {
+            System.out.println(&quot;文件为空&quot;);
+        }
+        //设置头信息
+        HttpHeaders headers = new HttpHeaders(); 
+        //中文文件名处理
+        String filename1=new String(filename.getBytes(&quot;utf-8&quot;),&quot;ISO-8859-1&quot;);
+         //设置请求头内容,告诉浏览器以下载方式打开窗口
+        headers.setContentDispositionFormData(&quot;attachment&quot;, filename1);
+        //定义以流的形式返回下载数据
+        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+        return new ResponseEntity&lt;byte[]&gt;(FileUtils.readFileToByteArray(pathfile),    
+                                              headers, HttpStatus.OK);  
+    }</code></pre>
             </div>
             <hr/>
 
@@ -684,7 +1220,7 @@ String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blog.onfree.cn/posts/ca446a09.html">https://blog.onfree.cn/posts/ca446a09.html</a>
+                    <a href="https://blog.onfree.cn/posts/b4403e21.html">https://blog.onfree.cn/posts/b4403e21.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -722,16 +1258,12 @@ String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/Spring/">
+                                    <span class="chip bg-color">Spring</span>
                                 </a>
                             
-                                <a href="/tags/IO%E6%B5%81/">
-                                    <span class="chip bg-color">IO流</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%BD%AC%E6%8D%A2/">
-                                    <span class="chip bg-color">转换</span>
+                                <a href="/tags/Spring-MVC/">
+                                    <span class="chip bg-color">Spring MVC</span>
                                 </a>
                             
                         </div>
@@ -1172,31 +1704,31 @@ String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方�
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/2d8346af.html">
+                <a href="/posts/e96f8d10.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s1.ax1x.com/2020/03/12/8eiyhF.md.jpg" class="responsive-img" alt="11分钟使用Java中HttpClient">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io@latest/medias/bg1.jpg" class="responsive-img" alt="11分钟搭建专属自己的影视网站">
                         
-                        <span class="card-title">11分钟使用Java中HttpClient</span>
+                        <span class="card-title">11分钟搭建专属自己的影视网站</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在Java中HttpClient使用，在 Internet，HTTP 协议上是使用得最多、最重要的协议了,HttpClient 是 Apache Jakarta Common 下的子项目..
+                            十分钟搭建专属自己的影视网站,再也不用四处找资源了，自己做个影视站给自己开心开心，快乐的的一起看电影吧！hahah..
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-23
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-12
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -1206,12 +1738,8 @@ String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                    <a href="/tags/HttpClient/">
-                        <span class="chip bg-color">HttpClient</span>
+                    <a href="/tags/%E5%BD%B1%E8%A7%86/">
+                        <span class="chip bg-color">影视</span>
                     </a>
                     
                 </div>
@@ -1225,31 +1753,31 @@ String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/b59ed7a2.html">
+                <a href="/posts/5c5273a3.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s1.ax1x.com/2020/03/17/8NX6mT.md.jpg" class="responsive-img" alt="11分钟掌握Java对象和Map转换">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s1.ax1x.com/2020/03/12/8ei2c9.md.jpg" class="responsive-img" alt="11分钟学习JavaWeb中Listener和Filter">
                         
-                        <span class="card-title">11分钟掌握Java对象和Map转换</span>
+                        <span class="card-title">11分钟学习JavaWeb中Listener和Filter</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java对象和Map在很多时候常常需要转换，而本文可作为常见转换工具类来使用											..
+                             JavaWeb中Listener是个监听器，能够监听某一个事件的发生和状态的改变和，而Filter呢则是个过滤器,能够对客户端发出来的请求进行过滤
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/JavaWeb/" class="post-category">
+                                    JavaWeb
                                 </a>
                             
                             
@@ -1259,12 +1787,16 @@ String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/JavaWeb/">
+                        <span class="chip bg-color">JavaWeb</span>
                     </a>
                     
-                    <a href="/tags/Map/">
-                        <span class="chip bg-color">Map</span>
+                    <a href="/tags/Listener/">
+                        <span class="chip bg-color">Listener</span>
+                    </a>
+                    
+                    <a href="/tags/Filter/">
+                        <span class="chip bg-color">Filter</span>
                     </a>
                     
                 </div>
