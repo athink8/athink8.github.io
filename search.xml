@@ -541,9 +541,9 @@
       
         <tags>
             
-            <tag> 简介 </tag>
-            
             <tag> Spring </tag>
+            
+            <tag> 简介 </tag>
             
         </tags>
       
@@ -902,9 +902,9 @@
       
         <tags>
             
-            <tag> Redis </tag>
-            
             <tag> 配置 </tag>
+            
+            <tag> Redis </tag>
             
             <tag> 命令类型 </tag>
             
@@ -931,9 +931,9 @@
       
         <tags>
             
-            <tag> Redis </tag>
-            
             <tag> 简介 </tag>
+            
+            <tag> Redis </tag>
             
             <tag> 使用场景 </tag>
             
