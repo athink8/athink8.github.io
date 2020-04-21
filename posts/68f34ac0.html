@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="Java,转换,IO流,11分钟,11,blog.onfree.cn,Athink">
+    <meta name="keywords" content="JavaWeb,Listener,Filter,11分钟,11,blog.onfree.cn,Athink">
     <meta name="description" content="Athink_博客|Athink，blog.onfree.cn-分享生活点滴·分享技术成长。athink博客,技术,Athink,自由,专栏,blog,生活,网站seo优化,实用工具,福利资源,经验教程,Java,Spring,SpringBoot,微服务,资源分享,分享生活点滴,分享技术成长;专攻Java，微服务">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -15,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>11分钟掌握Java中string和InputStream转换 - Athink_博客</title>
+    <title>11分钟学习JavaWeb中Listener和Filter - Athink_博客</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/athink8/athink8.github.io/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/5.11.1/css/all.min.css">
@@ -435,7 +435,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">11分钟掌握Java中string和InputStream转换</h1>
+                    <h1 class="description center-align post-title">11分钟学习JavaWeb中Listener和Filter</h1>
                 </div>
             </div>
         </div>
@@ -552,16 +552,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java/">
-                                <span class="chip bg-color">Java</span>
+                            <a href="/tags/JavaWeb/">
+                                <span class="chip bg-color">JavaWeb</span>
                             </a>
                         
-                            <a href="/tags/IO%E6%B5%81/">
-                                <span class="chip bg-color">IO流</span>
+                            <a href="/tags/Listener/">
+                                <span class="chip bg-color">Listener</span>
                             </a>
                         
-                            <a href="/tags/%E8%BD%AC%E6%8D%A2/">
-                                <span class="chip bg-color">转换</span>
+                            <a href="/tags/Filter/">
+                                <span class="chip bg-color">Filter</span>
                             </a>
                         
                     </div>
@@ -572,8 +572,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/JavaWeb/" class="post-category">
+                                JavaWeb
                             </a>
                         
                     </div>
@@ -585,28 +585,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-23
+                    2020-03-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-19
+                    2020-04-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    335
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
 				
@@ -622,44 +622,427 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="11分钟掌握Java中string和InputStream转换"><a href="#11分钟掌握Java中string和InputStream转换" class="headerlink" title="11分钟掌握Java中string和InputStream转换"></a>11分钟掌握Java中string和InputStream转换</h2><blockquote>
-<p><code>相信奇迹的人本身就和奇迹一样了不起啊</code></p>
+                <h2 id="11分钟学习JavaWeb中Listener和Filter"><a href="#11分钟学习JavaWeb中Listener和Filter" class="headerlink" title="11分钟学习JavaWeb中Listener和Filter"></a>11分钟学习JavaWeb中Listener和Filter</h2><blockquote>
+<p><code>别迷惘，别烦恼，加速吧，只要行动就好，别停下，迷惘什么的一点都不像你，像那样纵身轻跃，拾级而上，就像那一天一样，让我再次追逐你的身影，我的英雄</code></p>
 </blockquote>
 <hr>
-<h3 id="1、InputStream转化为String"><a href="#1、InputStream转化为String" class="headerlink" title="1、InputStream转化为String"></a>1、InputStream转化为String</h3><h4 id="1-1-JDK原生提供"><a href="#1-1-JDK原生提供" class="headerlink" title="1.1 JDK原生提供"></a>1.1 JDK原生提供</h4><h5 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h5><pre><code>byte[] bytes = new byte[0];
-bytes = new byte[inputStream.available()];
-inputStream.read(bytes);
-String str = new String(bytes);</code></pre><h5 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h5><pre><code>String result = new BufferedReader(new InputStreamReader(inputStream))
-        .lines().collect(Collectors.joining(System.lineSeparator()));</code></pre><h5 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h5><pre><code>String result = new BufferedReader(new InputStreamReader(inputStream))
-       .lines().parallel().collect(Collectors.joining(System.lineSeparator()));</code></pre><h5 id="方法四："><a href="#方法四：" class="headerlink" title="方法四："></a>方法四：</h5><pre><code>Scanner s = new Scanner(inputStream).useDelimiter(&quot;\\A&quot;);
-String str = s.hasNext() ? s.next() : &quot;&quot;;</code></pre><h5 id="方法五："><a href="#方法五：" class="headerlink" title="方法五："></a>方法五：</h5><pre><code>String resource = new Scanner(inputStream).useDelimiter(&quot;\\Z&quot;).next();
-return resource;</code></pre><h5 id="方法六："><a href="#方法六：" class="headerlink" title="方法六："></a>方法六：</h5><pre><code>StringBuilder sb = new StringBuilder();
-String line;
+<h3 id="一、Listener"><a href="#一、Listener" class="headerlink" title="一、Listener"></a>一、Listener</h3><blockquote>
+<p>监听器</p>
+</blockquote>
+<ul>
+<li>能做什么事？</li>
+</ul>
+<blockquote>
+<p>监听某一个事件的发生和状态的改变。</p>
+</blockquote>
+<ul>
+<li>监听器的内部机制</li>
+</ul>
+<blockquote>
+<p>其实就是接口回调. </p>
+</blockquote>
+<h4 id="Web监听器"><a href="#Web监听器" class="headerlink" title="Web监听器"></a>Web监听器</h4><blockquote>
+<p>总共有8个 划分成三种类型</p>
+</blockquote>
+<ol>
+<li><p>定义一个类，实现接口</p>
+</li>
+<li><p>注册 | 配置监听器</p>
+</li>
+</ol>
+<h4 id="监听三个作用域创建和销毁"><a href="#监听三个作用域创建和销毁" class="headerlink" title="监听三个作用域创建和销毁"></a>监听三个作用域创建和销毁</h4><pre><code>     request  ---httpServletRequest
+    session  ---httpSession
+    aapplication  --- ServletContext
 
-BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
-while ((line = br.readLine()) != null) {
-    sb.append(line);
+1. ServletContextListener
+
+    servletcontext创建：
+
+        1. 启动服务器的时候
+
+    servletContext销毁：
+
+        2. 关闭服务器. 从服务器移除项目
+
+
+2. ServletRequestListener
+
+    request创建:
+
+        访问服务器上的任意资源都会有请求出现。
+
+        访问 html： 会
+        访问 jsp:    会
+        访问 servlet : 会 
+
+    request销毁：
+
+        服务器已经对这次请求作出了响应。
+
+        public class MyRequestListener implements ServletRequestListener {
+                @Override
+                public void requestDestroyed(ServletRequestEvent sre) {
+                    System.out.println(&quot;servletrequest 销毁了&quot;);
+                }
+
+                @Override
+                public void requestInitialized(ServletRequestEvent sre) {
+                    System.out.println(&quot;servletrequest 初始化了&quot;);
+                }
+            }
+
+          &lt;listener&gt;
+              &lt;listener-class&gt;com.itheima.listener.MyRequestListener&lt;/listener-class&gt;
+          &lt;/listener&gt;    
+
+3. HttpSessionListener
+
+    session的创建
+        只要调用getSession
+
+        html:        不会
+        jsp:        会      getSession();
+        servlet:     会
+
+    session的销毁
+        超时  30分钟
+
+        非正常关闭 销毁
+
+        正常关闭服务器(序列化)
+
+        public class MySessionListener implements HttpSessionListener {
+
+            @Override
+            public void sessionCreated(HttpSessionEvent se) {
+                System.out.println(&quot;创建session了&quot;);
+            }
+
+            @Override
+            public void sessionDestroyed(HttpSessionEvent se) {
+                System.out.println(&quot;销毁session了&quot;);
+            }
+        }</code></pre><p><strong>作用：</strong>    </p>
+<pre><code>ServletContextListener
+
+    利用它来，在servletcontext创建的时候， 
+        1. 完成自己想要的初始化工作
+
+        2. 执行自定义任务调度。 执行某一个任务。 Timer  
+
+HttpSessionListener
+
+    统计在线人数.</code></pre><h4 id="监听三个作用域属性状态变更"><a href="#监听三个作用域属性状态变更" class="headerlink" title="监听三个作用域属性状态变更"></a>监听三个作用域属性状态变更</h4><blockquote>
+<p>可以监听在作用域中值 添加  | 替换  | 移除的动作。 </p>
+</blockquote>
+<ul>
+<li><p>servletContext — ServletContextAttributeListener<br><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/athink8/cdn/imgs/arctle/ServletContextAttributeListener.png" alt=""></p>
+</li>
+<li><p>request — ServletRequestAttributeListener<br><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/athink8/cdn/imgs/arctle/ServletRequestAttributeListener%20.png" alt="image"></p>
+</li>
+<li><p>session — HttpSessionAttributeListener<br><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/athink8/cdn/imgs/arctle/HttpSessionAttributeListener.png" alt="image"></p>
+</li>
+</ul>
+<h4 id="监听httpSession里面存值的状态变更"><a href="#监听httpSession里面存值的状态变更" class="headerlink" title="监听httpSession里面存值的状态变更"></a>监听httpSession里面存值的状态变更</h4><blockquote>
+<p>这一类监听器不用注册。</p>
+</blockquote>
+<ul>
+<li>HttpSessionBindingListener</li>
+</ul>
+<blockquote>
+<p>监听对象与session 绑定和解除绑定 的动作</p>
+</blockquote>
+<pre><code>1. 让javaBean 实现该接口即可
+
+        @Override
+        public void valueBound(HttpSessionBindingEvent event) {
+            System.out.println(&quot;对象被绑定进来了&quot;);
+        }
+
+        @Override
+        public void valueUnbound(HttpSessionBindingEvent event) {
+            System.out.println(&quot;对象被解除绑定&quot;);
+        }</code></pre><ul>
+<li>HttpSessionActivationListener</li>
+</ul>
+<blockquote>
+<p>用于监听现在session的值 是 钝化 （序列化）还是活化 （反序列化）的动作</p>
+</blockquote>
+<ul>
+<li>钝化 （序列化） </li>
+</ul>
+<blockquote>
+<p>把内存中的数据 存储到硬盘上</p>
+</blockquote>
+<ul>
+<li>活化 （反序列化）</li>
+</ul>
+<blockquote>
+<p>把硬盘中的数据读取到内存中。</p>
+</blockquote>
+<ul>
+<li>session的钝化活化的用意何在</li>
+</ul>
+<blockquote>
+<p> session中的值可能会很多， 并且我们有很长一段时间不使用这个内存中的值， 那么可以考虑把session的值可以存储到硬盘上【钝化】，等下一次在使用的时候，在从硬盘上提取出来。 【活化】</p>
+</blockquote>
+<ul>
+<li>如何让session的在一定时间内钝化. </li>
+</ul>
+<blockquote>
+<p>做配置即可</p>
+</blockquote>
+<pre><code>1. 在tomcat里面 conf/context.xml 里面配置
+
+        对所有的运行在这个服务器的项目生效  
+
+2. 在conf/Catalina/localhost/context.xml 配置
+
+        对 localhost生效。  localhost:8080
+
+3. 在自己的web工程项目中的 META-INF/context.xml
+
+        只对当前的工程生效。
+
+    maxIdleSwap ： 1分钟不用就钝化
+    directory ：  钝化后的那个文件存放的目录位置。 
+
+        D:\tomcat\apache-tomcat-7.0.52\work\Catalina\localhost\ListenerDemo\itheima
+
+    &lt;Context&gt;
+        &lt;Manager className=&quot;org.apache.catalina.session.PersistentManager&quot; maxIdleSwap=&quot;1&quot;&gt;
+            &lt;Store className=&quot;org.apache.catalina.session.FileStore&quot; directory=&quot;itheima&quot;/&gt;
+        &lt;/Manager&gt;
+    &lt;/Context&gt;</code></pre><h3 id="二、Filter"><a href="#二、Filter" class="headerlink" title="二、Filter"></a>二、Filter</h3><blockquote>
+<p>过滤器 ， 其实就是对客户端发出来的请求进行过滤。 浏览器发出， 然后服务器派servlet处理。  在中间就可以过滤， 其实过滤器起到的是拦截的作用。</p>
+</blockquote>
+<ul>
+<li><p>作用</p>
+<ol>
+<li><p>对一些敏感词汇进行过滤</p>
+</li>
+<li><p>统一设置编码</p>
+</li>
+<li><p>自动登录</p>
+<p>…</p>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="如何使用Filter"><a href="#如何使用Filter" class="headerlink" title="如何使用Filter"></a>如何使用Filter</h4><ol>
+<li><p>定义一个类， 实现Filter</p>
+<pre><code> public class FilterDemo implements Filter {
+
+     public void destroy() {
+     }
+
+     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+         System.out.println(&quot;来到过虑器了。。。&quot;);
+         chain.doFilter(request, response);
+     }
+
+     public void init(FilterConfig fConfig) throws ServletException {
+     }
+
+ }</code></pre></li>
+<li><p>注册过滤器</p>
+</li>
+</ol>
+<blockquote>
+<p>在web.xml里面注册，注册的手法与servlet基本一样。</p>
+</blockquote>
+<pre><code>          &lt;filter&gt;
+        &lt;display-name&gt;FilterDemo&lt;/display-name&gt;
+        &lt;filter-name&gt;FilterDemo&lt;/filter-name&gt;
+        &lt;filter-class&gt;com.itheima.filter.FilterDemo&lt;/filter-class&gt;
+      &lt;/filter&gt;
+      &lt;filter-mapping&gt;
+        &lt;filter-name&gt;FilterDemo&lt;/filter-name&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+      &lt;/filter-mapping&gt;</code></pre><h4 id="Filter的生命周期"><a href="#Filter的生命周期" class="headerlink" title="Filter的生命周期"></a>Filter的生命周期</h4><ul>
+<li>创建</li>
+</ul>
+<blockquote>
+<p>在服务器启动的时候就创建。 </p>
+</blockquote>
+<ul>
+<li>销毁</li>
+</ul>
+<blockquote>
+<p>服务器停止的时候。</p>
+</blockquote>
+<h4 id="Filter执行顺序"><a href="#Filter执行顺序" class="headerlink" title="Filter执行顺序"></a>Filter执行顺序</h4><ol>
+<li><p>客户端发出请求，先经过过滤器， 如果过滤器放行，那么才能到servlet</p>
+</li>
+<li><p>如果有多个过滤器， 那么他们会按照注册的映射顺序 来 排队。 只要有一个过滤器， 不放行，那么后面排队的过滤器以及咱们的servlet都不会收到请求。</p>
+</li>
+</ol>
+<h4 id="Filter细节："><a href="#Filter细节：" class="headerlink" title="Filter细节："></a>Filter细节：</h4><ol>
+<li><p>init方法的参数 FilterConfig , 可以用于获取filter在注册的名字 以及初始化参数。  其实这里的设计的初衷与ServletConfig是一样的。</p>
+</li>
+<li><p>如果想放行，那么在doFilter 方法里面操作，使用参数 chain</p>
+</li>
+</ol>
+<pre><code>    chain.doFilter(request, response); 放行， 让请求到达下一个目标。</code></pre><ol start="3">
+<li><p><url-pattern>/*</url-pattern> 写法格式与servlet一样。</p>
+<ol>
+<li><p>全路径匹配  以 /  开始 </p>
+<pre><code> /LoginServlet</code></pre></li>
+<li><p>以目录匹配 以 / 开始  以 * 结束</p>
+<p> /demo01/*  </p>
+</li>
+<li><p>以后缀名匹配  以 * 开始 以后缀名结束</p>
+<p> *.jsp  *.html *.do </p>
+</li>
+</ol>
+</li>
+<li><p>针对 dispatcher 设置</p>
+<pre><code> REQUEST ： 只要是请求过来，都拦截，默认就是REQUEST 
+ FORWARD : 只要是转发都拦截。 
+ ERROR ： 页面出错发生跳转 
+ INCLUDE ： 包含页面的时候就拦截。</code></pre></li>
+</ol>
+<h4 id="自动登录"><a href="#自动登录" class="headerlink" title="自动登录"></a>自动登录</h4><h5 id="登录servlet代码"><a href="#登录servlet代码" class="headerlink" title="登录servlet代码"></a>登录servlet代码</h5><pre><code>    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    try {
+        String userName = request.getParameter(&quot;username&quot;);
+        String password = request.getParameter(&quot;password&quot;);
+        String autoLogin = request.getParameter(&quot;auto_login&quot;);
+        UserBean user = new UserBean();
+        user.setUsername(userName);
+        user.setPassword(password);
+
+        UserDao dao = new UserDaoImpl();
+        UserBean userBean = dao.login(user);
+
+        if(userBean != null){
+            //成功了，进入首页
+            request.getSession().setAttribute(&quot;userBean&quot;, userBean);
+            response.sendRedirect(&quot;index.jsp&quot;);
+        }else{
+            //不成功...
+            request.getRequestDispatcher(&quot;login.jsp&quot;).forward(request, response);
+        }
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}</code></pre><h5 id="过滤器代码"><a href="#过滤器代码" class="headerlink" title="过滤器代码"></a>过滤器代码</h5><blockquote>
+<p> 过滤器的核心不是完成拦截不给 ， 还是放行显示。 它的核心是在放行之前，帮用户完成登录的功能。 </p>
+</blockquote>
+<ul>
+<li>实现思路</li>
+</ul>
+<ol>
+<li><p>先判断session是否有效， 如果有效，就不用取cookie了，直接放行。</p>
+</li>
+<li><p>如果session失效了，那么就取 cookie。</p>
+<ul>
+<li><p>没有cookie 放行</p>
+</li>
+<li><p>有cookie    </p>
+<p>a.取出来cookie的值，然后完成登录</p>
+<p>b.把这个用户的值存储到session中</p>
+<p>c.放行。</p>
+</li>
+</ul>
+<pre><code>/**
+
+ * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+   */
+   public void doFilter(ServletRequest req, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+
+try {
+    HttpServletRequest request = (HttpServletRequest) req;
+//先判断，现在session中还有没有那个userBean.
+UserBean userBean = (UserBean) request.getSession().getAttribute(&quot;userBean&quot;);
+//还有，有效。
+if(userBean != null){
+    chain.doFilter(request, response);
+}else{
+    //代表session失效了。
+
+    //2. 看cookie。
+
+    //1. 来请求的时候，先从请求里面取出cookie , 但是cookie有很多的key-value
+    Cookie[] cookies = request.getCookies();
+    //2. 从一堆的cookie里面找出我们以前给浏览器发的那个cookie
+    Cookie cookie = CookieUtil.findCookie(cookies, &quot;auto_login&quot;);
+
+    //第一次来
+    if(cookie  == null){
+        chain.doFilter(request, response);
+    }else{
+
+        //不是第一次。
+
+        String value = cookie.getValue();
+        String username = value.split(&quot;#itheima#&quot;)[0];
+        String password = value.split(&quot;#itheima#&quot;)[1];
+
+        //完成登录
+        UserBean user = new UserBean();
+        user.setUsername(username);
+        user.setPassword(password);
+
+        UserDao dao = new UserDaoImpl();
+        userBean = dao.login(user);
+
+        //使用session存这个值到域中，方便下一次未过期前还可以用。
+        request.getSession().setAttribute(&quot;userBean&quot;, userBean);
+
+        chain.doFilter(request, response);
+    }
+
 }
-String str = sb.toString();
-return str;</code></pre><h5 id="方法七："><a href="#方法七：" class="headerlink" title="方法七："></a>方法七：</h5><pre><code>ByteArrayOutputStream result = new ByteArrayOutputStream();
-byte[] buffer = new byte[inStream.available()];
-int length;
-while ((length = inputStream.read(buffer)) != -1) {
-    result.write(buffer, 0, length);
+
+} catch (Exception e) {
+    e.printStackTrace();
+    chain.doFilter(req, response);
 }
-String str = result.toString(StandardCharsets.UTF_8.name());
-return str;</code></pre><h5 id="方法八："><a href="#方法八：" class="headerlink" title="方法八："></a>方法八：</h5><pre><code>BufferedInputStream bis = new BufferedInputStream(inputStream);
-ByteArrayOutputStream buf = new ByteArrayOutputStream();
-int result = bis.read();
-while(result != -1) {
-    buf.write((byte) result);
-    result = bis.read();
-}
-String str = buf.toString();
-return str;</code></pre><h4 id="1-2-Apache-Common提供"><a href="#1-2-Apache-Common提供" class="headerlink" title="1.2  Apache Common提供"></a>1.2  Apache Common提供</h4><h5 id="方法九："><a href="#方法九：" class="headerlink" title="方法九："></a>方法九：</h5><pre><code>StringWriter writer = new StringWriter();
-IOUtils.copy(inputStream, writer, StandardCharsets.UTF_8.name());
-String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方法十：" class="headerlink" title="方法十："></a>方法十：</h5><pre><code>String str = IOUtils.toString(inputStream, &quot;utf-8&quot;);</code></pre><h4 id="1-3-Google-Guava提供"><a href="#1-3-Google-Guava提供" class="headerlink" title="1.3  Google Guava提供"></a>1.3  Google Guava提供</h4><h5 id="方法十一："><a href="#方法十一：" class="headerlink" title="方法十一："></a>方法十一：</h5><pre><code>String str = CharStreams.toString(new InputStreamReader(inputStream, StandardCharsets.UTF_8));</code></pre><h5 id="方法十二："><a href="#方法十二：" class="headerlink" title="方法十二："></a>方法十二：</h5><pre><code>String str = new String(ByteStreams.toByteArray(inputStream));</code></pre><h3 id="2、String转化为InputStream"><a href="#2、String转化为InputStream" class="headerlink" title="2、String转化为InputStream"></a>2、String转化为InputStream</h3><h4 id="2-1-JDK原生提供"><a href="#2-1-JDK原生提供" class="headerlink" title="2.1 JDK原生提供"></a>2.1 JDK原生提供</h4><pre><code>InputStream is = new ByteArrayInputStream(str.getBytes());</code></pre><h4 id="2-2-Apache-Common提供"><a href="#2-2-Apache-Common提供" class="headerlink" title="2.2 Apache Common提供"></a>2.2 Apache Common提供</h4><pre><code>InputStream targetStream = IOUtils.toInputStream(str, StandardCharsets.UTF_8.name());</code></pre><h4 id="2-3-Google-Guava提供"><a href="#2-3-Google-Guava提供" class="headerlink" title="2.3 Google Guava提供"></a>2.3 Google Guava提供</h4><pre><code>InputStream targetStream =
-        new ReaderInputStream(CharSource.wrap(str).openStream(), StandardCharsets.UTF_8.name());</code></pre>
+}</code></pre></li>
+</ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li><p>Listener</p>
+<p>  三种类型 </p>
+<p>  针对三个作用域的创建和销毁<br>  针对三个作用域的值改变 【添加 | 替换 | 移除】</p>
+</li>
+</ul>
+<blockquote>
+<p>ServletContextListner  ： 应用被部署的时候， 服务器加载这个项目的时候，做一些初始化工作， 任务调度。<br>    HttpSessionListener    ： 统计在线人数<br>    HttpSessionActivationListener  ： 钝化活化处理</p>
+</blockquote>
+<ul>
+<li>Filter </li>
+</ul>
+<blockquote>
+<p>使用频率更高</p>
+</blockquote>
+<ul>
+<li>如果要写一个过滤器。</li>
+</ul>
+<blockquote>
+<ol>
+<li>定义一个类，实现接口 Filter</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>注册 . web.xml . 与servlet相似。</li>
+</ol>
+</blockquote>
+<ul>
+<li>过滤器放行。 </li>
+</ul>
+<blockquote>
+<p>chain.doFilter(request, response);</p>
+</blockquote>
+<ul>
+<li><p>过滤器生命周期</p>
+<p>  创建： 服务器加载这个项目的时候创建实例</p>
+<p>  销毁： 关闭服务器或者从服务器中移除项目的时候。</p>
+</li>
+</ul>
+
             </div>
             <hr/>
 
@@ -684,7 +1067,7 @@ String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blog.onfree.cn/posts/1b4376a9.html">https://blog.onfree.cn/posts/1b4376a9.html</a>
+                    <a href="https://blog.onfree.cn/posts/68f34ac0.html">https://blog.onfree.cn/posts/68f34ac0.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -722,16 +1105,16 @@ String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java/">
-                                    <span class="chip bg-color">Java</span>
+                                <a href="/tags/JavaWeb/">
+                                    <span class="chip bg-color">JavaWeb</span>
                                 </a>
                             
-                                <a href="/tags/IO%E6%B5%81/">
-                                    <span class="chip bg-color">IO流</span>
+                                <a href="/tags/Listener/">
+                                    <span class="chip bg-color">Listener</span>
                                 </a>
                             
-                                <a href="/tags/%E8%BD%AC%E6%8D%A2/">
-                                    <span class="chip bg-color">转换</span>
+                                <a href="/tags/Filter/">
+                                    <span class="chip bg-color">Filter</span>
                                 </a>
                             
                         </div>
@@ -1172,31 +1555,31 @@ String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方�
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/2d8346af.html">
+                <a href="/posts/65754b0a.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s1.ax1x.com/2020/03/12/8eiyhF.md.jpg" class="responsive-img" alt="11分钟使用Java中HttpClient">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s1.ax1x.com/2020/03/12/8eiyhF.md.jpg" class="responsive-img" alt="11分钟详析Spring MVC">
                         
-                        <span class="card-title">11分钟使用Java中HttpClient</span>
+                        <span class="card-title">11分钟详析Spring MVC</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在Java中HttpClient使用，在 Internet，HTTP 协议上是使用得最多、最重要的协议了,HttpClient 是 Apache Jakarta Common 下的子项目..
+                            Spring MVC是当前最优秀的MVC框架，支持注解配置，易用性有了大幅度的提高，使用简单，学习成本低，灵活性高，易拓展
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-23
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-12
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
                                 </a>
                             
                             
@@ -1206,12 +1589,12 @@ String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
                     </a>
                     
-                    <a href="/tags/HttpClient/">
-                        <span class="chip bg-color">HttpClient</span>
+                    <a href="/tags/Spring-MVC/">
+                        <span class="chip bg-color">Spring MVC</span>
                     </a>
                     
                 </div>
@@ -1225,31 +1608,31 @@ String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/f6a8ac2c.html">
+                <a href="/posts/100e6672.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s1.ax1x.com/2020/03/17/8NX6mT.md.jpg" class="responsive-img" alt="11分钟掌握Java对象和Map转换">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://s1.ax1x.com/2020/03/12/8eiU6s.md.jpg" class="responsive-img" alt="11分钟浅析Spring AOP">
                         
-                        <span class="card-title">11分钟掌握Java对象和Map转换</span>
+                        <span class="card-title">11分钟浅析Spring AOP</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java对象和Map在很多时候常常需要转换，而本文可作为常见转换工具类来使用											..
+                             Spring Aop在实际生产中往往很多地方都需要，如最常用的权限检查和日志记录等，都是web开发中必可少的..
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
                                 </a>
                             
                             
@@ -1259,12 +1642,12 @@ String str = writer.toString();</code></pre><h5 id="方法十："><a href="#方�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
                     </a>
                     
-                    <a href="/tags/Map/">
-                        <span class="chip bg-color">Map</span>
+                    <a href="/tags/AOP/">
+                        <span class="chip bg-color">AOP</span>
                     </a>
                     
                 </div>
