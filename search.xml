@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>11分钟修改Tomcat终端日志</title>
+      <link href="/posts/ebc9054.html"/>
+      <url>/posts/ebc9054.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="11分钟修改Tomcat终端日志"><a href="#11分钟修改Tomcat终端日志" class="headerlink" title="11分钟修改Tomcat终端日志"></a>11分钟修改Tomcat终端日志</h2><blockquote><p><code>须交有道之人,莫结无义之友。饮清静之茶，莫贪花色之酒。开方便之门，闲是非之口。</code></p></blockquote><hr><p>在tomcat中，默认将终端输出信息输出到</p><pre><code>$CATALINA_HOME/logs/catalina.out</code></pre><p>1.方式一</p><p>进入tomcat安装路径的bin目录中，运行</p><pre><code>sh catalina.sh run</code></pre><p>将在终端动态显示catalina.out的内容</p><p>2.方式二</p><p>进入上述的安装目录下的logs目录中，执行如下命令</p><pre><code>tail -f catalina.out</code></pre><p>Tomcat控制台日志输出到文件的方法 startup.bat中修改</p><pre><code>call &quot;%EXECUTABLE%&quot; start %CMD_LINE_ARGS%</code></pre><p>为</p><pre><code>call &quot;%EXECUTABLE%&quot; run %CMD_LINE_ARGS%  (&gt;&gt; ..\logs\detailLog.%DATE:~0,10%.log )</code></pre><p>这样控制台就不会输出日志文件了，让catalina.bat去决定日志输出在哪。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tomcat </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 配置 </tag>
+            
+            <tag> Tomcat </tag>
+            
+            <tag> 终端日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>11分钟学会Tomcat多项目映射</title>
       <link href="/posts/a6cbb12f.html"/>
       <url>/posts/a6cbb12f.html</url>
