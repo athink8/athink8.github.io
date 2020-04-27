@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>11分钟学会JS生成二维码</title>
+      <link href="/posts/e274bebd.html"/>
+      <url>/posts/e274bebd.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="11分钟学会JS生成二维码"><a href="#11分钟学会JS生成二维码" class="headerlink" title="11分钟学会JS生成二维码"></a>11分钟学会JS生成二维码</h2><blockquote><p><code>山有木兮木有枝，心悦君兮君不知。——佚名《越人歌》</code></p></blockquote><p>二维码对于大家来说不陌生了，是最常接触的了..</p><p>使用二维码能够让你网站更好的分享出去..</p><p>那如何使用JS生成二维码呢..</p><p>使用<a href="https://github.com/davidshimjs/qrcodejs" target="_blank" rel="noopener">QRCode.js</a>生成..</p><p>QRCode.js 是一个用于生成二维码的 JavaScript 库。主要是通过获取 DOM 的标签,再通过 HTML5 Canvas 绘制而成,不依赖任何库..</p><p>QRCode.js 使用简便，直接引用，加实例化就行了..</p><p>具体如下..</p><h3 id="一、引入类库文件"><a href="#一、引入类库文件" class="headerlink" title="一、引入类库文件"></a>一、引入类库文件</h3><pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span></code></pre><p>或者下载类库文件到本地引用，不太建议..</p><h3 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用"></a>二、使用</h3><ul><li><p>HTML</p><pre class=" language-HTML"><code class="language-HTML"><div id="qrcode"></div></code></pre></li><li><p>JavaScript</p><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//初始化即可</span><span class="token keyword">var</span> qrcode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">QRCode</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"qrcode"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>    text<span class="token punctuation">:</span> <span class="token string">"https://blog.onfree.cn"</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//网址</span>    width<span class="token punctuation">:</span> <span class="token number">128</span><span class="token punctuation">,</span>        <span class="token comment" spellcheck="true">//宽</span>    height<span class="token punctuation">:</span> <span class="token number">128</span><span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">//高</span>    colorDark <span class="token punctuation">:</span> <span class="token string">"#000000"</span><span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">//阴影</span>    colorLight <span class="token punctuation">:</span> <span class="token string">"#ffffff"</span><span class="token punctuation">,</span>    <span class="token comment" spellcheck="true">//高光</span>    correctLevel <span class="token punctuation">:</span> QRCode<span class="token punctuation">.</span>CorrectLevel<span class="token punctuation">.</span>H<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//--以下按需使用--</span>qrcode<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 清除二维码</span>qrcode<span class="token punctuation">.</span><span class="token function">makeCode</span><span class="token punctuation">(</span><span class="token string">"https://blog.onfree.cn"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 重新生成另外一个二维码</span></code></pre><hr></li></ul><h3 id="三、完成"><a href="#三、完成" class="headerlink" title="三、完成"></a>三、完成</h3><p>是不是很简单呢，好了！赶快去试下吧..</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>11分钟修改Tomcat终端日志</title>
       <link href="/posts/ebc9054.html"/>
       <url>/posts/ebc9054.html</url>
