@@ -676,9 +676,9 @@
       
         <tags>
             
-            <tag> Spring </tag>
-            
             <tag> 简介 </tag>
+            
+            <tag> Spring </tag>
             
         </tags>
       
@@ -1037,9 +1037,9 @@
       
         <tags>
             
-            <tag> 配置 </tag>
-            
             <tag> Redis </tag>
+            
+            <tag> 配置 </tag>
             
             <tag> 命令类型 </tag>
             
