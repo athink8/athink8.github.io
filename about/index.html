@@ -525,7 +525,7 @@
 
                                 </div>
                                 <div class="title">Athink</div>
-                                <div class="career">Java爱好者/全栈</div>
+                                <div class="career">Java/全栈/Vue</div>
                                 <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
                                     
     <a href="https://github.com/athink8" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
@@ -593,7 +593,7 @@
                     </div>
                 </div>
 
-                <div class="introduction center-align" data-aos="fade-up">本人90后，主学Java后端，但是又不想局限于此，希望能够对技术保持兴趣，学无止境，努力！加油！</div>
+                <div class="introduction center-align" data-aos="fade-up">生活中平平凡凡的一名程序员，啥都会，啥也不会，只期盼明天比今天多进步一点就好..</div>
 
                 <style type="text/css">
     #posts-chart,
@@ -644,7 +644,7 @@
         },
         xAxis: {
             type: 'category',
-            data: ["2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12"]
+            data: ["2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12","2021-01","2021-02"]
         },
         yAxis: {
             type: 'value',
@@ -654,7 +654,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,11,19,9,2,1,0,0,0,0,0,0],
+                data: [11,19,9,2,1,0,0,0,0,0,0,0,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -696,7 +696,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"前端","value":6},{"name":"Java","value":9},{"name":"数据库","value":2},{"name":"Spring","value":6},{"name":"SpringBoot","value":9},{"name":"Tomcat","value":4},{"name":"JavaWeb","value":1},{"name":"其他","value":2},{"name":"杂文","value":1},{"name":"微服务","value":1},{"name":"分享","value":1}],
+                data: [{"name":"前端","value":6},{"name":"Java","value":9},{"name":"数据库","value":2},{"name":"Spring","value":6},{"name":"SpringBoot","value":9},{"name":"Tomcat","value":4},{"name":"JavaWeb","value":1},{"name":"其他","value":2},{"name":"微服务","value":1},{"name":"杂文","value":1},{"name":"分享","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -908,7 +908,7 @@
             <div class="skillbar">
                 <div class="skillbar-title"
                      style="background: linear-gradient(to right, #FFEB3B 0%, #FFF176 100%); width: 60%">
-                    <span>前端</span>
+                    <span>Vue</span>
                 </div>
                 <div class="skill-bar-percent">60%</div>
             </div>
@@ -918,10 +918,10 @@
         <div class="col s12 m6 l6" data-aos="fade-up">
             <div class="skillbar">
                 <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #B8F1C4 0%, #47DB65 100%); width: 90%">
+                     style="background: linear-gradient(to right, #B8F1C4 0%, #47DB65 100%); width: 99%">
                     <span>学习</span>
                 </div>
-                <div class="skill-bar-percent">90%</div>
+                <div class="skill-bar-percent">99%</div>
             </div>
         </div>
         
@@ -1047,7 +1047,7 @@
 </style>
 <footer class="page-footer2 bg-color">
     
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s0 m2">&nbsp</div>
 		<div class="col s12 m6 18 copy-right">
             Copyright&nbsp;&copy;
@@ -1072,6 +1072,50 @@
             </span>
             
             <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "2";
+                    var startDate = "10";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
             
 			<br>
             
